@@ -1,41 +1,41 @@
 Javascript Performance tips
-ï	Minify JS (Removes whitespace/linebreaks and shortends variables)
-ï	Combine JS (Reduces the amount of HTTP Requests)
-ï	<script> tags block parallel downloads, put them last so other resources can be downloaded first
-ï	Defer Parsing of Javascript
-ï	Just in time Loading
-ï	Async Loading via Lab.js or  the async attribute for the script tag (IE9 & below donít support)
+‚Ä¢  Minify JS (Removes whitespace/linebreaks and shortends variables)
+‚Ä¢	Combine JS (Reduces the amount of HTTP Requests)
+‚Ä¢	<script> tags block parallel downloads, put them last so other resources can be downloaded first
+‚Ä¢	Defer Parsing of Javascript
+o	Just in time Loading
+o	Async Loading via Lab.js or  the async attribute for the script tag (IE9 & below don‚Äôt support)
 
 
 Javascript Coding Tips
-ï	ì$(document).ready(function() {ì vs ì$(function(){ì  Code is executed after DOM is loaded (Document Object Model, HTML. XML
-ï	Add an extra (); at the end ì(function () {})();ì Self Executing(Imediately Invoking) anonymous function which would runs imediately
-ï	ì(function ($){}(jQuery)î As above but passes the jQuery object as a parameter so that ì$î refers to ìjQueryî. In general widgets would be to be contained in a Immediate invoking function but Controller 
-ï	localStorage/sessionStorage ñ Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
-ï	Put all optional parameters into an options hash. function circle(x,y,radius,options) { options = options || {};}
-ï	Use firebugs console.time to track down bottlenecks & console.log to trace code
-ï	Use event delegation instead of individual event listeners
-ï	When javascript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6. 
+‚Ä¢	‚Äú$(document).ready(function() {‚Äú vs ‚Äú$(function(){‚Äú  Code is executed after DOM is loaded (Document Object Model, HTML. XML
+‚Ä¢	Add an extra (); at the end ‚Äú(function () {})();‚Äú Self Executing(Imediately Invoking) anonymous function which would runs imediately
+‚Ä¢	‚Äú(function ($){}(jQuery)‚Äù As above but passes the jQuery object as a parameter so that ‚Äú$‚Äù refers to ‚ÄújQuery‚Äù. In general widgets would be to be contained in a Immediate invoking function but Controller 
+‚Ä¢	localStorage/sessionStorage ‚Äì Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
+‚Ä¢	Put all optional parameters into an options hash. function circle(x,y,radius,options) { options = options || {};}
+‚Ä¢	Use firebugs console.time to track down bottlenecks & console.log to trace code
+‚Ä¢	Use event delegation instead of individual event listeners
+‚Ä¢	When javascript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6. 
 
 
 
 Helpful Javascript Coding Scripts
-ï	jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
-ï	respond.js ñ Adds browsers support to min-max css media queries for ie6-ie8.
-ï	selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
-ï	Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).
-ï	Require.js helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
+‚Ä¢	jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
+‚Ä¢	respond.js ‚Äì Adds browsers support to min-max css media queries for ie6-ie8.
+‚Ä¢	selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
+‚Ä¢	Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).
+‚Ä¢	Require.js helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 
 
 Database Tips
-ï	Relational Database ñ built on tables, fields & keys e.g MySQL, SQL Server
-ï	Document-oriented Database ñ A collection of independent documents. E.g CouchDB, MongoDB
+‚Ä¢	Relational Database ‚Äì built on tables, fields & keys e.g MySQL, SQL Server
+‚Ä¢	Document-oriented Database ‚Äì A collection of independent documents. E.g CouchDB, MongoDB
 
 
 Abbreviations/Terms:
-ï	IDE ñ Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code
-ï	API ñ Application Programming Interface is a specification for combining software components.
-ï	SDK ñ Software Development Kit is a toolkit to allow softwore development on a specific framework or platform
-ï	CDN ñ Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
-ï	REST ñ REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful
-ï	Progressive Enhancement ñ Using a feature that may not be supported by all browsers but does not break the page if it isnít supported
+‚Ä¢	IDE ‚Äì Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code
+‚Ä¢	API ‚Äì Application Programming Interface is a specification for combining software components.
+‚Ä¢	SDK ‚Äì Software Development Kit is a toolkit to allow softwore development on a specific framework or platform
+‚Ä¢	CDN ‚Äì Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
+‚Ä¢	REST ‚Äì REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful
+‚Ä¢	Progressive Enhancement ‚Äì Using a feature that may not be supported by all browsers but does not break the page if it isn‚Äôt supported
