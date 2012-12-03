@@ -1,3 +1,39 @@
+<h2>JQuery Coding/Performance tips</h2>
+•  Reference Ids rather than classes (Id selection is native increases performance)
+•	From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. <input id="cb" type="checkbox" checked="checked"> .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
+
+
+<h2>HTML/CSS/Images Performance tips</h2>
+<ul>
+<li>Limit CSS Box-shadows, Gradients</li>
+<li>Minify CSS (Removes whitespace/linebreaks reducing file size)</li>
+<li>Combine CSS (Reduce the amount of HTTP Requests)</li>
+<li>Use image sprites to reduce round trips</li>
+<li>We should move all referenced files css, js, images etc. to dispersed servers like Akamai.</li>
+<li>Putting stylesheets in the <head> allows the page to render progressively.</li>
+</ul>
+<h2>CSS Coding Tips</h2>
+<ul>
+<li>:after{content:”more”;} & :before{} IE8+ Allows you to add content before/after an element</li>
+<li>*{} targets every element (Not recommend adds performance issues)</li>
+<li>ul > li{} IE7+ targets direct children</li>
+<li>ul ~ p{} IE7+ targets p tags after ul tag</li>
+<li>Avoid using IDs in CSS</li>
+<li>h1 + p{} IE7+ targets adjacent p tags directly after h1 tags</li>
+<li>a[data-info~="image"]{} IE7+ selects all elements that have a data-info of “image” including multiple values such as  data-info="external image"</li>
+<li>:first-child{} IE7+ targets the first child element</li>
+<li>:last-child{} IE9+ targets the last child element</li>
+<li>li:nth-child(3) IE9+</li>
+<li>background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6 and Chrome 21 ONLY</li>
+<li>background-clip, background-origin and background-size IE9+</li>
+<li>HasLayout - The single most important thing you need to know about fixing bugs in IE! Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }</li>
+</ul>
+
+<h2>HTML Coding Tips</h2>
+<ul>
+<li>HTML5 Inputs with graceful degredation: type=search,</li>
+<li>Use input[placeholder] with IE10> polyfill fallback jquery-placeholder.js</li>
+</ul>
 <h2>Javascript Performance tips</h2>
 <ul>
 <li>Minify JS (Removes whitespace/linebreaks and shortends variables)</li>
