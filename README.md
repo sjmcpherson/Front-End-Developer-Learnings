@@ -1,7 +1,8 @@
 <h2>JQuery Coding/Performance tips</h2>
-•  Reference Ids rather than classes (Id selection is native increases performance)
-•	From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. <input id="cb" type="checkbox" checked="checked"> .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
-
+<ul>
+<li>Reference Ids rather than classes (Id selection is native increases performance)</li>
+<li>From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. <input id="cb" type="checkbox" checked="checked"> .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards</li>
+</ul>
 
 <h2>HTML/CSS/Images Performance tips</h2>
 <ul>
