@@ -11,7 +11,7 @@
 <h2>HTML Coding Tips</h2>
 <ul>
 <li>HTML5 Inputs with graceful degredation: type=search,</li>
-<li>Use input[placeholder] with IE<10 polyfill fallback jquery-placeholder.js</li>
+<li>Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js</li>
 </ul>
 
 <h2>CSS Coding Tips</h2>
