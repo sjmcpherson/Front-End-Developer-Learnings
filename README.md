@@ -1,9 +1,3 @@
-<h2>JQuery Coding/Performance tips</h2>
-<ul>
-<li>Reference Ids rather than classes (Id selection is native increases performance)</li>
-<li>From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. <input id="cb" type="checkbox" checked="checked"> .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards</li>
-</ul>
-
 <h2>HTML/CSS/Images Performance tips</h2>
 <ul>
 <li>Limit CSS Box-shadows, Gradients</li>
@@ -11,8 +5,15 @@
 <li>Combine CSS (Reduce the amount of HTTP Requests)</li>
 <li>Use image sprites to reduce round trips</li>
 <li>We should move all referenced files css, js, images etc. to dispersed servers like Akamai.</li>
-<li>Putting stylesheets in the <head> allows the page to render progressively.</li>
+<li>Putting stylesheets in the &lt;head&gt; allows the page to render progressively.</li>
 </ul>
+
+<h2>HTML Coding Tips</h2>
+<ul>
+<li>HTML5 Inputs with graceful degredation: type=search,</li>
+<li>Use input[placeholder] with IE<10 polyfill fallback jquery-placeholder.js</li>
+</ul>
+
 <h2>CSS Coding Tips</h2>
 <ul>
 <li>:after{content:”more”;} & :before{} IE8+ Allows you to add content before/after an element</li>
@@ -25,27 +26,22 @@
 <li>:first-child{} IE7+ targets the first child element</li>
 <li>:last-child{} IE9+ targets the last child element</li>
 <li>li:nth-child(3) IE9+</li>
-<li>background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6 and Chrome 21 ONLY</li>
+<li>background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6+ and Chrome 21+ ONLY</li>
 <li>background-clip, background-origin and background-size IE9+</li>
 <li>HasLayout - The single most important thing you need to know about fixing bugs in IE! Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }</li>
 </ul>
 
-<h2>HTML Coding Tips</h2>
-<ul>
-<li>HTML5 Inputs with graceful degredation: type=search,</li>
-<li>Use input[placeholder] with IE10> polyfill fallback jquery-placeholder.js</li>
-</ul>
-<h2>Javascript Performance tips</h2>
+<h2>Javascript/jQuery Performance tips</h2>
 <ul>
 <li>Minify JS (Removes whitespace/linebreaks and shortends variables)</li>
 <li>Combine JS (Reduces the amount of HTTP Requests)</li>
-<li><code><script></code> tags block parallel downloads, put them last so other resources can be downloaded first</li>
+<li>&lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first</li>
 <li>Defer Parsing of Javascript</li>
 <li>Just in time Loading</li>
 <li>Async Loading via Lab.js or  the async attribute for the script tag (IE9 & below don’t support)</li>
 </ul>
 
-<h2>Javascript Coding Tips</h2>
+<h2>Javascript/jQuery Coding Tips</h2>
 <ul>
 <li>“$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded (Document Object Model, HTML. XML</li>
 <li>Add an extra (); at the end “(function () {})();“ Self Executing(Imediately Invoking) anonymous function which would runs imediately</li>
@@ -53,11 +49,16 @@
 <li>localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+</li>
 <li>Put all optional parameters into an options hash. function circle(x,y,radius,options) { options = options || {};}</li>
 <li>firebugs console.time to track down bottlenecks & console.log to trace code</li>
-<li>Use event delegation instead of individual event listeners</li>
+<li>As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()</li>
+<li>Use event delegation instead of individual event listeners e.g. $("table").delegate("td", "click", function(){$(this).toggleClass("chosen");
+});//jQuery 1.4.3+ $("table").on("click", "td", function() {$(this).toggleClass("chosen");});//jQuery 1.7+</li>
 <li>When javascript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6. </li>
+<li>Reference Ids rather than classes (Id selection is native increases performance)</li>
+<li>From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards</li>
+<li>Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9</li>
 </ul>
 
-<h2>Helpful Javascript Coding Scripts</h2><ul>
+<h2>Helpful Javascript/jQuery Scripts</h2><ul>
 <li>jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.</li>
 <li>respond.js – Adds browsers support to min-max css media queries for ie6-ie8.</li>
 <li>selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.</li>
