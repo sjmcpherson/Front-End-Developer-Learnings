@@ -1,20 +1,20 @@
-<h2>HTML/CSS/Images Performance tips</h2>
+<h2>HTML/CSS/Images Coding & Performance tips</h2>
 <ul>
 <li>Limit CSS Box-shadows, Gradients</li>
+<li>Reduce unecessary html tags</li>
 <li>Minify CSS (Removes whitespace/linebreaks reducing file size)</li>
 <li>Combine CSS (Reduce the amount of HTTP Requests)</li>
 <li>Use image sprites to reduce round trips</li>
 <li>We should move all referenced files css, js, images etc. to dispersed servers like Akamai.</li>
 <li>Putting stylesheets in the &lt;head&gt; allows the page to render progressively.</li>
-</ul>
-
-<h2>HTML Coding Tips</h2>
-<ul>
+<li>HTML5 Doctype &lt;!DOCTYPE html&gt;</li>
 <li>HTML5 Inputs with graceful degredation: type=search,</li>
 <li>Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js</li>
+<li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
+
 </ul>
 
-<h2>CSS Coding Tips</h2>
+<h2>CSS Coding & Performance Tips</h2>
 <ul>
 <li>:after{content:”more”;} & :before{} IE8+ Allows you to add content before/after an element</li>
 <li>*{} targets every element (Not recommend adds performance issues)</li>
@@ -29,6 +29,12 @@
 <li>background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6+ and Chrome 21+ ONLY</li>
 <li>background-clip, background-origin and background-size IE9+</li>
 <li>HasLayout - The single most important thing you need to know about fixing bugs in IE! Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }</li>
+<li>X:first-letter/:first-line apply to block level elements compatible with all browser versions</li>
+<li>Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript</li>
+<li>Avoid unnecessary tag identifiers for performance i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}</li>
+<li>Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up</li>
+<li>Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo</li>
+<li>Multi-column Wrapping Text layouts with -column-count: 3; IE10+</li>
 </ul>
 
 <h2>Javascript/jQuery Performance tips</h2>
@@ -64,6 +70,7 @@
 <li>selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.</li>
 <li>Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).</li>
 <li>Require.js helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)</li>
+<li>jQuery-contextMenu.js For creating a custom Context menu (right-click menu)</li>
 </ul>
 
 <h2>Database Tips</h2><ul>
