@@ -1,21 +1,20 @@
-<h2>HTML/CSS/Images Coding & Performance tips</h2>
+<h2>HTML Coding & Performance tips</h2>
 <ul>
-<li>Limit CSS Box-shadows, Gradients</li>
 <li>Reduce unecessary html tags</li>
-<li>Minify CSS (Removes whitespace/linebreaks reducing file size)</li>
-<li>Combine CSS (Reduce the amount of HTTP Requests)</li>
 <li>Use image sprites to reduce round trips</li>
-<li>We should move all referenced files css, js, images etc. to dispersed servers like Akamai.</li>
+<li>Serve all referenced files css, js, images on dispersed servers.</li>
 <li>Putting stylesheets in the &lt;head&gt; allows the page to render progressively.</li>
 <li>HTML5 Doctype &lt;!DOCTYPE html&gt;</li>
-<li>HTML5 Inputs with graceful degredation: type=search,</li>
+<li>HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel</li>
 <li>Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js</li>
 <li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
-
 </ul>
 
 <h2>CSS Coding & Performance Tips</h2>
 <ul>
+<li>Limit CSS Box-shadows, Gradients</li>
+<li>Minify CSS (Removes whitespace/linebreaks reducing file size)</li>
+<li>Combine CSS (Reduce the amount of HTTP Requests)</li>
 <li>:after{content:”more”;} & :before{} IE8+ Allows you to add content before/after an element</li>
 <li>*{} targets every element (Not recommend adds performance issues)</li>
 <li>ul > li{} IE7+ targets direct children</li>
@@ -42,15 +41,14 @@
 <li>Minify JS (Removes whitespace/linebreaks and shortends variables)</li>
 <li>Combine JS (Reduces the amount of HTTP Requests)</li>
 <li>&lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first</li>
-<li>Defer Parsing of Javascript</li>
-<li>Just in time Loading</li>
-<li>Async Loading via Lab.js or  the async attribute for the script tag (IE9 & below don’t support)</li>
+<li>Defer Parsing of scripts that are not called at statup.</li>
+<li>Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)</li>
 </ul>
 
 <h2>Javascript/jQuery Coding Tips</h2>
 <ul>
-<li>“$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded (Document Object Model, HTML. XML</li>
-<li>Add an extra (); at the end “(function () {})();“ Self Executing(Imediately Invoking) anonymous function which would runs imediately</li>
+<li>“$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded</li>
+<li>Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) anonymous function which would run imediately</li>
 <li>“(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be to be contained in a Immediate invoking function but Controller </li>
 <li>localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+</li>
 <li>Put all optional parameters into an options hash. function circle(x,y,radius,options) { options = options || {};}</li>
