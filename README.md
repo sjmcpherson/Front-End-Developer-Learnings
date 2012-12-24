@@ -8,6 +8,16 @@
 <li>HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel</li>
 <li>Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js</li>
 <li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
+<li>The "download" attribute forces browser to invoke download dialog &lt;a href="http://google.com/logo.png" download="Logo.png"&gt;download me&lt;/a&gt;
+<li>&lt;datalist&gt; Databinding Autocomplete example</li>
+<code><input list="browsers">
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+</datalist></code>
 </ul>
 
 <h2>CSS Coding & Performance Tips</h2>
@@ -34,6 +44,8 @@
 <li>Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up</li>
 <li>Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo</li>
 <li>Multi-column Wrapping Text layouts with -column-count: 3; IE10+</li>
+<li>-flex: The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes -order: for ordering structure elements -justify-content: for aligning structure elements and -webkit-flex-direction: for positioning</li>
+<li>-calc: Dynamic css calculations div {width: +calc(100% - 4em);}</li>
 </ul>
 
 <h2>Javascript/jQuery Performance tips</h2>
