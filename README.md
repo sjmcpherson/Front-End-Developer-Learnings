@@ -10,14 +10,16 @@
 <li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
 <li>The "download" attribute forces browser to invoke download dialog &lt;a href="http://google.com/logo.png" download="Logo.png"&gt;download me&lt;/a&gt;
 <li>&lt;datalist&gt; Databinding Autocomplete example</li>
-<code><input list="browsers">
+<code><pre><input list="browsers">
 <datalist id="browsers">
   <option value="Chrome">
   <option value="Firefox">
   <option value="Internet Explorer">
   <option value="Opera">
   <option value="Safari">
-</datalist></code>
+</datalist></pre></code>
+<li>&lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;</li>
+<li>&lt;video autoplay controls&gt;&lt;/video&gt;</li>
 </ul>
 
 <h2>CSS Coding & Performance Tips</h2>
@@ -73,6 +75,9 @@
 <li>From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards</li>
 <li>Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9</li>
 <li>"$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; });</li>
+<li>Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.</li>
+<li>Web Intents - a new framework for web-based inter-application communication and service discovery using Javascript postMessage()</li>
+<li>navigator.getUserMedia() - Record Audio/Video (limited browser capatibility</li>
 </ul>
 
 <h2>Helpful Javascript/jQuery Scripts</h2><ul>
@@ -89,11 +94,16 @@
 <li>Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB</li>
 </ul>
 
-<h2>Abbreviations/Terms:</h2><ul>
+<h2>Abbreviations/Terms:</h2>
+<ul>
+<li>UI - User Interface are the components by which users interact with</li>
+<li>UX - User Experience is a broader term which is distinct from UI as it encompasses the way a person feels about using a product, system or service</li>
 <li>IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code</li>
 <li>API – Application Programming Interface is a specification for combining software components.</li>
 <li>SDK – Software Development Kit is a toolkit to allow softwore development on a specific framework or platform</li>
 <li>CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.</li>
 <li>REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful</li>
 <li>Progressive Enhancement – Using a feature that may not be supported by all browsers but does not break the page if it isn’t supported</li>
+<li>Data Binding - Syncronises data between UI components which are bound to the data source</li>
+<li>CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications</li>
 </ul>
