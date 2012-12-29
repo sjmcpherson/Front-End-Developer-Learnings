@@ -10,14 +10,14 @@
 <li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
 <li>The "download" attribute forces browser to invoke download dialog &lt;a href="http://google.com/logo.png" download="Logo.png"&gt;download me&lt;/a&gt;
 <li>&lt;datalist&gt; Databinding Autocomplete example</li>
-<code><pre><input list="browsers">
+<pre><code><input list="browsers">
 <datalist id="browsers">
   <option value="Chrome">
   <option value="Firefox">
   <option value="Internet Explorer">
   <option value="Opera">
   <option value="Safari">
-</datalist></pre></code>
+</datalist></code></pre>
 <li>&lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;</li>
 <li>&lt;video autoplay controls&gt;&lt;/video&gt;</li>
 </ul>
