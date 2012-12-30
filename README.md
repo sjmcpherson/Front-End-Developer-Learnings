@@ -20,6 +20,7 @@
 </datalist></code></pre>
 <li>&lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;</li>
 <li>&lt;video autoplay controls&gt;&lt;/video&gt;</li>
+<li>Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/</li>
 </ul>
 
 <h2>CSS Coding & Performance Tips</h2>
@@ -78,15 +79,16 @@
 <li>Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.</li>
 <li>Web Intents - a new framework for web-based inter-application communication and service discovery using Javascript postMessage()</li>
 <li>navigator.getUserMedia() - Record Audio/Video (limited browser capatibility</li>
+<li>Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).</li>
 </ul>
 
 <h2>Helpful Javascript/jQuery Scripts</h2><ul>
 <li>jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.</li>
 <li>respond.js – Adds browsers support to min-max css media queries for ie6-ie8.</li>
 <li>selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.</li>
-<li>Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).</li>
 <li>Require.js helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)</li>
 <li>jQuery-contextMenu.js For creating a custom Context menu (right-click menu)</li>
+<li>equalize.js jQuery plugin for equalizing the height or width of sibling elements</li>
 </ul>
 
 <h2>Database Tips</h2><ul>
