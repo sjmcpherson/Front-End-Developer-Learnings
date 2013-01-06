@@ -42,7 +42,6 @@
 <li>background-clip, background-origin and background-size IE9+</li>
 <li>HasLayout - The single most important thing you need to know about fixing bugs in IE! Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }</li>
 <li>X:first-letter/:first-line apply to block level elements compatible with all browser versions</li>
-<li>Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript</li>
 <li>Avoid unnecessary tag identifiers for performance i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}</li>
 <li>Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up</li>
 <li>Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo</li>
@@ -58,6 +57,7 @@
 <li>&lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first</li>
 <li>Defer Parsing of scripts that are not called at statup.</li>
 <li>Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)</li>
+<li>Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript</li>
 </ul>
 
 <h2>Javascript/jQuery Coding Tips</h2>
