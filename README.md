@@ -48,6 +48,7 @@
 <li>Multi-column Wrapping Text layouts with -column-count: 3; IE10+</li>
 <li>-flex: The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes -order: for ordering structure elements -justify-content: for aligning structure elements and -webkit-flex-direction: for positioning</li>
 <li>-calc: Dynamic css calculations div {width: +calc(100% - 4em);}</li>
+<li>Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)</li>
 </ul>
 
 <h2>Javascript/jQuery Performance tips</h2>
