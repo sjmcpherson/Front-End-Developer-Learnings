@@ -1,10 +1,11 @@
 <h2>HTML Coding & Performance tips</h2>
 <ul>
-<li>Reduce unecessary html tags</li>
-<li>Use image sprites to reduce round trips</li>
+<li>Reduce unecessary html tags to improve performance</li>
+<li>Use image sprites to reduce round trips to server</li>
 <li>Serve all referenced files css, js, images on dispersed servers.</li>
 <li>Putting stylesheets in the &lt;head&gt; allows the page to render progressively.</li>
 <li>HTML5 Doctype &lt;!DOCTYPE html&gt;</li>
+<li>Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)</li>
 <li>HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel</li>
 <li>Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js</li>
 <li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
