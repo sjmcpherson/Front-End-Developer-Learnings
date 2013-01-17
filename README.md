@@ -23,9 +23,10 @@
 </pre>
 </li>
 <li>&lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;</li>
-<li>&lt;video autoplay controls&gt;&lt;/video&gt;</li>
-<li>Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/</li>
 </ul>
+ - &lt;video autoplay controls&gt;&lt;/video&gt;
+ - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
+
 
 1. Craft your CSS with min/max-width media queries to adapt your layout from mobile (first) all the way up to desktop
 
