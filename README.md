@@ -52,7 +52,7 @@
 <li>Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)</li>
 </ul>
 
-<h2>Javascript/jQuery Performance tips</h2>
+<h2>Javascript/jQuery Coding & Performance Tips</h2>
 <ul>
 <li>Minify JS (Removes whitespace/linebreaks and shortends variables)</li>
 <li>Combine JS (Reduces the amount of HTTP Requests)</li>
@@ -60,10 +60,6 @@
 <li>Defer Parsing of scripts that are not called at statup.</li>
 <li>Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)</li>
 <li>Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript</li>
-</ul>
-
-<h2>Javascript/jQuery Coding Tips</h2>
-<ul>
 <li>“$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded</li>
 <li>Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) anonymous function which would run imediately</li>
 <li>“(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be to be contained in a Immediate invoking function but Controller </li>
@@ -82,6 +78,7 @@
 <li>Web Intents - a new framework for web-based inter-application communication and service discovery using Javascript postMessage()</li>
 <li>navigator.getUserMedia() - Record Audio/Video (limited browser capatibility</li>
 <li>Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).</li>
+<li>Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back</li>
 </ul>
 
 <h2>Helpful Javascript/jQuery Scripts</h2><ul>
