@@ -11,14 +11,16 @@
 <li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
 <li>The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt;
 <li>&lt;datalist&gt; Databinding Autocomplete example</li>
-<pre><code><input list="browsers">
+<pre>
+<input list="browsers">
 <datalist id="browsers">
   <option value="Chrome">
   <option value="Firefox">
   <option value="Internet Explorer">
   <option value="Opera">
   <option value="Safari">
-</datalist></code></pre>
+</datalist>
+</pre>
 <li>&lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;</li>
 <li>&lt;video autoplay controls&gt;&lt;/video&gt;</li>
 <li>Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/</li>
