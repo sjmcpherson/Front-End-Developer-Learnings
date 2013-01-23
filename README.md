@@ -1,16 +1,16 @@
 <h2>HTML Coding & Performance tips</h2>
-<ul>
-<li>Reduce unecessary html tags to improve performance</li>
-<li>Use image sprites to reduce round trips to server</li>
-<li>Serve all referenced files css, js, images on dispersed servers.</li>
-<li>Putting stylesheets in the &lt;head&gt; allows the page to render progressively.</li>
-<li>HTML5 Doctype &lt;!DOCTYPE html&gt;</li>
-<li>Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)</li>
-<li>HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel</li>
-<li>Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js</li>
-<li>&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.</li>
-<li>The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt;
-<li>&lt;datalist&gt; Databinding Autocomplete example
+
+ - Reduce unecessary html tags to improve performance
+ - Use image sprites to reduce round trips to server
+ - Serve all referenced files css, js, images on dispersed servers.
+ - Putting stylesheets in the &lt;head&gt; allows the page to render progressively.
+ - HTML5 Doctype &lt;!DOCTYPE html&gt;
+ - Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)
+ - HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel
+ - Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js
+ - &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
+ - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt;
+ - &lt;datalist&gt; Databinding Autocomplete example
 <pre>
 <input list="browsers">
 <datalist id="browsers">
@@ -21,21 +21,11 @@
   <option value="Safari">
 </datalist>
 </pre>
-</li>
-<li>&lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;</li>
-</ul>
+ - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
  - &lt;video autoplay controls&gt;&lt;/video&gt;
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
 
 
-1. Craft your CSS with min/max-width media queries to adapt your layout from mobile (first) all the way up to desktop
-
-
-<pre>
-    @media screen and (min-width: 480px){
-        ...styles for 480px and up go here
-    }
-</pre>
 
 <h2>CSS Coding & Performance Tips</h2>
 <ul>
@@ -66,33 +56,40 @@
 </ul>
 
 <h2>Javascript/jQuery Coding & Performance Tips</h2>
-<ul>
-<li>Minify JS (Removes whitespace/linebreaks and shortends variables)</li>
-<li>Combine JS (Reduces the amount of HTTP Requests)</li>
-<li>&lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first</li>
-<li>Defer Parsing of scripts that are not called at statup.</li>
-<li>Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)</li>
-<li>Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript</li>
-<li>“$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded</li>
-<li>Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) anonymous function which would run imediately</li>
-<li>“(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be to be contained in a Immediate invoking function but Controller </li>
-<li>localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+</li>
-<li>Put all optional parameters into an options hash. function circle(x,y,radius,options) { options = options || {};}</li>
-<li>firebugs console.time to track down bottlenecks & console.log to trace code</li>
-<li>As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()</li>
-<li>Use event delegation instead of individual event listeners e.g. $("table").delegate("td", "click", function(){$(this).toggleClass("chosen");
-});//jQuery 1.4.3+ $("table").on("click", "td", function() {$(this).toggleClass("chosen");});//jQuery 1.7+</li>
-<li>When javascript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6. </li>
-<li>Reference Ids rather than classes (Id selection is native increases performance)</li>
-<li>From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards</li>
-<li>Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9</li>
-<li>"$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; });</li>
-<li>Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.</li>
-<li>Web Intents - a new framework for web-based inter-application communication and service discovery using Javascript postMessage()</li>
-<li>navigator.getUserMedia() - Record Audio/Video (limited browser capatibility</li>
-<li>Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).</li>
-<li>Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back</li>
-</ul>
+- Minify JS (Removes whitespace/linebreaks and shortends variables)
+- Combine JS (Reduces the amount of HTTP Requests)
+- &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
+- Defer Parsing of scripts that are not called at statup.
+- Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)
+- Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript
+- “$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded
+- Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) anonymous function which would run imediately
+- “(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be to be contained in a Immediate invoking function but Controller
+- localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
+- Put all optional parameters into an options hash. function circle(x,y,radius,options) { options = options || {};}
+- firebugs console.time to track down bottlenecks & console.log to trace code</li>
+- As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
+- Use event delegation instead of individual event listeners e.g. $("table").delegate("td", "click", function(){$(this).toggleClass("chosen");
+});//jQuery 1.4.3+ $("table").on("click", "td", function() {$(this).toggleClass("chosen");});//jQuery 1.7+
+- When javascript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
+- Reference Ids rather than classes (Id selection is native increases performance}
+- From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
+- Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
+- "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; })
+- Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
+- Web Intents - a new framework for web-based inter-application communication and service discovery using Javascript postMessage()
+- navigator.getUserMedia() - Record Audio/Video (limited browser capatibility
+- Javascript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).
+- Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back
+- Jquery methods should chain:
+<pre>
+$.fn.enumerate = function() {
+  return this; //Add to make the method chainable.
+};
+//Because of using "return this", it's chainable!
+$("li").enumerate().css( "color", "red" );
+</pre>
+
 
 <h2>Helpful Javascript/jQuery Scripts</h2><ul>
 <li>jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.</li>
@@ -120,4 +117,5 @@
 <li>Progressive Enhancement – Using a feature that may not be supported by all browsers but does not break the page if it isn’t supported</li>
 <li>Data Binding - Syncronises data between UI components which are bound to the data source</li>
 <li>CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications</li>
+<li>Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.</li>
 </ul>
