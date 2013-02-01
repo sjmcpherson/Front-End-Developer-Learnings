@@ -91,7 +91,7 @@ $.fn.enumerate = function() {
 $("li").enumerate().css( "color", "red" );
 ```
 
--Console Debugging break IE when not using the Developer Tools so only use in development
+- Console Debugging will break IE when not using the Developer Tools so only use in development
 
 
 <h2>Helpful Javascript/jQuery Scripts</h2><ul>
@@ -102,12 +102,7 @@ $("li").enumerate().css( "color", "red" );
 <li>jQuery-contextMenu.js For creating a custom Context menu (right-click menu)</li>
 <li>Equalize.js jQuery plugin for equalizing the height or width of sibling elements</li>
 <li>Underscore.js - Utilty functions uncluding map, select, javascript templating</li>
-<li>CoffeeScript is a programming language that transcompiles to JavaScript inspired by Ruby</li>
-</ul>
-
-<h2>Database Tips</h2><ul>
-<li>Relational Database – built on tables, fields & keys e.g MySQL, SQL Server</li>
-<li>Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB</li>
+<li>CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby</li>
 </ul>
 
 <h2>Abbreviations/Terms:</h2>
@@ -115,6 +110,8 @@ $("li").enumerate().css( "color", "red" );
 - UI - User Interface are the components by which users interact with</li>
 - UX - User Experience is a broader term which is distinct from UI as it encompasses the way a person feels about using a product, system or service</li>
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code</li>
+- Relational Database – built on tables, fields & keys e.g MySQL, SQL Server
+- Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - API – Application Programming Interface is a specification for combining software components.</li>
 - SDK – Software Development Kit is a toolkit to allow softwore development on a specific framework or platform</li>
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.</li>
