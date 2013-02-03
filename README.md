@@ -92,13 +92,17 @@ $("li").enumerate().css( "color", "red" );
 ```
 
 - Console Debugging will break IE when not using the Developer Tools so only use in development
+- Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
+
+
+
 
 
 <h2>Helpful Javascript/jQuery Scripts</h2><ul>
 <li>jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.</li>
 <li>Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr</li>
 <li>selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.</li>
-<li>Requireg.js helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)</li>
+<li>Requirejs helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)</li>
 <li>jQuery-contextMenu.js For creating a custom Context menu (right-click menu)</li>
 <li>Equalize.js jQuery plugin for equalizing the height or width of sibling elements</li>
 <li>Underscore.js - Utilty functions uncluding map, select, javascript templating</li>
