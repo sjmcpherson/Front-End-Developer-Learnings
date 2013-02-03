@@ -44,7 +44,7 @@
 <li>li:nth-child(3) IE9+</li>
 <li>background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6+ and Chrome 21+ ONLY</li>
 <li>background-clip, background-origin and background-size IE9+</li>
-<li>HasLayout - The single most important thing you need to know about fixing bugs in IE! Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }</li>
+<li>HasLayout - The single most important thing you need to know about fixing bugs in <IE8, Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }</li>
 <li>X:first-letter/:first-line apply to block level elements compatible with all browser versions</li>
 <li>Avoid unnecessary tag identifiers for performance i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}</li>
 <li>Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up</li>
@@ -59,7 +59,7 @@
 - Minify JS (Removes whitespace/linebreaks and shortends variables)
 - Combine JS (Reduces the amount of HTTP Requests)
 - &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
-- Defer Parsing of scripts that are not called at statup.
+- Defer Parsing of scripts that are not called at statup.h
 - Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)
 - Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript
 - “$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded
@@ -113,7 +113,7 @@ $("li").enumerate().css( "color", "red" );
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - API – Application Programming Interface is a specification for combining software components.</li>
-- SDK – Software Development Kit is a toolkit to allow softwore development on a specific framework or platform</li>
+- SDK – Software Development Kit is a toolkit to allow software development on a specific framework or platform</li>
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.</li>
 - REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful</li>
 - Progressive Enhancement – Using a feature that may not be supported by all browsers but does not break the page if it isn’t supported</li>
