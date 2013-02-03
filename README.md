@@ -91,7 +91,16 @@ $.fn.enumerate = function() {
 $("li").enumerate().css( "color", "red" );
 ```
 
-- Console Debugging will break IE when not using the Developer Tools so only use in development
+- Console Debugging will break IE when not using the Developer Tools.
+
+```javascript
+// This allows you to log things, if console
+// is available, but takes no action, if not.
+function log() {
+  console && console.log(arguments);
+}
+```
+
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 
 
