@@ -24,7 +24,7 @@
  - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
  - &lt;video autoplay controls&gt;&lt;/video&gt;
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
-
+ - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited, but can be added with a JavaScript shim.
 
 
 <h2>CSS Coding & Performance Tips</h2>
@@ -102,8 +102,8 @@ function log() {
 ```
 
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
-
-
+- Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
+- The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
 
 
 
