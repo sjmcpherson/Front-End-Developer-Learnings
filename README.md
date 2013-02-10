@@ -107,16 +107,17 @@ function log() {
 
 
 
-<h2>Helpful Javascript/jQuery Scripts</h2><ul>
-<li>jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.</li>
-<li>Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr</li>
-<li>selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.</li>
-<li>Requirejs helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)</li>
-<li>jQuery-contextMenu.js For creating a custom Context menu (right-click menu)</li>
-<li>Equalize.js jQuery plugin for equalizing the height or width of sibling elements</li>
-<li>Underscore.js - Utilty functions uncluding map, select, javascript templating</li>
-<li>CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby</li>
-</ul>
+<h2>Helpful Javascript/jQuery Scripts</h2>
+- jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
+- Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
+- selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
+- Requirejs helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
+- jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
+- Equalize.js jQuery plugin for equalizing the height or width of sibling elements
+- Underscore.js - Utilty functions uncluding map, select, javascript templating
+- CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
+- Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
+
 
 <h2>Abbreviations/Terms:</h2>
 
