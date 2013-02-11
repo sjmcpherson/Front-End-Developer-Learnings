@@ -104,7 +104,7 @@ function log() {
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 - Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
-
+- JSON without " is evaluated as a object literal and JSON.Parse will not accept
 
 
 <h2>Helpful Javascript/jQuery Scripts</h2>
