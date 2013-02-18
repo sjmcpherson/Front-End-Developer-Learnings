@@ -65,6 +65,7 @@
 - “$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded
 - Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) anonymous function which would run imediately
 - “(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be to be contained in a Immediate invoking function but initated by a global Controller.
+- To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
 - Use console.time to track down bottlenecks & console.log to trace code</li>
@@ -105,7 +106,7 @@ function log() {
 - Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
-
+- Check if selected objects exist if($("#element").length >0){} or if($("#element").is('*')) {}
 
 <h2>Helpful Javascript/jQuery Scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
