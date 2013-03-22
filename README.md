@@ -26,13 +26,12 @@
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
  - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited, but can be added with a JavaScript shim.
 
-
 <h2>CSS Coding & Performance Tips</h2>
 
- - Limit CSS Box-shadows, Gradients
+ - Limit Browser rendering with CSS Box-shadows, Gradients
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS (Reduce the amount of HTTP Requests)
- - :after{content:”more”;} & :before{} IE8+ Allows you to add content before/after an element
+ - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element
  - *{} targets every element (Not recommend adds performance issues)
  - ul > li{} IE7+ targets direct children
  - ul ~ p{} IE7+ targets p tags after ul tag
