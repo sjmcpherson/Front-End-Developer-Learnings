@@ -41,6 +41,7 @@
  - :first-child{} IE7+ targets the first child element
  - :last-child{} IE9+ targets the last child element
  - li:nth-child(3) IE9+
+ - Work around for lack of :nth-child support in IE7 & IE8 using adjacent selector: ul>li+li+li
  - background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6+ and Chrome 21+ ONLY
  - background-clip, background-origin and background-size IE9+
  - HasLayout - The single most important thing you need to know about fixing bugs in <IE8, Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }
