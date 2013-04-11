@@ -136,7 +136,7 @@ function log() {
 - Data Binding - Syncronises data between UI components which are bound to the data source</li>
 - CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications</li>
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.</li>
-- Explicit iteration vs Implicit Iteration - In jQuery:
+- Explicit Iteration vs Implicit Iteration - In jQuery:
 
 ```javascript
 // Explicit iteration with the jQuery .each() method
