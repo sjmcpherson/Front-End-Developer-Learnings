@@ -1,11 +1,13 @@
 <h2>HTML Coding & Performance tips</h2>
 
  - Reduce unecessary html tags to improve performance
- - Use image sprites to reduce round trips to server
- - Serve all referenced files css, js, images on dispersed servers.
+ - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. HTTP Requests add to the download time and browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
+ - Use dispersed servers for referenced files such as css, js & images,  in most circumstances this leads to quicker download speeds.
+ - For common libraries use a popular CDN(such as //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js) to enhance the chance the user has the file cached.
  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively.
  - HTML5 Doctype &lt;!DOCTYPE html&gt;
  - Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)
+ - The Protocol-relative URL <img src="//domain.com/img/logo.png"> Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel
  - Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js
  - &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
@@ -55,12 +57,10 @@
  - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
 
-
 <h2>Javascript/jQuery Coding & Performance Tips</h2>
-- Minify JS (Removes whitespace/linebreaks and shortends variables)
-- Combine JS (Reduces the amount of HTTP Requests)
+- Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
 - &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
-- Defer Parsing of scripts that are not called at statup.h
+- Defer Parsing of scripts that are not called at statup
 - Async Loading via Lab.js or the async attribute for the script tag (IE9 & below don’t support)
 - Avoid excess Style Recalculation which occurs when manipulating the DOM with javascript
 - “$(document).ready(function() {“ vs “$(function(){“  Code is executed after DOM is loaded
@@ -108,6 +108,7 @@ function log() {
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 - Check if selected objects exist if($("#element").length >0){} or if($("#element").is('*')) {}
+- Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
 
 <h2>Helpful Javascript/jQuery Scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
@@ -119,7 +120,7 @@ function log() {
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
-
+- Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser.
 
 <h2>Abbreviations/Terms:</h2>
 
