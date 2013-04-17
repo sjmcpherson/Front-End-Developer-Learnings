@@ -25,7 +25,7 @@ function log() {
 - Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
-
+- The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000';
 
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
@@ -45,7 +45,7 @@ $("li").enumerate().css( "color", "red" );
 - "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; })
 - Check if selected objects exist if($("#element").length >0){} or if($("#element").is('*')) {}
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
-
+- $("form").serialize() will return a string of all elements inside the form: "name=value&amp;name2=value2" etc.
 
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
