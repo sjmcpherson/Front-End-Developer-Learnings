@@ -1,7 +1,7 @@
 <h2>General JavaScript Coding Tips</h2>
 
-- “$(document).ready(function() {“ & “$(function(){“ are the same Code is executed after DOM is loaded 
-- Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) anonymous function which would run imediately
+- Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
+- Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) Anonymous Function which would run imediately
 - “(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be to be contained in a Immediate invoking function but initated by a global Controller.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
@@ -55,7 +55,8 @@ $("li").enumerate().css( "color", "red" );
 - Avoid excess Style Recalculation which occurs when manipulating the DOM with JavaScript
 - Reference IDs rather than Classes (ID selection is native & increases performance)
 - Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
-
+- Where possible use CSS animations browsers optimise them for you and hardware accelerate them
+- Use requestAnimationFrame() instead of setInterval(). requestAnimationFrame() only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval will.
 
 <h2>Helpful JavaScript/jQuery scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
