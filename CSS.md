@@ -6,7 +6,8 @@
  - a[data-info~="image"]{} IE7+ selects all elements that have a data-info of “image” including multiple values such as  data-info="external image"
  - :first-child{} IE7+ targets the first child element
  - :last-child{} IE9+ targets the last child element
- - li:nth-child(3) IE9+
+ - li:nth-child(3) & li:nth-last-child(2) IE9+ 
+ - X:not(selector) IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
  - Work around for lack of :nth-child support in IE7 & IE8 using adjacent selector: ul>li+li+li
  - background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6+ and Chrome 21+ ONLY
  - background-clip, background-origin and background-size IE9+
@@ -16,13 +17,13 @@
  - -flex: The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes -order: for ordering structure elements -justify-content: for aligning structure elements and -webkit-flex-direction: for positioning
  - -calc: Dynamic css calculations div {width: +calc(100% - 4em);}
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
- - Avoid using IDs rather CSS as they decrease portability
+ - Avoid using IDs as they decrease portability
 
 <h2>CSS Performance</h2>
 
- - Limit Browser rendering with CSS Box-shadows, Gradients
+ - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
- - Combine CSS (Reduces the amount of HTTP Requests)
+ - Combine CSS files (Reduces the amount of HTTP Requests)
  - *{} targets every element (Not recommend adds performance issues)
  - Avoid unnecessary tag identifiers for performance (short selectors load faster) i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
  - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
