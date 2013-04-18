@@ -16,7 +16,7 @@
  - -flex: The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes -order: for ordering structure elements -justify-content: for aligning structure elements and -webkit-flex-direction: for positioning
  - -calc: Dynamic css calculations div {width: +calc(100% - 4em);}
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
- - Avoid using IDs in CSS as they decrease portability
+ - Avoid using IDs rather CSS as they decrease portability
 
 <h2>CSS Performance</h2>
 
