@@ -70,5 +70,5 @@ $("li").enumerate().css( "color", "red" );
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
-- Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. 
+- Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 
