@@ -54,7 +54,28 @@ $("li").enumerate().css( "color", "red" );
 - &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
 - Defer Parsing of scripts that are not called at statup
 - Async Loading via Lab.js or the 'async' attribute for the script tag (IE9 & below don’t support)
-- Avoid excess Style Recalculation which occurs when manipulating the DOM with JavaScript
+- Avoid excess DOM manipulation. Don't do:
+```javascript
+var list = document.querySelector('ul');
+ajaxResult.items.forEach(function(item) {
+    var li = document.createElement('li');
+    li.innerHTML = item.text;
+    list.apppendChild(li);
+});
+```
+Instead place the LI into a fragment and add to the DOM in one go.
+```javascript
+var frag = document.createDocumentFragment();
+ajaxResult.items.forEach(function(item) {
+    var li = document.createElement('li');
+    li.innerHTML = item.text;
+    frag.appendChild(li);
+});
+document.querySelector('ul').appendChild(frag);
+```
+
+
+
 - Reference IDs rather than Classes (ID selection is native & increases performance)
 - Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
 - Where possible use CSS animations browsers optimise them for you and hardware accelerate them
