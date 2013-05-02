@@ -32,8 +32,20 @@ function log() {
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
-- Use event delegation instead of individual event listeners e.g. $("table").delegate("td", "click", function(){$(this).toggleClass("chosen");
-});//jQuery 1.4.3+ $("table").on("click", "td", function() {$(this).toggleClass("chosen");});//jQuery 1.7+
+- Use Event Delegation instead of individual event listeners e.g. 
+```javascript
+//jQuery 1.4.3+ 
+$("table").delegate("td", "click", function(){});
+//jQuery 1.7+
+$("table").on("click", "td", function() {});
+//Vanilla JavaScript
+document.querySelector('#parent-list').addEventListener('click', function(e) {
+    // e.target is the clicked element!
+    if(e.target && e.target.tagName == 'LI') {
+        // List item found!  Do something now!
+    }
+});
+```
 - From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
 - jQuery methods should chain:
 
@@ -58,18 +70,18 @@ $("li").enumerate().css( "color", "red" );
 ```javascript
 var list = document.querySelector('ul');
 ajaxResult.items.forEach(function(item) {
-    var li = document.createElement('li');
-    li.innerHTML = item.text;
-    list.apppendChild(li);
+ var li = document.createElement('li');
+ li.innerHTML = item.text;
+ list.apppendChild(li);
 });
 ```
 Instead place the LI into a fragment and add to the DOM in one go.
 ```javascript
 var frag = document.createDocumentFragment();
 ajaxResult.items.forEach(function(item) {
-    var li = document.createElement('li');
-    li.innerHTML = item.text;
-    frag.appendChild(li);
+ var li = document.createElement('li');
+ li.innerHTML = item.text;
+ frag.appendChild(li);
 });
 document.querySelector('ul').appendChild(frag);
 ```
