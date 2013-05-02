@@ -24,7 +24,21 @@
  - -calc: Dynamic css calculations div {width: +calc(100% - 4em);}
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - Avoid using IDs as they decrease portability
-
+ - Backgrounds can be animated with @Keyframes and CSS Animations
+```CSS
+@keyframes 
+animatedBackground {
+  to { background-position-x:100%; 
+}
+#animate-area	{ 
+	width: 560px; 
+	height: 400px; 
+	background-image: url(bg-clouds.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 40s linear infinite;
+}
+```
 <h2>CSS Performance</h2>
 
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
