@@ -1,6 +1,6 @@
 <h2>CSS Coding Tips</h2>
 
-<h3>Uncommon Selectors</h3>
+<h3>Uncommon CSS Selectors</h3>
  - X:first-letter/:first-line IE6+ apply to block level elements compatible with all browser versions
  - ul > li{} IE7+ targets direct children
  - ul ~ p{} IE7+ targets p tags after ul tag in DOM
@@ -14,14 +14,28 @@
  - X:not(selector) IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
  - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element.
 
+<h3>Uncommon CSS Properties</h3>
+ - 'counter-increment' (IE8+) Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
+
+```CSS
+h1 {
+        counter-reset: section;
+}
+h2:before {
+        counter-increment: section;
+        content: counter(section) ". ";
+}
+```
+
+ - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
+ - 'background-clip', 'background-origin' and 'background-size' IE9+
+ - '-flex' The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes '-order': for ordering structure elements '-justify-content': for aligning structure elements and '-webkit-flex-direction': for positioning 
+ - '-column-count' Multi-column Wrapping Text layouts with "div{-column-count: 3;}" IE10+
+ - '-calc' Dynamic css calculations "div{width: +calc(100% - 4em);}"
+
 <h3>General Coding Tips</h3>
  - Work around for lack of :nth-child support in IE7 & IE8 using adjacent selector: ul>li+li+li
- - background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x); Safari 6+ and Chrome 21+ ONLY
- - background-clip, background-origin and background-size IE9+
  - HasLayout - The single most important thing you need to know about fixing bugs in <IE8, Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }
- - Multi-column Wrapping Text layouts with -column-count: 3; IE10+
- - -flex: The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes -order: for ordering structure elements -justify-content: for aligning structure elements and -webkit-flex-direction: for positioning
- - -calc: Dynamic css calculations div {width: +calc(100% - 4em);}
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - Avoid using IDs as they decrease portability
  - Backgrounds can be animated with @Keyframes and CSS Animations:
