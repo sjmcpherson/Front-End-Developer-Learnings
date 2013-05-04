@@ -40,7 +40,7 @@ document.querySelector('#parent-list').addEventListener('click', function(e) {
         if(e.target && e.target.tagName == 'LI') {}
 });
 ```
-
+- requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
 
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
@@ -88,12 +88,11 @@ ajaxResult.items.forEach(function(item) {
 document.querySelector('ul').appendChild(frag);
 ```
 
-
-
 - Reference IDs rather than Classes (ID selection is native & increases performance)
 - Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
 - Where possible use CSS animations browsers optimise them for you and hardware accelerate them
-- Use requestAnimationFrame() instead of setInterval(). requestAnimationFrame() only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval will.
+- Becareful when using window.onscroll (jQuery $(window).scroll()) event, use setTimeout/setInterval to limit excessive triggering of event.
+
 
 <h2>Helpful JavaScript/jQuery scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
