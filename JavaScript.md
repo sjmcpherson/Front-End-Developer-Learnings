@@ -41,7 +41,14 @@ document.querySelector('#parent-list').addEventListener('click', function(e) {
 });
 ```
 - requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
-
+- addEventListener(event,function,useCapture) IE9+ deprecietes attachEvent(event,function);
+```javascript
+if(el.addEventListener){
+    el.addEventListener("click", functionA, false)
+}else{
+    el.attachEvent("onclick", functionA)
+}
+```
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
