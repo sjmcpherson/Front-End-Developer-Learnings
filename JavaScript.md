@@ -104,7 +104,7 @@ document.querySelector('ul').appendChild(frag);
 - Reference IDs rather than Classes (ID selection is native & increases performance)
 - Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
 - Where possible use CSS animations browsers optimise them for you and hardware accelerate them
-- Becareful when using scroll & resize events, use setTimeout/setInterval to limit excessive triggering of event.
+- Debounce when using scroll & resize events, use setTimeout/setInterval to limit excessive triggering of event, this is called Debouncing.
 - Avoid using an anonymous function body to process your event code as in the first case below, as this code would be duplicated multiple times due to the for loop, use the 2nd case.
 
 ```javascript
