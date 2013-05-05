@@ -10,7 +10,7 @@
 - Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
 - navigator.getUserMedia() - Record Audio/Video (limited browser capatibility
-- JavaScript Frameworks manipulating DOM on page load have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete).
+- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back
 - Console Debugging will break IE when not using the Developer Tools.
 
@@ -41,14 +41,20 @@ document.querySelector('#parent-list').addEventListener('click', function(e) {
 });
 ```
 - requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
-- addEventListener(event,function,useCapture) IE9+ deprecietes attachEvent(event,function);
+- addEventListener(event,function,useCapture) IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}' would deprecietes attachEvent(event,function);
+- attachEvent(event,function) depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
+- Use something like the below as a cross browser AddEventListener override
+
 ```javascript
-if(el.addEventListener){
-    el.addEventListener("click", functionA, false)
-}else{
-    el.attachEvent("onclick", functionA)
-}
+function AddEvent(html_element, event_name, event_function) 
+{       
+   if(html_element.attachEvent) //Internet Explorer
+      html_element.attachEvent("on" + event_name, function() {event_function.call(html_element);}); 
+   else if(html_element.addEventListener) //Firefox & company
+      html_element.addEventListener(event_name, event_function, false); //don't need the 'call' trick because in FF everything already works in the right way          
+} 
 ```
+
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
@@ -98,8 +104,18 @@ document.querySelector('ul').appendChild(frag);
 - Reference IDs rather than Classes (ID selection is native & increases performance)
 - Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
 - Where possible use CSS animations browsers optimise them for you and hardware accelerate them
-- Becareful when using window.onscroll (jQuery $(window).scroll()) event, use setTimeout/setInterval to limit excessive triggering of event.
+- Becareful when using scroll & resize events, use setTimeout/setInterval to limit excessive triggering of event.
+- Avoid using an anonymous function body to process your event code as in the first case below, as this code would be duplicated multiple times due to the for loop, use the 2nd case.
 
+```javascript
+for(i=0 ; i<arrElements.length ; i++){
+  arrElements[i].addEventListener("click", function(e){var field = i;}, false);
+}
+ 
+for(i=0 ; i<arrElements.length ; i++){
+  arrElements[i].addEventListener("click", function(e){clickEvent(i)}, false);
+}
+```
 
 <h2>Helpful JavaScript/jQuery scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
