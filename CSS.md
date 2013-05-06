@@ -18,13 +18,8 @@
  - 'counter-increment' (IE8+) Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
 
 ```CSS
-h1 {
-        counter-reset: section;
-}
-h2:before {
-        counter-increment: section;
-        content: counter(section) ". ";
-}
+h1 {counter-reset: section;}
+h2:before {counter-increment: section;content: counter(section) ". ";}
 ```
 
  - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
