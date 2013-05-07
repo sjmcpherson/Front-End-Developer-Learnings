@@ -12,9 +12,9 @@
 ```HTML
 <input list="browsers">
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Safari">
+     <option value="Chrome">
+     <option value="Firefox">
+     <option value="Safari">
 </datalist>
 ```
 
