@@ -43,3 +43,4 @@ Would Produce:
  - Use dispersed servers for referenced files such as css, js & images,  in most circumstances this leads to quicker download speeds.
  - For common libraries use a popular CDN(such as //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js) to enhance the chance the user has the file cached.
  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively.
+ - To give more control and to speed up loading time of Web Fonts use Web Font Loader, Fonts provided by Typekit, FontDeck and Google can be loaded through the script, for best performance embed the script directly after head tag and to remove FOUT add CSS for the class ".wf-loading" on the HTML element to hide text e.g. *.wf-loading{opacity(0)} the script then removes this class once fonts are loaded. https://developers.google.com/fonts/docs/webfont_loader
