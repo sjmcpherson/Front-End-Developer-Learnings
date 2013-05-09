@@ -36,6 +36,9 @@ Would Produce:
     </div>
 ```
 
+- The recommened viewport setting for responsive design '<meta name="viewport" content="width=device-width">' this allows the user to zoom.
+- To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
+- Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
