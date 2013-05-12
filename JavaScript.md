@@ -72,7 +72,9 @@ $("li").enumerate().css( "color", "red" );
 - Check if selected objects exist if($("#element").length >0){} or if($("#element").is('*')) {}
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
 - $("form").serialize() will return a string of all elements inside the form: "name=value&amp;name2=value2" etc.
-
+- $("span", this) is the same as $(this).find('span')
+- Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
+- To determine if a selector exists use if($(element).length){}
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
 - &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
