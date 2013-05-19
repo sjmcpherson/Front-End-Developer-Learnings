@@ -55,6 +55,8 @@ function AddEvent(html_element, event_name, event_function)
 } 
 ```
 
+ - document.querySelector() & document.querySelectorAll() IE8+ Accepts any CSS selector, .querySelector() returns null if no matches are found, otherwise, it returns the first matching element. .querySelectorAll() returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
+
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
@@ -75,6 +77,7 @@ $("li").enumerate().css( "color", "red" );
 - $("span", this) is the same as $(this).find('span')
 - Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
 - To determine if a selector exists use if($(element).length){}
+
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
 - &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
@@ -119,6 +122,8 @@ for(i=0 ; i<arrElements.length ; i++){
 }
 ```
 - Stop Using Document Ready when loading scripts from bottom of the body tag
+- .offset() used to get/set the x/y position of an element relative to the document. i.e. $(selector).offset().top;
+- .position() same as above but relative to the parent.
 
 <h2>Helpful JavaScript/jQuery scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
