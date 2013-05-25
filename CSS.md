@@ -13,6 +13,8 @@
  - li:nth-child(3) & li:nth-last-child(2) IE9+ 
  - X:not(selector) IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
  - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element.
+ - :empty IE9+ targets elements with no children
+ - :only-child IE9+ targets elements that are the only child of their parent
 
 <h3>Uncommon CSS Properties</h3>
  - 'counter-increment' (IE8+) Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
@@ -47,6 +49,8 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
         animation: animatedBackground 40s linear infinite;
 }
 ```
+- Font size units - px,pt,em,rem,%
+
 
 <h2>CSS Performance</h2>
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
