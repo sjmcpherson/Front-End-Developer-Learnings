@@ -124,6 +124,8 @@ for(i=0 ; i<arrElements.length ; i++){
 - Stop Using Document Ready when loading scripts from bottom of the body tag
 - .offset() used to get/set the x/y position of an element relative to the document. i.e. $(selector).offset().top;
 - .position() same as above but relative to the parent.
+- Cache elements when using selectors var elem = getElementByTagName('a');
+
 
 <h2>Helpful JavaScript/jQuery scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
