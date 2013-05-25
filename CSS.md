@@ -27,6 +27,7 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - '-flex' The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes '-order': for ordering structure elements '-justify-content': for aligning structure elements and '-webkit-flex-direction': for positioning 
  - '-column-count' Multi-column Wrapping Text layouts with "div{-column-count: 3;}" IE10+
  - '-calc' Dynamic css calculations "div{width: +calc(100% - 4em);}"
+ - 'box-sizing:border-box' (IE8+) forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
 
 <h3>General Coding Tips</h3>
  - Work around for lack of :nth-child support in IE7 & IE8 using adjacent selector: ul>li+li+li
