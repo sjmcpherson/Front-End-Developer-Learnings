@@ -77,6 +77,18 @@ $("li").enumerate().css( "color", "red" );
 - $("span", this) is the same as $(this).find('span')
 - Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
 - To determine if a selector exists use if($(element).length){}
+- .hover() is shorthand for mouseenter mouseleave events:
+
+```javascript
+$("td").hover(
+  function () {
+    $(this).addClass("hover");
+  },
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+```
 
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
@@ -138,4 +150,4 @@ for(i=0 ; i<arrElements.length ; i++){
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
 - Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
-
+- hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
