@@ -36,6 +36,7 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - HasLayout - The single most important thing you need to know about fixing bugs in <IE8, Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - Avoid using IDs as they decrease portability
+ - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
  - Backgrounds can be animated with @Keyframes and CSS Animations:
 
 ```CSS
