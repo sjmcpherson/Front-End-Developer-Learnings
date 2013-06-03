@@ -89,7 +89,7 @@ $("td").hover(
   }
 );
 ```
-
+- $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
 - &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
