@@ -10,9 +10,9 @@
  - X[href^="http"] IE7+
  - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element
  - :last-child{} IE9+ targets the last child element
- - li:nth-child(3) & li:nth-last-child(2) IE9+ 
+ - X:nth-child(3) & X:nth-last-child(2) IE9+ 
+ - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector
  - X:not(selector) IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
- - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element.
  - :empty IE9+ targets elements with no children
  - :only-child IE9+ targets elements that are the only child of their parent
 
