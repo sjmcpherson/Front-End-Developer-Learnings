@@ -1,7 +1,7 @@
 <h2>HTML Coding Tips</h2>
 
 
- - HTML5 Doctype &lt;!DOCTYPE html&gt;
+ - HTML5 Doctype &lt;!doctype html&gt;
  - Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel
@@ -39,6 +39,7 @@ Would Produce:
 - The recommened viewport setting for responsive design '<meta name="viewport" content="width=device-width">' this allows the user to zoom.
 - To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
 - Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
+- The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/ Similarly the CSS attribute -user-input can be use to replicate but with limited support.
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
