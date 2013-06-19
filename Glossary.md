@@ -6,6 +6,7 @@
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
 - CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
 - Data Binding - Syncronises data between UI components which are bound to the data source
+- Declarative Programming seeks to make you coding more descriptive by using techniques to show what is done rather than how is done. This is opposed to Imperative Programming.
 - Dependency Injection(DI) is a software design pattern that deals with how code gets hold of its dependencies.
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - Explicit Iteration vs Implicit Iteration - In jQuery:
