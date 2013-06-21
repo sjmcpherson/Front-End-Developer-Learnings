@@ -58,6 +58,34 @@ function AddEvent(html_element, event_name, event_function)
  - document.querySelector() & document.querySelectorAll() IE8+ Accepts any CSS selector, .querySelector() returns null if no matches are found, otherwise, it returns the first matching element. .querySelectorAll() returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
  - Cross-origin resource sharing (CORS) IE10+(Partial Support for IE8/9) is a mechanism that allows JavaScript on a web page to make XMLHttpRequests to another domain which would otherwise be forbidden due to the Same Origin Policy.
 
+<h3>JavaScript Shorthand</h3>
+- If statments can be shortened in a number of ways:
+
+Variables
+```javascript
+//Longhand
+var x;
+var y;
+var z = 3;
+//Shorthand
+var x, y, z=3;
+```
+
+If Statements
+```javascript
+//Longhand
+var big;
+if (x > 10) {
+    big = true;
+}
+else {
+    big = false;
+}
+//Shorthand
+var big = (x > 10) ? true : false;
+//Also Will Work
+var big = (x > 10);
+```
 
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
@@ -72,6 +100,7 @@ $.fn.enumerate = function() {
 //Because of using "return this", it's chainable!
 $("li").enumerate().css( "color", "red" );
 ```
+
 - "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; })
 - Check if selected objects exist if($("#element").length >0){} or if($("#element").is('*')) {}
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
