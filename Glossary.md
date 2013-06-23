@@ -29,6 +29,7 @@ $( "li" ).addClass( "bar" );
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
 - REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful.
 - Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
+- SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
 - SDK – Software Development Kit is a toolkit to allow software development on a specific framework or platform.
 - Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
 - UI - User Interface are the components by which users interact with.
