@@ -174,7 +174,7 @@ for(i=0 ; i<arrElements.length ; i++){
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
-- Requirejs helps load script in the right order, combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
+- Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
 - Equalize.js jQuery plugin for equalizing the height or width of sibling elements
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
