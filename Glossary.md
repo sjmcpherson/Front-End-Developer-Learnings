@@ -11,7 +11,7 @@
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - DRY(Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 - Explicit Iteration vs Implicit Iteration - In jQuery:
-
+- Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
 ```javascript
 // Explicit iteration with the jQuery .each() method
 $( "li" ).each(function() {
