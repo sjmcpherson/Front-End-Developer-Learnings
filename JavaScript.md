@@ -15,6 +15,12 @@
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back
 - Console Debugging will break IE when not using the Developer Tools.
+- isNaN() checks if value is NaN which is achieved when Number() is unsuccessful in converting a value to a number
+- Use % to determine if a number is divisible by another, it gives the remander value I.e:
+```javascript
+if(randomNum % 7 == 0)
+// Do Something
+```
 
 ```javascript
 // This allows you to log things, if console
@@ -88,7 +94,6 @@ var big = (x > 10) ? true : false;
 //Also Will Work
 var big = (x > 10);
 ```
-
 
 <h2>jQuery Specific Coding Tips</h2>
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
