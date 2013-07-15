@@ -65,6 +65,23 @@ function AddEvent(html_element, event_name, event_function)
 
  - document.querySelector() & document.querySelectorAll() IE8+ Accepts any CSS selector, .querySelector() returns null if no matches are found, otherwise, it returns the first matching element. .querySelectorAll() returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
  - Cross-origin resource sharing (CORS) IE10+(Partial Support for IE8/9) is a mechanism that allows JavaScript on a web page to make XMLHttpRequests to another domain which would otherwise be forbidden due to the Same Origin Policy.
+- Automatic Type Conversion in JS means that varibles if different types can be compared I.e 
+
+```javascript
+false == 0 //true
+"5" == 5 //true
+!"" //true
+null == undefined //true
+```
+
+- For cases where you do not want automatic type conversion to occur use '===' or '!==' I.e.
+
+```javascript
+"5" === 5 //false
+false !== 0 //true
+```
+
+
 
 <h3>JavaScript Shorthand</h3>
 - If statments can be shortened in a number of ways:
