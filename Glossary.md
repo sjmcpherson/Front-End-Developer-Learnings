@@ -20,6 +20,7 @@ $( "li" ).each(function() {
 // jQuery Implicit Iteration
 $( "li" ).addClass( "bar" );
 ```
+- Functional Programming
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - MVC stands for Model View Controller
