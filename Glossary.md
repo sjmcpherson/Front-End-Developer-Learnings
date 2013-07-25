@@ -21,12 +21,13 @@ $( "li" ).each(function() {
 $( "li" ).addClass( "bar" );
 ```
 - Functional Programming
+- Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - MVC stands for Model View Controller
 - MVVM stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
-- Progressive Enhancement – Using a feature that may not be supported by all browsers but does not break the page if it isn’t supported.
+- Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
 - REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful.
 - Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
