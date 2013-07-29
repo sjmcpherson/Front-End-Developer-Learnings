@@ -81,10 +81,10 @@ null == undefined //true
 false !== 0 //true
 ```
 
-
+- Objects are set using the 'new' namespace
+- Objects with the same properties are not equal unless they are assigned to each other see http://jsfiddle.net/sjmcpherso/YgEjv/
 
 <h3>JavaScript Shorthand</h3>
-- If statments can be shortened in a number of ways:
 
 Variables
 ```javascript
