@@ -83,6 +83,16 @@ false !== 0 //true
 
 - Objects are set using the 'new' namespace
 - Objects with the same properties are not equal unless they are assigned to each other see http://jsfiddle.net/sjmcpherso/YgEjv/
+- The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
+
+```javascript
+testFunc(1,"go");
+function testFunc(){
+//argument.length = 2;
+//argument[1] = "go";
+}
+```
+
 
 <h3>JavaScript Shorthand</h3>
 
