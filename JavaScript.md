@@ -9,6 +9,7 @@
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
 - Use console.time to track down bottlenecks & console.log to trace code</li>
 - When JavaScript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
+- element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
 - Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
 - navigator.getUserMedia() - Record Audio/Video (limited browser capatibility
