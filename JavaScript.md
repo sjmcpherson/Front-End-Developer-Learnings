@@ -137,7 +137,7 @@ $.fn.enumerate = function() {
 $("li").enumerate().css( "color", "red" );
 ```
 
-- "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; })
+- "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; }) Useful as JS .filter(callback[, thisObject]) method is only IE9+
 - Check if selected objects exist if($("#element").length >0){} or if($("#element").is('*')) {}
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
 - $("form").serialize() will return a string of all elements inside the form: "name=value&amp;name2=value2" etc.
