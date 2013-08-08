@@ -30,7 +30,6 @@ function log() {
 }
 ```
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
-- Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000';
@@ -142,6 +141,7 @@ $("li").enumerate().css( "color", "red" );
 - The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; I.e. $("#id")[0] is the same as getElementById("id");
 - $("form").serialize() will return a string of all elements inside the form: "name=value&amp;name2=value2" etc.
 - $("span", this) is the same as $(this).find('span')
+- Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
 - Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
 - To determine if a selector exists use if($(element).length){}
 - .hover() is shorthand for mouseenter mouseleave events:
