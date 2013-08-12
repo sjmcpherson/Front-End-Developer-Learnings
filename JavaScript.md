@@ -13,7 +13,17 @@
 - navigator.getUserMedia() - Record Audio/Video (limited browser capatibility
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back
-- Console Debugging - Use console.time to track down bottlenecks & console.log to trace code but will break <IE10 when not using the Developer Tools.
+- Console Debugging - Use console.time to track down bottlenecks & console.log to trace code but will break <IE10 when not using the Developer Tools. Use the below to allow for this:
+```javascript
+// Provide a mock object, so that calls to the console in <IE10 wouldn't result in an error
+if(!window.console) {
+  window.console = new function() {
+    this.log = function(str) {};
+    this.dir = function(str) {};
+  };
+}
+```
+
 - isNaN() checks if value is NaN which is achieved when Number() is unsuccessful in converting a value to a number
 - Use % to determine if a number is divisible by another, it gives the remander value I.e:
 ```javascript
@@ -21,13 +31,6 @@ if(randomNum % 7 == 0)
 // Do Something
 ```
 
-```javascript
-// This allows you to log things, if console
-// is available, but takes no action, if not.
-function log() {
-  console && console.log(arguments);
-}
-```
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
