@@ -121,6 +121,21 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
+<h3>Array Object Methods</h2>
+- array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
+- array.indexOf(item,start) - IE8+ Search the array for an element and returns its position
+- array.join(separator) -	Joins all elements of an array into a string
+- array.lastIndexOf(item,start) -	Search the array for an element, starting at the end, and returns its position
+- array.pop() -	Removes the last element of an array, and returns that element
+- array.push(item1, item2, ..., itemX) - Adds new elements to the end of an array, and returns the new length
+- array.reverse() -	Reverses the order of the elements in an array
+- array.shift() -	Removes the first element of an array, and returns that element
+- array.slice(start, end) -	Selects a part of an array, and returns the new array
+- array.sort(sortfunction) -	Sorts the elements of an array
+- array.splice(index,howmany,item1,.....,itemX) -	Adds/Removes elements from an array
+- array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
+- array.unshift(item1,item2, ..., itemX) - IE8+	Adds new elements to the beginning of an array, and returns the new length
+
 <h2>jQuery Specific Coding Tips</h2>
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
