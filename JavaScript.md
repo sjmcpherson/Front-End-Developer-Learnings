@@ -121,7 +121,7 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-<h3>Array Object Methods</h2>
+<h3>Array Object Methods</h3>
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
 - array.indexOf(item,start) - IE8+ Search the array for an element and returns its position
 - array.join(separator) -	Joins all elements of an array into a string
