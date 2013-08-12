@@ -6,7 +6,6 @@
 - “(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
-- Use console.time to track down bottlenecks & console.log to trace code</li>
 - When JavaScript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
 - Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
@@ -14,7 +13,7 @@
 - navigator.getUserMedia() - Record Audio/Video (limited browser capatibility
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - Same Origin Policy is a security concept that stops browsers making cross domain XMLHttpRequests, For JSON you can avoid by using the datatype "JSONP" but also wrap the response in the requested serverside call back
-- Console Debugging will break IE when not using the Developer Tools.
+- Console Debugging - Use console.time to track down bottlenecks & console.log to trace code but will break <IE10 when not using the Developer Tools.
 - isNaN() checks if value is NaN which is achieved when Number() is unsuccessful in converting a value to a number
 - Use % to determine if a number is divisible by another, it gives the remander value I.e:
 ```javascript
