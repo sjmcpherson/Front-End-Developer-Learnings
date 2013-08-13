@@ -140,6 +140,7 @@ var big = (x > 10);
 
 <h2>jQuery Specific Coding Tips</h2>
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
+- Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
 - From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
@@ -217,7 +218,6 @@ for(i=0 ; i<arrElements.length ; i++){
   arrElements[i].addEventListener("click", function(e){clickEvent(i)}, false);
 }
 ```
-- Stop Using Document Ready when loading scripts from bottom of the body tag
 - .offset() used to get/set the x/y position of an element relative to the document. i.e. $(selector).offset().top;
 - .position() same as above but relative to the parent.
 - Cache elements when using selectors var elem = getElementByTagName('a');
