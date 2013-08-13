@@ -134,7 +134,7 @@ var big = (x > 10);
 - array.shift() -	Removes the first element of an array, and returns that element
 - array.slice(start, end) -	Selects a part of an array, and returns the new array
 - array.sort(sortfunction) - Sorts the elements of an array
-- array.splice(index,howmany,item1,.....,itemX) -	Adds/Removes elements from an array at a specific position i.e. array.splice(index,1) will remove 1 element at index.
+- array.splice(index,howmany,item1,.....,itemX) -	Adds/Removes elements from an array at a specific position i.e. array.splice(index,1) will remove 1 element at index. Distinct from "delete array[index]" which removes the element but doesnt adjust;
 - array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 
