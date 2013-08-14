@@ -1,6 +1,5 @@
 <h2>HTML Coding Tips</h2>
 
-
  - HTML5 Doctype &lt;!doctype html&gt;
  - Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
@@ -22,7 +21,8 @@
  - &lt;video autoplay controls&gt;&lt;/video&gt;
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
  - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited, but can be added with a JavaScript shim.
- - Haml (HTML Abstraction Markup Language) is a lightweight markup language. Example:  
+ - Haml (HTML Abstraction Markup Language) is a lightweight markup language. Example:
+
 ```HTML
   %body
     #header
@@ -48,7 +48,8 @@ Would Produce:
  - For common libraries use a popular CDN(such as //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js) to enhance the chance the user has the file cached.
  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively.
  - To give more control and to speed up loading time of Web Fonts use Web Font Loader, Fonts provided by Typekit, FontDeck and Google can be loaded through the script, for best performance embed the script directly after head tag and to remove FOUT add CSS for the class ".wf-loading" on the HTML element to hide text e.g. *.wf-loading{opacity(0)} the script then removes this class once fonts are loaded. https://developers.google.com/fonts/docs/webfont_loader
-- Use Link Prefetching (limited browser support) to preload whole pages or just images, css etc.
+ - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
+ - Use Link Prefetching (limited browser support) to preload whole pages or just images, css etc.
 ```HTML
 <!-- full page -->
 <link rel="prefetch" href="http://davidwalsh.name/css-enhancements-user-experience" />
