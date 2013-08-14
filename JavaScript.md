@@ -1,10 +1,8 @@
 <h2>General JavaScript Coding Tips</h2>
 
-
 <h4>Javascript Values</h4>
 - Their are 6 types of values used in JS: number, string, Boolean, object, function and undefined.
 - The typeOf operator can be used to identify a values type.
-
 
 <h4>Numbers</h4>
 - isNaN() checks if value is NaN which is achieved when Number() is unsuccessful in converting a value to a number
@@ -14,7 +12,6 @@
 if(randomNum % 7 == 0)
 // Do Something
 ```
-
 
 <h4>Objects</h4>
 - Objects are set using the 'new' namespace
@@ -37,7 +34,6 @@ if(randomNum % 7 == 0)
 - array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 
-
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
 
@@ -50,10 +46,7 @@ function testFunc(){
 ```
 
 - Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) Anonymous Function which would run imediately
-- “(function ($){}(jQuery)” As above but passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
-
-
 
 <h4>Type Coercion</h4>
 - When JavaScript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
@@ -73,16 +66,14 @@ null == undefined //true
 false !== 0 //true
 ```
 
-
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
 - document.querySelector() & document.querySelectorAll() IE8+ Accepts any CSS selector, .querySelector() returns null if no matches are found, otherwise, it returns the first matching element. .querySelectorAll() returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
 
-
 <h4>JSON</h4>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 
-<h4>JavaScript Events<h4>
+<h4>JavaScript Events</h4>
 - Use Event Delegation instead of individual event listeners e.g. 
 
 ```javascript
@@ -112,7 +103,6 @@ function AddEvent(html_element, event_name, event_function)
 ```
 
 - requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
-
 
 <h4>JavaScript Shorthand</h4>
 
@@ -150,6 +140,7 @@ var big = (x > 10);
 
 <h2>jQuery Specific Coding Tips</h2>
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
+- “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .on() use .off()
