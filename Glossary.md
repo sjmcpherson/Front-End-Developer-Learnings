@@ -13,14 +13,16 @@
 - DRY(Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 - Explicit Iteration vs Implicit Iteration - In jQuery:
 - Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
+
 ```javascript
 // Explicit iteration with the jQuery .each() method
 $( "li" ).each(function() {
-  $(this).addClass( "foo" );
+    $(this).addClass( "foo" );
 });
 // jQuery Implicit Iteration
-$( "li" ).addClass( "bar" );
+    $( "li" ).addClass( "bar" );
 ```
+
 - Functional Programming
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
