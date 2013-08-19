@@ -34,6 +34,7 @@ if(randomNum % 7 == 0)
 - array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
+- array.reduce(
 
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
