@@ -53,7 +53,7 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 ```
 
 
-- Font size units - px,pt,em,rem,%
+- Font size units - px,pt,em,rem,%.
 
 
 <h2>CSS Performance</h2>
