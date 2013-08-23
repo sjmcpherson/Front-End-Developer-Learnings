@@ -15,11 +15,13 @@ if(randomNum % 7 == 0)
 
 <h4>Objects</h4>
 - Objects are set using the 'new' namespace
-- Objects with the same properties are not equal unless they are assigned to each other see http://jsfiddle.net/sjmcpherso/YgEjv/
+- For code consistancy use capitals for the name of a constructor of an Object but Instance names should be lower case. i.e. var car = new Car();
+- In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 
 <h3>Array Object Methods</h3>
+- Arrays are objects with extra properties i.e. length, sort and the methods below
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
 - array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
 - array.join(separator) -	Joins all elements of an array into a string
@@ -34,7 +36,7 @@ if(randomNum % 7 == 0)
 - array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
-- array.reduce(
+- array.reduce()
 
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
@@ -133,6 +135,10 @@ var big = (x > 10) ? true : false;
 //Also Will Work
 var big = (x > 10);
 ```
+
+<h4>Advanced JS Techniques</h4><
+- JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+- Closures: a closure is formed when you nest functions, inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 
 <h4>Other JavaScript Methods/Frameworks</h4>
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
