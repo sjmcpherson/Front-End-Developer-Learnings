@@ -136,7 +136,7 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-<h4>Advanced JS Techniques</h4><
+<h4>Advanced JS Techniques</h4>
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 - Closures: a closure is formed when you nest functions, inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 
