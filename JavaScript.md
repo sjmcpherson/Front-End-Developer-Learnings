@@ -53,6 +53,7 @@ function testFunc(){
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
 
 <h4>Type Coercion</h4>
+- Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different types rather than throwing an error like a Strongly Typed language would.
 - When JavaScript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
 - Automatic Type Conversion in JS means that varibles if different types can be compared I.e 
 
