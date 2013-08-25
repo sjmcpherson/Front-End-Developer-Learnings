@@ -5,7 +5,10 @@
 - The typeOf operator can be used to identify a values type.
 
 <h4>Numbers</h4>
-- isNaN() checks if value is NaN which is achieved when Number() is unsuccessful in converting a value to a number
+- Only 1 number type (i.e no integer) which is represent as 64bit floating point also know as Double.
+- Has problems mapping to common arithmetic I.e 0.1 + 0.2 = 0.300000000004
+- isNaN() checks if value is NaN(Not a Number) which is achieved when when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
+- parseInt can also be used to parse a string into a number but in the form of an integer though be aware of the follow parseInt("08") = 0 so use a Radix I.e parseInt("08",10) = 8
 - Use % to determine if a number is divisible by another, it gives the remander value I.e:
 
 ```javascript
@@ -13,12 +16,39 @@ if(randomNum % 7 == 0)
 // Do Something
 ```
 
+<h4>Strings</h4>
+- A string can contain an unlimited amount of characters and has methods attached to it.
+- string.charAt
+- string.concat
+- string.slice
+- string.split
+- string.indexOf
+- string.lastIndexOf
+- string.substring
+- string.replace
+- string.toLowerCase
+- string.toUpperCase
+
+
+
+
 <h4>Objects</h4>
 - Objects are set using the 'new' namespace
 - For code consistancy use capitals for the name of a constructor of an Object but Instance names should be lower case. i.e. var car = new Car();
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
-- When you change the value of a prototype property it also changes across all existing objects derived from it.
+- When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
+- Math object used for more complex math functions
+- Math.round
+- Math.floor - Best used to take the integer part of a number.
+- Math.ceil
+- Math.random
+- Math.abs
+- Math.sqrt
+- Math.log
+- Math.pow
+- Math.sin
+- Math.max
 
 <h3>Array Object Methods</h3>
 - Arrays are objects with extra properties i.e. length, sort and the methods below
@@ -136,6 +166,9 @@ var big = (x > 10) ? true : false;
 //Also Will Work
 var big = (x > 10);
 ```
+
+<h4>Prototypal Inheritance</h4>
+- Distinct from Class Inheritance, where the an object inherits any properties from an object assigned to it.
 
 <h4>Advanced JS Techniques</h4>
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
