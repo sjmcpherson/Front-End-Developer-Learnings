@@ -3,7 +3,10 @@
 <h4>Javascript Values</h4>
 - Their are 6 types of values used in JS: number, string, Boolean, object, function and undefined.
 - The typeOf operator can be used to identify a values type.
-
+<h4>Boolean</h4>
+- Only 2 Boolean values true & false although a number of values can equal true or false
+- Falsey values - false,null,"",0,undefined,NaN
+- All other values including objects are truthy
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represent as 64bit floating point also know as Double.
 - Has problems mapping to common arithmetic I.e 0.1 + 0.2 = 0.300000000004
@@ -67,6 +70,9 @@ if(randomNum % 7 == 0)
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
 - array.reduce()
+
+<h4>Undefined</h4>
+- The value of a variable which has been initialized but not assigned a type
 
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
