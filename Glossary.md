@@ -27,6 +27,7 @@ $( "li" ).each(function() {
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
+- Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript
 - MVC stands for Model View Controller
 - MVVM stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
@@ -37,6 +38,7 @@ $( "li" ).each(function() {
 - Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than "<i>Yes</i>" use "<em>Yes</em>"(emphasis) or "<span class='emphasis'>Yes</span>"
 - SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
 - SDK – Software Development Kit is a toolkit to allow software development on a specific framework or platform.
+- Strongly Typed - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
 - Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
 - UI - User Interface are the components by which users interact with.
 - UX - User Experience is a broader term which is distinct from UI as it encompasses the way a person feels about using a product, system or service.
