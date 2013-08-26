@@ -3,6 +3,7 @@
 - Abstraction - A procees I which a programmer will attempt to make the code more readable by making functions shorter and by make code reuse able. Object-Oriented Programming is an approach to Abstraction.
 - API – Application Programming Interface is a specification for combining software components.
 - AJAX an acronym for Asynchronous JavaScript and XML. Despite the name, the use of XML is not required as JSON is often used instead. With Ajax, web applications can send data to, and retrieve data from, a server asynchronously (in the background) without interfering with the display and behavior of the existing page.
+- Associative Array - abstract data type composed of a collection of  pairs, such that each 
 - Asynchronous vs Synchronous, Asynchronouse permits other processing to continue while a transmission is being processed.
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
 - CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
@@ -25,6 +26,7 @@ $( "li" ).each(function() {
 
 - Functional Programming
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
+- Hash Table - 
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript
