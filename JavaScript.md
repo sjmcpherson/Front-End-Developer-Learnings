@@ -1,8 +1,8 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h4>Javascript Values</h4>
-- Their are 6 types of values used in JS: number, string, Boolean, object, function and undefined.
-- The typeOf operator can be used to identify a values type.
+- Their are 6 identifiable values types used in JavaScript: number, string, boolean, object, function and undefined.
+- The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; 
  
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of a other type are also either true or false.
@@ -11,7 +11,7 @@
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represent as 64bit floating point also know as Double.
-- Has problems mapping to common arithmetic I.e 0.1 + 0.2 = 0.300000000004
+- Has problems mapping to common arithmetic I.e var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
 - parseInt can also be used to parse a string into a number but in the form of an integer though be aware of the follow parseInt("08") = 0 so use a Radix I.e parseInt("08",10) = 8
 - Use % to determine if a number is divisible by another, it gives the remander value I.e:
@@ -54,7 +54,7 @@ if(randomNum % 7 == 0)
 - Math.min(x,y,z,...,n) - As above but returns the lowest value
 - The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
-<h3>Array Object Methods</h3>
+<h3>The Array Object</h3>
 - Arrays are objects with extra properties i.e. length, sort and the methods below
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
 - array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
@@ -73,7 +73,7 @@ if(randomNum % 7 == 0)
 - array.reduce()
 
 <h4>Undefined</h4>
-- The value of a variable which has been initialized but not assigned a type
+- Undefined is the value of a variable which has been initialized but not assigned a type. i.e. var a; 'typeof a' will equal undefined.
 
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
@@ -111,6 +111,7 @@ false !== 0 //true
 
 <h4>Operators</h4>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
+- var isTrue = input || 
 
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
