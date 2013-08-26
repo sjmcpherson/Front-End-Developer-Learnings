@@ -56,6 +56,7 @@ if(randomNum % 7 == 0)
 
 <h3>The Array Object</h3>
 - Arrays are objects with extra properties i.e. length, sort and the methods below
+- Array length is the value 1 higher than the array's subscri
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
 - array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
 - array.join(separator) -	Joins all elements of an array into a string
@@ -111,7 +112,27 @@ false !== 0 //true
 
 <h4>Operators</h4>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
-- var isTrue = input || 
+- '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
+- '||' As above but if the first operand is Truthy then the result is the first operated i.e. var inputVal = input || "";
+
+```javascript
+  var inputVal = input && "";
+  //Is the same as
+  var inputVal;
+  if(input == true){
+    inputVal = "";
+  }else{
+    inputVal = input
+  }
+  //Where as
+  var inputVal = input || "";
+  //Is the same as
+  if(input == true){
+    inputVal = input;
+  }else{
+    inputVal = "";
+  }
+```
 
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
