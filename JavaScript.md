@@ -3,10 +3,12 @@
 <h4>Javascript Values</h4>
 - Their are 6 types of values used in JS: number, string, Boolean, object, function and undefined.
 - The typeOf operator can be used to identify a values type.
+ 
 <h4>Boolean</h4>
-- Only 2 Boolean values true & false although a number of values can equal true or false
-- Falsey values - false,null,"",0,undefined,NaN
-- All other values including objects are truthy
+- Only 2 Boolean values true & false, although values of a other type are also either true or false.
+- Falsey values - false, null ,"" ,0 ,undefined ,NaN
+- All other values including objects are Truthy
+
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represent as 64bit floating point also know as Double.
 - Has problems mapping to common arithmetic I.e 0.1 + 0.2 = 0.300000000004
@@ -36,22 +38,21 @@ if(randomNum % 7 == 0)
 
 
 <h4>Objects</h4>
-- Objects are set using the 'new' namespace
-- For code consistancy use capitals for the name of a constructor of an Object but Instance names should be lower case. i.e. var car = new Car();
+- Objects are initialized using the 'new' namespace i.e new Object() or using Literal notation i.e. var obj = {};
+- For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
+
+<h4>The Math Object</h4>
 - Math object used for more complex math functions
-- Math.round
-- Math.floor - Best used to take the integer part of a number.
-- Math.ceil
-- Math.random
-- Math.abs
-- Math.sqrt
-- Math.log
-- Math.pow
-- Math.sin
-- Math.max
+- The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
+- Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
+- Math.ceil(x) - As above but rounds Upward to the nearest integer.
+- Math.random - Returns a random number between 0 and 1. Math.floor((Math.random()*100)+1) returns a number between 1 & 100.
+- Math.max(x,y,z,...,n) - Returns the highest value, use Math.max.apply(null, array) to get the highest value of a numeric array.
+- Math.min(x,y,z,...,n) - As above but returns the lowest value
+- The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
 <h3>Array Object Methods</h3>
 - Arrays are objects with extra properties i.e. length, sort and the methods below
@@ -106,6 +107,10 @@ null == undefined //true
 "5" === 5 //false
 false !== 0 //true
 ```
+
+
+<h4>Operators</h4>
+- Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
 
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
