@@ -119,19 +119,18 @@ false !== 0 //true
   var inputVal = input && "";
   //Is the same as
   var inputVal;
-  if(input == true){
+  if(input == true)
     inputVal = "";
-  }else{
+  else
     inputVal = input
-  }
+  
   //Where as
   var inputVal = input || "";
   //Is the same as
-  if(input == true){
+  if(input == true)
     inputVal = input;
-  }else{
+  else
     inputVal = "";
-  }
 ```
 
 <h4>JavaScript Selectors</h4>
