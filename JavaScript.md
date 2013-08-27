@@ -1,19 +1,19 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h4>Javascript Values</h4>
-- Their are 6 identifiable values types used in JavaScript: number, string, boolean, object, function and undefined.
+- Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
  
 <h4>Boolean</h4>
-- Only 2 Boolean values true & false, although values of a other type are also either true or false.
-- Falsey values - false, null ,"" ,0 ,undefined ,NaN
+- Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
+- Falsey values are false, null ,"" ,0 ,undefined ,NaN
 - All other values including objects are Truthy
 
 <h4>Numbers</h4>
-- Only 1 number type (i.e no integer) which is represent as 64bit floating point also know as Double.
+- Only 1 number type (i.e no integer) which is represented as a 64bit floating point also know as Double.
 - Has problems mapping to common arithmetic I.e var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
-- isNaN() checks if value is NaN(Not a Number) which is achieved when when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
-- parseInt can also be used to parse a string into a number but in the form of an integer though be aware of the follow parseInt("08") = 0 so use a Radix I.e parseInt("08",10) = 8
+- isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
+- parseInt can also be used to parse a string into a number but in the form of an integer, though be aware of the follow parseInt("08") = 0 so use a Radix I.e parseInt("08",10) = 8
 - Use % to determine if a number is divisible by another, it gives the remander value I.e:
 
 ```javascript
