@@ -3,7 +3,7 @@
 <h4>Javascript Values</h4>
 - Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
- 
+
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
 - Falsey values are false, null ,"" ,0 ,undefined ,NaN
@@ -113,7 +113,7 @@ false !== 0 //true
 <h4>Operators</h4>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
 - '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
-- '||' As above but if the first operand is Truthy then the result is the first operated i.e. var inputVal = input || "";
+- '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
 
 ```javascript
   var inputVal = input && "";
