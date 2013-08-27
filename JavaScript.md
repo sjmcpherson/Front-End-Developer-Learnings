@@ -2,7 +2,7 @@
 
 <h4>Javascript Values</h4>
 - Their are 6 identifiable values types used in JavaScript: number, string, boolean, object, function and undefined.
-- The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; 
+- The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
  
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of a other type are also either true or false.
