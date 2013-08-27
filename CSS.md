@@ -7,7 +7,7 @@
  - h1 + p{} IE7+ targets adjacent p tags directly after h1 tags
  - a[data-info~="image"]{} IE7+ selects all elements that have a data-info of “image” including multiple values such as  data-info="external image"
  - :first-child{} IE7+ targets the first child element
- - X[href^="http"] IE7+
+ - X[href^="http"] IE7+ You can use 'a[href$='index.html'] {color: green;}' to set the active navigation item in a menu.
  - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element
  - :last-child{} IE9+ targets the last child element
  - X:nth-child(3) & X:nth-last-child(2) IE9+ 
