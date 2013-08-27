@@ -31,6 +31,12 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - '-calc' Dynamic css calculations "div{width: +calc(100% - 4em);}"
  - 'box-sizing:border-box' (IE8+) forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
 
+<h4>Media Queries</h4>
+ - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
+ - 'min-width' - '@media screen and (min-width: 900px) {}' Will apply CSS if the viewing area is greater than 900px.
+ - 'max-device-width' - '@media screen and (max-device-width: 480px) {}' Will apply CSS if the resolution is greater than 480px as max-device-width means the actual resolution of the device rather than just the viewing area resolution.
+ - 'min-device-pixel-ratio' - '@media only screen and (min-device-pixel-ratio : 2){}' For 2x pixel density resolutions like the Retina display.
+
 <h3>General Coding Tips</h3>
  - Its important when working in a team of developers on a project that they all abide to a similar syntax and format with their stylesheets, this is important specifically in large projects to keep stylesheets maintainable, readable and scalable. Often its important to agree on a CSS Guideline which states what file structure, preprocessor, font-sizing unit, spacing etc that should be adhered to. A very detailed one can be found here: https://github.com/csswizardry/CSS-Guidelines
  - Work around for lack of :nth-child support in IE7 & IE8 using adjacent selector: ul>li+li+li
