@@ -3,11 +3,12 @@
 <h4>Javascript Values</h4>
 - Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
+- JavaScript uses Implied Global Variables so if you so you can initalize a variable without using the 'var' keyword but it will be deemed a Global Variable so as Good practise you should always initialize with the 'var' keyword.
+
 
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
-- Falsey values are false, null ,"" ,0 ,undefined ,NaN
-- All other values including objects are Truthy
+- Falsey values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are Truthy
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also know as Double.
@@ -35,8 +36,6 @@ if(randomNum % 7 == 0)
 - string.toUpperCase
 
 
-
-
 <h4>Objects</h4>
 - Objects are initialized using the 'new' namespace i.e new Object() or using Literal notation i.e. var obj = {};
 - For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
@@ -44,40 +43,12 @@ if(randomNum % 7 == 0)
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 
-<h4>The Math Object</h4>
-- Math object used for more complex math functions
-- The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
-- Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
-- Math.ceil(x) - As above but rounds Upward to the nearest integer.
-- Math.random - Returns a random number between 0 and 1. Math.floor((Math.random()*100)+1) returns a number between 1 & 100.
-- Math.max(x,y,z,...,n) - Returns the highest value, use Math.max.apply(null, array) to get the highest value of a numeric array.
-- Math.min(x,y,z,...,n) - As above but returns the lowest value
-- The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
-
-<h3>The Array Object</h3>
-- Arrays are objects with extra properties i.e. length, sort and the methods below
-- Array length is the value 1 higher than the array's subscri
-- array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
-- array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
-- array.join(separator) -	Joins all elements of an array into a string
-- array.lastIndexOf(item,start) - IE9+ Search the array for an element, starting at the end, and returns its position
-- array.pop() -	Removes the last element of an array, and returns that element
-- array.push(item1, item2, ..., itemX) - Adds new elements to the end of an array, and returns the new length
-- array.reverse() -	Reverses the order of the elements in an array
-- array.shift() -	Removes the first element of an array, and returns that element
-- array.slice(start, end) -	Selects a part of an array, and returns the new array
-- array.sort(sortfunction) - Sorts the elements of an array
-- array.splice(index,howmany,item1,.....,itemX) -	Adds/Removes elements from an array at a specific position i.e. array.splice(index,1) will remove 1 element at index. Distinct from "delete array[index]" which removes the element but doesnt adjust;
-- array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
-- array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
-- array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
-- array.reduce()
-
 <h4>Undefined</h4>
 - Undefined is the value of a variable which has been initialized but not assigned a type. i.e. var a; 'typeof a' will equal undefined.
 
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
+
 
 ```javascript
 testFunc(1,"go");
@@ -109,7 +80,6 @@ null == undefined //true
 false !== 0 //true
 ```
 
-
 <h4>Operators</h4>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
 - '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
@@ -132,6 +102,36 @@ false !== 0 //true
   else
     inputVal = "";
 ```
+
+<h4>The Math Object</h4>
+- Math object used for more complex math functions
+- The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
+- Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
+- Math.ceil(x) - As above but rounds Upward to the nearest integer.
+- Math.random - Returns a random number between 0 and 1. Math.floor((Math.random()*100)+1) returns a number between 1 & 100.
+- Math.max(x,y,z,...,n) - Returns the highest value, use Math.max.apply(null, array) to get the highest value of a numeric array.
+- Math.min(x,y,z,...,n) - As above but returns the lowest value
+- The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
+
+<h3>The Array Object</h3>
+- Arrays are objects with extra properties i.e. length, sort and the methods below
+- Array length is the value 1 higher than the array's subscri
+- array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
+- array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
+- array.join(separator) -	Joins all elements of an array into a string
+- array.lastIndexOf(item,start) - IE9+ Search the array for an element, starting at the end, and returns its position
+- array.pop() -	Removes the last element of an array, and returns that element
+- array.push(item1, item2, ..., itemX) - Adds new elements to the end of an array, and returns the new length
+- array.reverse() -	Reverses the order of the elements in an array
+- array.shift() -	Removes the first element of an array, and returns that element
+- array.slice(start, end) -	Selects a part of an array, and returns the new array
+- array.sort(sortfunction) - Sorts the elements of an array
+- array.splice(index,howmany,item1,.....,itemX) -	Adds/Removes elements from an array at a specific position i.e. array.splice(index,1) will remove 1 element at index. Distinct from "delete array[index]" which removes the element but doesnt adjust;
+- array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
+- array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
+- array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
+- array.reduce()
+
 
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
