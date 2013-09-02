@@ -37,7 +37,7 @@ if(randomNum % 7 == 0)
 
 
 <h4>Objects</h4>
-- Objects are initialized using the 'new' namespace i.e new Object() or using Literal notation i.e. var obj = {};
+- Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}';
 - For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
@@ -114,7 +114,7 @@ false !== 0 //true
 - The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
 <h3>The Array Object</h3>
-- Arrays are objects with extra properties i.e. length, sort and the methods below
+- Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
 - Array length is the value 1 higher than the array's subscri
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
 - array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
