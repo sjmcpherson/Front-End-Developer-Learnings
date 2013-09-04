@@ -200,7 +200,7 @@ var big = (x > 10);
 ```
 
 <h4>Prototypal Inheritance</h4>
-- Distinct from Class Inheritance, where the an object inherits any properties from an object assigned to it.
+- Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 
 <h4>Advanced JS Techniques</h4>
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
