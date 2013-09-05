@@ -132,7 +132,6 @@ false !== 0 //true
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
 - array.reduce()
 
-
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
 - document.querySelector() & document.querySelectorAll() IE8+ Accepts any CSS selector, .querySelector() returns null if no matches are found, otherwise, it returns the first matching element. .querySelectorAll() returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
@@ -292,7 +291,8 @@ ajaxResult.items.forEach(function(item) {
 document.querySelector('ul').appendChild(frag);
 ```
 
-- Reference IDs rather than Classes (ID selection is native & increases performance)
+- Reference IDs rather than Classes (ID selection is native & increases performance);
+- Cache AJAX results to reduce unnessary requests. Use flags to determine whether to request new data and/or periodical clearing of the cache if data is updated externally. i.e. 
 - Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
 - Where possible use CSS animations browsers optimise them for you and hardware accelerate them
 - Debounce when using scroll & resize events, use setTimeout/setInterval to limit excessive triggering of event, this is called Debouncing.
@@ -319,6 +319,7 @@ for(i=0 ; i<arrElements.length ; i++){
 - Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
 - Equalize.js jQuery plugin for equalizing the height or width of sibling elements
+- ajax-cache.js - Provides a AJAX response caching object so as to limit unnessary requests. https://code.google.com/p/ajax-cache/
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
