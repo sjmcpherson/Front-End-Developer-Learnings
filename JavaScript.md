@@ -211,17 +211,15 @@ var big = (x > 10);
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 
-<h4>The XMLHttpRequest Object</h4>
+<h4>The XMLHttpRequest(XHR) Object</h4>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
 - GET vs POST - GET is simpler and faster than POST and therefore used in AJAX enviroments. POST offers a more secure option.
-- .open(method,url,async) - Secifies the type of request(GET or POST), the URL(Location of file on server) and if the request should be handled asynchronously or not.
-- .send(string) - Used to initiate the XMLHttpRequest, the string value is only used in POST requests.
+- .open(method,url,asyc,user,password) - Intializes the request. 'method' specifies the type of request("GET", "POST", "PUT" or "DELETE"), 'url' the URL(Location of file on server). Optional parameters 'asyc'(default: true) if the request should be handled asynchronously or not and user & password strings for authentication purposes.
+- .send(string) - Sends the request, the string value is only used in POST requests.
 - .onreadystatechange - Property that stores a function which is called each time the readyState property changes.
 - .readyState - Property for the status of the XMLHTTPRequest - 0:request not initialized,1:server connection,2:request received,3:processing request, 4:request complete.
 - .status - Property for that result of the XMLHttpRequest - 200: 'OK', 404: 'Page not found'
 - .responseText/.responseXML - Property to get the response from server.
-
- 
 
 <h2>jQuery Specific Coding Tips</h2>
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
