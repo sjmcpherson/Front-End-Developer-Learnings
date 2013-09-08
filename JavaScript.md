@@ -3,8 +3,7 @@
 <h4>Javascript Values</h4>
 - Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
-- JavaScript uses Implied Global Variables so if you so you can initalize a variable without using the 'var' keyword but it will be deemed a Global Variable so as Good practise you should always initialize with the 'var' keyword.
-
+- JavaScript has Implied Global Variables so if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
