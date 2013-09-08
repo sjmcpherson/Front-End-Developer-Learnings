@@ -132,8 +132,9 @@ false !== 0 //true
 - array.reduce()
 
 <h4>JavaScript Selectors</h4>
-- element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementsById full compatibility.
-- document.querySelector() & document.querySelectorAll() IE8+ Accepts any CSS selector, .querySelector() returns null if no matches are found, otherwise, it returns the first matching element. .querySelectorAll() returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
+- element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementById, full support.
+- element.querySelector(selectors) IE8+ - 'selectors' is a string of one or more selectors. Returns null if no matches are found; otherwise, it returns the first matching element.
+- document.querySelectorAll() IE8+ - returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
 
 <h4>JSON</h4>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
