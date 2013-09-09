@@ -46,7 +46,7 @@ if(randomNum % 7 == 0)
 - Undefined is the value of a variable which has been initialized but not assigned a type. i.e. var a; 'typeof a' will equal undefined.
 
 <h4>Functions</h4>
-- The Arguments Object - is a system object resembling an array for accessing the variables past to an function. I.e
+- The Arguments Object - is a system object resembling an array for accessing the variables past to an function. It has the length property but no Array methods i.e
 
 
 ```javascript
