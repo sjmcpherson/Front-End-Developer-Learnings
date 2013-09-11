@@ -210,6 +210,8 @@ var big = (x > 10);
 - navigator.getUserMedia() - Record Audio/Video (limited browser capatibility)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
+- Full Screen API with requestFullScreen
+
 
 <h4>The XMLHttpRequest(XHR) Object</h4>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
