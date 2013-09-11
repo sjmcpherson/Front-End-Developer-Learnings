@@ -2,7 +2,7 @@
 
 - Abstraction - A procees I which a programmer will attempt to make the code more readable by making functions shorter and by make code reuse able. Object-Oriented Programming is an approach to Abstraction.
 - API – Application Programming Interface is a specification for combining software components.
-- AJAX an acronym for Asynchronous JavaScript and XML. Despite the name, the use of XML is not required as JSON is often used instead. With Ajax, web applications can send data to, and retrieve data from, a server asynchronously (in the background) without interfering with the display and behavior of the existing page.
+- AJAX an acronym for Asynchronous JavaScript and XML. Despite the name, the use of XML is not required as JSON is often used instead. With AJAX, web applications can send data, and retrieve data from, a server asynchronously (in the background therefore creating a new code thread) without interfering with the display and behavior of the existing page.
 - Associative Array - abstract data type composed of a collection of  pairs, such that each 
 - Asynchronous vs Synchronous, Asynchronouse permits other processing to continue while a transmission is being processed.
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
@@ -35,6 +35,7 @@ $( "li" ).each(function() {
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
+- Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
 - REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful.
 - Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
 - Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than "<i>Yes</i>" use "<em>Yes</em>"(emphasis) or "<span class='emphasis'>Yes</span>"
