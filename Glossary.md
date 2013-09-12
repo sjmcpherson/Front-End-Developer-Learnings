@@ -23,7 +23,7 @@ $( "li" ).each(function() {
 // jQuery Implicit Iteration
     $( "li" ).addClass( "bar" );
 ```
-
+- Falsy - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
 - Functional Programming
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
 - Hash Table - 
