@@ -211,6 +211,7 @@ function AddEvent(html_element, event_name, event_function)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
+- animationstart, animationiteration, animationend allow JavaScript control over CSS3 Animations. IE10+ & prefixes required for most browsers through:
 
 ```javascript
 var pfx = ["webkit", "moz", "MS", "o", ""];
@@ -220,6 +221,7 @@ function PrefixedEvent(element, type, callback) {
 		element.addEventListener(pfx[p]+type, callback, false);
 	}
 }
+PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
 
 <h4>The XMLHttpRequest(XHR) Object</h4>
