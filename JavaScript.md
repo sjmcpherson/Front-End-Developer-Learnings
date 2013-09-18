@@ -5,6 +5,15 @@
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
 - JavaScript has Implied Global Variables so if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
+```javascript
+  //Longhand
+  var x;
+  var y;
+  var z = 3;
+  //Shorthand
+  var x, y, z=3;
+```
+
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
 - Falsey values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are Truthy
@@ -101,6 +110,24 @@ false !== 0 //true
     inputVal = "";
 ```
 
+- If Statements can be written in a number of ways e.g:
+
+```javascript
+//Longhand
+var big;
+if (x > 10) {
+    big = true;
+}
+else {
+    big = false;
+}
+//Shorthand
+var big = (x > 10) ? true : false;
+//Also Will Work
+var big = (x > 10);
+```
+
+
 <h4>The Math Object</h4>
 - Math object used for more complex math functions
 - The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
@@ -170,33 +197,6 @@ function AddEvent(html_element, event_name, event_function)
 
 - requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
 
-<h4>JavaScript Shorthand</h4>
-
-Variables
-```javascript
-//Longhand
-var x;
-var y;
-var z = 3;
-//Shorthand
-var x, y, z=3;
-```
-
-If Statements
-```javascript
-//Longhand
-var big;
-if (x > 10) {
-    big = true;
-}
-else {
-    big = false;
-}
-//Shorthand
-var big = (x > 10) ? true : false;
-//Also Will Work
-var big = (x > 10);
-```
 
 <h4>Prototypal Inheritance</h4>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
@@ -212,6 +212,15 @@ var big = (x > 10);
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
 
+```javascript
+var pfx = ["webkit", "moz", "MS", "o", ""];
+function PrefixedEvent(element, type, callback) {
+	for (var p = 0; p < pfx.length; p++) {
+		if (!pfx[p]) type = type.toLowerCase();
+		element.addEventListener(pfx[p]+type, callback, false);
+	}
+}
+```
 
 <h4>The XMLHttpRequest(XHR) Object</h4>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
