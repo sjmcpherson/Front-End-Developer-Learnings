@@ -207,7 +207,7 @@ function AddEvent(html_element, event_name, event_function)
 
 <h4>Other JavaScript Methods/Frameworks</h4>
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
-- navigator.getUserMedia() - Record Audio/Video (limited browser capatibility)
+- navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
