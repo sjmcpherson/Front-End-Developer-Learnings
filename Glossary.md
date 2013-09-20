@@ -9,7 +9,7 @@
 - CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
 - Data Binding - Syncronises data between UI components which are bound to the data source
 - Declarative Programming seeks to make you coding more descriptive by using techniques to show what is done rather than how is done. This is opposed to Imperative Programming.
-- Dependency Injection(DI) is a software design pattern that deals with how code gets hold of its dependencies.
+- Dependency Injection(DI) is a software design pattern that deals with providing the dependencies that an object needs instead of having it construct them itself. AngularJS utilizes this pattern.
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - DRY(Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 - Explicit Iteration vs Implicit Iteration - In jQuery:
