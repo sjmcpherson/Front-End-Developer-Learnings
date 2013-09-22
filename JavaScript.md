@@ -274,9 +274,9 @@ $("td").hover(
 
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
-- &lt;script&gt;tags block parallel downloads, put them last so other resources can be downloaded first
-- Defer Parsing of scripts that are not called at statup
-- Async Loading via Lab.js or the 'async' attribute for the script tag (IE9 & below don’t support)
+- 'script' tags block parallel downloads, put them last so other resources can be downloaded first
+- Defer Parsing of scripts that are not called at startup.
+- Async Loading via Lab.js or the 'async' attribute for the script tag (IE9 & below don’t support).
 - Avoid excess DOM manipulation. Don't append on every iteration as below:
 
 ```javascript
