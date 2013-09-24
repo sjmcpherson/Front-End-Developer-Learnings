@@ -318,7 +318,7 @@ for(i=0 ; i<arrElements.length ; i++){
 - .offset() used to get/set the x/y position of an element relative to the document. i.e. $(selector).offset().top;
 - .position() same as above but relative to the parent.
 - Cache elements when using selectors var elem = getElementByTagName('a');
-- Avoid using the eval() function as well as potential security implications it causes code executed by the eval function to run at least twice as slow.
+- Avoid using the eval() function as well as potential security implications it causes code executed by the eval function to run at least twice as slow. There maybe times when it is necessary i.e. when executing code inside JSON.
 
 <h2>Helpful JavaScript/jQuery scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
