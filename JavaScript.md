@@ -1,6 +1,6 @@
 <h2>General JavaScript Coding Tips</h2>
 
-<h4>Javascript Values</h4>
+<h3>Javascript Values</h3>
 - Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
 - JavaScript has Implied Global Variables so if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
@@ -69,7 +69,7 @@ function testFunc(){
 - Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) Anonymous Function which would run imediately
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
 
-<h4>Type Coercion</h4>
+<h3>Type Coercion</h4>
 - Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different types rather than throwing an error like a Strongly Typed language would.
 - When JavaScript sees a string it immediately begins type coercing all value into strings. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
 - Automatic Type Conversion in JS means that varibles if different types can be compared i.e
@@ -87,7 +87,7 @@ null == undefined //true
 false !== 0 //true
 ```
 
-<h4>Operators</h4>
+<h3>Operators</h3>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
 - '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
 - '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
@@ -127,8 +127,8 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-<h4>System Objects</h4>
-<h5>The Math Object</h5>
+<h3>System Objects</h3>
+<h4>The Math Object</h4>
 - Math object used for more complex math functions
 - The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
 - Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
@@ -138,7 +138,7 @@ var big = (x > 10);
 - Math.min(x,y,z,...,n) - As above but returns the lowest value
 - The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
-<h5>The Array Object</h5>
+<h4>The Array Object</h4>
 - Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
 - Array length is the value 1 higher than the array's subscript.
 - Use 'value instanceof Array' or 'value.contructor === Array' to determine if Array
@@ -158,22 +158,33 @@ var big = (x > 10);
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
 - array.reduce()
 
-<h5>The Window Object</h5>
+<h4>The Window Object</h4>
 - The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
  
-<h5>The Document Object</h5>
+<h4>The Document Object</h4>
 - Where the DOM is accessed
 - A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
 
-<h4>JavaScript Selectors</h4>
+<h4>The XMLHttpRequest(XHR) Object</h4>
+- XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
+- GET vs POST - GET is simpler and faster than POST and therefore used in AJAX enviroments. POST offers a more secure option.
+- .open(method,url,asyc,user,password) - Intializes the request. 'method' specifies the type of request("GET", "POST", "PUT" or "DELETE"), 'url' the URL(Location of file on server). Optional parameters 'asyc'(default: true) if the request should be handled asynchronously or not and user & password strings for authentication purposes.
+- .send(string) - Sends the request, the string value is only used in POST requests.
+- .onreadystatechange - Property that stores a function which is called each time the readyState property changes.
+- .readyState - Property for the status of the XMLHTTPRequest - 0:request not initialized,1:server connection,2:request received,3:processing request, 4:request complete.
+- .status - Property for that result of the XMLHttpRequest - 200: 'OK', 404: 'Page not found'
+- .responseText/.responseXML - Property to get the response from server.
+
+
+<h3>JavaScript Selectors</h3>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementById, full support.
 - element.querySelector(selectors) IE8+ - 'selectors' is a string of one or more selectors. Returns null if no matches are found; otherwise, it returns the first matching element.
 - document.querySelectorAll() IE8+ - returns a node list of all elements selected i.e. document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
 
-<h4>JSON</h4>
+<h3>JSON</h3>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 
-<h4>JavaScript Events</h4>
+<h3>JavaScript Events</h3>
 - Use Event Delegation instead of individual event listeners e.g. 
 
 ```javascript
@@ -205,14 +216,14 @@ function AddEvent(html_element, event_name, event_function)
 - requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
 
 
-<h4>Prototypal Inheritance</h4>
+<h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 
-<h4>Advanced JS Techniques</h4>
+<h3>Advanced JS Techniques</h3>
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 - Closures: a closure is formed when you nest functions, inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 
-<h4>Other JavaScript Methods/Frameworks</h4>
+<h3>Other JavaScript Methods/Frameworks</h3>
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
@@ -230,16 +241,6 @@ function PrefixedEvent(element, type, callback) {
 }
 PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
-
-<h4>The XMLHttpRequest(XHR) Object</h4>
-- XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
-- GET vs POST - GET is simpler and faster than POST and therefore used in AJAX enviroments. POST offers a more secure option.
-- .open(method,url,asyc,user,password) - Intializes the request. 'method' specifies the type of request("GET", "POST", "PUT" or "DELETE"), 'url' the URL(Location of file on server). Optional parameters 'asyc'(default: true) if the request should be handled asynchronously or not and user & password strings for authentication purposes.
-- .send(string) - Sends the request, the string value is only used in POST requests.
-- .onreadystatechange - Property that stores a function which is called each time the readyState property changes.
-- .readyState - Property for the status of the XMLHTTPRequest - 0:request not initialized,1:server connection,2:request received,3:processing request, 4:request complete.
-- .status - Property for that result of the XMLHttpRequest - 200: 'OK', 404: 'Page not found'
-- .responseText/.responseXML - Property to get the response from server.
 
 <h2>jQuery Specific Coding Tips</h2>
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
