@@ -127,8 +127,8 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-
-<h4>The Math Object</h4>
+<h4>System Objects</h4>
+<h5>The Math Object</h5>
 - Math object used for more complex math functions
 - The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
 - Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
@@ -138,7 +138,7 @@ var big = (x > 10);
 - Math.min(x,y,z,...,n) - As above but returns the lowest value
 - The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
-<h3>The Array Object</h3>
+<h5>The Array Object</h5>
 - Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
 - Array length is the value 1 higher than the array's subscript.
 - Use 'value instanceof Array' or 'value.contructor === Array' to determine if Array
@@ -157,6 +157,13 @@ var big = (x > 10);
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
 - array.reduce()
+
+<h5>The Window Object</h5>
+- The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
+ 
+<h5>The Document Object</h5>
+- Where the DOM is accessed
+- A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
 
 <h4>JavaScript Selectors</h4>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementById, full support.
