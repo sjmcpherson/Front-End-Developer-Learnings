@@ -33,6 +33,7 @@ $( "li" ).each(function() {
 - MVC stands for Model View Controller
 - MVVM stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
+- Parsing - Taking raw data and converting into a formal data structure.
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
 - Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
