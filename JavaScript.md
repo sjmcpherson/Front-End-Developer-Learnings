@@ -174,7 +174,7 @@ var big = (x > 10);
 - .readyState - Property for the status of the XMLHTTPRequest - 0:request not initialized,1:server connection,2:request received,3:processing request, 4:request complete.
 - .status - Property for that result of the XMLHttpRequest - 200: 'OK', 404: 'Page not found'
 - .responseText/.responseXML - Property to get the response from server.
-
+- Modern browsers support cross-site requests by implementing the web applications working group's Access Control for Cross-Site Requests standard.  As long as the server is configured to allow requests from your web application's origin, XMLHttpRequest will work.  Otherwise, an INVALID_ACCESS_ERR exception is thrown.
 
 <h3>JavaScript Selectors</h3>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementById, full support.
