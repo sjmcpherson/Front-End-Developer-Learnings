@@ -60,7 +60,7 @@ if(randomNum % 7 == 0)
 - Undefined is a 'Falsy' value
 
 <h4>Functions</h4>
-- 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the difference between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherso/qHBUY/
+- 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the differences between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherso/qHBUY/
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. It has the length property but no Array methods i.e
 
 ```javascript
@@ -75,6 +75,7 @@ function testFunc(){
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
 - Functions inherit the object prototype therefore methods and properties can be assigned to them.
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+- Initializing a variable in a Function will mean that it is only available to operations inside this function. Functions are the only place where a new scope is created.
 - Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 
 
