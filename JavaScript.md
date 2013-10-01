@@ -14,6 +14,9 @@
   var x, y, z=3;
 ```
 
+- No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
+
+
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
@@ -56,6 +59,7 @@ if(randomNum % 7 == 0)
 - Undefined is a 'Falsy' value
 
 <h4>Functions</h4>
+- 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the difference between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherso/qHBUY/
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. It has the length property but no Array methods i.e
 
 ```javascript
@@ -68,6 +72,10 @@ function testFunc(){
 
 - Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) Anonymous Function which would run imediately
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
+- Functions inherit the object prototype therefore methods and properties can be assigned to them.
+- JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
+- Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
+
 
 <h3>Type Coercion</h3>
 - Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different value types rather than throwing an error like a Strongly-Typed language would.
@@ -218,10 +226,6 @@ function AddEvent(html_element, event_name, event_function)
 
 <h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
-
-<h3>Advanced JS Techniques</h3>
-- JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
-- Closures: a closure is formed when you nest functions, inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 
 <h3>Other JavaScript Methods/Frameworks</h3>
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
