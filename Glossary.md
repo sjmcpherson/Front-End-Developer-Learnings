@@ -5,6 +5,7 @@
 - AJAX an acronym for Asynchronous JavaScript and XML. Despite the name, the use of XML is not required as JSON is often used instead. With AJAX, web applications can send data, and retrieve data from, a server asynchronously (in the background therefore creating a new code thread) without interfering with the display and behavior of the existing page.
 - Associative Array - abstract data type composed of a collection of  pairs, such that each 
 - Asynchronous vs Synchronous, Asynchronouse permits other processing to continue while a transmission is being processed.
+- Closure - A term used when you nest functions, as inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
 - CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
 - Data Binding - Syncronises data between UI components which are bound to the data source
