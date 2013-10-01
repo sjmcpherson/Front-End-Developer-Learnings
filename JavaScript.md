@@ -48,6 +48,7 @@ if(randomNum % 7 == 0)
 
 
 <h4>Objects</h4>
+- Objects are an unordered list of name/value pairs. Names are strings and values can be any type including other objects
 - Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}';
 - For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
