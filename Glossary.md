@@ -13,6 +13,7 @@
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - DRY(Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 - Explicit Iteration vs Implicit Iteration - In jQuery:
+- Expression - Something which evaluates to a value. Example: 1+2/x
 - Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
 
 ```javascript
@@ -42,6 +43,7 @@ $( "li" ).each(function() {
 - Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than "<i>Yes</i>" use "<em>Yes</em>"(emphasis) or "<span class='emphasis'>Yes</span>"
 - SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
 - SDK – Software Development Kit is a toolkit to allow software development on a specific framework or platform.
+- Statement - A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
 - Strongly Typed - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
 - Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
 - UI - User Interface are the components by which users interact with.
