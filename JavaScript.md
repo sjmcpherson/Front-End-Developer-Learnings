@@ -16,7 +16,7 @@
 
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
-- Falsey values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are Truthy
+- "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also know as Double.
@@ -53,10 +53,10 @@ if(randomNum % 7 == 0)
 
 <h4>Undefined</h4>
 - Undefined is the value of a variable which has been initialized but not assigned a type. i.e. var a; 'typeof a' will equal undefined.
+- Undefined is a 'Falsy' value
 
 <h4>Functions</h4>
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. It has the length property but no Array methods i.e
-
 
 ```javascript
 testFunc(1,"go");
