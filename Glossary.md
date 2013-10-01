@@ -14,8 +14,6 @@
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - DRY(Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 - Explicit Iteration vs Implicit Iteration - In jQuery:
-- Expression - Something which evaluates to a value. Example: 1+2/x
-- Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
 
 ```javascript
 // Explicit iteration with the jQuery .each() method
@@ -25,6 +23,9 @@ $( "li" ).each(function() {
 // jQuery Implicit Iteration
     $( "li" ).addClass( "bar" );
 ```
+
+- Expression - Something which evaluates to a value. Example: 1+2/x
+- Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
 - Falsy - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
 - Functional Programming
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
