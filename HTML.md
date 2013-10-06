@@ -8,6 +8,7 @@
  - &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
  - &lt;datalist&gt; Databinding Autocomplete. IE10+, No Safari support. Example:
+
 ```HTML
 <input list="browsers">
 <datalist id="browsers">
