@@ -27,7 +27,7 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 
  - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
  - 'background-clip', 'background-origin' and 'background-size' IE9+
- - '-flex' The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes '-order': for ordering structure elements '-justify-content': for aligning structure elements and '-webkit-flex-direction': for positioning 
+ - '-flex' The new Flexible Box layout Module for fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html IE10+ includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
  - '-column-count' Multi-column Wrapping Text layouts with "div{-column-count: 3;}" IE10+
  - '-calc' Dynamic css calculations "div{width: +calc(100% - 4em);}"
  - 'box-sizing:border-box' (IE8+) forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
