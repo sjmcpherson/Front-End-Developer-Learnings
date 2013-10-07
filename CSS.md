@@ -7,11 +7,12 @@
  - h1 + p{} IE7+ targets adjacent p tags directly after h1 tags
  - a[data-info~="image"]{} IE7+ selects all elements that have a data-info of “image” including multiple values such as  data-info="external image"
  - :first-child{} IE7+ targets the first child element
+ - :last-child{} IE9+ targets the last child element
  - X[href^="http"] IE7+ You can use 'a[href$='index.html'] {color: green;}' to set the active navigation item in a menu.
  - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element
- - :last-child{} IE9+ targets the last child element
  - X:nth-child(3) & X:nth-last-child(2) IE9+ 
- - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector
+ - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector.
+ - :first-of-type & :last-of-type IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
  - X:not(selector) IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
  - :empty IE9+ targets elements with no children
  - :only-child IE9+ targets elements that are the only child of their parent
