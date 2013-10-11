@@ -52,6 +52,7 @@ Would Produce:
  - To give more control and to speed up loading time of Web Fonts use Web Font Loader, Fonts provided by Typekit, FontDeck and Google can be loaded through the script, for best performance embed the script directly after head tag and to remove FOUT add CSS for the class ".wf-loading" on the HTML element to hide text e.g. *.wf-loading{opacity(0)} the script then removes this class once fonts are loaded. https://developers.google.com/fonts/docs/webfont_loader
  - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
  - Use Link Prefetching (limited browser support) to preload whole pages or just images, css etc.
+
 ```HTML
 <!-- full page -->
 <link rel="prefetch" href="http://davidwalsh.name/css-enhancements-user-experience" />
