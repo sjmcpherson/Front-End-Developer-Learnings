@@ -25,7 +25,7 @@
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also know as Double.
 - Has problems mapping to common arithmetic I.e var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
-- parseInt can also be used to parse a string into a number but in the form of an integer, though be aware of the following gotcha parseInt("08") = 0 so use a Radix i.e parseInt("08",10) = 8
+- parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion.
 - Use % to determine if a number is divisible by another, it gives the remander value i.e:
 
 ```javascript
