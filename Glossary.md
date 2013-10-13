@@ -49,5 +49,6 @@ $( "li" ).each(function() {
 - Statement - A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
 - Strongly Typed - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
 - Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
+- Two Way Data Binding - A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
 - UI - User Interface are the components by which users interact with.
 - UX - User Experience is a broader term which is distinct from UI as it encompasses the way a person feels about using a product, system or service.
