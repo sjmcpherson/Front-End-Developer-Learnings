@@ -43,6 +43,22 @@ Would Produce:
 - The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/ Similarly the CSS attribute -user-input can be use to replicate but with limited support.
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 
+<h2>SEO Optimization</h2>
+- Include descriptive terms to your URLs and create a easily to understand hierarchy, i.e. List of Products at “www.yoursite.com/products/” individual products at “www.yoursite.com/products/descriptive-product-name/”
+- Make use of header tag. h1,h2,h3,h4,h5 tags to emphasize important text but use sparingly across the page.
+- Place links on descriptive wording rather than text such as "Click Here" and load the Title attribute with info about the link i.e
+
+```HTML
+To read our View our website, click <a href="http://www.instantshift.com">here</a>. <!- Not terrible ->
+  
+Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine, Web Development">Smash Dynamic, web design & development specialists</a>. <!- Much better ->
+```
+
+- When using images add a description to the “Alt” tag of the image markup.
+- Create unique meta title tags for each page which are brief but descriptive (info on Meta Tags here) https://support.google.com/webmasters/answer/79812?hl=en&ref_topic=2371375
+- Include important keywords in your text but don’t overdo it as Google will see this as content manipulation. And of course you should always be thinking of your audience not just your page ranking.
+- You may find the need to abreviate important terms to make you content more concise use the 'abbr' tag to get the best of both worlds i.e. <abbr title="Front End Developer">FED</abbr>
+
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
  - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. HTTP Requests add to the download time and browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
