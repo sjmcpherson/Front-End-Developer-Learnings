@@ -18,6 +18,7 @@
  - :only-child IE9+ targets elements that are the only child of their parent
 
 <h3>Uncommon CSS Properties</h3>
+ - position: sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. 
  - 'counter-increment' (IE8+) Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
 
 ```CSS
