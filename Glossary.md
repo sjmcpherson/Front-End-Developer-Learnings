@@ -32,6 +32,7 @@ $( "li" ).each(function() {
 - Hash Table - 
 - Hoisting - In JavaScript no matter where you declare a variable, its declaration is added to the top of its scope(function) this means JavaScript Scope is different to most other languages that use Block Level Scope inwhich new scope is created within any curly brakets('{}')
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
+- JSON - Stands for JavaScript Object Notation.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript
 - Minification - Removes comments and white space to reduce the file size.
