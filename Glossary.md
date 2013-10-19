@@ -34,9 +34,11 @@ $( "li" ).each(function() {
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript
+- Minification - Removes comments and white space to reduce the file size.
 - MVC stands for Model View Controller
 - MVVM stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
+- Obfuscation - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
 - Parsing - Taking raw data and converting into a formal data structure.
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
