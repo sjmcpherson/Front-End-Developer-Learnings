@@ -167,6 +167,18 @@ var big = (x > 10);
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
 - array.reduce()
+- Avoid using the 'for-in' loop to iterate through an array, as properties and extending Array.prototype will also be iterated. i.e
+
+```javascript
+	Array.prototype.foo = "foo!";
+	var array = ['a', 'b', 'c'];
+	array.total = "10";
+	
+	for (var i in array) {
+	  alert(array[i]);
+	}
+	//The above code will alert, "a", "b", "c","foo!" and 10.
+```
 
 <h4>The Window Object</h4>
 - The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
