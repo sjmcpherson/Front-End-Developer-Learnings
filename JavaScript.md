@@ -3,6 +3,7 @@
 <h3>Javascript Values</h3>
 - Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
 - The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
+- JavaScript has Lexical scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
 - JavaScript has Implied Global Variables so if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
 ```javascript
