@@ -260,6 +260,13 @@ function PrefixedEvent(element, type, callback) {
 PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
 
+
+<h2>ECMAScript 6</h2>
+- This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most.
+- Const - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
+- Let - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
+
+
 <h2>jQuery Specific Coding Tips</h2>
 - The jQuery '$' is just a function that returs jQuery's 'init' function
 - $.fn is just shorthand for the jQuery Prototype object i.e. jQuery.fn = jQuery.prototype
