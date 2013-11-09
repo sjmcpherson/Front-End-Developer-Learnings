@@ -21,6 +21,7 @@
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
+- Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false 
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also know as Double.
