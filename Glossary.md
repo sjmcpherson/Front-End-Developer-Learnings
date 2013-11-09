@@ -36,12 +36,13 @@ $( "li" ).each(function() {
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript
 - Minification - Removes comments and white space to reduce the file size.
-- MVC stands for Model View Controller
+- MVC stands for Model View Controller which creates a structure of seperation in an application, the Model being the data, the View the presentation layer and the controller which acts as the glue between the Model & View manipulating Data and recording Events.
 - MVVM stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
 - Obfuscation - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
 - Parsing - Taking raw data and converting into a formal data structure.
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
+- Prototypal Inheritance - In JavaScript Objects are inherited from other Objects using the 'new' operator, there is no distinguising between a object & the object it inherits from as opposed to a class based language.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
 - Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
 - REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful.
