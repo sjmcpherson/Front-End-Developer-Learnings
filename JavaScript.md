@@ -245,6 +245,12 @@ function AddEvent(html_element, event_name, event_function)
 <h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 
+
+<h3>Debugging</h3>
+- console.log() - Used to output values to the console window.
+- console.table() - Is used to output tabular data to the console window e.g JSON & Array Objects
+
+
 <h3>Other JavaScript Methods/Frameworks</h3>
 - Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
