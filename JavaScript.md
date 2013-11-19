@@ -248,7 +248,7 @@ function AddEvent(html_element, event_name, event_function)
 
 <h3>Debugging</h3>
 - console.log() - Used to output values to the console window.
-- console.table() - Is used to output tabular data to the console window e.g JSON & Array Objects
+- console.table() - Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);"
 
 
 <h3>Other JavaScript Methods/Frameworks</h3>
