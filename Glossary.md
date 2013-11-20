@@ -41,6 +41,7 @@ $( "li" ).each(function() {
 - MVW stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
 - Obfuscation - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
 - Parsing - Taking raw data and converting into a formal data structure.
+- Primitive Data Type - A data type that can hold only single value, in JS Primitive Data Types are Number, String, Boolean, Null & undefined whereas Objects & Functions are not as they can hold multiple values i.e. var a = {"a":1,"b":2}
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Prototypal Inheritance - In JavaScript Objects are inherited from other Objects using the 'new' operator, there is no distinguising between a object & the object it inherits from as opposed to a class based language.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
