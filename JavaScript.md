@@ -58,7 +58,7 @@ if(randomNum % 7 == 0)
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 
 <h4>Undefined</h4>
-- Undefined is the value of a variable which has been initialized but not assigned a type. i.e. var a; 'typeof a' will equal undefined.
+- Undefined is the value of a variable which has been initialized but not assigned a type or a value. i.e. var a; 'typeof a' will equal undefined.
 - Undefined is a 'Falsy' value
 
 <h4>Functions</h4>
