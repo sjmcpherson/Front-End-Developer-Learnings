@@ -245,6 +245,7 @@ function AddEvent(html_element, event_name, event_function)
 <h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 
+<h3>Constructors</h3>
 
 <h3>Debugging</h3>
 - console.log() - Used to output values to the console window.
