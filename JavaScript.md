@@ -1,8 +1,8 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h3>Javascript Values</h3>
-- Their are 6 identifiable values types in JavaScript: number, string, boolean, object, function and undefined.
-- The 'typeof' operator can be used to identify a values type. i.e. var theType = typeof ""; theType would equal 'string';
+- Their are 7 data types in JavaScript: number, string, boolean, object, function, undefined and null.
+- The 'typeof' operator can be used to identify the data type. i.e. var theType = typeof ""; theType would equal 'string'. Although a bug exists when using typeof with 'null' values as it returns Object.
 - JavaScript has Lexical scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
 - JavaScript has Implied Global Variables so if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
@@ -59,7 +59,12 @@ if(randomNum % 7 == 0)
 
 <h4>Undefined</h4>
 - Undefined is the value of a variable which has been initialized but not assigned a type or a value. i.e. var a; 'typeof a' will equal undefined.
+- A value can also be set to undefinend i.e. a = undefined; 
 - Undefined is a 'Falsy' value
+
+<h4>Null</h4>
+- Null is a value that can be used by developers to set 
+
 
 <h4>Functions</h4>
 - 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the differences between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherso/qHBUY/
@@ -246,6 +251,8 @@ function AddEvent(html_element, event_name, event_function)
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 
 <h3>Constructors</h3>
+- The 'new' keyword signify's the use of a constructor
+- 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
 
 <h3>Debugging</h3>
 - console.log() - Used to output values to the console window.
