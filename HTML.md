@@ -58,6 +58,27 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 - Create unique meta title tags for each page which are brief but descriptive (info on Meta Tags here) https://support.google.com/webmasters/answer/79812?hl=en&ref_topic=2371375
 - Include important keywords in your text but don’t overdo it as Google will see this as content manipulation. And of course you should always be thinking of your audience not just your page ranking.
 - You may find the need to abreviate important terms to make you content more concise use the 'abbr' tag to get the best of both worlds i.e. <abbr title="Front End Developer">FED</abbr>
+- Use the Microdata specification to add metadata to content i.e
+```HTML
+<section itemscope itemtype="http://schema.org/Person"> 
+        Hello, my name is 
+        <span itemprop="name">John Doe</span>, 
+        I am a 
+        <span itemprop="jobTitle">graduate research assistant</span> 
+        at the 
+        <span itemprop="affiliation">University of Dreams</span>. 
+        My friends call me 
+        <span itemprop="additionalName">Johnny</span>. 
+        You can visit my homepage at 
+        <a href="http://www.JohnnyD.com" itemprop="url">www.JohnnyD.com</a>. 
+        <section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                I live at 
+                <span itemprop="streetAddress">1234 Peach Drive</span>,
+                <span itemprop="addressLocality">Warner Robins</span>,
+                <span itemprop="addressRegion">Georgia</span>.
+       </section>
+</section>
+```
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
