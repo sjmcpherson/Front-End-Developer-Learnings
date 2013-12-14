@@ -373,7 +373,7 @@ for(i=0 ; i<arrElements.length ; i++){
 - Cache elements when using selectors var elem = getElementByTagName('a');
 - Avoid using the eval() function as well as potential security implications it causes code executed by the eval function to run at least twice as slow. There maybe times when it is necessary i.e. when executing code inside JSON.
 
-<h2>Helpful JavaScript/jQuery scripts</h2>
+<h2>Helpful JavaScript/jQuery Libraries & Scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
@@ -386,4 +386,15 @@ for(i=0 ; i<arrElements.length ; i++){
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
 - Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
+- Handlebars.js - Lightweight, library to build semantic templates i.e.
+
+```HTML
+<div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+```
+
 
