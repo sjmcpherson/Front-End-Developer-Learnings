@@ -17,7 +17,6 @@
 
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
-
 <h4>Boolean</h4>
 - Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
@@ -48,7 +47,6 @@ if(randomNum % 7 == 0)
 - string.toLowerCase
 - string.toUpperCase
 
-
 <h4>Objects</h4>
 - Objects are an unordered list of name/value pairs. Names are strings and values can be any type including other objects
 - Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}';
@@ -56,7 +54,7 @@ if(randomNum % 7 == 0)
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
-- hasOwnProperty - This is used to determine whether a property is part of the prototype chain or not. This is useful in checking if a native prototype is supported and for use in a 'for in' loop
+- hasOwnProperty - This is used to determine whether a property is part of the prototype chain or not. This is useful in checking if a native prototype is supported and for use in a 'for in' loop to avoid errors from extending the native prototype
  
 ```javascript
 // Poisoning Object.prototype
