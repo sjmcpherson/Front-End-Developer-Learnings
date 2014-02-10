@@ -56,6 +56,19 @@ if(randomNum % 7 == 0)
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
+- hasOwnProperty - This is used to determine whether a property is part of the prototype chain or not.
+ 
+```javascript
+// Poisoning Object.prototype
+Object.prototype.bar = 1;
+var foo = {goo: undefined};
+
+foo.bar; // 1
+'bar' in foo; // true
+
+foo.hasOwnProperty('bar'); // false
+foo.hasOwnProperty('goo'); // true
+```
 
 <h4>Undefined</h4>
 - Undefined is the value of a variable which has been initialized but not assigned a type or a value. i.e. var a; 'typeof a' will equal undefined.
@@ -397,5 +410,4 @@ for(i=0 ; i<arrElements.length ; i++){
   </div>
 </div>
 ```
-
 
