@@ -249,6 +249,7 @@ function AddEvent(html_element, event_name, event_function)
 
 <h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
+- Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
 
 <h3>Constructors</h3>
 - The 'new' keyword signify's the use of a constructor
