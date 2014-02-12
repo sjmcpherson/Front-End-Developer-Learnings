@@ -1,10 +1,8 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h3>Javascript Values</h3>
-- Their are 7 data types in JavaScript: number, string, boolean, object, function, undefined and null.
-- The 'typeof' operator can be used to identify the data type. i.e. var theType = typeof ""; theType would equal 'string'. Although a bug exists when using typeof with 'null' values as it returns Object.
-- JavaScript has Lexical scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
-- JavaScript has Implied Global Variables so if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
+- Their are 7 data types in JavaScript: number, string, boolean, object, function, undefined and null identifiable by the 'typeof' operator. i.e. var theType = typeof ""; theType would equal 'string'. Although a bug exists when using typeof with 'null' values as it returns Object.
+- Implied Global Variables - JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
 ```javascript
   //Longhand
@@ -15,6 +13,7 @@
   var x, y, z=3;
 ```
 
+- JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
 <h4>Boolean</h4>
@@ -269,6 +268,9 @@ function AddEvent(html_element, event_name, event_function)
 <h3>Debugging</h3>
 - console.log() - Used to output values to the console window.
 - console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);"
+
+<h3>Module Pattern</h3>
+
 
 
 <h3>Other JavaScript Methods/Frameworks</h3>
