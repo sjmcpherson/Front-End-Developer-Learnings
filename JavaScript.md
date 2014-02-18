@@ -291,7 +291,7 @@ function PrefixedEvent(element, type, callback) {
 }
 PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
-
+- Web Workers - An API for defining background scripts to run concurrently from the main thread handling user interactions. See http://www.html5rocks.com/en/tutorials/workers/basics/
 
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most.
@@ -368,7 +368,6 @@ document.querySelector('ul').appendChild(frag);
 ```
 
 - Cache AJAX results to reduce unnessary requests. Use flags to determine whether to request new data and/or periodical clearing of the cache if data is updated externally. i.e. 
-- Web Worker i.e. var worker = new Worker('my_task.js'); runs in the background, independently of other scripts, without affecting the performance of the page.
 - Where possible use CSS animations, browsers take advantage of hardware acceleration.
 - Debounce when using scroll & resize events, use setTimeout/setInterval to limit excessive triggering of event, this is called Debouncing.
 - Avoid using an anonymous function body to process your event code as in the first case below, as this code would be duplicated multiple times due to the for loop, use the 2nd case.
@@ -410,4 +409,3 @@ for(i=0 ; i<arrElements.length ; i++){
   </div>
 </div>
 ```
-
