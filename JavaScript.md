@@ -274,7 +274,6 @@ function AddEvent(html_element, event_name, event_function)
 
 
 <h3>Other JavaScript Methods/Frameworks</h3>
-- Web Intents - a new framework for web-based inter-application communication and service discovery using JavaScript postMessage()
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
@@ -291,7 +290,7 @@ function PrefixedEvent(element, type, callback) {
 }
 PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
-- Web Workers - An API for defining background scripts to run concurrently from the main thread handling user interactions. See http://www.html5rocks.com/en/tutorials/workers/basics/
+- Web Workers - An API for defining background scripts to run concurrently from the main thread handling user interactions. IE10+ See http://www.html5rocks.com/en/tutorials/workers/basics/
 
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most.
