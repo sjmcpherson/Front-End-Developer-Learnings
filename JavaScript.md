@@ -293,7 +293,7 @@ PrefixedEvent(anim, "AnimationStart", AnimationListener);
 - Web Workers - An API for defining background scripts to run concurrently from the main thread handling user interactions. IE10+ See http://www.html5rocks.com/en/tutorials/workers/basics/
 
 <h2>ECMAScript 6</h2>
-- This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most.
+- This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Const - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
 - Let - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
 
