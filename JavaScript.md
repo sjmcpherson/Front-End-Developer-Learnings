@@ -1,7 +1,7 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h3>Javascript Values</h3>
-- Their are 7 data types in JavaScript: number, string, boolean, object, function, undefined and null identifiable by the 'typeof' operator. i.e. var theType = typeof ""; theType would equal 'string'. Although a bug exists when using typeof with 'null' values as it returns Object.
+- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; theType would equal 'string'. Although a bug exists when using typeof with 'null' values as it returns Object.
 - Implied Global Variables - JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
 ```javascript
