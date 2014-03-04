@@ -66,6 +66,16 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 
 - Font size units - px,pt,em,rem,%.
 
+<h2>CSS Code Snippets</h2>
+ - Vertical align text or imaages inside a element.
+
+ ```CSS
+.holder p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+```
 
 <h2>CSS Performance</h2>
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
