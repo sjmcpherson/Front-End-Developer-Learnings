@@ -341,6 +341,7 @@ $("td").hover(
 );
 ```
 - $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
+-  $("a[href='" + document.location.pathname + "']").addClass("current"); Use the filename to highlight the current page on a nav
 
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
