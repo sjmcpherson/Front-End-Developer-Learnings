@@ -274,7 +274,7 @@ function AddEvent(html_element, event_name, event_function)
 - console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);"
 
 <h3>Module Pattern</h3>
-
+- The module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
 
 
 <h3>Other JavaScript Methods/Frameworks</h3>
