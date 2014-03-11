@@ -2,6 +2,7 @@
 
  - HTML5 Doctype &lt;!doctype html&gt;
  - Doctype must be first on page or IE will revert to Quirks Mode (Dreamweaver Templates can mess with this)
+ - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel
  - Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js
@@ -80,6 +81,9 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
        </section>
 </section>
 ```
+
+- Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
+
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
