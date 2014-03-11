@@ -228,6 +228,7 @@ var big = (x > 10);
 
 <h3>JSON</h3>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
+- JSONP stands for JSON with padding. The padding is a callback function that is used to wrap the data returned from the server. The reason for its existence is to get around browser's same-origin restriction against cross domain requests.
 
 <h3>JavaScript Events</h3>
 - Use Event Delegation instead of individual event listeners e.g. 
