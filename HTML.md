@@ -42,6 +42,7 @@ Would Produce:
 - Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
 - The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/ Similarly the CSS attribute -user-input can be use to replicate but with limited support.
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
+- Application Cache (AppCache) 
 
 <h2>SEO Optimization</h2>
 - Include descriptive terms to your URLs and create a easily to understand hierarchy, i.e. List of Products at “www.yoursite.com/products/” individual products at “www.yoursite.com/products/descriptive-product-name/”
