@@ -32,8 +32,8 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - '-column-count' Multi-column Wrapping Text layouts with "div{-column-count: 3;}" IE10+
  - '-calc' Dynamic css calculations "div{width: +calc(100% - 4em);}"
  - Box Sizing - 'box-sizing:border-box' (IE8+) forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
-- CSS Regions
-- Pointer Events - 'pointer-events:none' Disables mouse events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
+ - CSS Regions - A specification that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
+ - Pointer Events - 'pointer-events:none' Disables mouse events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
 
 <h4>Media Queries</h4>
  - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
