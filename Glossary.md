@@ -50,7 +50,7 @@ $( "li" ).each(function() {
 - Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
 - REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful.
 - Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
-- Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than "<i>Yes</i>" use "<em>Yes</em>"(emphasis) or "<span class='emphasis'>Yes</span>"
+- Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
 - SHA - Secure Hash Algorithm
 - SOAP - Simple Object Access Protocol
 - SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
