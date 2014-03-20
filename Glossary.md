@@ -15,7 +15,7 @@
 - Document-oriented Database – A collection of independent documents. E.g CouchDB, MongoDB
 - DOM - Document Object Model
 - DRY(Don't Repeat Yourself) is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
-- Emmet - a plugin for popular text editors which speed of HTML authoring. 
+- Emmet - a plugin for popular text editors which speed of HTML authoring using CSS like abreviations.
 - Explicit Iteration vs Implicit Iteration - In jQuery:
 
 ```javascript
