@@ -39,7 +39,7 @@ $( "li" ).each(function() {
 - JSON - Stands for JavaScript Object Notation.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
-- Markdown - A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites.
+- Markdown - A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites. http://daringfireball.net/projects/markdown/
  
 ```HTML
 Header 1 Title
