@@ -38,7 +38,17 @@ $( "li" ).each(function() {
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
 - JSON - Stands for JavaScript Object Notation.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
-- Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript
+- Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
+- Markdown - A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites.
+ 
+```CSS
+A Title
+===========
+- A bullet point
+
+```
+
+
 - Minification - Removes comments and white space to reduce the file size.
 - MVC stands for Model View Controller which creates a structure of seperation in an application, the Model being the data, the View the presentation layer and the controller which acts as the glue between the Model & View manipulating Data and recording Events.
 - MVVM stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
