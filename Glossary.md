@@ -42,10 +42,14 @@ $( "li" ).each(function() {
 - Markdown - A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites.
  
 ```CSS
-A Title
+Header 1 Title
 ===========
-- A bullet point
+- bullet point
 
+Will be converted to:
+
+<h1>Header 1 Title</h1>
+<li>bullet point</li>
 ```
 
 
