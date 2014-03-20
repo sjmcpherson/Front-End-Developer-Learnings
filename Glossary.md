@@ -41,7 +41,7 @@ $( "li" ).each(function() {
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
 - Markdown - A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites.
  
-```CSS
+```HTML
 Header 1 Title
 ===========
 - bullet point
