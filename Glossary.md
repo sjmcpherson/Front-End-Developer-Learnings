@@ -1,4 +1,5 @@
-<h2>Abbreviations/Terms:</h2>
+Abbreviations/Terms:
+=============
 
 - Abstraction - A process of structuring code to be more readable by making functions shorter and code reuseable. Object-Oriented Programming is an approach to Abstraction.
 - API – Application Programming Interface is a specification for combining software components.
