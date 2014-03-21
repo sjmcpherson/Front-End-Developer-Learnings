@@ -22,8 +22,8 @@
  - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
  - &lt;video autoplay controls&gt;&lt;/video&gt;
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
- - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited, but can be added with a JavaScript shim.
- - Haml (HTML Abstraction Markup Language) is a lightweight markup language. Example:
+ - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
+ - HAML (HTML Abstraction Markup Language) is a lightweight markup language. Example:
 
 ```HTML
   %body
@@ -41,9 +41,16 @@ Would Produce:
 - The recommened viewport setting for responsive design '<meta name="viewport" content="width=device-width">' this allows the user to zoom.
 - To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
 - Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
-- The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/ Similarly the CSS attribute -user-input can be use to replicate but with limited support.
+- The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/. Similarly the CSS attribute -user-input can be use to replicate but with limited support.
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
+- Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
 - Application Cache (AppCache) 
+- Web Components a collection standards (like HTML imports) in development for allowing encapsulation of HTML, CSS & JS into custom HTML tags. 
+
+```HTML
+  <link rel="import" href="import.html">
+```
+
 
 <h2>SEO Optimization</h2>
 - Include descriptive terms to your URLs and create a easily to understand hierarchy, i.e. List of Products at “www.yoursite.com/products/” individual products at “www.yoursite.com/products/descriptive-product-name/”
@@ -81,9 +88,6 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
        </section>
 </section>
 ```
-
-- Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
-
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
