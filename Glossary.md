@@ -33,6 +33,7 @@ $( "li" ).each(function() {
 - Falsy - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
 - Functional Programming
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
+- Grunt is a framework to build, run and test your project. It can process/minify/combine the likes of Less,Sass,JS,HAML,Markdown,CoffeeScript etc create a test enviroment and create a webserver to view your project on.
 - Hash Table - 
 - Hoisting - In JavaScript no matter where you declare a variable, its declaration is added to the top of its scope(function) this means JavaScript Scope is different to most other languages that use Block Level Scope inwhich new scope is created within any curly brakets('{}')
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
