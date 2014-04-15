@@ -63,8 +63,9 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 }
 ```
 
-
-- Font size units - px,pt,em,rem,%.
+<h3>Font size units</h3>
+- em - Calculated based on the root defined 
+- px,pt,em,rem,%.
 
 <h2>CSS Code Snippets</h2>
  - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
