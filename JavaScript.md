@@ -304,7 +304,7 @@ PrefixedEvent(anim, "AnimationStart", AnimationListener);
 
 
 <h2>jQuery Specific Coding Tips</h2>
-- The jQuery '$' is just a function that returs jQuery's 'init' function
+- The jQuery '$' is just a function that returns jQuery's 'init' function
 - $.fn is just shorthand for the jQuery Prototype object i.e. jQuery.fn = jQuery.prototype
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
 - “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
