@@ -64,8 +64,28 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 ```
 
 <h3>Font size units</h3>
-- em - Calculated based on the root defined 
-- px,pt,em,rem,%.
+ - em - Calculates the font size based on the Parent font size which compounds down the tree
+ 
+```CSS
+html {font-size: 0.625em;}
+ul { font-size: 2.4em; } /* =24px */
+ul li  { font-size: 1em; } /* =24px */
+ul li  { font-size: 1.05em; } /* =25px */
+```
+
+ - rem - Which stands for Root EM calculates the font size relative to the Root element
+ 
+```CSS
+html {font-size: 0.625rem;}
+ul { font-size: 2.4rem; } /* =24px */
+ul li { font-size: 1.4rem; } /* =14px */
+```
+
+
+
+i.e. html{font-size:62.5%}
+
+ - px,pt,em,rem,%.
 
 <h2>CSS Code Snippets</h2>
  - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
