@@ -301,6 +301,27 @@ PrefixedEvent(anim, "AnimationStart", AnimationListener);
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Const - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
 - Let - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
+- Default Parameter Values - Will allow you to set default values for parameters that are undefined. i.e.
+```javascript
+function Point(x = 0, y = 0) {
+   this.x = x;
+   this.y = y;
+}
+
+var p = new Point(); // => { 0, 0 }
+```
+- The Spread Operator - Allows parameters to be summarised in places where multiple arguments or elements are expected
+```javascript
+function add(...values) {}
+add(2, 5, 3);
+
+var a = [0, 1, 2];
+var b = [3, 4, 5];
+
+a.push(...b); // => [0, 1, 2, 3, 4, 5]
+```
+
+- Classes - A clean simple declarative syntax for defining object prototypes and inheritance chains.
 
 
 <h2>jQuery Specific Coding Tips</h2>
