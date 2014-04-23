@@ -1,7 +1,7 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h3>What is JavaScript</h3>
-- JavaScript commonly abbreviated to JS is a scripted language rather than a compiled language like C#, C++, Java etc This means it is executed line by line by its host environment(commonly the web browser) at run time. Initially called LiveScript JS is built from EcmaScript standards. 
+- JavaScript commonly abbreviated to JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. Initially called LiveScript, JS is built from EcmaScript standards. 
 
 <h3>Javascript Values</h3>
 - JavaScript is a Dynamically typed language meaning variables do not need to be initialised with a type and therefore deals with Type Errors differently to strongly typed Static Type languages like C#, C++, Java etc.
