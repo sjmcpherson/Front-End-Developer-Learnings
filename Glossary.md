@@ -65,7 +65,7 @@ Will be converted to:
 - Prototypal Inheritance - In JavaScript Objects are inherited from other Objects using the 'new' operator, there is no distinguising between a object & the object it inherits from as opposed to a class based language.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
 - Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
-- REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful.
+- REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. T
 - Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
 - Sass - Preproccessor for CSS, which allow you to use Variables, Functions & Calcutions, their are 2 formats the standard .Sass format and the more widely used .Scss format.
 - Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
@@ -80,5 +80,6 @@ Will be converted to:
 - Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
 - SVG - Scalable Vector Graphics - is a XML based vector graphics format with some support for interactivity and animations
 - Two Way Data Binding - A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
+- URI - Uniform Resource Identifier.
 - User Experience(UX) - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
 - User Interface(UI) - The User Interface are the components which users interact with.
