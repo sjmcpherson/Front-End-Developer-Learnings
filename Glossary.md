@@ -74,6 +74,7 @@ Will be converted to:
 - Software Development Methology - is a framework for structuring planning, controlling a software project. 
 - SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
 - SDK – Software Development Kit is a toolkit to allow software development on a specific framework or platform.
+- SSL - Secure Sockets Layer - a internet protocol for secure communication.
 - SSH - Secure Shell - is a network protocol for secure communication over an insecure network.
 - Statement - A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
 - Strongly Typed - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
