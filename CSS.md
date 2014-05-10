@@ -118,8 +118,16 @@ i.e. html{font-size:62.5%}
  .site-footer { background: orange;}
 ```
 
-
-
+ - Spaced and indented paragraph
+```CSS
+p{
+  margin-bottom:20px;
+}
+p+p{
+  text-indent:2em;
+  margin-top:-20px;
+}
+```
 
 <h2>CSS Performance</h2>
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
