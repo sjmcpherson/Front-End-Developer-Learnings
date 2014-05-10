@@ -87,6 +87,12 @@ i.e. html{font-size:62.5%}
 
  - px,pt,em,rem,%.
 
+
+<h3>Font Rendering</h3>
+ - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+ - http://aestheticallyloyal.com/public/optimize-legibility/
+
+
 <h2>CSS Code Snippets</h2>
  - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
 
