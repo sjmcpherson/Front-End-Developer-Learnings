@@ -138,3 +138,4 @@ p+p{
  - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
  - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
  - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
+ - Use CSS Animtaions & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration improving performance making CSS Transitions/Animation smoother. 
