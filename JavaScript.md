@@ -278,6 +278,13 @@ function AddEvent(html_element, event_name, event_function)
 - The module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
 
 
+<h3>RequestAnimationFrame</h3>
+ - CSS should be used for simple transitions & animations i.e. button rollovers, dropdown menus etc
+ - Using RequestAnimationFrame over other techniques the browser optimizes it with hardware acceleration to make them smoother.
+ - Animations in inactive tabs will stop, utilizing CPU elsewhere
+ - It helps with battery life
+
+
 <h3>Other JavaScript Methods/Frameworks</h3>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
@@ -435,3 +442,5 @@ for(i=0 ; i<arrElements.length ; i++){
   </div>
 </div>
 ```
+
+
