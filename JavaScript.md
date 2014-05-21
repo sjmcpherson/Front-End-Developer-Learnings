@@ -231,7 +231,7 @@ var big = (x > 10);
 - JSONP stands for JSON with padding. The padding is a callback function that is used to wrap the data returned from the server. The reason for its existence is to get around browser's same-origin restriction against cross domain requests.
 
 <h3>JavaScript Events</h3>
-- Use Event Delegation instead of individual event listeners e.g. 
+- Use Event Delegation instead of individual event listeners (read more http://davidwalsh.name/event-delegate) e.g. 
 
 ```javascript
 //jQuery 1.4.3+ 
@@ -239,9 +239,9 @@ $("table").delegate("td", "click", function(){});
 //jQuery 1.7+
 $("table").on("click", "td", function() {});
 //Vanilla JS
-document.querySelector('#parent-list').addEventListener('click', function(e) {
+document.querySelectorAll('table').addEventListener('click', function(e) {
         // e.target is the clicked element!
-        if(e.target && e.target.tagName == 'LI') {}
+        if(e.target && e.target.tagName == 'td') {}
 });
 ```
 - Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
