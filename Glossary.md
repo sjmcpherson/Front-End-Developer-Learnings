@@ -33,6 +33,7 @@ $( "li" ).each(function() {
 - Expression - Something which evaluates to a value. Example: 1+2/x
 - Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
 - Falsy - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
+- FastCGI - A system whereby CGI (Common Gateway Interface) programs stay in memory rather than being spawned as individual process when requested. This makes for much better efficiency. 
 - Functional Programming
 - Graceful Degradation - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used. 
 - Grunt is a framework to build, run and test your project. It can process/minify/combine the likes of Less,Sass,JS,HAML,Markdown,CoffeeScript etc create a test enviroment and create a webserver to view your project on.
