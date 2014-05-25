@@ -286,7 +286,7 @@ function AddEvent(html_element, event_name, event_function)
  - It helps with battery life
 
 
-<h3>Other JavaScript Methods/Frameworks</h3>
+<h3>Other JavaScript APIs</h3>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
@@ -306,6 +306,18 @@ PrefixedEvent(anim, "AnimationStart", AnimationListener);
 - Web Workers - An API for defining background scripts to run concurrently from the main thread handling user interactions. IE10+ See http://www.html5rocks.com/en/tutorials/workers/basics/
 - WebSockets - Allows the browser to open 2 way communication with the server this allows real time communication rather than relying on polling. (More Info  https://developer.mozilla.org/en-US/docs/WebSockets/Writing_WebSocket_client_applications)
 - Server Side Events(SSEs) - 
+- Page Visibility - Using document.hidden and/or document.visibilityState you can determine whether the page is in the active tab of the browser and whether the browser window is minified or not
+
+```javascript
+function handleVisibilityChange() {
+  if (document.hidden)
+    pauseSimulation();
+  else
+    startSimulation();
+}
+
+document.addEventListener("visibilitychange", handleVisibilityChange, false);
+```
 
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
