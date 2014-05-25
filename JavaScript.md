@@ -259,9 +259,6 @@ function AddEvent(html_element, event_name, event_function)
 } 
 ```
 
-- requestAnimationFrame() Limited Browser Compatibility(IE10+,Safari6+) - only triggers when the result will update the display i.e. Will not trigger on a hidden browser tab whereas SetInterval/SetTimeout will.
-
-
 <h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
@@ -288,7 +285,6 @@ function AddEvent(html_element, event_name, event_function)
 
 <h3>Other JavaScript APIs</h3>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
-- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
 - animationstart, animationiteration, animationend allow JavaScript control over CSS3 Animations. IE10+ & prefixes required for most browsers through:
@@ -318,6 +314,16 @@ function handleVisibilityChange() {
 
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
+
+- Web Notifications - Allows you to send notifications to the user outside of the browser window. The user must allow permission for your application to use them. The look is largely based on the browser and compatibility is limited
+- Application Cache - Allows pages and resources to be cached for offline usage
+- Network Information - Can be used to determine what internet connection is being used I.e wifi, cellular etc
+- Vibration - Trigger vibration in mobile devices
+- Battery - Detect if the battery is low on the device
+
+<h3>JavaScript Frameworks</h3>
+- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
+
 
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
