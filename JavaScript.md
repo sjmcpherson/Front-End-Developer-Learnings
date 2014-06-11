@@ -160,6 +160,21 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
+<h3>Iteration VS Enumeration </h3>
+- iteration - the for statement 
+- enumeration - the for in statement enumeration order is not guaranteed 
+- enumeration order is not guaranteed see the follow example:
+```javascript
+var obj:Object = {};
+obj.name = "Manish Jethani";
+obj.city = "Copenhagen";
+obj.os = "Mac OS X 10.4";
+for (var p:* in obj)
+    trace(p + ": " + obj[p]);
+//The above can print name, city, and os inA ANY order. 
+```
+
+    
 <h3>System Objects</h3>
 <h4>The Math Object</h4>
 - Math object used for more complex math functions
