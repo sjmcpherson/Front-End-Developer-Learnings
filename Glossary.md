@@ -8,6 +8,7 @@ Abbreviations/Terms:
 - Asynchronous vs Synchronous, Asynchronouse permits other processing to continue while a transmission is being processed.
 - Atom - applies to a pair of related Web standards
 - Bower - A front-end package management system that runs on Node.js & npm
+- CGI - Common Gateway Interface is the standard method for server-side communication when transfering information between the web server & browser. 
 - Closure - A term used when you nest functions, as inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 - CDN – Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
 - CRUD - Create, Read, Update, Delete (Also BREAD - Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
