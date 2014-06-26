@@ -370,6 +370,7 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 <h2>jQuery Specific Coding Tips</h2>
 - The jQuery '$' is just a function that returns jQuery's 'init' function
 - $.fn is just shorthand for the jQuery Prototype object i.e. jQuery.fn = jQuery.prototype
+- Get the version of jQuery used on a webpage via $.fn.jquery
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
 - “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
@@ -407,6 +408,7 @@ $("td").hover(
 ```
 - $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
 -  $("a[href='" + document.location.pathname + "']").addClass("current"); Use the filename to highlight the current page on a nav
+- You can load the latest version of jQuery via the Command Line using include('jquery').
 
 <h2>JavaScript Performance</h2>
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
