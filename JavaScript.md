@@ -459,15 +459,17 @@ for(i=0 ; i<arrElements.length ; i++){
 
 <h2>Helpful JavaScript/jQuery Libraries & Scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
-- Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
-- selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
-- Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
+- JSX a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
 - Equalize.js jQuery plugin for equalizing the height or width of sibling elements
 - ajax-cache.js - Provides a AJAX response caching object so as to limit unnessary requests. https://code.google.com/p/ajax-cache/
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
+- Reactjs a JS library developed by Facebook which uses the Virtual DOM to make changes to the View improving performance
+- Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
+- Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
+- selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
 - Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
 - Handlebars.js - Lightweight, library to build semantic templates i.e.
