@@ -466,7 +466,7 @@ for(i=0 ; i<arrElements.length ; i++){
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
-- Reactjs a JS library developed by Facebook which uses the Virtual DOM to make changes to the View improving performance
+- Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
 - Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
