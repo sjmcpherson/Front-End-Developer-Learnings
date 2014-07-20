@@ -306,6 +306,25 @@ function AddEvent(html_element, event_name, event_function)
  - It helps with battery life
 
 
+<h3>JavaScript Promises</h3>
+```javascript
+function simplePromise() {
+  return {
+    then: function(callback) {
+      var value = 42;
+      callback(value);
+    }
+  };
+}
+
+simplePromise().then(function(result) {
+    log("got a result", result);
+});
+```
+- Promise Libraries: Q, when, WinJS, RSVP.js
+- JavaScript Promise API (Chrome, Firefox, Opera Only)
+
+
 <h3>Other JavaScript APIs</h3>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
