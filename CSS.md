@@ -1,6 +1,6 @@
 <h2>CSS Coding Tips</h2>
 
-<h3>Uncommon CSS Selectors</h3>
+<h3>Advanced CSS Selectors</h3>
  - X:first-letter/:first-line IE6+ apply to block level elements compatible with all browser versions
  - ul > li{} IE7+ targets direct children
  - ul ~ p{} IE7+ targets p tags after ul tag in DOM
@@ -9,7 +9,7 @@
  - :first-child{} IE7+ targets the first child element
  - :last-child{} IE9+ targets the last child element
  - X[href^="http"] IE7+ You can use 'a[href$='index.html'] {color: green;}' to set the active navigation item in a menu.
- - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8
+ - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Input elements are not supported.
  - X:nth-child(3) & X:nth-last-child(2) IE9+ 
  - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector.
  - :first-of-type & :last-of-type IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
