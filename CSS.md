@@ -91,7 +91,7 @@ i.e. html{font-size:62.5%}
 <h3>Font Rendering</h3>
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
- - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:normal" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
+ - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
 
 <h2>CSS Code Snippets</h2>
  - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
