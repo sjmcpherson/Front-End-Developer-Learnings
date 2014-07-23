@@ -129,7 +129,7 @@ p+p{
 }
 ```
 
- - Alternate Rows
+ - Alternate Rows (:nth-child IE9+)
 ```CSS 
 tbody tr:nth-child(odd) {
    background-color: lightblue;
