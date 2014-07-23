@@ -129,6 +129,14 @@ p+p{
 }
 ```
 
+ - Alternate Rows
+```CSS 
+tbody tr:nth-child(odd) {
+   background-color: lightblue;
+}
+```
+
+
 <h2>CSS Performance</h2>
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
