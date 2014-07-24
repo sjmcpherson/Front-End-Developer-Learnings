@@ -147,3 +147,4 @@ tbody tr:nth-child(odd) {
  - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
  - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
  - Use CSS Animtaions & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration improving performance making CSS Transitions/Animation smoother. 
+ - The browser will still download images that are hidden with display:none although with some browsers(Firefox) images in CSS via background-images will not be downloaded.
