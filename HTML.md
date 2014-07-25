@@ -88,6 +88,14 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
        </section>
 </section>
 ```
+- An under-utilized and often misunderstood element is the Definition List, semantically correct when displaying a list of titles with a description
+```HTML
+    <dl><!--Container-->
+       <dt>Definition Term (like a title)</dt>
+       <dd>Definition Description</dd>
+    </dl>
+```
+
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
