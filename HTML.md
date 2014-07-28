@@ -51,6 +51,14 @@ Would Produce:
   <link rel="import" href="import.html">
 ```
 
+- Dialog Element - Native popup/
+```HTML
+<dialog open id="dialog">
+  <p>Hi, I'm a dialog!</p>
+  <button id="close">Okay</button>
+</dialog>
+```
+
 
 <h2>SEO Optimization</h2>
 - Include descriptive terms to your URLs and create a easily to understand hierarchy, i.e. List of Products at “www.yoursite.com/products/” individual products at “www.yoursite.com/products/descriptive-product-name/”
