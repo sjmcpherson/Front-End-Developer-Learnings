@@ -63,6 +63,8 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 }
 ```
 
+- rgba(0,0,0,0) - Red, Green, Blue & Alpha Transparency can be used for almost any color attribute but is not supported by <IE9
+
 <h3>Font size units</h3>
  - em - Calculates the font size based on the Parent font size which compounds down the tree
  
