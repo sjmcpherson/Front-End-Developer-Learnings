@@ -493,11 +493,12 @@ for(i=0 ; i<arrElements.length ; i++){
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
+- htm5shiv.js/html5shim.js - Allows the styling of HTML5 Elements such as Section, Article, Header in <IE9.
 - Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
 - Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
-- Modernizr.js adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
+- Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
 - Handlebars.js - Lightweight, library to build semantic templates i.e.
 
