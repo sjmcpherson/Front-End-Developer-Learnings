@@ -60,6 +60,20 @@ Would Produce:
 ```
 
 
+<h2>HTML5 Forms</h2>
+- Input types - HTML5 introduces a number of new input types all have varing browser support. color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week. Modernizr can be used to determine support and if not fallback to input="text".
+- type="search" - In Webkit browsers it adds a Clear field button, In Chrome hitting 'Esc' will clear field. Webkit browsers may style it differently.
+
+- contenteditable
+- spellcheck attribute when set to true on an input, textarea and a contenteditable set element will tell the browser(if supported) to check the spelling of element and add a red underline to a word it deems incorrect. By default the attribute is false for inputs and true for textareas and contenteditible in most browsers.
+- autocorrect attribute - Used specifically by Touch device web browsers to offer options to correct potential spelling mistakes. Disabled by default on input="email"
+- autocapitalize attribute - Used specifically by Touch device web browsers to Autocapitalize the first letter in an input. Disabled by default on input="email"
+- autocomplete attribute - can be used by browser to autopopulate a field based on previously entered data.
+```HTML
+    <input type="email" name="email" id="email" autocomplete="email">
+```
+
+
 <h2>SEO Optimization</h2>
 - Include descriptive terms to your URLs and create a easily to understand hierarchy, i.e. List of Products at “www.yoursite.com/products/” individual products at “www.yoursite.com/products/descriptive-product-name/”
 - Make use of header tag. h1,h2,h3,h4,h5 tags to emphasize important text but use sparingly across the page.
