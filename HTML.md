@@ -61,6 +61,9 @@ Would Produce:
 
 
 <h2>HTML5 Forms</h2>
+- Placeholder attribute - Text is displayed inside the input field as long as the field is empty. When you click on (or tab to) the input field and start typing, the placeholder text disappears. IE10+
+- Autofocus attribute - On page load set focus to element. Can be used on inputs buttons and textareas. e.g <input autofocus /> IE10+
+
 - Input types - HTML5 introduces a number of new input types all have varing browser support. color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week. Modernizr can be used to determine support and if not fallback to input="text".
 - type="search" - In Webkit browsers it adds a Clear field button, In Chrome hitting 'Esc' will clear field. Webkit browsers may style it differently.
 
