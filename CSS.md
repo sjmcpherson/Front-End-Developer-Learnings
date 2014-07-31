@@ -52,26 +52,27 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 
 <h4>Opacity</h4>
 ```CSS
-	/* Theoretically for IE 8 & 9 (more valid) */	
-	/* ...but not required as filter works too */
-	/* should come BEFORE filter */
+	/* Theoretically for IE 8 & 9 (more valid) but not required as filter works too should come BEFORE filter */
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-	
-	/* This works in IE 8 & 9 too */
-	/* ... but also 5, 6, 7 */
+	/* This works in IE 8 & 9 too but also 5, 6, 7 */
 	filter: alpha(opacity=50);
-	
 	/* Older than Firefox 0.9 */
 	-moz-opacity:0.5;
-	
 	/* Safari 1.x (pre WebKit!) */
 	-khtml-opacity: 0.5;
-    
-	/* Modern!
-	/* Firefox 0.9+, Safari 2?, Chrome any?
-	/* Opera 9+, IE 9+ */
+	/* Modern! Firefox 0.9+, Safari 2?, Chrome any?, Opera 9+, IE 9+ */
 	opacity: 0.5;
+
+	/* Recommended Usage for Today */
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}	
 ```
+
+
+
 
 <h4>Media Queries</h4>
  - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
