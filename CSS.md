@@ -1,7 +1,7 @@
 <h2>CSS Coding Tips</h2>
 
 <h3>Advanced CSS Selectors</h3>
- - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}
+ - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
  - element > element - IE7+ targets direct children e.g ul > li{}
  - element ~ element - IE7+ targets p tags after ul tag in DOM e.g ul ~ p{} 
  - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
