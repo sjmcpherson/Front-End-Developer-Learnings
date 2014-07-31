@@ -1,7 +1,6 @@
 <h2>CSS Coding Tips</h2>
 
 <h3>Advanced CSS Selectors</h3>
- - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
  - element > element - IE7+ targets direct children e.g ul > li{}
  - element ~ element - IE7+ targets p tags after ul tag in DOM e.g ul ~ p{} 
  - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
@@ -18,11 +17,9 @@
 
 
 <h4>Peusdo Selectors</h4>
-
+ - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
  - element:first-child - IE7+ targets the first child element
  - element:last-child - IE9+ targets the last child element
-
-
  - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
  - X:nth-child(3) & X:nth-last-child(2) IE9+ 
  - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector.
