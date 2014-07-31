@@ -1,15 +1,29 @@
 <h2>CSS Coding Tips</h2>
 
 <h3>Advanced CSS Selectors</h3>
- - X:first-letter/:first-line IE6+ apply to block level elements compatible with all browser versions
- - ul > li{} IE7+ targets direct children
- - ul ~ p{} IE7+ targets p tags after ul tag in DOM
- - h1 + p{} IE7+ targets adjacent p tags directly after h1 tags
- - a[data-info~="image"]{} IE7+ selects all elements that have a data-info of “image” including multiple values such as  data-info="external image"
- - :first-child{} IE7+ targets the first child element
- - :last-child{} IE9+ targets the last child element
- - X[href^="http"] IE7+ You can use 'a[href$='index.html'] {color: green;}' to set the active navigation item in a menu.
- - :after{content:"more";} & :before{} IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Input elements are not supported.
+ - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}
+ - element > element - IE7+ targets direct children e.g ul > li{}
+ - element ~ element - IE7+ targets p tags after ul tag in DOM e.g ul ~ p{} 
+ - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
+
+ 
+<h4>Attribute Selectors</h4>
+ - Targets an elements attributes, __All attribute selectors are IE7+__
+ - element[attribute ^= value] - IE7+ selects elements with a attribute value that begins with the characters e.g a[href^="http"]{}
+ - element[attribute *= value] - IE7+ selects elements matching the characters e.g a[data-info *= "image"]{}
+ - element[attribute ~= value] - IE7+ selects elements matching the whole word, a stricter version of "*="
+ - have a data-info of “image” including multiple values such as  data-info="external image" e.g a[data-info~="image"]{}
+ - element[attribute $= value] - IE7+ selects elements matching 
+
+
+
+<h4>Peusdo Selectors</h4>
+
+ - element:first-child - IE7+ targets the first child element
+ - element:last-child - IE9+ targets the last child element
+
+
+ - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
  - X:nth-child(3) & X:nth-last-child(2) IE9+ 
  - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector.
  - :first-of-type & :last-of-type IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
