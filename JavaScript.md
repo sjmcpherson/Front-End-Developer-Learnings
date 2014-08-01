@@ -266,7 +266,9 @@ document.querySelectorAll('table').addEventListener('click', function(e) {
         if(e.target && e.target.tagName == 'td') {}
 });
 ```
-- Event Bubbling when a nested tag triggers the parent. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
+
+- return false - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating jQuery funcitions e.preventDefault() & e.stopPropagation().
+- Event Bubbling when a nested element triggers the parents event handler. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
 - addEventListener(event,function,useCapture) IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}' would deprecietes attachEvent(event,function);
 - attachEvent(event,function) depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
 - Use something like the below as a cross browser AddEventListener override
