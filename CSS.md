@@ -16,17 +16,29 @@
 
 
 
-<h4>Peusdo Selectors</h4>
+<h4>Pseudo Selectors</h4>
  - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
+ - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
  - element:first-child - IE7+ targets the first child element
  - element:last-child - IE9+ targets the last child element
- - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
- - X:nth-child(3) & X:nth-last-child(2) IE9+ 
- - X:nth-of-type(n) IE9+ rather than selecting a child, targets according to the type of element. Because of this targeting the type of element you will encounter issues when using a class as the selector.
- - :first-of-type & :last-of-type IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
- - X:not(selector) IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
- - :empty IE9+ targets elements with no children
- - :only-child IE9+ targets elements that are the only child of their parent
+ - element:nth-child(3)/:nth-last-child(2) - IE9+ 
+ - element:nth-of-type(n) - IE9+ rather than selecting a child, targets according to the type of element. Because of targeting the type of element you will encounter issues when using a class as the selector.
+ - element:first-of-type/:last-of-type - IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
+ - element:not(selector) - IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
+ - element:empty - IE9+ targets elements with no children
+ - element:only-child - IE9+ targets elements that are the only child of their parent
+ - element:target{} - IE9+ A powerful selector for single page apps, targets an element with the same ID as the hash in the URL. Note setting the URL this way triggers Bookmark like behaviour: Affecting browser history and scrolling the window to element behavior
+```HTML
+<a href="#page1">Page 1</a>
+<section id="page1"> 
+   Content
+</section>
+```
+```CSS
+section{display:none;}
+:target {display:block;}
+```
+
 
 <h3>Uncommon CSS Properties</h3>
  - position: sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. 
