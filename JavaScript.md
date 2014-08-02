@@ -326,13 +326,11 @@ simplePromise().then(function(result) {
 - Promise Libraries: Q, when, WinJS, RSVP.js
 - JavaScript Promise API (Chrome, Firefox, Opera Only)
 
-
 <h3>Other JavaScript APIs</h3>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
 - animationstart, animationiteration, animationend allow JavaScript control over CSS3 Animations. IE10+ & prefixes required for most browsers through:
-
 ```javascript
 var pfx = ["webkit", "moz", "MS", "o", ""];
 function PrefixedEvent(element, type, callback) {
@@ -364,6 +362,8 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 - Network Information - Can be used to determine what internet connection is being used I.e wifi, cellular etc
 - Vibration - Trigger vibration in mobile devices
 - Battery - Detect if the battery is low on the device
+- classList - A performance optimized API to manipulate classes on elements. div.classList.add("class"); IE10+ 
+
 
 <h3>JavaScript Frameworks</h3>
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
@@ -394,6 +394,7 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
 - Classes - A clean simple declarative syntax for defining object prototypes and inheritance chains.
+
 
 
 <h2>jQuery Specific Coding Tips</h2>
