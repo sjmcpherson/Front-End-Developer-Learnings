@@ -27,6 +27,7 @@
  - element:not(selector) - IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
  - element:empty - IE9+ targets elements with no children
  - element:only-child - IE9+ targets elements that are the only child of their parent
+ - element:checked - for radio and checkbox
  - element:target{} - IE9+ A powerful selector for single page apps, targets an element with the same ID as the hash in the URL. Note setting the URL this way triggers Bookmark like behaviour: Affecting browser history and scrolling the window to element behavior
 ```HTML
 <a href="#page1">Page 1</a>
