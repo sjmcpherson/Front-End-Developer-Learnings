@@ -213,6 +213,8 @@ for (var p:* in obj)
 - array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
 - array.reduce()
 - Avoid using the 'for-in' loop to iterate through an array, as properties and extending Array.prototype will also be iterated. i.e
+- The correct way to clear an Array is arr.length = 0 not arr = [] as often used
+
 
 ```javascript
 	Array.prototype.foo = "foo!";
