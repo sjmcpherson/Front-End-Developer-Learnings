@@ -396,7 +396,7 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
 - Classes - A clean simple declarative syntax for defining object prototypes and inheritance chains.
-
+- Generators
 
 
 <h2>jQuery Specific Coding Tips</h2>
