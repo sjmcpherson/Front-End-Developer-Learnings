@@ -6,7 +6,7 @@
  - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
 
  
-<h4>Attribute Selectors</h4>
+<h3>Attribute Selectors</h3>
  - Targets an elements attributes, __All attribute selectors are IE7+__
  - element[attribute ^= value] - IE7+ selects elements with a attribute value that begins with the characters e.g a[href^="http"]{}
  - element[attribute *= value] - IE7+ selects elements matching the characters e.g a[data-info *= "image"]{}
@@ -16,7 +16,7 @@
 
 
 
-<h4>Pseudo Selectors</h4>
+<h3>Pseudo Selectors</h3>
  - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
  - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
  - element:first-child - IE7+ targets the first child element
@@ -42,7 +42,10 @@ section{display:none;}
 
 
 
-<h4>CSS Opacity</h4>
+<h3>CSS Opacity</h3>
+- rgba(0,0,0,0) - Red, Green, Blue & Alpha Transparency can be used for almost any color attribute but is not supported by <IE9
+- Completed crossbrowser CSS Opacity
+
 ```CSS
 /* Theoretically for IE 8 & 9 (more valid) but not required as filter works too should come BEFORE filter */
 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -66,7 +69,7 @@ opacity: 0.5;
 
 
 
-<h4>Media Queries</h4>
+<h3>Media Queries</h3>
  - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
  - 'min-width' - '@media screen and (min-width: 900px) {}' Will apply CSS if the viewing area is greater than 900px.
  - 'max-device-width' - '@media screen and (max-device-width: 480px) {}' Will apply CSS if the resolution is greater than 480px as max-device-width means the actual resolution of the device rather than just the viewing area resolution.
@@ -75,26 +78,8 @@ opacity: 0.5;
 
 <h3>General Coding Tips</h3>
  - Its important when working in a team of developers on a project that they all abide to a similar syntax and format with their stylesheets, this is important specifically in large projects to keep stylesheets maintainable, readable and scalable. Often its important to agree on a CSS Guideline which states what file structure, preprocessor, font-sizing unit, spacing etc that should be adhered to. A very detailed one can be found here: https://github.com/csswizardry/CSS-Guidelines
- - Work around for lack of :nth-child support in IE7 & IE8 using adjacent selector: ul>li+li+li
- - HasLayout - The single most important thing you need to know about fixing bugs in <IE8, Giving an element "Layout" will fix 99% of IE rendering bugs, as if by magic. The other 1% will most likely be related to position: relative; or floats. Use "zoom: 1" as a trigger for whatever IE versions need it. Eg .ie6 #myElement, .ie7 #myElement { zoom: 1 }
- - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - Avoid using IDs as they decrease portability
- - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
- - Backgrounds can be animated with @Keyframes and CSS Animations:
 
-```CSS
-@keyframes animatedBackground {
-        to { background-position-x:100%;}
-}
-#animate-area	{ 
-        width: 560px; 
-        height: 400px; 
-        background: url(bg-clouds.png) 0px 0px repeat-x;
-        animation: animatedBackground 40s linear infinite;
-}
-```
-
-- rgba(0,0,0,0) - Red, Green, Blue & Alpha Transparency can be used for almost any color attribute but is not supported by <IE9
 
 <h3>Font size units</h3>
  - em - Calculates the font size based on the Parent font size which compounds down the tree
@@ -113,9 +98,6 @@ html {font-size: 0.625rem;}
 ul { font-size: 2.4rem; } /* =24px */
 ul li { font-size: 1.4rem; } /* =14px */
 ```
-
-
-
 i.e. html{font-size:62.5%}
 
  - px,pt,em,rem,%.
@@ -125,6 +107,47 @@ i.e. html{font-size:62.5%}
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
+
+
+
+<h3>Structure & Positioning</h3>
+ - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
+ - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
+ - Box Sizing('box-sizing:border-box') - IE8+ forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
+ - Flex Box Module('display:flex;') - IE10+ For fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
+ - Multicolumn Module('column-count:value') - IE10+ Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
+ - CSS Regions Module - A specification that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
+ - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Limited Support currently only Chrome Canary 
+
+
+<h3>CSS3 Animations & Transitions</h3>
+ - Backgrounds can be animated with @Keyframes and CSS Animations:
+
+```CSS
+@keyframes animatedBackground {
+        to { background-position-x:100%;}
+}
+#animate-area	{ 
+        width: 560px; 
+        height: 400px; 
+        background: url(bg-clouds.png) 0px 0px repeat-x;
+        animation: animatedBackground 40s linear infinite;
+}
+```
+
+<h3>Other CSS Properties</h3>
+
+ - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
+```CSS
+h1 {counter-reset: section;}
+h2:before {counter-increment: section;content: counter(section) ". ";}
+```
+ - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
+ - 'background-clip', 'background-origin' and 'background-size' IE9+
+ - Calculations('property:calc()') - IE9+,Safari 6+ Dynamic css calculations "width:calc(100% - 4em);"
+ - Pointer Events('pointer-events:none') - Disables mouse/touch events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
+- 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
+ 
 
 <h2>CSS Code Snippets</h2>
  - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
@@ -136,6 +159,7 @@ i.e. html{font-size:62.5%}
     transform: translateY(-50%);
 }
 ```
+
  - Cross Browser Sticky Footer
 
 ```HTML
@@ -169,21 +193,7 @@ tbody tr:nth-child(odd) {
 }
 ```
 
-<h3>Uncommon CSS Properties</h3>
- - Box Sizing('box-sizing:border-box') - IE8+ forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
- - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Limited Support currently only Chrome Canary 
- - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
-```CSS
-h1 {counter-reset: section;}
-h2:before {counter-increment: section;content: counter(section) ". ";}
-```
- - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
- - 'background-clip', 'background-origin' and 'background-size' IE9+
- - Flex Box Module('display:flex;') - IE10+ For fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
- - Multicolumn Module('column-count:value') - IE10+ Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
- - Calculations('property:calc()') - IE9+,Safari 6+ Dynamic css calculations "width:calc(100% - 4em);"
- - CSS Regions Module - A specification that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
- - Pointer Events('pointer-events:none') - Disables mouse/touch events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
+
 
 
 <h2>CSS Performance</h2>
