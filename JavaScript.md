@@ -396,7 +396,7 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
 - Classes - A clean simple declarative syntax for defining object prototypes and inheritance chains.
-- Generators
+- Generators - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 
 
 <h2>jQuery Specific Coding Tips</h2>
