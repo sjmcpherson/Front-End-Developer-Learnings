@@ -1,12 +1,13 @@
-<h2>CSS Coding Tips</h2>
+#Cascading Style Sheets
 
-<h3>Advanced CSS Selectors</h3>
+##CSS Selectors
+
+###Advanced CSS Selectors
  - element > element - IE7+ targets direct children e.g ul > li{}
  - element ~ element - IE7+ targets p tags after ul tag in DOM e.g ul ~ p{} 
  - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
 
- 
-<h3>Attribute Selectors</h3>
+###Attribute Selectors
  - Targets an elements attributes, __All attribute selectors are IE7+__
  - element[attribute ^= value] - IE7+ selects elements with a attribute value that begins with the characters e.g a[href^="http"]{}
  - element[attribute *= value] - IE7+ selects elements matching the characters e.g a[data-info *= "image"]{}
@@ -14,9 +15,7 @@
  - have a data-info of “image” including multiple values such as  data-info="external image" e.g a[data-info~="image"]{}
  - element[attribute $= value] - IE7+ selects elements matching 
 
-
-
-<h3>Pseudo Selectors</h3>
+###Pseudo Selectors
  - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
  - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
  - element:first-child - IE7+ targets the first child element
@@ -42,7 +41,7 @@ section{display:none;}
 
 
 
-<h3>CSS Opacity</h3>
+###CSS Opacity
 - rgba(0,0,0,0) - Red, Green, Blue & Alpha Transparency can be used for almost any color attribute but is not supported by <IE9
 - Completed crossbrowser CSS Opacity
 
@@ -69,19 +68,19 @@ opacity: 0.5;
 
 
 
-<h3>Media Queries</h3>
+###Media Queries
  - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
  - 'min-width' - '@media screen and (min-width: 900px) {}' Will apply CSS if the viewing area is greater than 900px.
  - 'max-device-width' - '@media screen and (max-device-width: 480px) {}' Will apply CSS if the resolution is greater than 480px as max-device-width means the actual resolution of the device rather than just the viewing area resolution.
  - 'min-device-pixel-ratio' - '@media only screen and (min-device-pixel-ratio : 2){}' For 2x pixel density resolutions like the Retina display.
  - 'only' in '@media only screen..' stops older browsers parsing the remander of the selector
 
-<h3>General Coding Tips</h3>
+###General Coding Tips
  - Its important when working in a team of developers on a project that they all abide to a similar syntax and format with their stylesheets, this is important specifically in large projects to keep stylesheets maintainable, readable and scalable. Often its important to agree on a CSS Guideline which states what file structure, preprocessor, font-sizing unit, spacing etc that should be adhered to. A very detailed one can be found here: https://github.com/csswizardry/CSS-Guidelines
  - Avoid using IDs as they decrease portability
 
 
-<h3>Font size units</h3>
+###Font size units
  - em - Calculates the font size based on the Parent font size which compounds down the tree
  
 ```CSS
@@ -103,14 +102,14 @@ i.e. html{font-size:62.5%}
  - px,pt,em,rem,%.
 
 
-<h3>Font Rendering</h3>
+###Font Rendering
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
 
 
 
-<h3>Structure & Positioning</h3>
+###Structure & Positioning
  - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - Box Sizing('box-sizing:border-box') - IE8+ forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
@@ -120,7 +119,7 @@ i.e. html{font-size:62.5%}
  - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Limited Support currently only Chrome Canary 
 
 
-<h3>CSS3 Animations & Transitions</h3>
+###CSS3 Animations & Transitions
  - Backgrounds can be animated with @Keyframes and CSS Animations:
 
 ```CSS
@@ -135,7 +134,7 @@ i.e. html{font-size:62.5%}
 }
 ```
 
-<h3>Other CSS Properties</h3>
+###Other CSS Properties
 
  - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
 ```CSS
@@ -193,7 +192,7 @@ tbody tr:nth-child(odd) {
 }
 ```
 
-<h2>CSS Performance</h2>
+##CSS Performance
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS files (Reduces the amount of HTTP Requests)
