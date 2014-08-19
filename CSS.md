@@ -146,8 +146,8 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - 'background-clip', 'background-origin' and 'background-size' IE9+
  - Calculations('property:calc()') - IE9+,Safari 6+ Dynamic css calculations "width:calc(100% - 4em);"
  - Pointer Events('pointer-events:none') - Disables mouse/touch events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
-- 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
-- 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
+ - 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
+ - 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
 
 <h2>CSS Code Snippets</h2>
  - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
