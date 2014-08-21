@@ -4,10 +4,9 @@
 - JavaScript commonly abbreviated to JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. Initially called LiveScript, JS is built from ECMAScript standards. 
 
 <h3>Javascript Values</h3>
-- JavaScript is a Dynamically typed language meaning variables do not need to be initialised with a type and therefore deals with Type Errors differently to strongly typed Static Type languages like C#, C++, Java etc.
-- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; theType would equal 'string'. Although a bug exists when using typeof with 'null' values as it returns 'object'.
-- The Data types string, number, boolean, null and undefined are Primative value meaning they do not have methods associated with them. Whereas object and function do.
-Symbol (new in ECMAScript 6)
+- JavaScript is a Dynamically Typed language meaning variables do not need to be initialised with a type and therefore JS deals with Type Errors differently to strongly typed Static Type languages like C#, C++, Java etc.
+- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
+- The Data types string, number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do.
 - Implied Global Variables - JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
 
 ```javascript
