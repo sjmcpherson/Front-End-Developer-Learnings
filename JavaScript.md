@@ -505,6 +505,7 @@ for(i=0 ; i<arrElements.length ; i++){
 - Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
 - Handlebars.js - Lightweight, library to build semantic templates i.e.
+- Bower - A command line package manager to automate searching and downloading front-end development tools.
 
 ```HTML
 <div class="entry">
