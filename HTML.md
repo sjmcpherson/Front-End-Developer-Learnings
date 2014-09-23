@@ -121,6 +121,9 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
     </dl>
 ```
 
+<h2>HTML Imports</h2>
+ - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: <link rel="import" href="import-file.html">
+ - Limited support in Chrome & Opera Only.
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
