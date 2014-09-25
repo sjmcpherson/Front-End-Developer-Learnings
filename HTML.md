@@ -121,9 +121,23 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
     </dl>
 ```
 
-<h2>HTML Imports</h2>
+<h2>Web Components</h2>
+
+
+<h3>Custom Elements</h3>
+- Can use custom element names, the only requirement is must contain a dash "-" i.e. <img-slider>
+
+<h3>HTML Templates</h3>
+
+
+<h3>HTML Imports</h3>
  - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: <link rel="import" href="import-file.html">
+ - Note: HTML imports adhere to the same-origin policy for security reasons. Therefore, if you wish to import an HTML document from an external domain, you need to make sure you have CORS set up correctly.
  - Limited support in Chrome & Opera Only.
+ 
+<h3>Shadow DOM</h3>
+- Already the browser uses Shadow DOM simplify complex elements like <input type="date">, <select>, <video> etc
+- Style encapusation inside Shadow DOM
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
