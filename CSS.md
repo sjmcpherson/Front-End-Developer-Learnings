@@ -153,9 +153,9 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 
  ```CSS
 .holder p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 ```
 
@@ -177,18 +177,18 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - Spaced and indented paragraph
 ```CSS
 p{
-  margin-bottom:20px;
+	margin-bottom:20px;
 }
 p+p{
-  text-indent:2em;
-  margin-top:-20px;
+	text-indent:2em;
+	margin-top:-20px;
 }
 ```
 
  - Alternate Rows (:nth-child IE9+)
 ```CSS 
 tbody tr:nth-child(odd) {
-   background-color: lightblue;
+	background-color: lightblue;
 }
 ```
 
