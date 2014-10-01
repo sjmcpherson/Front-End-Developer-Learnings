@@ -122,10 +122,13 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 ```
 
 <h2>Web Components</h2>
+- A new specification for creating encapsulated, reusable widgets.
+- Limited browser support, Only Chrome & Opera implement all 4 features, Safari & Firefox just HTML Templates. IE12 Unlikely to have any support.
+- Frameworks which help are X-Tags, Polymer & Bosonic
 
 
 <h3>Custom Elements</h3>
-- Can use custom element names, the only requirement is must contain a dash "-" i.e. <img-slider>
+- Can use custom element names, the only requirement is must contain a dash "-" i.e. <img-slider>. All native tag names do not contain a dash.
 
 <h3>HTML Templates</h3>
 
@@ -137,7 +140,8 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
  
 <h3>Shadow DOM</h3>
 - Already the browser uses Shadow DOM simplify complex elements like <input type="date">, <select>, <video> etc
-- Style encapusation inside Shadow DOM
+- Style & Script encapusation inside Shadow DOM
+
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
