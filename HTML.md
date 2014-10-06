@@ -42,6 +42,7 @@ Would Produce:
 - To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
 - Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
 - The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/. Similarly the CSS attribute -user-input can be use to replicate but with limited support.
+- Specify image dimensions, by specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
 - Application Cache (AppCache) 
