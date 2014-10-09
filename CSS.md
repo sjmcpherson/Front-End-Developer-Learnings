@@ -65,7 +65,8 @@ opacity: 0.5;
 }	
 ```
 
-
+###Backgrounds
+ - background-size: cover;contain;width height; - 'cover' scales up background image so the <em>lesser</em> dimension matches the window size; 'contain' scales up to the <em>greater</em> dimension, meaning some background will not be covered by the image. 
 
 
 ###Media Queries
