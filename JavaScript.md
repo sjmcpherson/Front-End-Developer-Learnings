@@ -225,13 +225,19 @@ for (var p:* in obj)
 	}
 	//The above code will alert, "a", "b", "c","foo!" and 10.
 ```
-
-<h4>The Window Object</h4>
-- The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
  
 <h4>The Document Object</h4>
 - Where the DOM is accessed
 - A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
+
+<h4>The Window Object</h4>
+- The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
+- window.innerWidth/innerHeight - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
+
+<h4>The Image Object</h4>
+- img.complete - Read-only boolean property to determine if image is loaded.
+- img.naturalWidth/naturalHeight - Read-only property which represents the original(unmanipulated by CSS/JS) size of the image. Only available after image load. IE9+
+
 
 <h4>The XMLHttpRequest(XHR) Object</h4>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
