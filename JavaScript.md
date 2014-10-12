@@ -493,6 +493,23 @@ for(i=0 ; i<arrElements.length ; i++){
 - .position() same as above but relative to the parent.
 - Cache elements when using selectors var elem = getElementByTagName('a');
 - Avoid using the eval() function as well as potential security implications it causes code executed by the eval function to run at least twice as slow. There maybe times when it is necessary i.e. when executing code inside JSON.
+- For loops can create bottlenecks simple optimizations like caching object lookups can help ie.
+
+```javascript
+//Bad
+var total;
+for (var i = 0; i < values.length; i++){
+    myFramework.utils.addText(value[i]); 
+    total += value[i];
+}
+//Optimized    
+var total, amount, utilsMyFramework = myFramework.utils; //Declare reused variables outside of for loop, cache object look
+for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, being recalculated on each cycle
+    amount = value[i]; //Cache resused variable
+    utilsMyFramework.addText(amount); //Cache object lookup     
+    total += value[i];
+}    
+```
 
 <h2>Helpful JavaScript/jQuery Libraries & Scripts</h2>
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
