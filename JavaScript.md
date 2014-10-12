@@ -448,6 +448,7 @@ $("td").hover(
 - You can load the latest version of jQuery via the Command Line using include('jquery').
 
 <h2>JavaScript Performance</h2>
+- Avoid using jQuery when unnessary. jQuery is a broad library offering new & additional functionality covering selectors, animations, events & Ajax, including polyfills across lecacy browsers that may not be need. This quite often adds alot of bloat to your JS download. Also runtime performance can be affected as extra methods & properties are often added to native JS.
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
 - 'script' tags block parallel downloads, put them last so other resources can be downloaded first
 - Defer Parsing of scripts that are not called at startup.
