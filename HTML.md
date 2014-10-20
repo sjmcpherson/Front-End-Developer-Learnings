@@ -62,6 +62,7 @@ Would Produce:
 
 
 <h2>HTML5 Forms</h2>
+- Required attribute - required="required"
 - Placeholder attribute - Text is displayed inside the input field as long as the field is empty. When you click on (or tab to) the input field and start typing, the placeholder text disappears. IE10+
 - Autofocus attribute - On page load set focus to element. Can be used on inputs buttons and textareas. e.g <input autofocus /> IE10+
 
