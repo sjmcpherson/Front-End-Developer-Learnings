@@ -1,5 +1,7 @@
 <h2>HTML Coding Tips</h2>
 
+<h3>HTML Doctype</h3>
+
  - HTML5 Doctype &lt;!doctype html&gt;
  - Doctype must be first on page or IE will revert to Quirks Mode
  - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
