@@ -40,8 +40,9 @@ if(randomNum % 7 == 0)
 
 <h4>Strings</h4>
 - A string can contain an unlimited amount of characters and has methods attached to it.
+- Strings can concatenated with + "Hello " + "world!"; // = "Hello world!" Although issues with Type Coersion can occur
+- string.concat - To avoid Type Coersion concat with string1.concat(string1)
 - string.charAt
-- string.concat
 - string.slice
 - string.split
 - string.indexOf
