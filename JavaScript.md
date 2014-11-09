@@ -303,7 +303,9 @@ function AddEvent(html_element, event_name, event_function)
 - console.log() - Used to output values to the console window.
 - console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);" 
 - console.count(label) - Outputs the number times the line of code has been invoked with an optional string as a label
-- NOTE: use of the Console object will break <IE9 but NOT while the IE Developer Tools window is open.
+- console.assert(expression, message) - Will display the message if the expression in the first argument is false
+- console.time(message)/console.timeEnd(message) - Time the performance of code between .time() & .timeEnd() statements
+- NOTE: use of the Console object will break <IE10 but NOT while the IE Developer Tools window is open.
 
 <h3>Module Pattern</h3>
 - The module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
