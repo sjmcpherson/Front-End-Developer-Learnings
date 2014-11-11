@@ -235,6 +235,9 @@ for (var p:* in obj)
 - The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
 - window.innerWidth/innerHeight - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
 
+<h4>Timers & Timeouts</h4>
+- setTimeout(function, delay in milliseconds);
+
 <h4>The Image Object</h4>
 - img.complete - Read-only boolean property to determine if image is loaded.
 - img.naturalWidth/naturalHeight - Read-only property which represents the original(unmanipulated by CSS/JS) size of the image. Only available after image load. IE9+
