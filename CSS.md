@@ -161,7 +161,6 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 ```
 
  - Cross Browser Sticky Footer
-
 ```HTML
  <div class='page-wrap'><h1>Content Area</h1></div>
  <footer class='site-footer'>Sticky Footer.</footer>
