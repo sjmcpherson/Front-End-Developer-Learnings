@@ -451,7 +451,15 @@ $("td").hover(
 ```
 - $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
 -  $("a[href='" + document.location.pathname + "']").addClass("current"); Use the filename to highlight the current page on a nav
-- You can load the latest version of jQuery via the Command Line using include('jquery').
+- In firebug you can load the latest version of jQuery via the Command Line using "include('jquery')". Otherwise you can add to the Console something like this:
+
+```javascript
+var jq = document.createElement('script');
+jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
+document.getElementsByTagName('head')[0].appendChild(jq);
+// ... give time for script to load, then type.
+jQuery.noConflict();
+```
 
 <h2>JavaScript Performance</h2>
 - Avoid using jQuery when unnessary. jQuery is a broad library offering new & additional functionality covering selectors, animations, events & Ajax, including polyfills across lecacy browsers that may not be need. This quite often adds alot of bloat to your JS download. Also runtime performance can be affected as extra methods & properties are often added to native JS.
