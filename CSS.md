@@ -12,7 +12,7 @@
  - element[attribute ^= value] - IE7+ selects elements with a attribute value that begins with the characters e.g a[href^="http"]{}
  - element[attribute *= value] - IE7+ selects elements matching the characters e.g a[data-info *= "image"]{}
  - element[attribute ~= value] - IE7+ selects elements matching the whole word, a stricter version of "*="
- - have a data-info of “image” including multiple values such as  data-info="external image" e.g a[data-info~="image"]{}
+ - have a data-info of "image" including multiple values such as  data-info="external image" e.g a[data-info~="image"]{}
  - element[attribute $= value] - IE7+ selects elements matching 
 
 ###Pseudo Selectors
