@@ -109,7 +109,6 @@ i.e. html{font-size:62.5%}
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
 
 
-
 ###Structure & Positioning
  - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
