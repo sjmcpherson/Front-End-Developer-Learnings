@@ -1,13 +1,19 @@
 <h2>General JavaScript Coding Tips</h2>
 
 <h3>What is JavaScript</h3>
-- JavaScript commonly abbreviated to JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. Initially called LiveScript, JS is built from ECMAScript standards. 
+- JavaScript commonly abbreviated to JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
+- Initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
 
-<h3>Javascript Values</h3>
-- JavaScript is a Dynamically Typed language meaning variables do not need to be initialised with a type and therefore JS deals with Type Errors differently to strongly typed Static Type languages like C#, C++, Java etc.
-- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
-- The Data types string, number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do.
-- Implied Global Variables - JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For Good practise always initialize with the 'var' keyword.
+<h3>JavaScript Data Types</h3>
+- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
+#####Dynamic Typed
+- JavaScript is a Dynamically Typed language, As it is not compiled their is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc.
+#####Primative Values
+- The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using the String objects methods.
+
+<h4>Variable Scope</h4>
+#####Implied Global Variables
+JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For good practise always initialize with the 'var' keyword.
 
 ```javascript
   //Longhand
@@ -17,17 +23,18 @@
   //Shorthand
   var x, y, z=3;
 ```
-
+#####Function Level Scoping
 - JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
+#####Variable Hoisting
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
 <h4>Boolean</h4>
-- Only 2 Boolean values true & false, although values of other types are also deemed either true or false.
+- Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
 - Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false 
 
 <h4>Numbers</h4>
-- Only 1 number type (i.e no integer) which is represented as a 64bit floating point also know as Double.
+- Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
 - Has problems mapping to common arithmetic I.e var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
 - parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion.
