@@ -6,8 +6,10 @@
 
 <h3>JavaScript Data Types</h3>
 - There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
+
 #####Dynamic Typed
 - JavaScript is a Dynamically Typed language, As it is not compiled their is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc.
+
 #####Primative Values
 - The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using the String objects methods.
 
@@ -25,6 +27,7 @@ JavaScript has Implied Global Variables which means if a variable is initialized
 ```
 #####Function Level Scoping
 - JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
+
 #####Variable Hoisting
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
