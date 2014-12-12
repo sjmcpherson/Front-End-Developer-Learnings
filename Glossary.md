@@ -34,6 +34,7 @@ $( "li" ).each(function() {
 
 - Expression - Something which evaluates to a value. Example: 1+2/x
 - Encapsulation is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
+- Epoch - The "epoch" then serves as a reference point from which time is measured. In most systems/languages this is 01 January 1970 00:00:00 UTC, the most notable exception is Apple's Cocoa(NSDate) which is from 2001
 - Falsy - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
 - ESI - Edge Side Includes
 - FastCGI - A system whereby CGI (Common Gateway Interface) programs stay in memory rather than being spawned as individual process when requested. This makes for much better efficiency. 
@@ -78,6 +79,7 @@ Will be converted to:
 - Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
 - SHA - Secure Hash Algorithm
 - Shadow DOM -
+- Singleton - A pattern which limits the number of instances of a particular object to just one.
 - SOAP - Simple Object Access Protocol
 - Software Development Methology - is a framework for structuring planning, controlling a software project. 
 - SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
@@ -88,6 +90,7 @@ Will be converted to:
 - Strongly Typed - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
 - Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
 - SVG - Scalable Vector Graphics - is a XML based vector graphics format with some support for interactivity and animations
+- Stylus - Another CSS preprocessor which brackets, colons, and semi-colons are all optional. Uses the .styl file extension
 - Two Way Data Binding - A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
 - URI - Uniform Resource Identifier
 - User Experience(UX) - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
