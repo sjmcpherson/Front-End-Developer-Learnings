@@ -334,8 +334,8 @@ function AddEvent(html_element, event_name, event_function)
 - Module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
 
 ```javascript
-//Addy Osmani example from his book Essential JavaScript Design Datterns http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
-var myNamespace = (function () {
+//Addy Osmani's example from his book Essential JavaScript Design Datterns http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+var myModulePattern = (function () {
   var myPrivateVar, myPrivateMethod;
   myPrivateVar = 0; // A private counter variable
   myPrivateMethod = function( foo ) {console.log( foo );};  // A private function which logs any arguments
@@ -351,7 +351,7 @@ var myNamespace = (function () {
 - Singleton - a pattern for a class which initializes a single object over the lifetime of a program.
 
 ```javascript
-//Addy Osmani's example from his book Essential JavaScript Design Datterns http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript
+//Addy Osmani's example which expands on the Module Pattern
 var mySingleton = (function () {
   var instance; // Instance stores a reference to the Singleton
   function init() {    // Private methods and variables
@@ -365,8 +365,7 @@ var mySingleton = (function () {
   return {
     // Get the Singleton instance if one exists or create one if it doesn't
     getInstance: function () {
-      if ( !instance )
-	instance = init();
+      if ( !instance ){instance = init();}
       return instance;
     }
    };
