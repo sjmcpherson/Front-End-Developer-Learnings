@@ -72,6 +72,7 @@ Will be converted to:
 - Primitive Data Type - A data type that can hold only single value i.e. no properties. In JS Primitive Data Types are Number, String, Boolean, null & undefined whereas Objects & Functions can have properties i.e. var a = {"a":1,"b":2}
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Prototypal Inheritance - In JavaScript Objects are inherited from other Objects using the 'new' operator, there is no distinguising between a object & the object it inherits from as opposed to a class based language.
+
 Relational Database
 :   built on tables, fields & keys e.g MySQL, SQL Server.
 Race Condition
