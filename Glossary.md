@@ -97,6 +97,7 @@ Will be converted to:
 - URI - Uniform Resource Identifier
 - User Experience(UX) - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
 - User Interface(UI) - The User Interface are the components which users interact with.
+
 Apple
 :   Pomaceous fruit of plants of the genus Malus in 
     the family Rosaceae.
