@@ -97,3 +97,13 @@ Will be converted to:
 - URI - Uniform Resource Identifier
 - User Experience(UX) - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
 - User Interface(UI) - The User Interface are the components which users interact with.
+<dl>
+  <dt><strong>Lower cost</strong></dt>
+  <dd>The new version of this product costs significantly less than the
+      previous one!</dd>
+  <dt><strong>Easier to use</strong></dt>
+  <dd>We've changed the product so that it's much easier to use!</dd>
+  <dt><strong>Safe for kids</strong></dt>
+  <dd>You can leave your kids alone in a room with this product and they
+      won't get hurt (not a guarantee).</dd>
+</dl>
