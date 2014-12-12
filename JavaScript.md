@@ -330,8 +330,48 @@ function AddEvent(html_element, event_name, event_function)
 - console.time(message)/console.timeEnd(message) - Time the performance of code between .time() & .timeEnd() statements
 - NOTE: use of the Console object will break <IE10 but NOT while the IE Developer Tools window is open.
 
-<h3>Module Pattern</h3>
-- The module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
+<h3>Design Patterns</h3>
+- Module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
+
+```javascript
+//Addy Osmani example from his book Essential JavaScript Design Datterns http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+var myNamespace = (function () {
+  var myPrivateVar, myPrivateMethod;
+  myPrivateVar = 0; // A private counter variable
+  myPrivateMethod = function( foo ) {console.log( foo );};  // A private function which logs any arguments
+  return {
+    myPublicVar: "foo",  // A public variable
+    myPublicFunction: function( bar ) {// A public function utilizing privates
+      myPrivateVar++;  // Increment our private counter
+        myPrivateMethod( bar ); // Call our private method using bar
+    }
+  };
+})(); 
+```
+- Singleton - a pattern for a class which initializes a single object over the lifetime of a program.
+
+```javascript
+//Addy Osmani's example from his book Essential JavaScript Design Datterns http://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript
+var mySingleton = (function () {
+  var instance; // Instance stores a reference to the Singleton
+  function init() {    // Private methods and variables
+    var privateVariable = "Im also private";
+    function privateMethod(){console.log( "I am private" );}
+    return {      // Public methods and variables
+      publicMethod: function () {console.log( "The public can see me!" );},
+      publicProperty: "I am also public"
+    };
+  };
+  return {
+    // Get the Singleton instance if one exists or create one if it doesn't
+    getInstance: function () {
+      if ( !instance )
+	instance = init();
+      return instance;
+    }
+   };
+})();
+```
 
 
 <h3>RequestAnimationFrame</h3>
