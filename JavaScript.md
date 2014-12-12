@@ -245,13 +245,9 @@ for (var p:* in obj)
 - The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
 - window.innerWidth/innerHeight - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
 
-<h4>Timers & Timeouts</h4>
-- setTimeout(function, delay in milliseconds);
-
 <h4>The Image Object</h4>
 - img.complete - Read-only boolean property to determine if image is loaded.
 - img.naturalWidth/naturalHeight - Read-only property which represents the original(unmanipulated by CSS/JS) size of the image. Only available after image load. IE9+
-
 
 <h4>The XMLHttpRequest(XHR) Object</h4>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
@@ -263,6 +259,20 @@ for (var p:* in obj)
 - .status - Property for that result of the XMLHttpRequest - 200: 'OK', 404: 'Page not found'
 - .responseText/.responseXML - Property to get the response from server.
 - Modern browsers support cross-site requests by implementing the web applications working group's Access Control for Cross-Site Requests standard.  As long as the server is configured to allow requests from your web application's origin, XMLHttpRequest will work.  Otherwise, an INVALID_ACCESS_ERR exception is thrown.
+
+<h4>The Date Object</h4>
+- <code>var currentDateTime = Date()</code> sets the current milliseconds since Epoch(1/1/1970 00:00:00) which then needs to put through a date formatter to convert to a human readable date. 
+- Their are 4 ways of initiating a date value with the new Date() constructor.
+
+```javascript
+var currentDate = new Date(); //Current Date Time
+var epoch = new Date(0); //Milliseconds since Epoch i.e. new Date(86400000) + 1 day
+var date = new Date("January 13, 2015 12:30:00"); //Datestring
+var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute, second, and millisecond, in that order. NOTE the month reference is from 0 so in most cases you will need to decrease month variable by 1
+```
+
+<h3>Timers & Timeouts</h3>
+- setTimeout(function, delay in milliseconds);
 
 <h3>JavaScript Selectors</h3>
 - element.getElementsByClassName() IE9+, element.getElementsByTagName & element.getElementById, full support.
