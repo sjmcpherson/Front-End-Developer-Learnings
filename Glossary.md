@@ -44,6 +44,7 @@ $( "li" ).each(function() {
 - Hash Table - 
 - Hoisting - In JavaScript no matter where you declare a variable, its declaration is added to the top of its scope(function) this means JavaScript Scope is different to most other languages that use Block Level Scope inwhich new scope is created within any curly brakets('{}')
 - IDE – Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
+- Immediately-Invoked Function Expression (IIFE) - 
 - JSON - Stands for JavaScript Object Notation.
 - Loose Coupling - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
 - Loosely Typed - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
@@ -73,7 +74,8 @@ Will be converted to:
 - Prototypal Inheritance - In JavaScript Objects are inherited from other Objects using the 'new' operator, there is no distinguising between a object & the object it inherits from as opposed to a class based language.
 - Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
 - Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
-- REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. T
+- REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. 
+- Rich Object Model - 
 - Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
 - Sass - Preproccessor for CSS, which allow you to use Variables, Functions & Calcutions, their are 2 formats the standard .Sass format and the more widely used .Scss format.
 - Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
