@@ -72,33 +72,55 @@ Will be converted to:
 - Primitive Data Type - A data type that can hold only single value i.e. no properties. In JS Primitive Data Types are Number, String, Boolean, null & undefined whereas Objects & Functions can have properties i.e. var a = {"a":1,"b":2}
 - Progressive Enhancement – Uses a bottom up approach to development, aiming to meet a minium requirements then enhancing for more modern technologies.
 - Prototypal Inheritance - In JavaScript Objects are inherited from other Objects using the 'new' operator, there is no distinguising between a object & the object it inherits from as opposed to a class based language.
-- Relational Database – built on tables, fields & keys e.g MySQL, SQL Server.
-- Race Condition - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
-- REST – REpresentational State Transfer is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. 
-- Rich Object Model - 
-- Same Origin Policy - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
-- Sass - Preproccessor for CSS, which allow you to use Variables, Functions & Calcutions, their are 2 formats the standard .Sass format and the more widely used .Scss format.
-- Semantic HTML - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
-- SHA - Secure Hash Algorithm
-- Shadow DOM -
-- Singleton - A programming design pattern which limits the number of instances of a particular object to just one.
-- SOAP - Simple Object Access Protocol
-- Software Development Methology - is a framework for structuring planning, controlling a software project. 
-- SPA - Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
-- SDK – Software Development Kit is a toolkit to allow software development on a specific framework or platform.
-- SSL - Secure Sockets Layer - a internet protocol for secure communication.
-- SSH - Secure Shell - is a network protocol for secure communication over an insecure network.
-- Statement - A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
-- Strongly Typed - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
-- Surface Web - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
-- SVG - Scalable Vector Graphics - is a XML based vector graphics format with some support for interactivity and animations
-- Stylus - Another CSS preprocessor which brackets, colons, and semi-colons are all optional. Uses the .styl file extension
-- Two Way Data Binding - A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
-- URI - Uniform Resource Identifier
-- User Experience(UX) - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
-- User Interface(UI) - The User Interface are the components which users interact with.
+Relational Database
+:   built on tables, fields & keys e.g MySQL, SQL Server.
+Race Condition
+:   Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
+REST (REpresentational State Transfer)
+:   is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. 
+Rich Object Model
+:   
+Same Origin Policy
+:   An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
+Sass
+:   Preproccessor for CSS, which allow you to use Variables, Functions & Calcutions, their are 2 formats the standard .Sass format and the more widely used .Scss format.
+Semantic HTML
+:   The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
+SHA
+:   Secure Hash Algorithm
+Shadow DOM
+:   
+Singleton
+:   A programming design pattern which limits the number of instances of a particular object to just one.
+SOAP
+:   Simple Object Access Protocol
+Software Development Methology
+:   is a framework for structuring planning, controlling a software project. 
+SPA
+:   Single Page Application or Single-page interface (SPI). The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
+SDK
+:   Software Development Kit is a toolkit to allow software development on a specific framework or platform.
+SSL
+:   Secure Sockets Layer - a internet protocol for secure communication.
+SSH
+:   Secure Shell - is a network protocol for secure communication over an insecure network.
+Statement
+:   A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
+Strongly Typed
+:   Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
+Surface Web
+:   the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
+SVG (Scalable Vector Graphics)
+:   is a XML based vector graphics format with some support for interactivity and animations
+Stylus
+:   Another CSS preprocessor which brackets, colons, and semi-colons are all optional. Uses the .styl file extension
+Two Way Data Binding
+:   A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
+URI
+:   Uniform Resource Identifier
+User Experience(UX)
+:   User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
+User Interface(UI)
+:   The User Interface are the components which users interact with.
 
-Apple
-:   Pomaceous fruit of plants of the genus Malus in 
-    the family Rosaceae.
-:   An american computer company.
+
