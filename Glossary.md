@@ -222,24 +222,18 @@
   </dt>
   <dd>
     A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites. http://daringfireball.net/projects/markdown/
-  </dd>
-  
+
   ```HTML
   Header 1 Title
   ===========
   - bullet point
   
   Will be converted to:
-  
-  <h1>
-    Header 1 Title
-  </h1>
-  <li>
-    bullet point
-  </li>
+  <h1>Header 1 Title</h1>
+  <li>bullet point</li>
   ```
   
-  
+  </dd>
   <dt>
     Minification
   </dt>
