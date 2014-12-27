@@ -129,7 +129,7 @@ Will be converted to:
 
 <strong>MVW</strong> - stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
 
-###P
+###O
 
 <strong>Obfuscation</strong> - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
 
