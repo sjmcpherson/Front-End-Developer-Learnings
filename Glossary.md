@@ -124,7 +124,7 @@ Will be converted to:
  - <strong>Two Way Data Binding</strong> - A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
 
 ###U
- - <strong>URI (Uniform Resource Identifier) </strong> - 
+ - <strong>URI (Uniform Resource Identifier)</strong> - 
  - <strong>User Experience(UX)</strong> - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
  - <strong>User Interface(UI)</strong> - The User Interface are the components which users interact with.
 
