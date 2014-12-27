@@ -24,14 +24,14 @@
  - <strong>Dependency Injection(DI)</strong> - is a software design pattern that deals with providing the dependencies that an object needs instead of having it construct them itself. AngularJS utilizes this pattern.
  - <strong>Dirty Checking</strong> - 
  - <strong>Document-oriented Database</strong> - A collection of independent documents. E.g CouchDB, MongoDB
- - <strong>DOM<strong>Document Object Model</strong> - 
+ - <strong>DOM (Document Object Model)</strong> - 
  - <strong>DRY(Don't Repeat Yourself)</strong> - is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 
 ###E
  - <strong>Emmet</strong> - a plugin for popular text editors which speed of HTML authoring using CSS like abreviations.
  - <strong>Encapsulation</strong> - is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
  - <strong>Epoch</strong> - The "epoch" then serves as a reference point from which time is measured. In most systems/languages this is 01 January 1970 00:00:00 UTC, the most notable exception is Apple's Cocoa(NSDate) which is from 2001
- - <strong>ESI (Edge Side Includes)</strong> - 
+ - <strong>ESI (Edge Side Includes)</strong> -  
  - <strong>Explicit Iteration vs Implicit Iteration</strong> - In jQuery:
   
   ```javascript
