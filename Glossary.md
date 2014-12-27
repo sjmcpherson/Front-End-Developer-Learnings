@@ -2,11 +2,8 @@
 ------------------
 
  - A
-####Abstraction
-A process of structuring code to be more readable by making functions shorter and code reuseable. Object-Oriented Programming is an approach to Abstraction.
-
- - ####API
-Application Programming Interface is a specification for combining software components.
+<em>Abstraction</em> - A process of structuring code to be more readable by making functions shorter and code reuseable. Object-Oriented Programming is an approach to Abstraction.
+<em>API</em> - Application Programming Interface is a specification for combining software components.
 
  - ####AJAX
 an acronym for Asynchronous JavaScript and XML. Despite the name, the use of XML is not required as JSON is often used instead. With AJAX, web applications can send data, and retrieve data from, a server asynchronously (in the background therefore creating a new code thread) without interfering with the display and behavior of the existing page.
