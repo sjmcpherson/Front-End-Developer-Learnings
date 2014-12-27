@@ -1,7 +1,8 @@
 ##Abbreviations/Terms:
 ------------------
 
- - ####Abstraction
+ - A
+####Abstraction
 A process of structuring code to be more readable by making functions shorter and code reuseable. Object-Oriented Programming is an approach to Abstraction.
 
  - ####API
