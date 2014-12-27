@@ -3,6 +3,7 @@
 
  - A
 <em>Abstraction</em> - A process of structuring code to be more readable by making functions shorter and code reuseable. Object-Oriented Programming is an approach to Abstraction.
+
 <em>API</em> - Application Programming Interface is a specification for combining software components.
 
  - ####AJAX
