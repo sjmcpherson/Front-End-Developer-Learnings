@@ -31,7 +31,7 @@
  - <strong>Emmet</strong> - a plugin for popular text editors which speed of HTML authoring using CSS like abreviations.
  - <strong>Encapsulation</strong> - is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
  - <strong>Epoch</strong> - The "epoch" then serves as a reference point from which time is measured. In most systems/languages this is 01 January 1970 00:00:00 UTC, the most notable exception is Apple's Cocoa(NSDate) which is from 2001
- - <strong>ESI (Edge Side Includes)</strong> -  
+ - <strong>ESI (Edge Side Includes)</strong> - 
  - <strong>Explicit Iteration vs Implicit Iteration</strong> - In jQuery:
   
   ```javascript
@@ -42,7 +42,7 @@
   // jQuery Implicit Iteration
   $( "li" ).addClass( "bar" );
   ```
-  - <strong>Expression</strong> - Something which evaluates to a value. Example: 1+2/x
+ - <strong>Expression</strong> - Something which evaluates to a value. Example: 1+2/x
 
 ###F
  - <strong>Falsy</strong> - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
