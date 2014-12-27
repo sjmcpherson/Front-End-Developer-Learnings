@@ -42,7 +42,6 @@
   // jQuery Implicit Iteration
   $( "li" ).addClass( "bar" );
   ```
-
   - <strong>Expression</strong> - Something which evaluates to a value. Example: 1+2/x
 
 ###F
