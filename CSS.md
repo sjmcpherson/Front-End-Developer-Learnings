@@ -134,6 +134,9 @@ i.e. html{font-size:62.5%}
 }
 ```
 
+- To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates. 
+
+
 ###Other CSS Properties
 
  - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
