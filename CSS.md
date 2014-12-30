@@ -135,7 +135,7 @@ i.e. html{font-size:62.5%}
 ```
 
 - To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates. 
-
+- Transition-timing-function presets are ease, linear, ease-in, ease-out and ease-in-out for custom easing use cubic-bezier(point1, point2, point3, point4); http://cubic-bezier.com/ is a tool to generate this
 
 ###Other CSS Properties
 
