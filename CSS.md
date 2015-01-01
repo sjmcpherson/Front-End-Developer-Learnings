@@ -91,7 +91,7 @@ ul li  { font-size: 1em; } /* =24px */
 ul li  { font-size: 1.05em; } /* =25px */
 ```
 
- - rem - Which stands for Root EM calculates the font size relative to the Root element. IE9+ with some limitations.
+ - rem - Which stands for Root EM calculates the font size relative to the Root element. IE9+ with some limitations (See http://caniuse.com/#feat=rem).
  
 ```CSS
 html {font-size: 0.625rem;}
