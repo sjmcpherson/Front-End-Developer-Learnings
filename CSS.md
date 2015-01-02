@@ -116,7 +116,8 @@ i.e. html{font-size:62.5%}
  - Flex Box Module('display:flex;') - IE10+ For fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
  - Multicolumn Module('column-count:value') - IE10+ Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
  - CSS Regions Module - A specification that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
- - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Limited Support currently only Chrome Canary 
+ - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little to no support caniuse.com/css-sticky
+
 
 
 ###CSS3 Animations & Transitions
@@ -198,7 +199,7 @@ tbody tr:nth-child(odd) {
  - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS files (Reduces the amount of HTTP Requests)
- - *{} targets every element (Not recommend adds performance issues)
+ - *{} targets every element (Not recommend in most instances)
  - Avoid unnecessary tag identifiers for performance (short selectors load faster) i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
  - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
  - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
