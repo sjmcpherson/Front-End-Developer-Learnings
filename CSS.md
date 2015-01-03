@@ -2,7 +2,11 @@
 
 ##CSS Selectors
 
-###Advanced CSS Selectors
+
+###Element Selectors
+ - * - Selects all elements (use carefully as can be expensive performance wise)
+ - element, element - Targets both elements
+ - element element - Targetd children of the first element
  - element > element - IE7+ targets direct children e.g ul > li{}
  - element ~ element - IE7+ targets p tags after ul tag in DOM e.g ul ~ p{} 
  - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
@@ -196,13 +200,21 @@ tbody tr:nth-child(odd) {
 ```
 
 ##CSS Performance
- - Limit Browser rendering by limiting CSS Box-shadows & CSS Gradients
+
+###CSS Selector Performance
+ - For most web sites, the possible performance gains from optimizing CSS selectors will be small, and are not worth the costs. Although be careful with *{} which targets every element.
+ - The key to optimizing CSS selectors is to focus on the rightmost selector, also called the Key Selector. Here’s a much more expensive selector: A.class0007 * {} Although this selector might look simpler, it’s more expensive for the browser to match. Because the browser moves right to left, it starts by checking all the elements that match the key selector, “*“. This means the browser must try to match this selector against all elements in the page.
+ - Avoid unnecessary tag identifiers for performance (short selectors load faster) i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
+- Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
+ - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
+
+###Rendering Performance 
+ - Optimizing browser rendering by reducing use of CSS Box-shadows & CSS Gradients
+ - Use CSS Animations & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration making CSS Transitions/Animation smoother. Be aware CPU usage can climb quite heavily because of the hardware acceleration.
+ - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
+
+###Download Optimisation
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS files (Reduces the amount of HTTP Requests)
- - *{} targets every element (Not recommend in most instances)
- - Avoid unnecessary tag identifiers for performance (short selectors load faster) i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
- - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
- - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
- - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
- - Use CSS Animtaions & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration improving performance making CSS Transitions/Animation smoother. 
- - The browser will still download images that are hidden with display:none although with some browsers(Firefox) images in CSS via background-images will not be downloaded.
+ - Avoid unnecessary tag identifiers to reduce file size i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
+ - The browser will still download images that are hidden with display:none although with some browsers i.e Firefox, background-images will not be downloaded.
