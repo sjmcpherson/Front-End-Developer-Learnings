@@ -6,10 +6,10 @@
 ###Element Selectors
  - * - Selects all elements (use carefully as can be expensive performance wise)
  - element, element - Targets both elements
- - element element - Targetd children of the first element
+ - element element - Targets children of the first element
  - element > element - IE7+ targets direct children e.g ul > li{}
- - element ~ element - IE7+ targets p tags after ul tag in DOM e.g ul ~ p{} 
- - element + element - IE7+ targets adjacent p tags directly after h1 tags e.g h1 + p{}
+ - element ~ element - IE7+ e.g ul ~ p{} targets all p tags after a ul tag in DOM
+ - element + element - IE7+ e.g h1 + p{} targets adjacent p tags directly after h1 tags 
 
 ###Attribute Selectors
  - Targets an elements attributes, __All attribute selectors are IE7+__
@@ -19,7 +19,7 @@
  - have a data-info of "image" including multiple values such as  data-info="external image" e.g a[data-info~="image"]{}
  - element[attribute $= value] - IE7+ selects elements matching 
 
-###Pseudo Selectors
+###Pseudo-class Selectors
  - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
  - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
  - element:first-child - IE7+ targets the first child element
@@ -33,14 +33,14 @@
  - element:checked - for radio and checkbox
  - element:target{} - IE9+ A powerful selector for single page apps, targets an element with the same ID as the hash in the URL. Note setting the URL this way triggers Bookmark like behaviour: Affecting browser history and scrolling the window to element behavior
 ```HTML
-<a href="#page1">Page 1</a>
-<section id="page1"> 
-   Content
-</section>
+	<a href="#page1">Page 1</a>
+	<section id="page1"> 
+	   Content
+	</section>
 ```
 ```CSS
-section{display:none;}
-:target {display:block;}
+	section{display:none;}
+	:target {display:block;}
 ```
 
 
@@ -116,10 +116,10 @@ i.e. html{font-size:62.5%}
 ###Structure & Positioning
  - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
  - If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
- - Box Sizing('box-sizing:border-box') - IE8+ forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting.
- - Flex Box Module('display:flex;') - IE10+ For fluid layouts - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
+ - Box Sizing('box-sizing:border-box') - IE8+ forces the browser to render the box with the specific width & height, placing borders & padding inside of the box. Very helpful when working with 100% widths. Use the value 'content-box' to revert to the default setting. *{box-sizing:border-box;} is often used to convert all elements to box-sizing.
+ - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
  - Multicolumn Module('column-count:value') - IE10+ Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
- - CSS Regions Module - A specification that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
+ - CSS Regions Module - A experimental specification by Adobe that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
  - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little to no support caniuse.com/css-sticky
 
 
