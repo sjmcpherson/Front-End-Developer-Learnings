@@ -149,9 +149,9 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 
 <h2>HTML Performance Tips</h2>
  - Reduce unecessary html tags to improve performance
- - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. HTTP Requests add to the download time and browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
- -  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively.
- - Use dispersed servers(CDN) for referenced files such as css, js & images,  when compressed this can lead to quicker download speeds.
+ - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. Because of the round-trip to the server extra HTTP requests add to the download time and most browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
+ - Putting stylesheets in the &lt;head&gt; allows the page to render progressively and avoid potential browser repaints.
+ - Use dispersed servers(CDN) for referenced files such as css, js & images. So resources 
  - For common libraries using a popular CDN(such as //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js) can enhance the chance the user has the file cached.
  - To give more control and to speed up loading time of Web Fonts use Web Font Loader, Fonts provided by Typekit, FontDeck and Google can be loaded through the script, for best performance embed the script directly after head tag and to remove FOUT add CSS for the class ".wf-loading" on the HTML element to hide text e.g. *.wf-loading{opacity(0)} the script then removes this class once fonts are loaded. https://developers.google.com/fonts/docs/webfont_loader
  - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.
