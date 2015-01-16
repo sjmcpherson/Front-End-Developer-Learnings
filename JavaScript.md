@@ -617,4 +617,16 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 </div>
 ```
 
+<h2>NPMNode</h2>
+<h3>Node</h3>
+<h3>NPM</h3>
+<h3>Dependency Management</h3>
+- Create a package.json in your projects route directory with "npm init" to document your dependencies
+
+```javascript
+   npm install %package%" --save
+   npm install %package%" --save-dev
+```
+
+
 
