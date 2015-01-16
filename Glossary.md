@@ -85,6 +85,10 @@ Will be converted to:
  - <strong>MVVM</strong> - stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
  - <strong>MVW</strong> - stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
 
+###N
+ - <strong>Node</strong> - or NodeJS is a runtime enviroment for creating server-side JavaScript applications
+ - <strong>NPM (Node Package Manager)</strong> - is the default package manager from Node.js and handles download & installation of Node modules
+
 ###O
  - <strong>Obfuscation</strong> - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
  - <strong>OAuth</strong> - is a open standard for authorization to server resources for client applications. It provides a process for end users to authorize third-party access without needing to share their credentials. OAuth is commonly used as a way for users to log into third party web sites using their Google, Facebook or Twitter passwords, without worrying about their access credentials being compromised.
