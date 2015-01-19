@@ -126,8 +126,11 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 ```
 
 <h2>Web Components</h2>
-- A new specification for creating encapsulated, reusable widgets.
-- Limited browser support, Only Chrome & Opera implement all 4 features, Safari & Firefox just HTML Templates. IE12 Unlikely to have any support.
+- A new specification for creating encapsulated, reusable widgets, the 4 components that make up the spec are Custom Elements, HTML Imports, Templates and Shadow DOM. Limited browser support, Only Chrome & Opera currently implement all 4 features, Safari & Firefox just HTML Templates. IE12 Unlikely to have any support. http://webcomponents.org/
+- Custom Elements - Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>
+- HTML Imports 
+- Templates
+- Shadow Dom
 - Frameworks which help are X-Tags, Polymer & Bosonic
 
 
