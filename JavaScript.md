@@ -634,3 +634,6 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 
 
 
+<h2>Source Control</h2>
+- echo "" > .hgignore
+
