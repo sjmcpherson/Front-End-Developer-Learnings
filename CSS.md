@@ -2,14 +2,13 @@
 
 ##CSS Selectors
 
-
 ###Element Selectors
  - * - Selects all elements (use carefully as can be expensive performance wise)
  - element, element - Targets both elements
  - element element - Targets children of the first element
- - element > element - IE7+ targets direct children e.g ul > li{}
- - element ~ element - IE7+ e.g ul ~ p{} targets all p tags after a ul tag in DOM
- - element + element - IE7+ e.g h1 + p{} targets adjacent p tags directly after h1 tags 
+ - element > element - targets direct children e.g ul > li{}
+ - element ~ element - targets all p tags after a ul tag in DOM. e.g ul ~ p{}
+ - element + element - targets adjacent p tags directly after h1 tags. e.g h1 + p{}
 
 ###Attribute Selectors
  - Targets an elements attributes, __All attribute selectors are IE7+__
@@ -42,7 +41,6 @@
 	section{display:none;}
 	:target {display:block;}
 ```
-
 
 
 ###CSS Opacity
