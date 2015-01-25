@@ -163,17 +163,29 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
 
 <h2>CSS Code Snippets</h2>
- - Vertical align text or imaages inside a element. http://codepen.io/sebastianekstrom/pen/kzEhe
+ - Bullet proof vertical center text or images IE9+. http://codepen.io/sebastianekstrom/pen/kzEhe
 
  ```CSS
 .holder p {
 	position: relative;
 	top: 50%;
+	-ms-transform: translateY(-50%); //IE9
 	transform: translateY(-50%);
 }
 ```
 
- - Cross Browser Sticky Footer
+ - Elipise/Concat a single line of text IE8+ http://codepen.io/sjmcpherso/pen/vEZdRw
+
+```CSS
+p {
+	width:200px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+```
+
+ - Cross Browser Sticky Footer IE8+
 ```HTML
  <div class='page-wrap'><h1>Content Area</h1></div>
  <footer class='site-footer'>Sticky Footer.</footer>
