@@ -45,7 +45,7 @@
 
 ###CSS Opacity
 - 'property:rgba(255,255,255,100);' - Red, Green, Blue & Alpha transparency can be used for almost any color attribute, IE9+
-- Completed crossbrowser CSS Opacity
+- Complete cross-browser CSS Opacity
 
 ```CSS
 /* Theoretically for IE 8 & 9 (more valid) but not required as filter works too should come BEFORE filter */
@@ -72,7 +72,18 @@ opacity: 0.5;
 
 ###Gradients
 - Use a gradient generator to build complex gradients i.e. http://www.colorzilla.com/gradient-editor/
-
+- Completed cross-browser CSS Linear Gradient
+```CSS
+	background: #e56464; /* Old browsers */
+	background: -moz-linear-gradient(top, #e56464 0%, #a80000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e56464), color-stop(100%,#a80000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e56464 0%,#a80000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e56464 0%,#a80000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e56464 0%,#a80000 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #e56464 0%,#a80000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e56464', endColorstr='#a80000',GradientType=0 ); /* IE6-9 */
+	copy
+```
 
 ###Media Queries
  - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
