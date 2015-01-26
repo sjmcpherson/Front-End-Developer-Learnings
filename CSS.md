@@ -3,34 +3,34 @@
 ##CSS Selectors
 
 ###Element Selectors
- - * - Selects all elements (use carefully as can be expensive performance wise)
- - element, element - Targets both elements
- - element element - Targets children of the first element
- - element > element - targets direct children e.g ul > li{}
- - element ~ element - targets all p tags after a ul tag in DOM. e.g ul ~ p{}
- - element + element - targets adjacent p tags directly after h1 tags. e.g h1 + p{}
+- * - Selects all elements (use carefully as can be expensive performance wise)
+- element, element - Targets both elements
+- element element - Targets children of the first element
+- element > element - targets direct children e.g ul > li{}
+- element ~ element - targets all p tags after a ul tag in DOM. e.g ul ~ p{}
+- element + element - targets adjacent p tags directly after h1 tags. e.g h1 + p{}
 
 ###Attribute Selectors
- - Targets an elements attributes, __All attribute selectors are IE7+__
- - Asterix attribute selector(element[attribute *= value]) - selects elements matching the characters e.g a[class *= "asterix"]{} selects class='more asterix' & class='moreasterix'
+- Targets an elements attributes, __All attribute selectors are IE7+__
+- Asterix attribute selector(element[attribute *= value]) - selects elements matching the characters e.g a[class *= "asterix"]{} selects class='more asterix' & class='moreasterix'
 - Tilde selector(element[attribute ~= value]) - selects elements matching the whole word, a stricter version of "*=" e.g a[data-info~="tilde"]{} selects data-info="external tilde" but not data-info="bigtilde" or data-info="big-tilde"
 - Pipe selector(element[attribute |= value]) - selects elements starting with the specified whole word & can be hyphenated. i.e [class|=pipe]{} would select class='pipe' & class='pipe-header' but not class='pipeheader' or class='header pipe'.
 - Caret selector(element[attribute ^= value]) - selects elements that begins with the characters and does not need to be a whole word. e.g a[href^="http"]{} would select <a href="http://www.google.com"></a> but not <a href="www.google.com&var=http"></a>
 - Dollar selector(element[attribute $= value]) - selects elements that ends with the characters and does not need to be a whole word. e.g the opposite to the Caret selector
 
 ###Pseudo-class Selectors
- - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
- - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
- - element:first-child - IE7+ targets the first child element
- - element:last-child - IE9+ targets the last child element
- - element:nth-child(3)/:nth-last-child(2) - IE9+ 
- - element:nth-of-type(n) - IE9+ rather than selecting a child, targets according to the type of element. Because of targeting the type of element you will encounter issues when using a class as the selector.
- - element:first-of-type/:last-of-type - IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
- - element:not(selector) - IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
- - element:empty - IE9+ targets elements with no children
- - element:only-child - IE9+ targets elements that are the only child of their parent
- - element:checked - for radio and checkbox
- - element:target{} - IE9+ A powerful selector for single page apps, targets an element with the same ID as the hash in the URL. Note setting the URL this way triggers Bookmark like behaviour: Affecting browser history and scrolling the window to element behavior
+- element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
+- element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
+- element:first-child - IE7+ targets the first child element
+- element:last-child - IE9+ targets the last child element
+- element:nth-child(3)/:nth-last-child(2) - IE9+ 
+- element:nth-of-type(n) - IE9+ rather than selecting a child, targets according to the type of element. Because of targeting the type of element you will encounter issues when using a class as the selector.
+- element:first-of-type/:last-of-type - IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
+- element:not(selector) - IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
+- element:empty - IE9+ targets elements with no children
+- element:only-child - IE9+ targets elements that are the only child of their parent
+- element:checked - for radio and checkbox
+- element:target{} - IE9+ A powerful selector for single page apps, targets an element with the same ID as the hash in the URL. Note setting the URL this way triggers Bookmark like behaviour: Affecting browser history and scrolling the window to element behavior
 ```HTML
 	<a href="#page1">Page 1</a>
 	<section id="page1"> 
