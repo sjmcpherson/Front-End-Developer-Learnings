@@ -44,7 +44,7 @@
 
 
 ###CSS Opacity
-- 'property:rgba(255,255,255,100);' - Red, Green, Blue & Alpha Transparency can be used for almost any color attribute but is not supported by <IE9
+- 'property:rgba(255,255,255,100);' - Red, Green, Blue & Alpha transparency can be used for almost any color attribute, IE9+
 - Completed crossbrowser CSS Opacity
 
 ```CSS
