@@ -22,6 +22,7 @@
  - <strong>Data Binding</strong> - Syncronises data between UI components which are bound to the data source
  - <strong>Declarative Programming</strong> - seeks to make you coding more descriptive by using techniques to show what is done rather than how is done. This is opposed to Imperative Programming.
  - <strong>Dependency Injection(DI)</strong> - is a software design pattern that deals with providing the dependencies that an object needs instead of having it construct them itself. AngularJS utilizes this pattern.
+ - <strong>Distributed Denial of Service(DDOS)</strong> - is a method used to overload a network in an attempt to make it unusable.
  - <strong>Dirty Checking</strong> - 
  - <strong>Document-oriented Database</strong> - A collection of independent documents. E.g CouchDB, MongoDB
  - <strong>DOM (Document Object Model)</strong> - 
