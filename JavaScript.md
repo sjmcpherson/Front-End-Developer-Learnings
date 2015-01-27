@@ -278,7 +278,7 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - element.getElementById(id) - full support.
 - element.getElementsByName(name) - full support gets a node list matching the name attribute
 - element.getElementsByTagName(tag) - full support
-- element.querySelector(CSS selectors) - IE8+ 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element.
+- element.querySelector(CSS selectors) - IE8+(CSS2 selectors) IE9+(CSS3 selectors) 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element.
 - element.querySelectorAll(CSS selectors) IE8+ - returns a node list of all elements selected i.e. var el = document.body.querySelector("style[type='text/css'], style:not([type])");
 - document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
 - element.getElementsByClassName(class) - IE9+ i.e. document.getElementsByClassName('red test') = Get all elements that have both the 'red' and 'test' classes.
