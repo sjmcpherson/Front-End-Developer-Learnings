@@ -275,18 +275,20 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - setTimeout(function, delay in milliseconds);
 
 <h3>JavaScript Selectors</h3>
-- element.getElementById(id) - full support.
-- element.getElementsByName(name) - full support gets a node list matching the name attribute
-- element.getElementsByTagName(tag) - full support
-- element.querySelector(CSS selectors) - IE8+(CSS2 selectors), IE9+(CSS3 selectors) 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element.
-- element.querySelectorAll(CSS selectors) IE8+(CSS2 selectors), IE9+(CSS3 selectors) - returns a node list of all elements selected i.e. var el = document.body.querySelector("style[type='text/css'], style:not([type])");
-- document.querySelectorAll("div.note, div.alert") returns a list of all div elements within the document with a class of either "note" or "alert".
+- element.getElementById(id) - (full support)
+- element.getElementsByName(name) - returns a NodeList(not an array see ) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support) 
+- element.getElementsByTagName(tag) - returns a NodeList matching the tag name.  (full support)
+- element.querySelector(CSS selectors) - 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element. Pseudo selectors are NOT supported. IE8+
+- element.querySelectorAll(CSS selectors) - returns a NodeList(not an array) of all elements selected. Pseudo selectors are supported. i.e. var el = document.body.querySelector("style[type='text/css]'], style:not([type])"); (IE8+ for CSS2 selectors, IE9+ for CSS3 selectors)
 - element.getElementsByClassName(class) - IE9+ i.e. document.getElementsByClassName('red test') = Get all elements that have both the 'red' and 'test' classes.
 - You can also chain selectors i.e. document.getElementById('main').getElementsByClassName('test') although its better practise to cache elements for reuse i.e. var d = document;var main = d.getElementById('main');var testList = main.getElementsByClassName('test');
-- elementNodeReference.childNodes - gets a node list of direct children. Full support.
-- element.nextSibling - gets the next element in the parent elements child node list. Full support.
-- element.parentElement - gets the parent element. Full support.
+- elementNodeReference.childNodes - gets a NodeList of direct children. (full support)
+- element.nextSibling - gets the next element in the parent elements child node list. (full support)
+- element.parentElement - gets the parent element. (full support)
 
+<h4>The NodeList Object</h4>
+- What is a NodeList Object - it is a collection of Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
+- Converting a NodeList to an Array - var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div"));
 
 <h3>JSON</h3>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
