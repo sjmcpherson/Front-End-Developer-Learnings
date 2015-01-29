@@ -124,6 +124,7 @@ Will be converted to:
  - <strong>Surface Web</strong> - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
  - <strong>SVG (Scalable Vector Graphics)</strong> - is a XML based vector graphics format with some support for interactivity and animations
  - <strong>Stylus</strong> - Another CSS preprocessor which brackets, colons, and semi-colons are all optional. Uses the .styl file extension
+ - <strong>Systems Development Lifecycle (SDLC)</strong> - is used to describe a process for planning, creating, testing and deploying a information system.
 
 ###T
  - <strong>Three Tier Architecture</strong> - Consists of the Presentation layer or Front End, the Middle tier or Business Logic and the Data tier being where the data is stored.
