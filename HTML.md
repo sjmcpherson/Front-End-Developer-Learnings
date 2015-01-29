@@ -125,6 +125,27 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
     </dl>
 ```
 
+<h3>Microdata</h3>
+- Microdata is a way to label content as a specific type of information for Search Engines to process, for example reviews, personal information, locations & events.
+
+```HTML
+<div itemscope itemtype="http://data-vocabulary.org/Person">
+   My name is <span itemprop="name">Bob Smith</span>, 
+   but people call me <span itemprop="nickname">Smithy</span>.
+   Here is my homepage: 
+   <a href="http://www.example.com" itemprop="url">www.example.com</a>.
+   I live in 
+   <span itemprop="address" itemscope
+      itemtype="http://data-vocabulary.org/Address">
+      <span itemprop="locality">Albuquerque</span>, 
+      <span itemprop="region">NM</span> 
+   </span>
+   and work as an <span itemprop="title">engineer</span>
+   at <span itemprop="affiliation">ACME Corp</span>.
+</div>
+```
+
+
 <h2>Web Components</h2>
 - A new specification for creating encapsulated, reusable widgets, the 4 components that make up the spec are Custom Elements, HTML Imports, Templates and Shadow DOM. Limited browser support, Only Chrome & Opera currently implement all 4 features, Safari & Firefox just HTML Templates. IE12 Unlikely to have any support. http://webcomponents.org/
 - Custom Elements - Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>
