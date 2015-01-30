@@ -285,10 +285,19 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - elementNodeReference.childNodes - gets a NodeList of direct children. (full support)
 - element.nextSibling - gets the next element in the parent elements child node list. (full support)
 - element.parentElement - gets the parent element. (full support)
+- classList API - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains.
+
+```JavaScript
+div.classList.add("class","anotherclass");
+div.classList.remove(class);
+div.classList.toggle(class);// if visible is set remove it, otherwise add it
+div.classList.contains("foo"); //Returns true or false
+```
 
 <h4>The NodeList Object</h4>
 - What is a NodeList Object - it is a collection of Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
 - Converting a NodeList to an Array - var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div"));
+
 
 <h3>JSON</h3>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
@@ -445,7 +454,6 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 - Network Information - Can be used to determine what internet connection is being used I.e wifi, cellular etc
 - Vibration - Trigger vibration in mobile devices
 - Battery - Detect if the battery is low on the device
-- classList - A performance optimized API to manipulate classes on elements. div.classList.add("class"); IE10+ 
 
 
 <h3>JavaScript Frameworks</h3>
