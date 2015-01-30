@@ -64,7 +64,8 @@
 
 ###J
  - <strong>JSON</strong> - Stands for JavaScript Object Notation.
-
+ - <strong>JSX</strong> - Stands for JavaScript Object Notation.
+ - 
 ###L
  - <strong>Loose Coupling</strong> - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
  - <strong>Loosely Typed</strong> - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
