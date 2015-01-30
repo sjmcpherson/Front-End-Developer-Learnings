@@ -285,7 +285,7 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - elementNodeReference.childNodes - gets a NodeList of direct children. (full support)
 - element.nextSibling - gets the next element in the parent elements child node list. (full support)
 - element.parentElement - gets the parent element. (full support)
-- classList API - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains.
+- classList API - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains. IE10+
 
 ```JavaScript
 div.classList.add("class","anotherclass");
