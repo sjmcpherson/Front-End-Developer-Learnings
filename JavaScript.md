@@ -237,13 +237,20 @@ for (var p:* in obj)
 	//The above code will alert, "a", "b", "c","foo!" and 10.
 ```
  
+
+<h4>The Window Object</h4>
+- The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, history object, navigator object and location object.
+- window.innerWidth/innerHeight - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
+- window.length will give you the number of iframe elmements in the current window.
+- 
 <h4>The Document Object</h4>
 - Where the DOM is accessed
 - A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
 
-<h4>The Window Object</h4>
-- The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, the history object and the location object.
-- window.innerWidth/innerHeight - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
+<h4>The History Object</h4>
+- Contains a list of URLs visited that cannot be read, only navigated to
+- window.history.forward() & window.history.back() are used to navigate to the next & previous entries
+- window.history.go() is used to navigate back or forward a number of entries in the history i.e. window.history.go(-4);
 
 <h4>The Image Object</h4>
 - img.complete - Read-only boolean property to determine if image is loaded.
@@ -333,6 +340,14 @@ function AddEvent(html_element, event_name, event_function)
       html_element.addEventListener(event_name, event_function, false); //don't need the 'call' trick because in FF everything already works in the right way          
 } 
 ```
+<h4>Scroll Event</h4>
+- Can be used on any scrolling element with element.onscroll = function (event) {} but is general used on the Window object i.e. window.onscroll = function (event) {}
+- Unbind the scroll event by setting to null i.e. window.onscroll = null; 
+- Can also be used with addEventListener i.e. element.addEventListener("scroll", myFunction); although addEventListener is only IE9+
+- Performance heavy as trigged everytime you scroll one pixel (or one scroll unit, whatever that is on your OS)
+
+
+- window.onscroll event - Detects scrolling
 
 <h3>Prototypal Inheritance</h3>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
