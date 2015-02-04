@@ -69,6 +69,10 @@ opacity: 0.5;
 
 ###Backgrounds
  - background-size: cover;contain;width height; - 'cover' scales up background image so the <em>lesser</em> dimension matches the window size; 'contain' scales up to the <em>greater</em> dimension, meaning some background will not be covered by the image. 
+ - background-attachment:scroll;fixed;local; - 'fixed' background will not move (problems in Chrome with position relative among others)
+ - 'background-clip', 'background-origin' IE9+
+ - 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
+ - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
 
 ###Gradients
 - Use a gradient generator to build complex gradients i.e. http://www.colorzilla.com/gradient-editor/
@@ -167,11 +171,8 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
 h1 {counter-reset: section;}
 h2:before {counter-increment: section;content: counter(section) ". ";}
 ```
- - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
- - 'background-clip', 'background-origin' and 'background-size' IE9+
  - Calculations('property:calc()') - IE9+ Dynamic css calculations "width:calc(100% - 4em);"
  - Pointer Events('pointer-events:none') - Disables mouse/touch events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
- - 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
  - 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
 
 <h2>CSS Code Snippets</h2>
