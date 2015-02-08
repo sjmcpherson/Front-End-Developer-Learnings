@@ -139,7 +139,7 @@ div{width:100%;padding:10px;border:1px;} //Would be 22px larger than its parent 
 div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the same width as its parent element
 ```
 
- - Multicolumn Module('column-count:value') - Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
+ - Multi Column Module('column-count:value') - Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
  - CSS Regions Module - A experimental specification by Adobe that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful. Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
  - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little support, Safari & Firefox only. caniuse.com/css-sticky
 
