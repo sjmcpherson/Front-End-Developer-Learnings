@@ -282,17 +282,17 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - setTimeout(function, delay in milliseconds);
 
 <h3>JavaScript Selectors</h3>
-- element.getElementById(id) - (full support)
-- element.getElementsByName(name) - returns a NodeList(not an array see ) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support) 
-- element.getElementsByTagName(tag) - returns a NodeList matching the tag name.  (full support)
-- element.querySelector(CSS selectors) - 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element. Pseudo selectors are NOT supported. IE8+
-- element.querySelectorAll(CSS selectors) - returns a NodeList(not an array) of all elements selected. Pseudo selectors are supported. i.e. var el = document.body.querySelector("style[type='text/css]'], style:not([type])"); (IE8+ for CSS2 selectors, IE9+ for CSS3 selectors)
-- element.getElementsByClassName(class) - IE9+ i.e. document.getElementsByClassName('red test') = Get all elements that have both the 'red' and 'test' classes.
-- You can also chain selectors i.e. document.getElementById('main').getElementsByClassName('test') although its better practise to cache elements for reuse i.e. var d = document;var main = d.getElementById('main');var testList = main.getElementsByClassName('test');
-- elementNodeReference.childNodes - gets a NodeList of direct children. (full support)
-- element.nextSibling - gets the next element in the parent elements child node list. (full support)
-- element.parentElement - gets the parent element. (full support)
-- classList API - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains. IE10+
+- <strong>element.getElementById(id)</strong> - (full support)
+- <strong>element.getElementsByName(name)</strong> - returns a NodeList(not an array see ) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support) 
+- <strong>element.getElementsByTagName(tag)</strong> - returns a NodeList matching the tag name.  (full support)
+- <strong>element.querySelector(CSS selectors) - 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element. Pseudo selectors are NOT supported. IE8+
+- <strong>element.querySelectorAll(CSS selectors)</strong> - returns a NodeList(not an array) of all elements selected. Pseudo selectors are supported. i.e. var el = document.body.querySelector("style[type='text/css]'], style:not([type])"); (IE8+ for CSS2 selectors, IE9+ for CSS3 selectors)
+- <strong>element.getElementsByClassName(class)</strong> - IE9+ i.e. document.getElementsByClassName('red test') = Get all elements that have both the 'red' and 'test' classes.
+- <strong>Chaining Selectors</strong> - Just like with jQuery you can chain selectors i.e. document.getElementById('main').getElementsByClassName('test') although its better practise to cache elements for reuse i.e. var d = document;var main = d.getElementById('main');var testList = main.getElementsByClassName('test');
+- <strong>element.childNodes</strong> - gets a NodeList of direct children. (full support)
+- <strong>element.nextSibling</strong> - gets the next element in the parent elements child node list. (full support)
+- <strong>element.parentElement</strong> - gets the parent element. (full support)
+- <strong>ClassList API</strong> - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains. IE10+
 
 ```JavaScript
 div.classList.add("class","anotherclass");
