@@ -471,10 +471,6 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 - Battery - Detect if the battery is low on the device
 
 
-<h3>JavaScript Frameworks</h3>
-- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
-
-
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Const - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
@@ -619,33 +615,39 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 }    
 ```
 
-<h2>Helpful JavaScript/jQuery Libraries & Scripts</h2>
+<h2>JavaScript Frameworks, Library's, Languages and Script</h2>
+
+<h3>JavaScript Frameworks</h3>
+- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
+- AngularJS
+- Backbone
+- EmberJS
+- Ext JS
+
+
+<h3>Languages</h3>
+- asm.js
+- CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
+- JSX a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
+
+<h3>Library</h3>
+- Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
+- Handlebars.js - Lightweight, library to build semantic templates i.e.
+- Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
+- Underscore.js - Utilty functions uncluding map, select, javascript templating
+
+<h3>Scripts</h3>
+- ajax-cache.js - Provides a AJAX response caching object so as to limit unnessary requests. https://code.google.com/p/ajax-cache/
+- Equalize.js jQuery plugin for equalizing the height or width of sibling elements
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
 - jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
-- JSX a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
-- Equalize.js jQuery plugin for equalizing the height or width of sibling elements
-- ajax-cache.js - Provides a AJAX response caching object so as to limit unnessary requests. https://code.google.com/p/ajax-cache/
-- Underscore.js - Utilty functions uncluding map, select, javascript templating
-- CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
 - htm5shiv.js/html5shim.js - Allows the styling of HTML5 Elements such as Section, Article, Header in <IE9.
-- Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
 - Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
-- Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
-- Handlebars.js - Lightweight, library to build semantic templates i.e.
 - Bower - A command line package manager to automate searching and downloading front-end development tools.
-
-```HTML
-<div class="entry">
-  <h1>{{title}}</h1>
-  <div class="body">
-    {{body}}
-  </div>
-</div>
-```
 
 <h2>Node & NPM</h2>
 
