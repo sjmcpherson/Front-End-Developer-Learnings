@@ -316,6 +316,7 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - <strong>Chaining Selectors</strong> - Just like with jQuery you can chain selectors i.e. document.getElementById('main').getElementsByClassName('test') although its better practise to cache elements for reuse i.e. var d = document;var main = d.getElementById('main');var testList = main.getElementsByClassName('test');
 - <strong>element.children</strong> - gets a HTMLCollection of direct children. (IE9+) IE 6-8 support it, but include comment nodes.
 - <strong>element.childNodes</strong> - gets a NodeList of direct children. Note: Includes white space between nodes. (full support)
+- <strong>element.nextElementSibling/element.previousElementSibling</strong> - gets the next/previous element in the parent elements child HTMLColl. (IE10+)
 - <strong>element.nextSibling/element.previousSibling</strong> - gets the next/previous element in the parent elements child node list. Note: Includes white space between nodes. (full support) 
 - <strong>element.firstChild/element.lastChild</strong> - gets the first/last child of the element. Note: Includes white space between nodes. (full support)
 - <strong>element.parentElement</strong> - gets the parent element. (full support)
