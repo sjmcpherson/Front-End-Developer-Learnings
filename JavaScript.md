@@ -117,6 +117,31 @@ function testFunc(){
 - Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 - function.call vs function.apply - .apply and .call do the same thing, but .apply uses an array containing arguments for the target method as the second parameter.
 
+
+<h3>Loops</h3>
+- <strong>For Loop</strong>
+```javascript
+for (var i=startvalue; i<=endvalue; incrementfactor){ // Your code here}
+```
+- <strong>For In/Of Loop</strong>
+```javascript
+for (var prop in object){ // Your code here}
+```
+- <strong>While Loop</strong>
+```javascript
+while(i<=endvalue){ // Your code here}
+```
+- <strong>Do While Loop</strong>
+```javascript
+do{ // Your code here}(i<=endvalue)
+```
+
+- <strong>ForEach Loop</strong>
+```javascript
+
+```
+break and continue.
+
 <h3>Type Coercion</h3>
 - Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different value types rather than throwing an error like a Strongly-Typed language would.
 - When JavaScript is adding values it immediately begins type coercing all value into strings that proceed a string i.e. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
@@ -302,7 +327,7 @@ div.classList.contains("foo"); //Returns true or false
 ```
 
 <h4>The NodeList Object</h4>
-- What is a NodeList Object - it is a collection of Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
+- What is a NodeList Object - it is a read-only collection of order Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
 - Converting a NodeList to an Array - var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div"));
 
 
