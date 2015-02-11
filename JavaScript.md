@@ -339,25 +339,9 @@ div.classList.contains("foo"); //Returns true or false
 - JSONP stands for JSON with padding. The padding is a callback function that is used to wrap the data returned from the server. The reason for its existence is to get around browser's same-origin restriction against cross domain requests.
 
 <h3>JavaScript Events</h3>
-- Use Event Delegation instead of individual event listeners (read more http://davidwalsh.name/event-delegate) e.g. 
-
-```javascript
-//jQuery 1.4.3+ 
-$("table").delegate("td", "click", function(){});
-//jQuery 1.7+
-$("table").on("click", "td", function() {});
-//Vanilla JS
-document.querySelectorAll('table').addEventListener('click', function(e) {
-        // e.target is the clicked element!
-        if(e.target && e.target.tagName == 'td') {}
-});
-```
-
-- return false - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating jQuery funcitions e.preventDefault() & e.stopPropagation().
-- Event Bubbling when a nested element triggers the parents event handler. The follow code can be used to prevent bubbling event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
-- addEventListener(event,function,useCapture) IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}' would deprecietes attachEvent(event,function);
-- attachEvent(event,function) depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
-- Use something like the below as a cross browser AddEventListener override
+- <strong>addEventListener(event,function,useCapture)</strong> - IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}' would deprecietes attachEvent(event,function);
+- <strong>attachEvent(event,function)</strong> - Is a depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
+- <strong>Crossbrowser addEventListener</strong> - Use something like the below as a cross browser AddEventListener override
 
 ```javascript
 function AddEvent(html_element, event_name, event_function) 
@@ -368,6 +352,27 @@ function AddEvent(html_element, event_name, event_function)
       html_element.addEventListener(event_name, event_function, false); //don't need the 'call' trick because in FF everything already works in the right way          
 } 
 ```
+
+- <strong>Event Delegation</strong> - An method that instead of using multiple individual event listeners, places a single event listener on a parent (read more http://davidwalsh.name/event-delegate) e.g. 
+
+```javascript
+//jQuery 1.4.3+  
+$("nav").delegate("a", "click", function(){});
+//jQuery 1.7+
+$("nav").on("click", "a", function() {});
+//Vanilla JS
+document.querySelectorAll('nav').addEventListener('click', function(e) {
+        // e.target is the clicked element!
+        if(e.target && e.target.tagName == 'a') {}
+});
+```
+
+- return false - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating functions event.preventDefault() & event.stopPropagation().
+- <strong>Event Bubbling</strong> - is when a nested element triggers the parents event handler. The following code can be used to prevent bubbling.
+- <strong>event.preventDefault()</strong> - Cancels the default event(if cancelable) codepen.io/sjmcpherso/pen/gboxaa
+-  <strong>event.stopPropagation</strong> - event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
+
+
 <h4>Scroll Event</h4>
 - Can be used on any scrolling element with element.onscroll = function (event) {} but is general used on the Window object i.e. window.onscroll = function (event) {}
 - Unbind the scroll event by setting to null i.e. window.onscroll = null; 
