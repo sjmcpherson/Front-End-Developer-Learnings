@@ -175,7 +175,7 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - Pointer Events('pointer-events:none') - Disables mouse/touch events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
  - 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
 
-<h2>CSS Code Snippets</h2>
+<h2>Helpful CSS Code Snippets</h2>
  - Bullet proof vertical center text or images IE9+. http://codepen.io/sebastianekstrom/pen/kzEhe
 
  ```CSS
