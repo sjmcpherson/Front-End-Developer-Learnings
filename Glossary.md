@@ -9,6 +9,7 @@
  - <strong>Atom</strong> - Building apone RSS, Atom is a XML language used for web feeds.
 
 ###B
+ - <strong>Backend as a Service(BaaS)</strong> - A backend provider accessed via an API e.g Firebase, Parse, Loopback
  - <strong>Bower</strong> - A front-end package management system that runs on Node.js & npm
 
 ###C
