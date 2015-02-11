@@ -178,8 +178,8 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
 <h2>Helpful CSS Code Snippets</h2>
  - Bullet proof vertical center text or images IE9+. http://codepen.io/sebastianekstrom/pen/kzEhe
 
- ```CSS
-.holder p {
+```CSS
+ .holder p {
 	position: relative;
 	top: 50%;
 	-ms-transform: translateY(-50%); //IE9
