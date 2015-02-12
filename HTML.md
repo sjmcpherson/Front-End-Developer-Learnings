@@ -1,4 +1,4 @@
-<h2>HTML Coding Tips</h2>
+<h1>HTML Coding Tips</h1>
 
 <h3>HTML Doctype</h3>
 
