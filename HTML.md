@@ -6,20 +6,8 @@
  - Doctype must be first on page or IE will revert to Quirks Mode
  - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
- - HTML5 Inputs with graceful degredation: type=search, email, url, number, and tel
- - Use input[placeholder] with IE&lt;10 polyfill fallback jquery-placeholder.js
- - &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
- - &lt;datalist&gt; Databinding Autocomplete. IE10+, No Safari support. Example:
 
-```HTML
-<input list="browsers">
-<datalist id="browsers">
-     <option value="Chrome">
-     <option value="Firefox">
-     <option value="Safari">
-</datalist>
-```
 
  - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
  - &lt;video autoplay controls&gt;&lt;/video&gt;
@@ -48,11 +36,7 @@ Would Produce:
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
 - Application Cache (AppCache) 
-- Web Components a collection standards (like HTML imports) in development for allowing encapsulation of HTML, CSS & JS into custom HTML tags. 
 
-```HTML
-  <link rel="import" href="import.html">
-```
 
 - Dialog Element - Native popup/
 ```HTML
@@ -62,20 +46,35 @@ Would Produce:
 </dialog>
 ```
 
+<h2>Images</h2>
+
+
 
 <h2>HTML5 Forms</h2>
-- Required attribute - required="required"
-- Placeholder attribute - Text is displayed inside the input field as long as the field is empty. When you click on (or tab to) the input field and start typing, the placeholder text disappears. IE10+
+
+<h4>Form Inputs</h4>
+- <strong>New Input types</strong> - HTML5 introduces a number of new input types all have varing browser support. color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week. Modernizr can be used to determine support and if not fallback to input="text" or to avoid browser specific support.
+- <strong>type="search"</strong> - In Webkit browsers it adds a Clear field button and as a result Webkit browsers style it differently.  In Chrome hitting 'Esc' will clear field. 
+- <strong>Meter</strong> &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
+- <strong>Datalist</strong> - &lt;datalist&gt; Databinding Autocomplete. IE10+, No Safari support. Example:
+```HTML
+<input list="browsers">
+<datalist id="browsers">
+     <option value="Chrome">
+     <option value="Firefox">
+     <option value="Safari">
+</datalist>
+```
+
+<h4>Form Attributes</h4>
+- <strong>required="required"</strong> - The required attribute is used for validation and most modern browsers will check this attribute & add there own native validation errors when submitting the form.
+- <strong>placeholder="Enter Here"</strong> - Text is displayed inside the input field as long as the field is empty. When you click on (or tab to) the input field and start typing, the placeholder text disappears. IE10+, polyfill fallback jquery-placeholder.js for IE9 & below.
 - Autofocus attribute - On page load set focus to element. Can be used on inputs buttons and textareas. e.g <input autofocus /> IE10+
-
-- Input types - HTML5 introduces a number of new input types all have varing browser support. color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week. Modernizr can be used to determine support and if not fallback to input="text".
-- type="search" - In Webkit browsers it adds a Clear field button, In Chrome hitting 'Esc' will clear field. Webkit browsers may style it differently.
-
-- contenteditable
-- spellcheck attribute when set to true on an input, textarea and a contenteditable set element will tell the browser(if supported) to check the spelling of element and add a red underline to a word it deems incorrect. By default the attribute is false for inputs and true for textareas and contenteditible in most browsers.
-- autocorrect attribute - Used specifically by Touch device web browsers to offer options to correct potential spelling mistakes. Disabled by default on input="email"
-- autocapitalize attribute - Used specifically by Touch device web browsers to Autocapitalize the first letter in an input. Disabled by default on input="email"
-- autocomplete attribute - can be used by browser to autopopulate a field based on previously entered data.
+- <strong>contenteditable="true"</strong
+- <strong>spellcheck="true"</strong> - when set to true on an input, textarea and a contenteditable set element will tell the browser(if supported) to check the spelling of element and add a red underline to a word it deems incorrect. By default the attribute is false for inputs and true for textareas and contenteditible in most browsers.
+- <strong>autocorrect="false"</strong> - Used specifically by Touch device web browsers to offer options to correct potential spelling mistakes. Disabled by default on input="email"
+- <strong>autocapitalize="false"</strong> - Used specifically by Touch device web browsers to Autocapitalize the first letter in an input. Disabled by default on input="email"
+- <strong>autocomplete="email"</strong> - Used by browser to autopopulate a field based on previously entered data. Set by default on most modern browsers determind by the id/name.
 ```HTML
     <input type="email" name="email" id="email" autocomplete="email">
 ```
@@ -96,6 +95,16 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 - Create unique meta title tags for each page which are brief but descriptive (info on Meta Tags here) https://support.google.com/webmasters/answer/79812?hl=en&ref_topic=2371375
 - Include important keywords in your text but don’t overdo it as Google will see this as content manipulation. And of course you should always be thinking of your audience not just your page ranking.
 - You may find the need to abreviate important terms to make you content more concise use the 'abbr' tag to get the best of both worlds i.e. <abbr title="Front End Developer">FED</abbr>
+- An under-utilized and often misunderstood element is the Definition List, semantically correct when displaying a list of titles with a description
+```HTML
+    <dl><!--Container-->
+       <dt>Definition Term (like a title)</dt>
+       <dd>Definition Description</dd>
+    </dl>
+```
+
+<h4>Microdata</h4>
+- Microdata is a way to label content as a specific type of information for Search Engines to process, for example reviews, personal information, locations & events.
 - Use the Microdata specification to add metadata to content i.e
 ```HTML
 <section itemscope itemtype="http://schema.org/Person"> 
@@ -117,61 +126,30 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
        </section>
 </section>
 ```
-- An under-utilized and often misunderstood element is the Definition List, semantically correct when displaying a list of titles with a description
-```HTML
-    <dl><!--Container-->
-       <dt>Definition Term (like a title)</dt>
-       <dd>Definition Description</dd>
-    </dl>
-```
 
-<h3>Microdata</h3>
-- Microdata is a way to label content as a specific type of information for Search Engines to process, for example reviews, personal information, locations & events.
-
-```HTML
-<div itemscope itemtype="http://data-vocabulary.org/Person">
-   My name is <span itemprop="name">Bob Smith</span>, 
-   but people call me <span itemprop="nickname">Smithy</span>.
-   Here is my homepage: 
-   <a href="http://www.example.com" itemprop="url">www.example.com</a>.
-   I live in 
-   <span itemprop="address" itemscope
-      itemtype="http://data-vocabulary.org/Address">
-      <span itemprop="locality">Albuquerque</span>, 
-      <span itemprop="region">NM</span> 
-   </span>
-   and work as an <span itemprop="title">engineer</span>
-   at <span itemprop="affiliation">ACME Corp</span>.
-</div>
-```
 
 
 <h2>Web Components</h2>
 - A new specification for creating encapsulated, reusable widgets, the 4 components that make up the spec are Custom Elements, HTML Imports, Templates and Shadow DOM. Limited browser support, Only Chrome & Opera currently implement all 4 features, Safari & Firefox just HTML Templates. IE12 Unlikely to have any support. http://webcomponents.org/
-- Custom Elements - Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>
-- HTML Imports 
-- Templates
-- Shadow Dom
-- Frameworks which help are X-Tags, Polymer & Bosonic
+- <strong>Web Components Frameworks</strong> - add polyfils and intergrate web components with frameworks such as X-Tags, Polymer & Bosonic.
+
+<h4>Custom Elements</h4>
+- Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>. All native tag names do not contain a dash.
+
+<h4>HTML Templates</h4>
 
 
-<h3>Custom Elements</h3>
-- Can use custom element names, the only requirement is must contain a dash "-" i.e. <img-slider>. All native tag names do not contain a dash.
-
-<h3>HTML Templates</h3>
-
-
-<h3>HTML Imports</h3>
+<h4>HTML Imports</h4>
  - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: <link rel="import" href="import-file.html">
  - Note: HTML imports adhere to the same-origin policy for security reasons. Therefore, if you wish to import an HTML document from an external domain, you need to make sure you have CORS set up correctly.
  - Limited support in Chrome & Opera Only.
  
-<h3>Shadow DOM</h3>
+<h4>Shadow DOM</h4>
 - Already the browser uses Shadow DOM simplify complex elements like <input type="date">, <select>, <video> etc
 - Style & Script encapusation inside Shadow DOM
 
 
-<h2>HTML Performance Tips</h2>
+<h2>HTML Performance</h2>
  - Reduce unecessary html tags to improve performance
  - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. Because of the round-trip to the server extra HTTP requests add to the download time and most browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively and avoid potential browser repaints.
