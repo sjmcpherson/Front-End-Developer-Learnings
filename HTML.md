@@ -1,6 +1,6 @@
 <h1>HTML Coding Tips</h1>
 
-<h3>HTML Doctype</h3>
+<h2>HTML Doctype</h2>
 
  - HTML5 Doctype &lt;!doctype html&gt;
  - Doctype must be first on page or IE will revert to Quirks Mode
