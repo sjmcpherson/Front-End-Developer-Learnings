@@ -1,19 +1,26 @@
-<h1>HTML Coding Tips</h1>
+<h1>HTML</h1>
 
 <h2>HTML Doctype</h2>
 
- - HTML5 Doctype &lt;!doctype html&gt;
- - Doctype must be first on page or IE will revert to Quirks Mode
- - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
+ - <strong>HTML5 Doctype</strong> &lt;!doctype html&gt; must be first on page before the <html> tag. IE will revert to Quirks Mode if not the case
+ - <strong>HTML4 vs HTML5</strong> - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
+ 
+<h2>The Viewport</h2>
+- The recommened viewport setting for responsive design '<meta name="viewport" content="width=device-width">' this allows the user to zoom.
+- To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
+- Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
+
+
+<h2>Loading Resources</h2>
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
 
 
- - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
- - &lt;video autoplay controls&gt;&lt;/video&gt;
- - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
- - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
- - HAML (HTML Abstraction Markup Language) is a lightweight markup language. Example:
+
+
+
+<h2>HTML Preprocessors</h2>
+ - <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight markup language. Example:
 
 ```HTML
   %body
@@ -28,10 +35,16 @@ Would Produce:
     </div>
 ```
 
-- The recommened viewport setting for responsive design '<meta name="viewport" content="width=device-width">' this allows the user to zoom.
-- To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
-- Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
-- The attribute contenteditable="true" used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/. Similarly the CSS attribute -user-input can be use to replicate but with limited support.
+- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web.
+
+
+
+
+ - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
+ - &lt;video autoplay controls&gt;&lt;/video&gt;
+
+
+
 - Specify image dimensions, by specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
@@ -47,7 +60,8 @@ Would Produce:
 ```
 
 <h2>Images</h2>
-
+ - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
+ - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
 
 
 <h2>HTML5 Forms</h2>
@@ -70,7 +84,7 @@ Would Produce:
 - <strong>required="required"</strong> - The required attribute is used for validation and most modern browsers will check this attribute & add there own native validation errors when submitting the form.
 - <strong>placeholder="Enter Here"</strong> - Text is displayed inside the input field as long as the field is empty. When you click on (or tab to) the input field and start typing, the placeholder text disappears. IE10+, polyfill fallback jquery-placeholder.js for IE9 & below.
 - Autofocus attribute - On page load set focus to element. Can be used on inputs buttons and textareas. e.g <input autofocus /> IE10+
-- <strong>contenteditable="true"</strong
+- <strong>contenteditable="true"</strong> - The attribute contenteditable="true" is used to allow text elements the abilty to be typed into like a textbox e.g. http://jsfiddle.net/sjmcpherso/q3kWw/ (Full Support). Similarly the CSS attribute. -moz-user-input:enabled can be use to replicate but with only support for Firefox.
 - <strong>spellcheck="true"</strong> - when set to true on an input, textarea and a contenteditable set element will tell the browser(if supported) to check the spelling of element and add a red underline to a word it deems incorrect. By default the attribute is false for inputs and true for textareas and contenteditible in most browsers.
 - <strong>autocorrect="false"</strong> - Used specifically by Touch device web browsers to offer options to correct potential spelling mistakes. Disabled by default on input="email"
 - <strong>autocapitalize="false"</strong> - Used specifically by Touch device web browsers to Autocapitalize the first letter in an input. Disabled by default on input="email"
