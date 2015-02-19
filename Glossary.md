@@ -125,6 +125,7 @@ Will be converted to:
  - <strong>SSH (Secure Shell)</strong> - is a network protocol for secure communication over an insecure network.
  - <strong>Statement</strong> - A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
  - <strong>Strongly Typed</strong> - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
+ - <strong>Stub or Method Stub</strong> - Code used to simulate behaviour, often a temporary solution or used to demo functionality.
  - <strong>Surface Web</strong> - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
  - <strong>SVG (Scalable Vector Graphics)</strong> - is a XML based vector graphics format with some support for interactivity and animations
  - <strong>Stylus</strong> - Another CSS preprocessor which brackets, colons, and semi-colons are all optional. Uses the .styl file extension
