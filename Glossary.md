@@ -63,12 +63,15 @@
 
 ###I
  - <strong>IDE</strong> - Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
- - <strong>Immediately-Invoked Function Expression (IIFE)</strong> - 
+ - <strong>Immediately-Invoked Function Expression (IIFE)</strong> - Also known as Self-executing Anonymous Function is a JavaScript design pattern that uses JS Function Scoping to avoid Variable Hoisting poluting the global scope and calls itself immediately.
+ - <strong>Isomorphic App</strong> - An application the can run both client-side and server-side.
 
 ###J
- - <strong>JSON</strong> - Stands for JavaScript Object Notation.
- - <strong>JSX</strong> - Stands for JavaScript Object Notation.
- - 
+ - <strong>JSON (JavaScript Object Notation)</strong> - A lightweight data exchange format
+ - <strong>JSONP (JSON with Padding)</strong> - A technique used to allow the web browser to request data from a different domain, not usually allowed because of the "Same-orgin Policy" by using <script> tags added to the DOM to trigger the request.
+ - <strong>JSX (Extension for React)</strong> - An XML like JS syntax extension for creating and editing HTML nodes used by ReactJS
+ - <strong>JSX (Progamming Language)</strong> - Static type programming language that compiles to JS
+
 ###L
  - <strong>Loose Coupling</strong> - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
  - <strong>Loosely Typed</strong> - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
