@@ -4,11 +4,11 @@ Building a list of Coding & Performance Tips for Developers working with HTML, C
 
 Started as a learning tool for myself to help me memorise things I learn on a day to day basis.
 
-[&lt;html&gt;Coding&lt;html&gt;](https://github.com/sjmcpherso/learnings/blob/master/HTML.md)
+[&lt;html&gt;HTML Coding&lt;html&gt;](https://github.com/sjmcpherso/learnings/blob/master/HTML.md)
 
-[#CSS{display:Coding;}](https://github.com/sjmcpherso/learnings/blob/master/CSS.md)
+[#CSS{display:CSS Coding;}](https://github.com/sjmcpherso/learnings/blob/master/CSS.md)
 
-[JavaScript.Coding = true](https://github.com/sjmcpherso/learnings/blob/master/JavaScript.md)
+[JavaScript = "JavaScript Coding";](https://github.com/sjmcpherso/learnings/blob/master/JavaScript.md)
 
 [Glossary](https://github.com/sjmcpherso/learnings/blob/master/Glossary.md)
 
