@@ -68,7 +68,7 @@
 
 ###J
  - <strong>JSON (JavaScript Object Notation)</strong> - A lightweight data exchange format
- - <strong>JSONP (JSON with Padding)</strong> - A technique used to allow the web browser to request data from a different domain, not usually allowed because of the "Same-orgin Policy" by using <script> tags added to the DOM to trigger the request.
+ - <strong>JSONP (JSON with Padding)</strong> - A technique used to allow the web browser to request data from a different domain, not usually allowed because of the "Same-orgin Policy" by using "script" tags added to the DOM to trigger the request.
  - <strong>JSX (Extension for React)</strong> - An XML like JS syntax extension for creating and editing HTML nodes used by ReactJS
  - <strong>JSX (Progamming Language)</strong> - Static type programming language that compiles to JS
 
