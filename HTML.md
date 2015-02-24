@@ -10,6 +10,10 @@
 - To disable zooming use '<meta name="viewport" content="maximum-scale=1">' this would be recommend for a Mobile Web App.
 - Alternatively to disable a responsive design use '<meta name="viewport" content="width=1200">' the width being the size of your outer container.
 
+<h3>Compatibility Mode</h3>
+- Internet Explorer 8/9/10 support document compatibility modes that affect the way webpages are interpreted and displayed. Because of this, even if your site's visitor is using, let's say, Internet Explorer 9, it's possible that IE will not use the latest rendering engine, and instead, decide to render your page using the Internet Explorer 5.5 rendering engine. To avoid this set the X-UA-Compatible meta tag: "<meta http-equiv="X-UA-Compatible" content="IE=edge">"
+- There are some complications that may cause the X-UA-Compatible meta tag and in that case it needs to be set in the HTTP request header. See https://hsivonen.fi/doctype/
+
 
 <h2>Loading Resources</h2>
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
