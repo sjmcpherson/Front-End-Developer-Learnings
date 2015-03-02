@@ -391,12 +391,22 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
 
 <h3>Debugging</h3>
+
+<h4>Syntax vs Runtime Errors</h4>
+- Syntax errors are picked up by the browser when the script is parsed, if an error is found by the parser none of the script is executed.
+- Runtime errors are found by the browser at execution time but only code after the error will not be executed.
+
+<h4>The Console</h4>
 - console.log() - Used to output values to the console window.
 - console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);" 
 - console.count(label) - Outputs the number times the line of code has been invoked with an optional string as a label
 - console.assert(expression, message) - Will display the message if the expression in the first argument is false
 - console.time(message)/console.timeEnd(message) - Time the performance of code between .time() & .timeEnd() statements
 - NOTE: use of the Console object will break <IE10 but NOT while the IE Developer Tools window is open.
+
+
+<h3>Synchronous vs Asynchronous Script Loading</h3>
+- By default scripts are downloaded & executed synchronously
 
 <h3>Design Patterns</h3>
 - Module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
@@ -648,7 +658,11 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 }    
 ```
 
-<h2>JavaScript Frameworks, Library's, Languages and Script</h2>
+
+
+
+
+<h2>JavaScript Frameworks, Library's, Languages and Scripts</h2>
 
 <h3>JavaScript Frameworks</h3>
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
