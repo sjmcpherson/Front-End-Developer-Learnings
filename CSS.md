@@ -176,14 +176,24 @@ h2:before {counter-increment: section;content: counter(section) ". ";}
  - 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
 
 <h2>Helpful CSS Code Snippets</h2>
- - Bullet proof vertical center text or images IE9+. http://codepen.io/sebastianekstrom/pen/kzEhe
+ - Vertical & Horizontal centering via translate. IE9+.
 
 ```CSS
- .holder p {
+.child {
 	position: relative;
+	left: 50%;
 	top: 50%;
-	-ms-transform: translateY(-50%); //IE9
-	transform: translateY(-50%);
+	-ms-transform: translate(-50%,-50%); //IE9
+	transform: translate(-50%,-50%);
+}
+```
+ - Vertical & Horizontal centering via Flexbox. IE10+.
+
+```CSS
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ```
 
