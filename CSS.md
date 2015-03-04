@@ -59,9 +59,8 @@ filter: alpha(opacity=50);
 /* Modern! Firefox 0.9+, Safari 2?, Chrome any?, Opera 9+, IE 9+ */
 opacity: 0.5;
 
-/* Recommended Usage for Today */
+/* Recommended Usage for Today IE8+ */
 .transparent {
-	zoom: 1;
 	filter: alpha(opacity=50);
 	opacity: 0.5;
 }	
