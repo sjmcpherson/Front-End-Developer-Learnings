@@ -5,7 +5,7 @@
 - Initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
 
 <h3>JavaScript Data Types</h3>
-- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
+- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' noConflictoperator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
 
 #####Primative Values
 - The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using the String objects methods.
@@ -584,6 +584,7 @@ $("td").hover(
 ```
 - $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
 -  $("a[href='" + document.location.pathname + "']").addClass("current"); Use the filename to highlight the current page on a nav
+- jQuery.noConflict() - Removes the jQuery object from the variable '$' so that other libraries that may conflict can use it.
 - In firebug you can load the latest version of jQuery via the Command Line using "include('jquery')". Otherwise you can add to the Console something like this:
 
 ```javascript
