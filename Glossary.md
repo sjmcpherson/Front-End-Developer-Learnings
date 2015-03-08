@@ -88,6 +88,7 @@ Will be converted to:
   <li>bullet point</li>
 ```
 
+ - <strong>MEAN</strong> - Stands for MongoDB, ExpressJS, AngularJS and Node.js is a full-stack JS framework for building single page apps.
  - <strong>Minification</strong> - Removes comments and white space to reduce the file size.
  - <strong>MVC</strong> - stands for Model View Controller which creates a structure of seperation in an application, the Model being the data, the View the presentation layer and the controller which acts as the glue between the Model & View manipulating Data and recording Events.
  - <strong>MVVM</strong> - stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
