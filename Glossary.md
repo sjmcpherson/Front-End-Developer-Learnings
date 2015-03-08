@@ -18,7 +18,7 @@
  - <strong>Closure</strong> - A term used when you nest functions, as inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
  - <strong>Concatenation</strong> - The practise of joining two variables together, usually a string or array.
  - <strong>Continuous Delivery (CD)</strong> -  A design practise to automate and improve the process of software delivery.
- - <strong>CRUD</strong> - Create, Read, Update, Delete (Also BREAD<strong>Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
+ - <strong>CRUD</strong> - Create, Read, Update, Delete (Also BREAD Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
 
 ###D
  - <strong>Data Binding</strong> - Syncronises data between UI components which are bound to the data source
