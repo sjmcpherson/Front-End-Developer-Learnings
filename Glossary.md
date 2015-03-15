@@ -38,7 +38,7 @@
  - <strong>Encapsulation</strong> - is a feature of OOP, that allows for separation of an objects implementation and its interface by defining its variables an methods as either public or private.
  - <strong>Epoch</strong> - The "epoch" then serves as a reference point from which time is measured. In most systems/languages this is 01 January 1970 00:00:00 UTC, the most notable exception is Apple's Cocoa(NSDate) which is from 2001
  - <strong>ESI (Edge Side Includes)</strong> - 
- - <strong>Evergreen Browsers</strong> - Web browser that updates itself without prompting the user.
+ - <strong>Evergreen Browsers</strong> - Web browsers that updates itself without prompting the user.
  - <strong>Explicit Iteration vs Implicit Iteration</strong> - In jQuery:
   
   ```javascript
