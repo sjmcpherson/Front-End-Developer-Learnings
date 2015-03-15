@@ -508,12 +508,18 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-- Web Notifications - Allows you to send notifications to the user outside of the browser window. The user must allow permission for your application to use them. The look is largely based on the browser and compatibility is limited
+- Web Notifications - Allows you to send notifications to the user outside of the browser window. The user must allow permission for your application to use them. The look is largely based on the browser and compatibility is limited.
+```javascript
+if(window.Notification && Notification.permission !== "denied") {
+	Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
+		var n = new Notification('Title', { body: 'I am the body text!' }); 
+	});
+}
+```
 - Application Cache - Allows pages and resources to be cached for offline usage
 - Network Information - Can be used to determine what internet connection is being used I.e wifi, cellular etc
 - Vibration - Trigger vibration in mobile devices
 - Battery - Detect if the battery is low on the device
-
 
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
@@ -541,7 +547,6 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 
 - Classes - A clean simple declarative syntax for defining object prototypes and inheritance chains.
 - Generators - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
-
 
 <h2>jQuery Specific Coding Tips</h2>
 - The jQuery '$' is just a function that returns jQuery's 'init' function
@@ -662,8 +667,6 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 
 
 
-
-
 <h2>JavaScript Frameworks, Library's, Languages and Scripts</h2>
 
 <h3>JavaScript Frameworks</h3>
@@ -672,7 +675,6 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 - Backbone
 - EmberJS
 - Ext JS
-
 
 <h3>Languages</h3>
 - asm.js
