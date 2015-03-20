@@ -258,3 +258,7 @@ tbody tr:nth-child(odd) {
  - Combine CSS files (Reduces the amount of HTTP Requests)
  - Avoid unnecessary tag identifiers to reduce file size i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
  - The browser will still download images that are hidden with display:none although with some browsers i.e Firefox, background-images will not be downloaded.
+
+###CSS Source Maps
+ - When using a pre-processor you can generate a Source Map in addition to the compiled CSS, the Source Map 
+
