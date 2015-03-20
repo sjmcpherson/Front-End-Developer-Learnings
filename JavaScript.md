@@ -676,10 +676,12 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 - EmberJS
 - Ext JS
 
-<h3>Languages</h3>
+<h3>JS Compilers/Languages</h3>
 - asm.js
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - JSX a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
+- TypeScript - A strict sperset of JS which adds EcmaScript 6, optional static typing and class-based support amongst other things to the language. Backed by Microsoft
+- AtScript - Backed by Google but likely to merge under TypeScript
 
 <h3>Library</h3>
 - Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
