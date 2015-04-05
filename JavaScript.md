@@ -402,8 +402,17 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);" 
 - console.count(label) - Outputs the number times the line of code has been invoked with an optional string as a label
 - console.assert(expression, message) - Will display the message if the expression in the first argument is false
-- console.time(message)/console.timeEnd(message) - Time the performance of code between .time() & .timeEnd() statements
-- NOTE: use of the Console object will break <IE10 but NOT while the IE Developer Tools window is open.
+- console.time(message)/console.timeEnd(message) - Time the performance of code between .time() & .timeEnd() statements. i.e.
+
+```javascript 
+console.time("test");
+for(var i=0;i<100000;i++){
+	var j = Math.random()*1;
+}
+console.timeEnd("test"); //Will output "test: 8.75ms"
+```
+
+- NOTE: use of the Console object will break <IE9 but NOT while the IE Developer Tools window is open.
 
 
 <h3>Synchronous vs Asynchronous Script Loading</h3>
