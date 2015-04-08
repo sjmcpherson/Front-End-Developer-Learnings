@@ -307,7 +307,6 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 <h3>Timers & Timeouts</h3>
 - setTimeout(function, delay in milliseconds);
 
-
 <h3>Threading in JavaScript</h3>
 - JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. Web Workers a new API (IE10+) look to add multi-threading by defining background scripts that can run concurrently from the main thread.
 
