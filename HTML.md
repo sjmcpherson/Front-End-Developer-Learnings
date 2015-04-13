@@ -37,9 +37,7 @@ Would Produce:
 
 - <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
 
-
-
-- <strong>Jade</strong> - is a Nodejs based, HTML precompiler with a powerful templating engine. Jade forces the developer into using its own syntax by not allowing compiled HTML.
+- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
 
 
 <h2>Images</h2>
