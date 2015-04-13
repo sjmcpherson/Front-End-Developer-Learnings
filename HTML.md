@@ -19,12 +19,8 @@
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
 
-
-
-
-
 <h2>HTML Preprocessors</h2>
- - <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight markup language. Example:
+ - <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight Ruby based markup language. Example:
 
 ```HTML
   %body
@@ -39,33 +35,18 @@ Would Produce:
     </div>
 ```
 
-- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web.
+- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
 
 
 
+- <strong>Jade</strong> - is a Nodejs based, HTML precompiler with a powerful templating engine. Jade forces the developer into using its own syntax by not allowing compiled HTML.
 
- - &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
- - &lt;video autoplay controls&gt;&lt;/video&gt;
-
-
-
-- Specify image dimensions, by specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
-- CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
-- Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
-- Application Cache (AppCache) 
-
-
-- Dialog Element - Native popup/
-```HTML
-<dialog open id="dialog">
-  <p>Hi, I'm a dialog!</p>
-  <button id="close">Okay</button>
-</dialog>
-```
 
 <h2>Images</h2>
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
  - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
+- Specify image dimensions, by specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
+- &lt;figure&gt; used to markup illustrations, graphs and images used with &lt;figurecaption&gt;
 
 
 <h2>HTML5 Forms</h2>
@@ -95,6 +76,21 @@ Would Produce:
 - <strong>autocomplete="email"</strong> - Used by browser to autopopulate a field based on previously entered data. Set by default on most modern browsers determind by the id/name.
 ```HTML
     <input type="email" name="email" id="email" autocomplete="email">
+```
+
+
+<h2>Other Element/APIs</h2>
+ - &lt;video autoplay controls&gt;&lt;/video&gt;
+- CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
+- Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
+- Application Cache (AppCache) 
+
+- Dialog Element - Native popup/
+```HTML
+<dialog open id="dialog">
+  <p>Hi, I'm a dialog!</p>
+  <button id="close">Okay</button>
+</dialog>
 ```
 
 
