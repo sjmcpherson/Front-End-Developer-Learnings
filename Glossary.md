@@ -41,7 +41,7 @@
  - <strong>ESI (Edge Side Includes)</strong> - 
  - <strong>Evergreen Browsers</strong> - Web browsers that updates itself without prompting the user.
  - <strong>Explicit Iteration vs Implicit Iteration</strong> - In jQuery:
-  
+
   ```javascript
   // Explicit iteration with the jQuery .each() method
   $( "li" ).each(function() {
