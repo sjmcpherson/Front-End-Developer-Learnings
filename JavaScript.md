@@ -535,10 +535,11 @@ if(window.Notification && Notification.permission !== "denied") {
 - Battery - Detect if the battery is low on the device
 
 <h2>ECMAScript 6</h2>
-- This the next version of the JS standard, code-named "Harmony" or "ES.next. Very limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
-- Const - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
-- Let - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
-- Default Parameter Values - Will allow you to set default values for parameters that are undefined. i.e.
+- This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
+- Can be compiled to EcmaScript 5 via Google Traceur or BabelJS.
+- <strong>Const</strong> - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
+- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
+- <strong>Default Parameter Values</strong> - Will allow you to set default values for parameters that are undefined. i.e.
 ```javascript
 function Point(x = 0, y = 0) {
    this.x = x;
@@ -547,7 +548,7 @@ function Point(x = 0, y = 0) {
 
 var p = new Point(); // => { 0, 0 }
 ```
-- The Spread Operator - Allows parameters to be summarised in places where multiple arguments or elements are expected
+- <strong>The Spread Operator</strong> - Allows parameters to be summarised in places where multiple arguments or elements are expected
 ```javascript
 function add(...values) {}
 add(2, 5, 3);
@@ -558,8 +559,10 @@ var b = [3, 4, 5];
 a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
-- Classes - A clean simple declarative syntax for defining object prototypes and inheritance chains.
-- Generators - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
+<h4>ES6 Functions</h4>
+- <strong>Arrows</strong> - 
+- <strong>Classes</strong> - A clean simple declarative syntax for defining object prototypes and inheritance chains.
+- <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 
 <h2>jQuery Specific Coding Tips</h2>
 - The jQuery '$' is just a function that returns jQuery's 'init' function
