@@ -118,6 +118,25 @@ JavaScript has Implied Global Variables which means if a variable is initialized
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
 
+<h3>Type Coercion</h3>
+- Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different value types rather than throwing an error like a Strongly-Typed language would.
+- When JavaScript is adding values it immediately begins type coercing all value into strings that proceed a string i.e. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
+- When using other operators(-,*,/,%,<,>) JavaScript type coerces values in to numbers i.e. true - '1'; //Equals 0, 'true' * 1 //Equals NaN
+- Automatic Type Conversion in JS means that varibles if different types can be compared i.e
+
+```javascript
+false == 0 //true
+"5" == 5 //true
+!"" //true
+null == undefined //true
+```
+
+- For cases where you do not want automatic type conversion to occur use '===' or '!==' i.e
+
+```javascript
+"5" === 5 //false
+false !== 0 //true
+```
 
 <h3>Loops</h3>
 - <strong>For Loop</strong>
@@ -142,26 +161,6 @@ do{ // Your code here}(i<=endvalue)
 
 ```
 break and continue.
-
-<h3>Type Coercion</h3>
-- Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different value types rather than throwing an error like a Strongly-Typed language would.
-- When JavaScript is adding values it immediately begins type coercing all value into strings that proceed a string i.e. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
-- When using other operators(-,*,/,%,<,>) JavaScript type coerces values in to numbers i.e. true - '1'; //Equals 0, 'true' * 1 //Equals NaN
-- Automatic Type Conversion in JS means that varibles if different types can be compared i.e
-
-```javascript
-false == 0 //true
-"5" == 5 //true
-!"" //true
-null == undefined //true
-```
-
-- For cases where you do not want automatic type conversion to occur use '===' or '!==' i.e
-
-```javascript
-"5" === 5 //false
-false !== 0 //true
-```
 
 <h3>Operators</h3>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
