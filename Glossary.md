@@ -10,13 +10,13 @@
  - <strong>Atom</strong> - Building apone RSS, Atom is a XML language used for web feeds.
 
 ###B
- - <strong>Backend as a Service(BaaS)</strong> - A backend provider accessed via an API e.g Firebase, Parse, Loopback
+ - <strong>Backend as a Service (BaaS)</strong> - A backend provider accessed via an API e.g Firebase, Parse, Loopback
  - <strong>Bower</strong> - A front-end package management system that runs on Node.js & npm
 
 ###C
- - <strong>CDN</strong> - Content Delivery Network is a large distributed system of servers hosting content with high availability and download speeds.
- - <strong>CGI</strong> - Common Gateway Interface is the standard method for server-side communication when transfering information between the web server & browser. 
- -  - <strong>CLI</strong> - Command Line Interface
+ - <strong>CDN (Content Delivery Network)</strong> - is a large distributed system of servers hosting content with high availability and download speeds.
+ - <strong>CGI (Common Gateway Interface)</strong> - is the standard method for server-side communication when transfering information between the web server & browser. 
+ - <strong>CLI</strong> - Command Line Interface
  - <strong>Closure</strong> - A term used when you nest functions, as inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
  - <strong>Concatenation</strong> - The practise of joining two variables together, usually a string or array.
  - <strong>Continuous Delivery (CD)</strong> -  A design practise to automate and improve the process of software delivery.
@@ -32,7 +32,7 @@
  - <strong>Dirty Checking</strong> - 
  - <strong>Document-oriented Database</strong> - A collection of independent documents. E.g CouchDB, MongoDB
  - <strong>DOM (Document Object Model)</strong> - 
- - <strong>DRY(Don't Repeat Yourself)</strong> - is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
+ - <strong>DRY (Don't Repeat Yourself)</strong> - is a principle of software development aimed at reducing repetition of information of all kinds, by making components reuseable.
 
 ###E
  - <strong>Emmet</strong> - a plugin for popular text editors which speed of HTML authoring using CSS like abreviations.
