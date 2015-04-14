@@ -129,6 +129,7 @@ Will be converted to:
  - <strong>Shadow DOM</strong> - 
  - <strong>Singleton</strong> - A programming design pattern which limits the number of instances of a particular object to just one.
  - <strong>SOAP (Simple Object Access Protocol)</strong> - 
+ - <strong>Software Development Lifecycle or Systems Development Lifecycle (SDLC)</strong> - is used to describe a process for planning, creating, testing and deploying a information system.
  - <strong>Software Development Methology</strong> - is a ideology for structuring planning, controlling a software project. 
  - <strong>SPA Single Page Application or Single-page interface (SPI)</strong> - The majority of HTML/CSS & JS is obtained in a single page with the goal of providing a more fluid experience akin to a desktop application.
  - <strong>SDK</strong> - Software Development Kit is a toolkit to allow software development on a specific framework or platform.
@@ -140,7 +141,6 @@ Will be converted to:
  - <strong>Surface Web</strong> - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
  - <strong>SVG (Scalable Vector Graphics)</strong> - is a XML based vector graphics format with some support for interactivity and animations
  - <strong>Stylus</strong> - Another CSS preprocessor which brackets, colons, and semi-colons are all optional. Uses the .styl file extension
- - <strong>Systems Development Lifecycle (SDLC)</strong> - is used to describe a process for planning, creating, testing and deploying a information system.
 
 ###T
  - <strong>Test-driven development (TDD)</strong> - Is a software development process, where a test is created to perform a function then the code is developed to make that test valid.
