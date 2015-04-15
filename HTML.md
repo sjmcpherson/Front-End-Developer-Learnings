@@ -149,9 +149,10 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 - Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>. All native tag names do not contain a dash.
 
 <h4>HTML Templates</h4>
-
+ - By wrapping content in a "template" tag the content will not be part of the DOM until activated i.e. images won't load, scripts won't run, elements will not render etc
 
 <h4>HTML Imports</h4>
+ - Allows importing of external html file through an http request that can then be rendered to the page.
  - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: <link rel="import" href="import-file.html">
  - Note: HTML imports adhere to the same-origin policy for security reasons. Therefore, if you wish to import an HTML document from an external domain, you need to make sure you have CORS set up correctly.
  - Limited support in Chrome & Opera Only.
