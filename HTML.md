@@ -37,7 +37,7 @@ Would Produce:
 
 - <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
 
-- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
+- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.T
 
 
 <h2>Images</h2>
@@ -149,7 +149,22 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 - Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>. All native tag names do not contain a dash.
 
 <h4>HTML Templates</h4>
- - By wrapping content in a "template" tag the content will not be part of the DOM until activated i.e. images won't load, scripts won't run, elements will not render etc
+ - Wrap any scripts, css or markup in a "template" tag to ignore parsing the contents until   i.e. images won't load, scripts won't run, elements will not render etc until specified via JavaScript i.e. 
+
+```HTML
+<template id="template">
+  <style>
+    ...
+  </style>
+  <h1>Template Web Component</h1>
+  <image src="image.png" />
+</template>
+<script>
+  var template = document.querySelector('#template');
+  var clone = document.importNode(template.content, true);
+  document.body.appendChild(clone);
+</script>
+```
 
 <h4>HTML Imports</h4>
  - Allows importing of external html file through an http request that can then be rendered to the page.
