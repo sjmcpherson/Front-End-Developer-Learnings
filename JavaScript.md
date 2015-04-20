@@ -544,6 +544,8 @@ if(window.Notification && Notification.permission !== "denied") {
 <h2>ECMAScript 6</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Can be compiled to EcmaScript 5 via Google Traceur or BabelJS.
+
+<h4>ES6 Variables</h4>
 - <strong>Const</strong> - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
 - <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
 - <strong>Default Parameter Values</strong> - Will allow you to set default values for parameters that are undefined. i.e.
@@ -552,20 +554,22 @@ function Point(x = 0, y = 0) {
    this.x = x;
    this.y = y;
 }
-
 var p = new Point(); // => { 0, 0 }
 ```
 - <strong>The Spread Operator</strong> - Allows parameters to be summarised in places where multiple arguments or elements are expected
 ```javascript
 function add(...values) {}
 add(2, 5, 3);
-
 var a = [0, 1, 2];
 var b = [3, 4, 5];
 
 a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
+<h4>ES6 Functions</h4>
+- <strong>Arrows</strong> - 
+- <strong>Classes</strong> - A clean simple declarative syntax for defining object prototypes and inheritance chains.
+- <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 - <strong>For In/Of Loop</strong>
 ```javascript
 let arr = [3, 5, 7];
@@ -578,10 +582,13 @@ for (let i of arr) { //for of iterates over property values
 }
 ```
 
-<h4>ES6 Functions</h4>
-- <strong>Arrows</strong> - 
-- <strong>Classes</strong> - A clean simple declarative syntax for defining object prototypes and inheritance chains.
-- <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
+<h4>ES6 APIs</h4>
+- <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
+
+
+
+
+
 
 <h2>jQuery Specific Coding Tips</h2>
 - The jQuery '$' is just a function that returns jQuery's 'init' function
