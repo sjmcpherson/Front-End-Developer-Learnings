@@ -143,10 +143,6 @@ false !== 0 //true
 ```javascript
 for (var i=startvalue; i<=endvalue; incrementfactor){ // Your code here}
 ```
-- <strong>For In/Of Loop</strong>
-```javascript
-for (var prop in object){ // Your code here}
-```
 - <strong>While Loop</strong>
 ```javascript
 while(i<=endvalue){ // Your code here}
@@ -155,11 +151,9 @@ while(i<=endvalue){ // Your code here}
 ```javascript
 do{ // Your code here}(i<=endvalue)
 ```
+- <strong>For In/Of Loop</strong> (Limited Support See EcmaScript 6)
 
-- <strong>ForEach Loop</strong>
-```javascript
 
-```
 break and continue.
 
 <h3>Operators</h3>
@@ -570,6 +564,18 @@ var a = [0, 1, 2];
 var b = [3, 4, 5];
 
 a.push(...b); // => [0, 1, 2, 3, 4, 5]
+```
+
+- <strong>For In/Of Loop</strong>
+```javascript
+let arr = [3, 5, 7];
+arr.foo = "hello";
+for (let i in arr) { //for in iterates over property names
+   console.log(i); //logs "0", "1", "2", "foo"
+}
+for (let i of arr) { //for of iterates over property values
+   console.log(i); //logs "3", "5", "7"
+}
 ```
 
 <h4>ES6 Functions</h4>
