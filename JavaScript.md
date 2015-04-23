@@ -272,10 +272,11 @@ for (var p:* in obj)
  
 
 <h4>The Window Object</h4>
-- The window object represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, history object, navigator object and location object.
-- window.innerWidth/innerHeight - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
-- window.length will give you the number of iframe elmements in the current window.
-- 
+- <strong>The window object</strong> represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, history object, navigator object and location object.
+- <strong>window.innerWidth/innerHeight</strong> - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
+- <strong>window.length</strong> will give you the number of iframe elmements in the current window.
+- <strong>window.postMessage()</strong> - A method to allow cross-domain communication between <frame>, <iframe> (IE8+) & Browsers Windows/Tabs (IE10+)
+
 <h4>The Document Object</h4>
 - Where the DOM is accessed
 - A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
