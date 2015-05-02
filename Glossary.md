@@ -80,7 +80,7 @@
 
 ###L
  - <strong>Loose Coupling</strong> - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
- - <strong>Loosely Typed</strong> - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed e.g JavaScript.
+ - <strong>Loosely Typed</strong> - Describes a programming language whereby it is not necessary to create a variable with a type as apposed to Strongly Typed. e.g JavaScript is a Loose Typed language
 
 ###M
  - <strong>Markdown</strong> - A text to HTML conversion tool to simplify and speed up creating structurally valid XHTML text content for websites. http://daringfireball.net/projects/markdown/
