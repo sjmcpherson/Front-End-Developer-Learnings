@@ -40,6 +40,12 @@ Would Produce:
 - <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.T
 
 
+| Preprocessor  | Extension  | Use Standard HTML  | Uses Whitespace   |
+| ------------- |:-------------:| -----:| -----:|
+| Jade      | .jade | false  | true |
+| Haml      | .haml      | true  | true  |
+| Handlebars | .hbs      | true  | false  |
+
 <h2>Images</h2>
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
  - WebP is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
