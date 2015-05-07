@@ -20,7 +20,11 @@
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
 
 <h2>HTML Preprocessors</h2>
- - <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight Ruby based markup language. Example:
+- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
+
+- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
+ 
+- <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight Ruby based markup language. Example:
 
 ```HTML
   %body
@@ -35,16 +39,14 @@ Would Produce:
     </div>
 ```
 
-- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
-
-- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.T
 
 
-| Preprocessor  | Extension  | Use Standard HTML  | Uses Whitespace   |
+| Preprocessor  | Extension  | Can Use Standard HTML  | Uses Tabs for Hierachy    |
 | ------------- |:-------------:| -----:| -----:|
+| Markdown | .md      | true  | false  |
 | Jade      | .jade | false  | true |
 | Haml      | .haml      | true  | true  |
-| Handlebars | .hbs      | true  | false  |
+
 
 <h2>Images</h2>
  - Progressive vs Baseline JPEGs -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
