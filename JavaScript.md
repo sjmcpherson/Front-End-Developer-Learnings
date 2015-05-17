@@ -151,6 +151,14 @@ while(i<=endvalue){ // Your code here}
 ```javascript
 do{ // Your code here}(i<=endvalue)
 ```
+- <strong>For Each</strong>
+- Iterates through each item in an Array (IE9+) or Map object (IE11+) 
+```javascript
+arr.forEach(callback[, thisArg])
+
+[2, 5, , 9].forEach(function(element, index, array) {});
+```
+
 - <strong>For In/Of Loop</strong> (Limited Support See EcmaScript 6)
 
 
