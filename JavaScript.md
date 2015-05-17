@@ -152,7 +152,7 @@ while(i<=endvalue){ // Your code here}
 do{ // Your code here}(i<=endvalue)
 ```
 - <strong>For Each</strong>
-- Iterates through each item in an Array (IE9+) or Map object (IE11+) 
+Iterates through each item in an Array (IE9+) or Map object (IE11+). Cannot use 'break' or 'continue' functions.
 ```javascript
 arr.forEach(callback[, thisArg])
 
