@@ -1,12 +1,21 @@
-<h2>General JavaScript Coding Tips</h2>
+<h1>General JavaScript Coding Tips</h2>
 
-<h3>What is JavaScript</h3>
-- JavaScript commonly abbreviated to JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
-- Initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
+<h2>What is JavaScript</h2>
+- JavaScript commonly abbreviated to just JS was initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
 
-<h3>JavaScript Data Types</h3>
-- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' noConflictoperator. i.e. var theType = typeof ""; The variable 'theType' would equal 'string'. Although a bug exists when using typeof with 'null' values as it will return 'object'.
 
+
+ is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
+
+
+<h2>JavaScript Data Types</h2>
+- There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. Although a bug exists when using typeof with 'null' values as it will return 'object'.
+
+```javascript
+	var theType = typeof ""; //The variable 'theType' would equal 'string'.
+```
+
+<h3>The Data Types</h3>
 <h4>Boolean</h4>
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
@@ -93,11 +102,15 @@ function testFunc(){
 - Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
 - function.call vs function.apply - .apply and .call do the same thing, but .apply uses an array containing arguments for the target method as the second parameter.
 
-#####Primative Values
+
+####Primative Values
 - The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using the String objects methods.
 
+###Variables
 #####Dynamic Typed
-- JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. 
+- JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
+
+
 
 <h4>Variable Scope</h4>
 #####Implied Global Variables
@@ -117,8 +130,7 @@ JavaScript has Implied Global Variables which means if a variable is initialized
 #####Variable Hoisting
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
-
-<h3>Type Coercion</h3>
+<h4>Type Coercion</h4>
 - Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different value types rather than throwing an error like a Strongly-Typed language would.
 - When JavaScript is adding values it immediately begins type coercing all value into strings that proceed a string i.e. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
 - When using other operators(-,*,/,%,<,>) JavaScript type coerces values in to numbers i.e. true - '1'; //Equals 0, 'true' * 1 //Equals NaN
@@ -137,32 +149,6 @@ null == undefined //true
 "5" === 5 //false
 false !== 0 //true
 ```
-
-<h3>Loops</h3>
-- <strong>For Loop</strong>
-```javascript
-for (var i=startvalue; i<=endvalue; incrementfactor){ // Your code here}
-```
-- <strong>While Loop</strong>
-```javascript
-while(i<=endvalue){ // Your code here}
-```
-- <strong>Do While Loop</strong>
-```javascript
-do{ // Your code here}(i<=endvalue)
-```
-- <strong>For Each</strong>
-Iterates through each item in an Array (IE9+) or Map object (IE11+). Cannot use 'break' or 'continue' functions.
-```javascript
-arr.forEach(callback[, thisArg])
-
-[2, 5, , 9].forEach(function(element, index, array) {});
-```
-
-- <strong>For In/Of Loop</strong> (Limited Support See EcmaScript 6)
-
-
-break and continue.
 
 <h3>Operators</h3>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
@@ -204,7 +190,35 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-<h3>Iteration VS Enumeration </h3>
+
+
+
+<h3>Loops</h3>
+- <strong>For Loop</strong>
+```javascript
+for (var i=startvalue; i<=endvalue; incrementfactor){ // Your code here}
+```
+- <strong>While Loop</strong>
+```javascript
+while(i<=endvalue){ // Your code here}
+```
+- <strong>Do While Loop</strong>
+```javascript
+do{ // Your code here}(i<=endvalue)
+```
+- <strong>For Each</strong>
+Iterates through each item in an Array (IE9+) or Map object (IE11+). Cannot use 'break' or 'continue' functions.
+```javascript
+arr.forEach(callback[, thisArg])
+
+[2, 5, , 9].forEach(function(element, index, array) {});
+```
+
+- <strong>For In/Of Loop</strong> (Limited Support See EcmaScript 6)
+
+break and continue.
+
+<h4>Iteration VS Enumeration </h4>
 - iteration - the for statement 
 - enumeration - the for in statement enumeration order is not guaranteed 
 - enumeration order is not guaranteed see the follow example:
@@ -217,6 +231,9 @@ for (var p:* in obj)
     trace(p + ": " + obj[p]);
 //The above can print name, city, and os inA ANY order. 
 ```
+
+
+
 
 <h3>Strict mode vs Non-strict mode</h3>
 - Add "use strict" at the beginning of a script or for mixed mode it can be added at the function level.
@@ -233,8 +250,8 @@ for (var p:* in obj)
 - Some specified variables names using reserved words. e.g arguments, eval
 - In standard function calls, the 'this' value was the global object. In strict mode, it is now undefined.
 
-<h3>System Objects</h3>
-<h4>The Math Object</h4>
+<h2>System Objects</h2>
+<h3>The Math Object</h3>
 - Math object used for more complex math functions
 - The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
 - Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
@@ -244,7 +261,7 @@ for (var p:* in obj)
 - Math.min(x,y,z,...,n) - As above but returns the lowest value
 - The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
-<h4>The Array Object</h4>
+<h3>The Array Object</h3>
 - Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
 - Array length is the value 1 higher than the array's subscript.
 - Use 'value instanceof Array' or 'value.contructor === Array' to determine if Array
@@ -279,26 +296,26 @@ for (var p:* in obj)
 ```
  
 
-<h4>The Window Object</h4>
+<h3>The Window Object</h3>
 - <strong>The window object</strong> represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, history object, navigator object and location object.
 - <strong>window.innerWidth/innerHeight</strong> - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
 - <strong>window.length</strong> will give you the number of iframe elmements in the current window.
 - <strong>window.postMessage()</strong> - A method to allow cross-domain communication between 'frame'/'iframe' tags (IE8+) & browser Windows/Tabs (IE10+)
 
-<h4>The Document Object</h4>
+<h3>The Document Object</h3>
 - Where the DOM is accessed
 - A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
 
-<h4>The History Object</h4>
+<h3>The History Object</h3>
 - Contains a list of URLs visited that cannot be read, only navigated to
 - window.history.forward() & window.history.back() are used to navigate to the next & previous entries
 - window.history.go() is used to navigate back or forward a number of entries in the history i.e. window.history.go(-4);
 
-<h4>The Image Object</h4>
+<h3>The Image Object</h3>
 - img.complete - Read-only boolean property to determine if image is loaded.
 - img.naturalWidth/naturalHeight - Read-only property which represents the original(unmanipulated by CSS/JS) size of the image. Only available after image load. IE9+
 
-<h4>The XMLHttpRequest(XHR) Object</h4>
+<h3>The XMLHttpRequest(XHR) Object</h3>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
 - GET vs POST - GET is simpler and faster than POST and therefore used in AJAX enviroments. POST offers a more secure option.
 - .open(method,url,asyc,user,password) - Intializes the request. 'method' specifies the type of request("GET", "POST", "PUT" or "DELETE"), 'url' the URL(Location of file on server). Optional parameters 'asyc'(default: true) if the request should be handled asynchronously or not and user & password strings for authentication purposes.
@@ -309,7 +326,7 @@ for (var p:* in obj)
 - .responseText/.responseXML - Property to get the response from server.
 - Modern browsers support cross-site requests by implementing the web applications working group's Access Control for Cross-Site Requests standard.  As long as the server is configured to allow requests from your web application's origin, XMLHttpRequest will work.  Otherwise, an INVALID_ACCESS_ERR exception is thrown.
 
-<h4>The Date Object</h4>
+<h3>The Date Object</h3>
 - <code>var currentDateTime = Date()</code> sets the current milliseconds since Epoch(1/1/1970 00:00:00) which then needs to put through a date formatter to convert to a human readable date. 
 - Their are 4 ways of initiating a date value with the new Date() constructor.
 
@@ -320,13 +337,13 @@ var date = new Date("January 13, 2015 12:30:00"); //Datestring
 var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute, second, and millisecond, in that order. NOTE the month reference is from 0 so in most cases you will need to decrease month variable by 1
 ```
 
-<h3>Timers & Timeouts</h3>
+<h2>Timers & Timeouts</h2>
 - setTimeout(function, delay in milliseconds);
 
-<h3>Threading in JavaScript</h3>
+<h2>Threading in JavaScript</h2>
 - JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. Web Workers a new API (IE10+) look to add multi-threading by defining background scripts that can run concurrently from the main thread.
 
-<h3>JavaScript Selectors</h3>
+<h2>JavaScript Selectors</h2>
 - <strong>element.getElementById(id)</strong> - (full support)
 - <strong>element.getElementsByName(name)</strong> - returns a NodeList(not an array) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support) 
 - <strong>element.getElementsByTagName(tag)</strong> - returns a NodeList matching the tag name.  (full support)
@@ -350,16 +367,16 @@ div.classList.toggle(class);// if visible is set remove it, otherwise add it
 div.classList.contains("foo"); //Returns true or false
 ```
 
-<h4>The NodeList Object</h4>
+<h3>The NodeList Object</h3>
 - What is a NodeList Object - it is a read-only collection of order Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
 - Converting a NodeList to an Array - var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div"));
 
 
-<h3>JSON</h3>
+<h2>JSON</h2>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 - JSONP stands for JSON with padding. The padding is a callback function that is used to wrap the data returned from the server. The reason for its existence is to get around browser's same-origin restriction against cross domain requests.
 
-<h3>JavaScript Events</h3>
+<h2>JavaScript Events</h2>
 - <strong>addEventListener(event,function,useCapture)</strong> - IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}' would deprecietes attachEvent(event,function);
 - <strong>attachEvent(event,function)</strong> - Is a depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
 - <strong>Crossbrowser addEventListener</strong> - Use something like the below as a cross browser AddEventListener override
@@ -374,6 +391,7 @@ function AddEvent(html_element, event_name, event_function)
 } 
 ```
 
+<h3>Event Delegation</h3>
 - <strong>Event Delegation</strong> - An method that instead of using multiple individual event listeners, places a single event listener on a parent (read more http://davidwalsh.name/event-delegate) e.g. 
 
 ```javascript
@@ -394,7 +412,7 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 -  <strong>event.stopPropagation</strong> - event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
 
 
-<h4>Scroll Event</h4>
+<h3>Scroll Event</h3>
 - Can be used on any scrolling element with element.onscroll = function (event) {} but is general used on the Window object i.e. window.onscroll = function (event) {}
 - Unbind the scroll event by setting to null i.e. window.onscroll = null; 
 - Can also be used with addEventListener i.e. element.addEventListener("scroll", myFunction); although addEventListener is only IE9+
@@ -403,21 +421,21 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 
 - window.onscroll event - Detects scrolling
 
-<h3>Prototypal Inheritance</h3>
+<h2>Prototypal Inheritance</h2>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
 
-<h3>Constructors</h3>
+<h2>Constructors</h2>
 - The 'new' keyword signify's the use of a constructor
 - 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
 
-<h3>Debugging</h3>
+<h2>Debugging</h2>
 
-<h4>Syntax vs Runtime Errors</h4>
+<h3>Syntax vs Runtime Errors</h3>
 - Syntax errors are picked up by the browser when the script is parsed, if an error is found by the parser none of the script is executed.
 - Runtime errors are found by the browser at execution time but only code after the error will not be executed.
 
-<h4>The Console</h4>
+<h3>The Console</h3>
 - console.log() - Used to output values to the console window.
 - console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);" 
 - console.count(label) - Outputs the number times the line of code has been invoked with an optional string as a label
@@ -435,10 +453,10 @@ console.timeEnd("test"); //Will output "test: 8.75ms"
 - NOTE: use of the Console object will break <IE9 but NOT while the IE Developer Tools window is open.
 
 
-<h3>Synchronous vs Asynchronous Script Loading</h3>
+<h2>Synchronous vs Asynchronous Script Loading</h2>
 - By default scripts are downloaded & executed synchronously
 
-<h3>Design Patterns</h3>
+<h2>Design Patterns</h2>
 - Module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
 
 ```javascript
@@ -480,7 +498,7 @@ var mySingleton = (function () {
 })();
 ```
 
-
+<h2>Animating</h2>
 <h3>RequestAnimationFrame</h3>
  - CSS should be used for simple transitions & animations i.e. button rollovers, dropdown menus etc
  - Using RequestAnimationFrame over other techniques the browser optimizes it with hardware acceleration to make them smoother.
@@ -488,7 +506,7 @@ var mySingleton = (function () {
  - It helps with battery life
 
 
-<h3>JavaScript Promises</h3>
+<h2>JavaScript Promises</h2>
 ```javascript
 function simplePromise() {
   return {
@@ -506,7 +524,7 @@ simplePromise().then(function(result) {
 - Promise Libraries: Q, when, WinJS, RSVP.js
 - JavaScript Promise API (Chrome, Firefox, Opera Only)
 
-<h3>Other JavaScript APIs</h3>
+<h2>Other JavaScript APIs</h2>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
@@ -599,48 +617,16 @@ for (let i of arr) { //for of iterates over property values
 
 
 
-<h2>jQuery Specific Coding Tips</h2>
+<h2>jQuery</h2>
+<h3>The $ sign</h3>
 - The jQuery '$' is just a function that returns jQuery's 'init' function
 - $.fn is just shorthand for the jQuery Prototype object i.e. jQuery.fn = jQuery.prototype
-- Get the version of jQuery used on a webpage via $.fn.jquery
-- Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
-- “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
-- Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
-- To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
-- As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .oconsn() use .off()
-- From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
-- jQuery methods should chain:
 
-```javascript
-$.fn.enumerate = function() {
-        return this; //Add to make the method chainable.
-};
-//Because of using "return this", it's chainable!
-$("li").enumerate().css( "color", "red" );
-```
-
-- "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; }) Useful as JS .filter(callback[, thisObject]) method is only IE9+
-- Check if selected objects exist if($("#element").length){} as '0' is Falsy or if($("#element").is('*')) {}
-- The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; i.e. $("#id")[0] is the same as getElementById("id");
-- $("form").serialize() will return a string of all elements inside the form: "name=value&amp;name2=value2" etc.
-- $("span", this) is the same as $(this).find('span')
-- Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
-- Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
-- .hover() is shorthand for mouseenter mouseleave events:
-
-```javascript
-$("td").hover(
-  function () {
-    $(this).addClass("hover");
-  },
-  function () {
-    $(this).removeClass("hover");
-  }
-);
-```
-- $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
--  $("a[href='" + document.location.pathname + "']").addClass("current"); Use the filename to highlight the current page on a nav
+ <h3>jQuery.noConflict()</h3>
 - jQuery.noConflict() - Removes the jQuery object from the variable '$' so that other libraries that may conflict can use it.
+
+<h3>Getting/Setting the Version</h3>
+- Get the version of jQuery used on a webpage via $.fn.jquery
 - In firebug you can load the latest version of jQuery via the Command Line using "include('jquery')". Otherwise you can add to the Console something like this:
 
 ```javascript
@@ -650,6 +636,51 @@ document.getElementsByTagName('head')[0].appendChild(jq);
 // ... give time for script to load, then type.
 jQuery.noConflict();
 ```
+
+<h3>Document Ready</h3>
+- Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
+- “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
+- Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
+- 
+<h3>Chaining</h3>
+- jQuery methods should chain:
+
+```javascript
+$.fn.enumerate = function() {
+        return this; //Add to make the method chainable.
+};
+//Because of using "return this", it's chainable!
+$("li").enumerate().css( "color", "red" );
+```
+<h3>jQuery Events</h3>
+- As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .oconsn() use .off()
+
+<h3>jQuery Plugin</h3>
+- To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
+
+<h3>Helpful jQuery Snippets/Methods</h3>
+- $("span", this) is the same as $(this).find('span')
+- Check if selected objects exist if($("#element").length){} as '0' is Falsy or if($("#element").is('*')) {}
+- Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
+- .hover() is shorthand for mouseenter mouseleave events:
+
+```javascript
+$("td").hover(
+  function () {
+    $(this).addClass("hover");
+  }, function () {
+    $(this).removeClass("hover");
+  }
+);
+```
+- From >V1.6 .attr() returns the visable value and the new .prop() returns the underlying property i.e. &lt;input id="cb" type="checkbox" checked="checked"&gt; .attr(“checked”) “returns” checked whereas .prop(“checked”) returns “true” .prop() is the preferred method for returning properties from 1.6 onwards
+- "$.grep" Finds the elements of an array which satisfy a filter function. The original array is not affected. arr = jQuery.grep(arr, function (a) { return a != 9; }) Useful as JS .filter(callback[, thisObject]) method is only IE9+
+- The [] index will "dereference" a jQuery selector into a raw DOM object: $("#id")[0].style.color='#000000'; i.e. $("#id")[0] is the same as getElementById("id");
+- Pass raw DOM objects as arguments: $(document.getElementById("p1")).prepend(document.getElementById("p2"));
+- $("form").serialize() will return a string of all elements inside the form: "name=value&amp;name2=value2" etc.
+- $('body').disableSelection(); (jquery-ui.js) prevents selection of text.
+-  $("a[href='" + document.location.pathname + "']").addClass("current"); Use the filename to highlight the current page on a nav
+
 
 <h2>JavaScript Performance</h2>
 - Avoid using jQuery when unnessary. jQuery is a broad library offering new & additional functionality covering selectors, animations, events & Ajax, including polyfills across lecacy browsers that may not be need. This quite often adds alot of bloat to your JS download. Also runtime performance can be affected as extra methods & properties are often added to native JS.
