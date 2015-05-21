@@ -4,9 +4,8 @@
 - JavaScript commonly abbreviated to just JS was initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
 
 
-
- is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
-
+<h2>JavaScript Execution</h2>
+- JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
 
 <h2>JavaScript Data Types</h2>
 - There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. Although a bug exists when using typeof with 'null' values as it will return 'object'.
