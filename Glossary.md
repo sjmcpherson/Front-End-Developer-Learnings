@@ -158,4 +158,4 @@ Will be converted to:
 
 ###W
  - <strong>Web Socket</strong> - Is a protocol for realtime two-way communication between a client & server over a standard TCP connection.
-
+ - <strong>WebRTC (Web Real-Time Commnunication)</strong> - Is an API definition which allows peer-to-peer data communication. Which gives supporting browsers the ability to facilitate Video/Audio chat & data transfer via a web application.
