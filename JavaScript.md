@@ -506,6 +506,7 @@ var mySingleton = (function () {
 
 
 <h2>JavaScript Promises</h2>
+- A Promise is a way to manage asynchronous operations
 ```javascript
 function simplePromise() {
   return {
@@ -521,7 +522,7 @@ simplePromise().then(function(result) {
 });
 ```
 - Promise Libraries: Q, when, WinJS, RSVP.js
-- JavaScript Promise API (Chrome, Firefox, Opera Only)
+- JavaScript ES6 Promise API (Latest browsers Only, IE12+ but Polyfils available) 
 
 <h2>Other JavaScript APIs</h2>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
