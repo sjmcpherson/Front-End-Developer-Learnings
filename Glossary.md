@@ -67,6 +67,7 @@
  - <strong>Hoisting</strong> - In JavaScript no matter where you declare a variable, its declaration is added to the top of its scope(function) this means JavaScript Scope is different to most other languages that use Block Level Scope inwhich new scope is created within any curly brakets('{}')
  - <strong>HTTP (Hypertext Transfer Protocol)</strong> - is the underlying protocol used by the web to define the format and transmition between client & server
  - <strong>HTTPS</strong> - Result of layering HTTP on top of a secure protocol like SSL or TLS to provide authentication of the visited website and encripted communication between client & server
+ - <strong>HTTP/2</strong> - Offers anumber of performance improvements over the current version of HTTP(HTTP 1.1). HTTP/2 uses multiplexing which allows multiple assets to be sent and received at the same time, the connection is left open for extended periods of time elimating the need for multiple HTTP requests. With HTTP/2 also using compression, performance best practises like minification, concatenation and spriting will likely become unnecessary. Browser support for HTTP/2 is available in the latest browsers but only a few HTTP servers are offering the technology currently.
 
 ###I
  - <strong>IDE</strong> - Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
@@ -97,6 +98,7 @@ Will be converted to:
 
  - <strong>MEAN</strong> - Stands for MongoDB, ExpressJS, AngularJS and Node.js is a full-stack JS framework for building single page apps.
  - <strong>Minification</strong> - Removes comments and white space to reduce the file size.
+ - <strong>Multiplexing</strong> - 
  - <strong>MVC</strong> - stands for Model View Controller which creates a structure of seperation in an application, the Model being the data, the View the presentation layer and the controller which acts as the glue between the Model & View manipulating Data and recording Events.
  - <strong>MVVM</strong> - stands for Model View ViewModel based on the MVC(Model View Controller) pattern, the difference being the ViewModel is more separated from the Data so that its commands can function without having to know where the data is coming from.
  - <strong>MVW</strong> - stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
