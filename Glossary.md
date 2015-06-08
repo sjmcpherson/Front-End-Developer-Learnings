@@ -129,6 +129,7 @@ Will be converted to:
  - <strong>Same Origin Policy</strong> - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
  - <strong>Sass</strong> - Preproccessor for CSS, which allow you to use Variables, Functions & Calcutions, their are 2 formats the standard .Sass format and the more widely used .Scss format.
  - <strong>Semantic HTML</strong> - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
+ - <strong>SemVer (Semantic Versioning)</strong> - Is a versioning guideline to help track changes. The SemVar syntax is in the form MAJOR.MINOR.PATCH, where PATCH is backwards-compatible bug fix, MINOR is a backwards-compatible new feature release and MAJOR is 'breaking change' that is not backwards-compatible.
  - <strong>SHA (Secure Hash Algorithm)</strong> - 
  - <strong>Shadow DOM</strong> - 
  - <strong>Singleton</strong> - A programming design pattern which limits the number of instances of a particular object to just one.
