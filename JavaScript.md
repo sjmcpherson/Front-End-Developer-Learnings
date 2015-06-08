@@ -613,16 +613,13 @@ for (let i of arr) { //for of iterates over property values
 - <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
 
 
-
-
-
-
 <h2>jQuery</h2>
+
 <h3>The $ sign</h3>
 - The jQuery '$' is just a function that returns jQuery's 'init' function
 - $.fn is just shorthand for the jQuery Prototype object i.e. jQuery.fn = jQuery.prototype
 
- <h3>jQuery.noConflict()</h3>
+<h3>jQuery.noConflict()</h3>
 - jQuery.noConflict() - Removes the jQuery object from the variable '$' so that other libraries that may conflict can use it.
 
 <h3>Getting/Setting the Version</h3>
