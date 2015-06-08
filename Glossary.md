@@ -3,7 +3,7 @@
 ###A
  - <strong>Abstraction</strong> - A process of structuring code to be more readable by making functions shorter and code reuseable. Object-Oriented Programming is an approach to Abstraction.
  - <strong>API</strong> - Application Programming Interface is a specification for combining software components.
- - <strong>AJAX</strong> - an acronym for Asynchronous JavaScript and XML. Despite the name, the use of XML is not required as JSON is often used instead. With AJAX, web applications can send data, and retrieve data from, a server asynchronously (in the background therefore creating a new code thread) without interfering with the display and behavior of the existing page.
+ - <strong>AJAX (Asynchronous JavaScript and XML)</strong> - Despite the name, the use of XML is not required as JSON is often used instead. With AJAX, web applications can send data, and retrieve data from, a server asynchronously (in the background therefore creating a new code thread) without interfering with the display and behavior of the existing page.
  - <strong>ARIA (Assessability Rich Internet Application</strong> - 
  - <strong>Associative Array</strong> - Abstract data type composed of a collection of key/value pairs. Objects are Associative Arrays in JavaScript
  - <strong>Asynchronous vs Synchronous</strong> - Asynchronouse permits other processing to continue while a transmission is being processed.
