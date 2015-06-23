@@ -594,7 +594,16 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
 <h4>ES6 Functions</h4>
-- <strong>Arrows</strong> - 
+- <strong>Arrows</strong> - Using the following '=>' characters to provide a shortend version of a standard function that returns an expression i.e. result = arguments => expression. Arrow functions can be used instead of a standard function syntax except it cannot be used for a constructor(with 'new') and when using 'this' with Arrow functions it effectively has lexical scope and is readonly. Simple example of Arrow Function:  
+
+```javascript
+var result = (par1,par2) => par1*par2;
+//is the equavalent to
+var result = function(par1,par2){
+  return par1*par2;
+}
+```
+
 - <strong>Classes</strong> - A clean simple declarative syntax for defining object prototypes and inheritance chains.
 - <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 - <strong>For In/Of Loop</strong>
