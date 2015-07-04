@@ -132,7 +132,7 @@ Will be converted to:
  - <strong>SemVer (Semantic Versioning)</strong> - Is a versioning guideline to help track changes. The SemVar syntax is in the form MAJOR.MINOR.PATCH, where PATCH is backwards-compatible bug fix, MINOR is a backwards-compatible new feature release and MAJOR is 'breaking change' that is not backwards-compatible. Development should start at 0.1.0 as the first feature set and indicate as production ready with version 1.0.0 
  - <strong>SHA (Secure Hash Algorithm)</strong> - 
  - <strong>Shadow DOM</strong> - 
- - <strong>Singleton</strong> - A programming design pattern which limits the number of instances of a particular object to just one.
+ - <strong>Singleton</strong> - A programming design pattern which limits the number of instances of a particular object to just one effectively creating a system wide object. E.g The JS Module pattern, Angular Factories and Prototypes
  - <strong>SOAP (Simple Object Access Protocol)</strong> - 
  - <strong>Software Development Lifecycle or Systems Development Lifecycle (SDLC)</strong> - is used to describe a process for planning, creating, testing and deploying a information system.
  - <strong>Software Development Methology</strong> - is a ideology for structuring planning, controlling a software project. 
