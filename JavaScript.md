@@ -416,8 +416,6 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - Unbind the scroll event by setting to null i.e. window.onscroll = null; 
 - Can also be used with addEventListener i.e. element.addEventListener("scroll", myFunction); although addEventListener is only IE9+
 - Performance heavy as trigged everytime you scroll one pixel (or one scroll unit, whatever that is on your OS)
-
-
 - window.onscroll event - Detects scrolling
 
 <h2>Prototypal Inheritance</h2>
@@ -647,7 +645,7 @@ jQuery.noConflict();
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
 - “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
-- 
+
 <h3>Chaining</h3>
 - jQuery methods should chain:
 
