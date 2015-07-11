@@ -422,9 +422,11 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
 
-<h2>Constructors</h2>
-- The 'new' keyword signify's the use of a constructor
+<h2>Constructor Design Pattern</h2>
+- The 'new' keyword signify's the use of a constructor instance
+- 'this' keyword can be used to refer to the object created
 - 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
+
 
 <h2>Debugging</h2>
 
