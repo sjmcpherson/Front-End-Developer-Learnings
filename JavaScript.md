@@ -418,14 +418,31 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - Performance heavy as trigged everytime you scroll one pixel (or one scroll unit, whatever that is on your OS)
 - window.onscroll event - Detects scrolling
 
-<h2>Prototypal Inheritance</h2>
-- Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
-- Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
-
 <h2>Constructor Design Pattern</h2>
 - The 'new' keyword signify's the use of a constructor instance
 - 'this' keyword can be used to refer to the object created
 - 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
+
+<h2>Prototypal Inheritance</h2>
+- Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
+- Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
+
+```javascript
+function Beverage(name,temperature){
+	this.name = name;
+	this.temperature = temperature; //A beverage can be hot or cold.
+}
+Beverage.prototype.drink = function(){
+	console.log("I'm drinking " + this.name);
+}
+function Coffee(type){
+	this.type = type;//A coffee can be Dark or Mild
+        Beverage.call(this, "coffee", "hot"); //Coffee class inherits the properties from Beverage
+}
+Coffee.prototype = Object.create(Beverage.prototype); //Coffee class inherits prototype chain from Beverage
+
+var darkRoastCoffee = new Coffee("dark");//Create a instance of the inherited Coffee class
+```
 
 
 <h2>Debugging</h2>
