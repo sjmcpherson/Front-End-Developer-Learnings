@@ -442,6 +442,7 @@ function Coffee(type){
 Coffee.prototype = Object.create(Beverage.prototype); //Coffee class inherits prototype chain from Beverage
 
 var darkRoastCoffee = new Coffee("dark");//Create a instance of the inherited Coffee class
+darkRoastCoffee.drink();//Call Drink function will produce "I am drinking coffee"
 ```
 
 
