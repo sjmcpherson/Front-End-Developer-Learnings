@@ -145,6 +145,7 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
 ####Flexbox Model
  - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
 
+
 ###CSS3 Animations & Transitions
  - Backgrounds can be animated with @Keyframes and CSS Animations:
 
@@ -237,6 +238,18 @@ p+p{
 tbody tr:nth-child(odd) {
 	background-color: lightblue;
 }
+```
+
+ - Contain the caption in the bounds of a variable width image and display at the bottom
+```HTML
+<figure>
+  <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+  <figcaption>Fig.1 - A view of the pulpit rock in Norway.</figcaption>
+</figure>
+```
+```CSS
+figure{display:table;}
+figcaption{display:table-caption;caption-side:bottom;}
 ```
 
 ##CSS Performance
