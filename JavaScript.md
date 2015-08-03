@@ -370,6 +370,35 @@ div.classList.contains("foo"); //Returns true or false
 - What is a NodeList Object - it is a read-only collection of order Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
 - Converting a NodeList to an Array - var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div"));
 
+<h3>Manipulating the DOM</h3>
+- DOM manipulations can affect performance so its important to limit the amount of changes to the DOM i.e. in the case of creating multiple Nodes in a Loop
+
+```javascript
+for(i=0;i<100;i++){
+	var div = document.createElement('div');
+	document.body.appendChild(div); //Bad DOM is Changed 100 times
+}
+```
+```javascript
+var container = document.createElement('div');
+for(i=0;i<100;i++){
+	var div = document.createElement('div');
+	container.appendChild(div); 
+}
+document.body.appendChild(container); //Better DOM is changed only once
+```
+
+- <strong>document.createDocumentFragment()</strong> - DocumentFragment acts like a pseudo-DOM node, this maybe preferable to creating a container with an actual DOM node with document.createElement i.e.
+
+```javascript
+var ul = document.getElementsByTagName('ul');
+var frag = document.createDocumentFragment();
+for(i=0;i<100;i++){
+	var li = document.createElement('li');
+	frag.appendChild(li); 
+}
+ul[0].appendChild(frag);
+```
 
 <h2>JSON</h2>
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
