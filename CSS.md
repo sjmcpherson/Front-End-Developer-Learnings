@@ -100,7 +100,18 @@ opacity: 0.5;
  - Avoid using IDs as they decrease portability
 
 
-###Font size units
+###Measurements
+<strong>Pixels (px)</strong> - 
+<strong>Percentage (%)</strong> - 
+<strong>em</strong> - 
+<strong>rem (Root EM)</strong> - 
+<strong>Viewport units (vh & vw)</strong> - 
+<strong>Points/Picas (pt)</strong> - Used for Print Stylesheets
+<strong>Inches (in) and Centimeters (cm)</strong> - Used for Print Stylesheets
+
+###Fonts
+
+####Font size units
  - em - Calculates the font size based on the Parent font size which compounds down the tree
  
 ```CSS
@@ -122,7 +133,7 @@ i.e. html{font-size:62.5%}
  - px,pt,em,rem,%.
 
 
-###Font Rendering
+####Font Rendering
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
