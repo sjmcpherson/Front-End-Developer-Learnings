@@ -619,9 +619,25 @@ if(window.Notification && Notification.permission !== "denied") {
 - This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Can be compiled to EcmaScript 5 via Google Traceur or BabelJS.
 
+
+
+
 <h4>ES6 Variables</h4>
 - <strong>Const</strong> - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
-- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level rather than the whole function. i.e. block-level includes for loops, if/cases statement etc
+- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+
+
+```javascript
+var l = 5;
+var v = 10;
+if (l === 5) {
+  console.log(l + v); // 5 + 1
+  let v = 4; // The scope is inside the if-block and not hoisted to the top of the block
+  var b = 1; // The scope is inside the function
+  console.log(l + v); // 4 + 1
+} 
+console.log(l + v); // 5 + 1
+```
+
 - <strong>Default Parameter Values</strong> - Will allow you to set default values for parameters that are undefined. i.e.
 ```javascript
 function Point(x = 0, y = 0) {
