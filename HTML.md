@@ -84,8 +84,10 @@ Would Produce:
     <input type="email" name="email" id="email" autocomplete="email">
 ```
 
+- <strong>inputputmode="numeric"</strong> - On iOS & Android mobile browsers will display a 10-key phone-like keypad, Firefox OS requires the attribute: x-inputmode="numeric"
 
-<h2>Other Element/APIs</h2>
+
+<h2>Other Elements/APIs</h2>
  - &lt;video autoplay controls&gt;&lt;/video&gt;
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
