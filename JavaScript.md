@@ -235,19 +235,20 @@ for (var p:* in obj)
 
 
 <h3>Strict mode vs Non-strict mode</h3>
-- Add "use strict" at the beginning of a script or for mixed mode it can be added at the function level.
+- To set Strict Mode "use strict" at the beginning of a script or for mixed mode it can be added at the function level.
 - Support is for IE9+
 - Strict mode helps development by causing potentially problematic syntax to error.
 - Note: Becareful with concatenation of scripts. If a script level Strict mode file is concatenated with a Non-strict mode file both will be forced into Strict mode. 
 
 <h4>Not Allowed in Strict Mode</h4>
 - Undeclared variables - i.e. "use strict"; x = 3; // Will error "ReferenceError: x is not defined"
-- Deleting a variable or function - i.e. "use strict"; x = 3; //Will error "Delete of an unqualified identifier in strict mode."
+- Deleting a variable or function - i.e. "use strict"; delete arg; //Will error "Delete of an unqualified identifier in strict mode."
 - Defining a property twice - i.e "use strict"; var x = {p1:10, p1:20}; //Will error Duplicate data property in object literal not allowed in strict mode
 - Duplicate parameters - i.e. "use strict";function x(p1, p1) {};
 - Writing to read-only or get-only property
 - Some specified variables names using reserved words. e.g arguments, eval
 - In standard function calls, the 'this' value was the global object. In strict mode, it is now undefined.
+- Most usage of eval 
 
 <h2>System Objects</h2>
 <h3>The Math Object</h3>
