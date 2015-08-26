@@ -11,14 +11,26 @@
 - There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. Although a bug exists when using typeof with 'null' values as it will return 'object'.
 
 ```javascript
-	var theType = typeof ""; //The variable 'theType' would equal 'string'.
+	var theType = typeof false //'theType' would equal 'boolean'.
+	var theType = typeof ""; //'theType' would equal 'string'.
+	var theType = typeof null; //'theType' would equal 'undefined' (which is a bug).
 ```
 
 <h3>The Data Types</h3>
 <h4>Boolean</h4>
-- Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
+- Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey. i.e
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
-- Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false 
+- Truthy & Falsy variables can be toggled by equating a single negation of itself i.e true == !true //Will equal false
+- Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used i.e.
+
+```javascript
+var a = {}
+a == true //false, using Loose Equaition can cause inconsistant results, because of Type Coercion
+a === true //false, using Strict Equation values must be the same Type
+!!a === true //true, correct check for truthy value
+```
+
+
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
