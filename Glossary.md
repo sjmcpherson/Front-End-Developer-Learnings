@@ -155,7 +155,7 @@ Will be converted to:
 
 ###U
  - <strong>Unit Testing</strong> - Is a testing method where seperate pieces of source code are created to perform tasks which determine whether module of a program produce the desired outcome.
- - <strong>URI (Uniform Resource Identifier)</strong> - 
+ - <strong>URI (Uniform Resource Identifier)</strong> - A string used to identify a resource. A URL is a subset of a URI.
  - <strong>User Experience(UX)</strong> - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
  - <strong>User Interface(UI)</strong> - The User Interface are the components which users interact with.
 
