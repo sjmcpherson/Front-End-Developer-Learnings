@@ -18,7 +18,7 @@
 
 <h3>The Data Types</h3>
 <h4>Boolean</h4>
-- Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey. i.e
+- Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
 - Truthy & Falsy variables can be toggled by equating a single negation of itself i.e true == !true //Will equal false
 - Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used i.e.
