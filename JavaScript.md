@@ -20,7 +20,7 @@
 <h4>Boolean</h4>
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
-- Truthy & Falsy variables can be toggled by equating a single negation of itself i.e true == !true //Will equal false
+- Truthy & Falsy variables can be toggled by equating a single negation of itself i.e true = !true //Will equal false
 - Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used i.e.
 
 ```javascript
@@ -35,7 +35,7 @@ a === true //false, using Strict Equation values must be the same Type
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
 - Has problems mapping to common arithmetic I.e var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
-- isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number I.e when using the function Number(value) to convert a string to a number.
+- isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number. 
 - parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion.
 - Modulus(division remainder) Use % to determine if a number is divisible by another, it gives the remander value i.e:
 
@@ -106,7 +106,7 @@ function testFunc(){
 ```
 
 - Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) Anonymous Function which would run imediately
-- When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};}
+- When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};} //if options parameter is undefined set options to an empt object
 - Functions inherit the object prototype therefore methods and properties can be assigned to them.
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 - Initializing a variable in a Function will mean that it is only available to operations inside this function. Functions are the only place where a new scope is created.
@@ -115,7 +115,7 @@ function testFunc(){
 
 
 ####Primative Values
-- The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using the String objects methods.
+- The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using String object methods.
 
 ###Variables
 #####Dynamic Typed
