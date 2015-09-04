@@ -326,6 +326,7 @@ for (var p:* in obj)
 <h3>The Image Object</h3>
 - img.complete - Read-only boolean property to determine if image is loaded.
 - img.naturalWidth/naturalHeight - Read-only property which represents the original(unmanipulated by CSS/JS) size of the image. Only available after image load. IE9+
+- img.onerror
 
 <h3>The XMLHttpRequest(XHR) Object</h3>
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
