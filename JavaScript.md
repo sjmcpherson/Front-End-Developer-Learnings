@@ -121,8 +121,6 @@ function testFunc(){
 #####Dynamic Typed
 - JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
 
-
-
 <h4>Variable Scope</h4>
 #####Implied Global Variables
 JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For good practise always initialize with the 'var' keyword.
@@ -201,9 +199,6 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-
-
-
 <h3>Loops</h3>
 - <strong>For Loop</strong>
 ```javascript
@@ -242,7 +237,6 @@ for (var p:* in obj)
     trace(p + ": " + obj[p]);
 //The above can print name, city, and os inA ANY order. 
 ```
-
 
 
 
@@ -448,10 +442,11 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 });
 ```
 
-- return false - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating functions event.preventDefault() & event.stopPropagation().
+<h3>Event Bubbling & Default Event Canceling</h3>
 - <strong>Event Bubbling</strong> - is when a nested element triggers the parents event handler. The following code can be used to prevent bubbling.
+- <strong>return false</strong> - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating functions event.preventDefault() & event.stopPropagation().
 - <strong>event.preventDefault()</strong> - Cancels the default event(if cancelable) codepen.io/sjmcpherso/pen/gboxaa
--  <strong>event.stopPropagation</strong> - event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
+-  <strong>event.stopPropagation()</strong> - event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
 
 
 <h3>Scroll Event</h3>
