@@ -413,7 +413,7 @@ ul[0].appendChild(frag);
 - JSONP stands for JSON with padding. The padding is a callback function that is used to wrap the data returned from the server. The reason for its existence is to get around browser's same-origin restriction against cross domain requests.
 
 <h2>JavaScript Events</h2>
-- <strong>addEventListener(event,function,useCapture)</strong> - IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}' would deprecietes attachEvent(event,function);
+- <strong>addEventListener(event,function,useCapture)</strong> - IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}'
 - <strong>attachEvent(event,function)</strong> - Is a depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
 - <strong>Crossbrowser addEventListener</strong> - Use something like the below as a cross browser AddEventListener override
 
@@ -721,7 +721,7 @@ jQuery.noConflict();
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
 
 <h3>Chaining</h3>
-- jQuery methods should chain:
+- Custom jQuery methods can be set to chain with:
 
 ```javascript
 $.fn.enumerate = function() {
