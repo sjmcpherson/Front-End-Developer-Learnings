@@ -665,6 +665,19 @@ var b = [3, 4, 5];
 a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
+<h4>TDZ (Temporal Dead Zone)</h4>
+- Let/Const take a different technique to dealing with Hoisting to variables declared with var, rather than being set to undefined a variable initialized with 'let' or 'const' will give a "ReferenceError" when accessed before being declared. Take the following example:
+
+```javascript
+let l = 'let'; //Confirms hoisting still occurs with Let
+(function() {
+    console.log(v); //Undefined
+    console.log(l); //Reference Error 
+    let v = 'var';
+    let l = 'let';
+}());
+```
+
 <h4>ES6 Functions</h4>
 - <strong>Arrows</strong> - Using the following '=>' characters to provide a shortend version of a standard function that returns an expression i.e. result = arguments => expression. Arrow functions can be used instead of a standard function syntax except it cannot be used for a constructor(with 'new') and when using 'this' with Arrow functions it effectively has lexical scope and is readonly. Simple example of Arrow Function:  
 
