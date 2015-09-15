@@ -280,9 +280,21 @@ figcaption{display:table-caption;caption-side:bottom;}
 ###Download Optimisation
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS files (Reduces the amount of HTTP Requests)
- - Avoid unnecessary tag identifiers to reduce file size i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
+ - Avoid unnecessary tag identifiers to reduce file size ei.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
  - The browser will still download images that are hidden with display:none although with some browsers i.e Firefox, background-images will not be downloaded.
 
 ###CSS Source Maps
  - When using a pre-processor you can generate a Source Map in addition to the compiled CSS, the Source Map 
+
+###CSS Variables
+- Unlike preprocessed variables, CSS Variables are scoped to an element. Very limited support, Firefox only.   
+
+```CSS
+html {
+    var-primary-color: #333;
+}
+body {
+    background-color: var(primary-color);
+}
+```
 
