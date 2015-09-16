@@ -238,7 +238,8 @@ for (var p:* in obj)
 //The above can print name, city, and os inA ANY order. 
 ```
 
-
+<h3>URI & Parameters</h3>
+ - <strong>encodeURIComponent(string)</strong>
 
 <h3>Strict mode vs Non-strict mode</h3>
 - To set Strict Mode "use strict" at the beginning of a script or for mixed mode it can be added at the function level.
