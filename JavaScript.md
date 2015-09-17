@@ -666,6 +666,9 @@ var b = [3, 4, 5];
 a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
+- <strong>Template Strings</strong> - 
+
+
 <h4>TDZ (Temporal Dead Zone)</h4>
 - Let/Const take a different technique to dealing with Hoisting to variables declared with var, rather than being set to undefined a variable initialized with 'let' or 'const' will give a "ReferenceError" when accessed before being declared. Take the following example:
 
@@ -703,6 +706,10 @@ for (let i of arr) { //for of iterates over property values
    console.log(i); //logs "3", "5", "7"
 }
 ```
+
+
+ - 
+
 
 <h4>ES6 APIs</h4>
 - <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
