@@ -457,14 +457,19 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - Performance heavy as trigged everytime you scroll one pixel (or one scroll unit, whatever that is on your OS)
 - window.onscroll event - Detects scrolling
 
-<h2>Constructor Design Pattern</h2>
-- The 'new' keyword signify's the use of a constructor instance
-- 'this' keyword can be used to refer to the object created
-- 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
 
 <h2>Prototypal Inheritance</h2>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
+
+
+<h2>Design Patterns</h2>
+
+<h3>the Constructor Pattern</h3>
+- Object constructors are used to create specific types of objects
+- The 'new' keyword signify's the use of a constructor instance
+- 'this' keyword can be used to refer to the object created
+- 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
 
 ```javascript
 function Beverage(name,temperature){
@@ -482,6 +487,26 @@ Coffee.prototype = Object.create(Beverage.prototype); //Coffee class inherits pr
 
 var darkRoastCoffee = new Coffee("dark");//Create a instance of the inherited Coffee class
 darkRoastCoffee.drink();//Call Drink function will produce "I am drinking coffee"
+```
+
+<h3>The Module Pattern</h3>
+
+- The Module pattern was originally defined as a way to provide both private and public encapsulation for classes in conventional software engineering.
+
+```javascript
+var testModule = (function () {
+   var counter = 0;
+  return {
+    incrementCounter: function () {
+      return counter++;
+    },
+    resetCounter: function () {
+      console.log( "counter value prior to reset: " + counter );
+      counter = 0;
+    }
+  };
+})();
+testModule.incrementCounter();
 ```
 
 
