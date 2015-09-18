@@ -111,8 +111,9 @@ Will be converted to:
  - <strong>NPM (Node Package Manager)</strong> - is the default package manager from Node.js and handles download & installation of Node modules
 
 ###O
- - <strong>Obfuscation</strong> - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
  - <strong>OAuth</strong> - is a open standard for authorization to server resources for client applications. It provides a process for end users to authorize third-party access without needing to share their credentials. OAuth is commonly used as a way for users to log into third party web sites using their Google, Facebook or Twitter passwords, without worrying about their access credentials being compromised.
+ - <strong>Obfuscation</strong> - Takes minifying JS a step further by shortening variable and function names. But can introduce bugs if not done properly.
+ - <strong>Object Literal</strong> - A comma seperated list of name value pairs housing objects properties and methods.
 
 ###P
  - <strong>Parsing</strong> - Taking raw data and converting into a formal data structure.
