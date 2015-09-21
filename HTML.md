@@ -156,7 +156,7 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
        </section>
 </section>
 ```
- - You can you Google Data Testing tool to validate if need be
+ - Use the  Google Data Testing tool to validate https://developers.google.com/structured-data/testing-tool/
 
 
 
