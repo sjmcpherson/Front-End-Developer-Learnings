@@ -9,6 +9,7 @@
 - The recommened viewport setting for responsive design '&lt;meta name="viewport" content="width=device-width"&gt;' this allows the user to zoom.
 - To disable zooming use '&lt;meta name="viewport" content="maximum-scale=1"&gt;' this would be recommend for a Mobile Web App.
 - Alternatively to disable a responsive design use '&lt;meta name="viewport" content="width=1200"&gt;' the width being the size of your outer container.
+- See https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html for more info.
 
 <h3>Compatibility Mode</h3>
 - Internet Explorer 8/9/10 support document compatibility modes that affect the way webpages are interpreted and displayed. Because of this, even if your site's visitor is using, let's say, Internet Explorer 9, it's possible that IE will not use the latest rendering engine, and instead, decide to render your page using the Internet Explorer 5.5 rendering engine. To avoid this set the X-UA-Compatible meta tag: "<meta http-equiv="X-UA-Compatible" content="IE=edge">"
