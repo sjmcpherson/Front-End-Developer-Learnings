@@ -60,7 +60,7 @@ Would Produce:
 </figure>
 ```
 
- - <strong>&lt;picture&gt; element</strong> is a container to specify multiple sources for a specific image, using the media query attribute or mimetype attribute the browser can determine if the source is suitable or fallback to the standard img element enclosed before the end of the 'picture' element  Firefox, Chrome, Opera, Edge Only http://caniuse.com/#feat=picture
+ - <strong>&lt;picture&gt; element</strong> is a container to specify multiple sources for a specific image, using the media query attribute or mimetype attribute the browser can determine if the source is suitable or fallback to the standard img element enclosed before the end of the 'picture' element. Giving the ability to deal with responsive images and  non-cross-browser compatible file formants.  Firefox, Chrome, Opera, Edge Only http://caniuse.com/#feat=picture
 
 ```HTML
 <picture>
@@ -72,7 +72,7 @@ Would Produce:
 <h3>Image/Graphic Formats</h3>
 
  - <strong>GIF (Graphics Interchange Format)</strong> - Lossless format that can have transparency & animation with a maximum of 256 colors.
- - <strong>BMP (Bitmap Image Format)</strong> - BMP file format, also known as bitmap image file
+ - <strong>BMP (Bitmap Image Format)</strong> - A less used raster image format.
  - <strong>PNG (Portable Network Graphics)</strong> - Lossless graphic file format with 24bit colors & supports transparency. Also a less used 8bit version that only support 256 colors.
  - <strong>APNG (Animated PNG)</strong> - A PNG but allows frames for animation. Limited support - FF & Safari only
  - <strong>JPEG/JPG (Joint Photographic Experts Group)</strong> -  Lossy compression whereby the level of compression can be adjusted supports a maximum image size of 65535×65535 pixels
