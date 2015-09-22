@@ -204,6 +204,8 @@ var big = (x > 10);
 ```javascript
 for (var i=startvalue; i<=endvalue; incrementfactor){ // Your code here}
 ```
+
+
 - <strong>While Loop</strong>
 ```javascript
 while(i<=endvalue){ // Your code here}
@@ -212,17 +214,49 @@ while(i<=endvalue){ // Your code here}
 ```javascript
 do{ // Your code here}(i<=endvalue)
 ```
-- <strong>For Each</strong>
-Iterates through each item in an Array (IE9+) or Map object (IE11+). Cannot use 'break' or 'continue' functions.
+
+- <strong>For Each...in Loop</strong> (Depreciated)
+- Not to be confused with 'array.forEach() or map.forEach()' which cannot use 'break' or 'continue' functions.
+```javascript
+for each (variable in object) {
+  statement
+}
+```
+
+- <strong>For In Loop</strong> (ES6)
+- Iterates an object, in arbitrary order, outputing property <strong>name</strong>
+```javascript
+	for (property in object) {...
+	}
+```
+- Note: for...in should not be used to iterate over an Array where the index order is important.
+- If you only want to consider properties attached to the object itself, and not its prototypes, use getOwnPropertyNames() or perform a hasOwnProperty() i.e:
+```javascript
+	for (var key in obj) {
+	  if (obj.hasOwnProperty(key)) {
+	    console.log(key + " -> " + obj[key]); //Safely iterate all the properties in an object
+	  }
+	}
+```
+
+
+- <strong>For Of Loop</strong> (ES6)
+- Iterates objects (including Array, Map, Set, arguments), outputing property <strong>value</strong>
+```javascript
+	for (value of object) {...
+	}
+```
+
+
+break and continue.
+
+ - <strong>Array ForEach</strong>
 ```javascript
 arr.forEach(callback[, thisArg])
 
 [2, 5, , 9].forEach(function(element, index, array) {});
 ```
 
-- <strong>For In/Of Loop</strong> (Limited Support See EcmaScript 6)
-
-break and continue.
 
 <h4>Iteration VS Enumeration </h4>
 - iteration - the for statement 
