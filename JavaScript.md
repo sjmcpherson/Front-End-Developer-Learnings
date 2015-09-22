@@ -200,22 +200,26 @@ var big = (x > 10);
 ```
 
 <h3>Loops</h3>
-- <strong>For Loop</strong>
+
+- <h4>For Loop</h4>
 ```javascript
-for (var i=startvalue; i<=endvalue; incrementfactor){ // Your code here}
+for (var i=startvalue; i<=endvalue; incrementfactor){ 
+  //Your code here
+}
 ```
 
-
-- <strong>While Loop</strong>
+- <h4>While Loop</h4>
 ```javascript
-while(i<=endvalue){ // Your code here}
+while(i<=endvalue){ 
+//Your code here
+}
 ```
-- <strong>Do While Loop</strong>
+- <h4>Do While Loop</h4>
 ```javascript
 do{ // Your code here}(i<=endvalue)
 ```
 
-- <strong>For Each...in Loop</strong> (Depreciated)
+- <h4>For Each...in Loop</h4> (Depreciated)
 - Not to be confused with 'array.forEach() or map.forEach()' which cannot use 'break' or 'continue' functions.
 ```javascript
 for each (variable in object) {
@@ -223,7 +227,7 @@ for each (variable in object) {
 }
 ```
 
-- <strong>For In Loop</strong> (ES6)
+- <h4>For In Loop</h4> (ES6)
 - Iterates an object, in arbitrary order, outputing property <strong>name</strong>
 ```javascript
 	for (property in object) {...
@@ -234,19 +238,18 @@ for each (variable in object) {
 ```javascript
 	for (var key in obj) {
 	  if (obj.hasOwnProperty(key)) {
-	    console.log(key + " -> " + obj[key]); //Safely iterate all the properties in an object
+	    console.log(key + " -> " + obj[key]); //Iterate properties not added via the prototype
 	  }
 	}
 ```
 
 
-- <strong>For Of Loop</strong> (ES6)
+- <h4>For Of Loop</h4> (ES6)
 - Iterates objects (including Array, Map, Set, arguments), outputing property <strong>value</strong>
 ```javascript
 	for (value of object) {...
 	}
 ```
-
 
 break and continue.
 
