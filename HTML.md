@@ -20,33 +20,6 @@
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
 
-<h2>HTML Preprocessors</h2>
-- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
-
-- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
- 
-- <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight Ruby based markup language. Example:
-
-```HTML
-  %body
-    #header
-      %h1 BoBlog
-```
-Would Produce:
-```HTML
-  <body>
-    <div id='header'>
-      <h1>BoBlog</h1>
-    </div>
-```
-
-
-
-| Preprocessor  | Extension  | Can Use Standard HTML  | Uses Tabs for Hierachy    |
-| ------------- |:-------------:| -----:| -----:|
-| Markdown | .md      | true  | false  |
-| Jade      | .jade | false  | true |
-| Haml      | .haml      | true  | true  |
 
 
 <h2>Images/Graphics</h2>
@@ -131,6 +104,33 @@ Would Produce:
   <button id="close">Okay</button>
 </dialog>
 ```
+
+<h2>HTML Preprocessors</h2>
+- <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
+
+- <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
+ 
+- <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight Ruby based markup language. Example:
+
+```HTML
+  %body
+    #header
+      %h1 BoBlog
+```
+Would Produce:
+```HTML
+  <body>
+    <div id='header'>
+      <h1>BoBlog</h1>
+    </div>
+```
+
+
+| Preprocessor  | Extension  | Can Use Standard HTML  | Uses Tabs for Hierachy    |
+| ------------- |:-------------:| -----:| -----:|
+| Markdown | .md      | true  | false  |
+| Jade      | .jade | false  | true |
+| Haml      | .haml      | true  | true  |
 
 
 <h2>SEO Optimization</h2>
