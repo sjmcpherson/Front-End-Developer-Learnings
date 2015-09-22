@@ -71,13 +71,14 @@ Would Produce:
 ```
 <h3>Image/Graphic Formats</h3>
 
- - <strong>GIF (Graphics Interchange Format) </strong> - Lossless format that can have transparency & animation with a maximum of 256 colors.
+ - <strong>GIF (Graphics Interchange Format)</strong> - Lossless format that can have transparency & animation with a maximum of 256 colors.
+ - <strong>BMP (Bitmap Image Format)</strong> - BMP file format, also known as bitmap image file
  - <strong>PNG (Portable Network Graphics)</strong> - Lossless graphic file format with 24bit colors & supports transparency. Also a less used 8bit version that only support 256 colors.
  - <strong>APNG (Animated PNG)</strong> - A PNG but allows frames for animation. Limited support - FF & Safari only
  - <strong>JPEG/JPG (Joint Photographic Experts Group)</strong> -  Lossy compression whereby the level of compression can be adjusted supports a maximum image size of 65535×65535 pixels
 - <strong>Progressive vs Baseline JPEGs</strong> -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
  - <strong>WebP</strong> is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
-
+ - <strong>SVG (Scalable Vector Graphics )</strong> - is a XML markup language for describing & plotting vector graphics
 
 <h3>Image/Graphic Performance</h3>
  - <strong>Specifing image size attributes</strong> by specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
