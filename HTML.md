@@ -12,8 +12,8 @@
 - See https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html for more info.
 
 <h3>Compatibility Mode</h3>
-- Internet Explorer 8/9/10 support document compatibility modes that affect the way webpages are interpreted and displayed. Because of this, even if your site's visitor is using, let's say, Internet Explorer 9, it's possible that IE will not use the latest rendering engine, and instead, decide to render your page using the Internet Explorer 5.5 rendering engine. To avoid this set the X-UA-Compatible meta tag: "<meta http-equiv="X-UA-Compatible" content="IE=edge">"
-- There are some complications that may cause the X-UA-Compatible meta tag and in that case it needs to be set in the HTTP request header. See https://hsivonen.fi/doctype/
+- Internet Explorer 8/9/10 support document compatibility modes that affect the way webpages are interpreted and displayed, its possible those versions will not use the latest rendering engine, instead using the Internet Explorer 5.5 rendering engine. To avoid this set the X-UA-Compatible meta tag: "&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;"
+- There are some complications that may cause the X-UA-Compatible meta tag not to work and in that case it needs to be set in the HTTP request header. See https://hsivonen.fi/doctype/
 
 
 <h2>Loading Resources</h2>
