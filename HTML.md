@@ -2,7 +2,7 @@
 
 <h2>HTML Doctype</h2>
 
- - <strong>HTML5 Doctype</strong> &lt;!doctype html&gt; must be first on page before the <html> tag. IE will revert to Quirks Mode if not the case
+ - <strong>HTML5 Doctype &lt;!doctype html&gt;</strong> must be first on page before the <html> tag. IE will revert to Quirks Mode if not the case
  - <strong>HTML4 vs HTML5</strong> - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
  
 <h2>The Viewport</h2>
@@ -25,7 +25,7 @@
 <h2>Images/Graphics</h2>
 
 <h3>Image/Graphic Elements</h3>
- - <strong>&lt;figure&gt; element</strong> is used to markup illustrations, graphs, code snippets and images used with &lt;figurecaption&gt; IE9+
+ - <strong>&lt;figure&gt;</strong> element is used to markup illustrations, graphs, code snippets and images used with &lt;figurecaption&gt; IE9+
 
 ```HTML
 <figure>
@@ -34,7 +34,7 @@
 </figure>
 ```
 
- - <strong>&lt;picture&gt; element</strong> is a container to specify multiple sources for a specific image, using the media query attribute or mimetype attribute the browser can determine if the source is suitable or fallback to the standard img element enclosed before the end of the 'picture' element. Giving the ability to deal with responsive images and  non-cross-browser compatible file formants.  Firefox, Chrome, Opera, Edge Only http://caniuse.com/#feat=picture
+ - <strong>&lt;picture&gt;</strong> element is a container to specify multiple sources for a specific image, using the media query attribute or mimetype attribute the browser can determine if the source is suitable or fallback to the standard img element enclosed before the end of the 'picture' element. Giving the ability to deal with responsive images and  non-cross-browser compatible file formants.  Firefox, Chrome, Opera, Edge Only http://caniuse.com/#feat=picture
 
 ```HTML
 <picture>
