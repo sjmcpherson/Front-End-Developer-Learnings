@@ -234,11 +234,11 @@ for each (variable in object) {
 	}
 ```
 - Note: for...in should not be used to iterate over an Array where the index order is important.
-- If you only want to consider properties attached to the object itself, and not its prototypes, use getOwnPropertyNames() or perform a hasOwnProperty() i.e:
+- If you only want to consider properties attached to the object/array itself, and not its prototypes, use getOwnPropertyNames() or perform a hasOwnProperty() i.e:
 ```javascript
 	for (var key in obj) {
-	  if (obj.hasOwnProperty(key)) {
-	    console.log(key + " -> " + obj[key]); //Iterate properties not added via the prototype
+	  if (obj.hasOwnProperty(key)) {/iterate all the properties in an object & ignores properties attached via its prototype
+	    console.log(key + " -> " + obj[key]); 
 	  }
 	}
 ```
