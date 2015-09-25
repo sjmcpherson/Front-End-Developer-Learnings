@@ -372,7 +372,8 @@ for (var p:* in obj)
 - Modern browsers support cross-site requests by implementing the web applications working group's Access Control for Cross-Site Requests standard.  As long as the server is configured to allow requests from your web application's origin, XMLHttpRequest will work.  Otherwise, an INVALID_ACCESS_ERR exception is thrown.
 
 <h3>The Date Object</h3>
-- <code>var currentDateTime = Date()</code> sets the current milliseconds since Epoch(1/1/1970 00:00:00) which then needs to put through a date formatter to convert to a human readable date. 
+- <code>var currentDateTime = new Date()</code> sets a date object equavalent to the current milliseconds since Epoch(1/1/1970 00:00:00). 
+- new Date().getTime() is the equavalent to Date.now(), although Date.now() is IE9+.
 - Their are 4 ways of initiating a date value with the new Date() constructor.
 
 ```javascript
