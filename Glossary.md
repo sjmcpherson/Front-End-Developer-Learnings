@@ -143,7 +143,7 @@ Will be converted to:
  - <strong>SDK</strong> - Software Development Kit is a toolkit to allow software development on a specific framework or platform.
  - <strong>SSL (Secure Sockets Layer)</strong> - a internet protocol for secure communication.
  - <strong>SSH (Secure Shell)</strong> - is a network protocol for secure communication over an insecure network.
- - <strong>Statement</strong> - A line of code which does something. Example: GOTO 100. An Expression is a Statement but a Statement is not necessarily an Expression.
+ - <strong>Statement</strong> - A line of code made of expressions that performs a task in a program. Example: GOTO 100. 
  - <strong>Strongly Typed</strong> - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
  - <strong>Stub or Method Stub</strong> - Code used to simulate behaviour, often a temporary solution or used to demo functionality.
  - <strong>Surface Web</strong> - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
