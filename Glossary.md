@@ -52,7 +52,7 @@
   // jQuery Implicit Iteration
   $( "li" ).addClass( "bar" );
   ```
- - <strong>Expression</strong> - Something which evaluates to a value. Example: 1+2/x
+ - <strong>Expression</strong> - is a reference to a variable or value, or a set of variable(s) and value(s) combined with operators. 
 
 ###F
  - <strong>Falsy</strong> - Term for a value which returns 'false' although not nessaarily of boolean type when using Equal/Not Equal operands. i.e. In JavaScript null,false,"",undefined and 0 are Falsy while all other values including Objects are Truthy, So '1 == true' would return true
