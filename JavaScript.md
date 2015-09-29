@@ -644,6 +644,20 @@ simplePromise().then(function(result) {
 - Promise Libraries: Q, when, WinJS, RSVP.js
 - JavaScript ES6 Promise API (Latest browsers Only, IE12+ but Polyfils available) 
 
+
+
+<h2>Client-side Data Storage</h2>
+
+- <strong>localStorage/sessionStorage</strong> - A single persistent object, storage limit at least 5MB per origin (domain/protocol). localStorge persists when browser closed, sessionStorage clears when window closed. IE8+
+
+```javascript
+localStorage.setItem("username", "John");// Save data to the current local store also use localStorage.username = "John";
+alert( "username = " + localStorage.getItem("username"));// Access some stored data
+```
+
+- <strong>Indexed Database (IndexedDB)</strong> -  A collection of object stores, with an asynchronous API. Indexes on stores can be created to improve search speed.
+
+
 <h2>Other JavaScript APIs</h2>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
