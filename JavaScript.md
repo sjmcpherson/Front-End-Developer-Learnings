@@ -660,7 +660,6 @@ alert( "username = " + localStorage.getItem("username"));// Access some stored d
 
 <h2>Other JavaScript APIs</h2>
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
-- localStorage/sessionStorage – Clientside browser storage (localStorage is Persistant) limited to 5MB per domain IE8+
 - Full Screen API with requestFullScreen
 - animationstart, animationiteration, animationend allow JavaScript control over CSS3 Animations. IE10+ & prefixes required for most browsers through:
 ```javascript
@@ -790,6 +789,9 @@ for (let i of arr) { //for of iterates over property values
 
 <h4>ES6 APIs</h4>
 - <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
+
+<h2>ECMAScript 7</h2>
+- Object.Observe - Chrome only
 
 
 <h2>jQuery</h2>
