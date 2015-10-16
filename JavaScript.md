@@ -648,7 +648,7 @@ simplePromise().then(function(result) {
 
 <h2>Client-side Data Storage</h2>
 
-- <strong>localStorage/sessionStorage</strong> - A single persistent object, storage limit at least 5MB per origin (domain/protocol). localStorge persists when browser closed, sessionStorage clears when window closed. IE8+
+- <strong>localStorage/sessionStorage</strong> - A single persistent object, storage limit at least 5MB per origin (domain/protocol). localStorge persists when browser closed, sessionStorage clears when window closed. IE8+. Note: All variables are converted to strings i.e. so the output of localStorage.setItem("bool", true); &  localStorage.setItem("num", 1); would be "true" & "1" respectively
 
 ```javascript
 localStorage.setItem("username", "John");// Save data to the current local store also use localStorage.username = "John";
