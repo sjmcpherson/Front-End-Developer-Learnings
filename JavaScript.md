@@ -201,25 +201,27 @@ var big = (x > 10);
 
 <h3>Loops</h3>
 
-- <h4>For Loop</h4>
+<h4>For Loop</h4>
 ```javascript
 for (var i=startvalue; i<=endvalue; incrementfactor){ 
   //Your code here
 }
 ```
 
-- <h4>While Loop</h4>
+<h4>While Loop</h4>
 ```javascript
 while(i<=endvalue){ 
 //Your code here
 }
 ```
-- <h4>Do While Loop</h4>
+<h4>Do While Loop</h4>
 ```javascript
-do{ // Your code here}(i<=endvalue)
+do{ 
+//Your code here
+} while (i < endvalue);
 ```
 
-- <h4>For Each...in Loop</h4> (Depreciated)
+<h4>For Each...in Loop (Depreciated)</h4>
 - Not to be confused with 'array.forEach() or map.forEach()' which cannot use 'break' or 'continue' functions.
 ```javascript
 for each (variable in object) {
@@ -227,7 +229,7 @@ for each (variable in object) {
 }
 ```
 
-- <h4>For In Loop</h4> (ES6)
+<h4>For In Loop (ES6)</h4>
 - Iterates an object, in arbitrary order, outputing property <strong>name</strong>
 ```javascript
 	for (property in object) {...
@@ -244,7 +246,7 @@ for each (variable in object) {
 ```
 
 
-- <h4>For Of Loop</h4> (ES6)
+<h4>For Of Loop (ES6)</h4>
 - Iterates objects (including Array, Map, Set, arguments), outputing property <strong>value</strong>
 ```javascript
 	for (value of object) {...
