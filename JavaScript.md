@@ -554,7 +554,7 @@ testModule.incrementCounter();
 ```
 
 
-<h2>Debugging</h2>
+<h2>Debugging & Error Checking</h2>
 
 <h3>Syntax vs Runtime Errors</h3>
 - Syntax errors are picked up by the browser when the script is parsed, if an error is found by the parser none of the script is executed.
@@ -576,6 +576,36 @@ console.timeEnd("test"); //Will output "test: 8.75ms"
 ```
 
 - NOTE: use of the Console object will break <IE9 but NOT while the IE Developer Tools window is open.
+
+<h3>Try Catch Statement</h3>
+- Use to surround a block of statements to handle when an exception occurs
+- The 'try' block encompases where to track for exceptions
+- The 'catch' block is where the response to the exception is handled
+- The 'finally' block will be executed after the 'try' or 'catch' (in the case of an exception in the 'try') block.
+
+```javascript 
+try {
+  try {
+    throw new Error("oops");
+  }
+  catch (ex) {
+    console.error("inner", ex.message);
+  }
+  finally {
+    console.log("finally");
+  }
+}
+catch (ex) {
+  console.error("outer", ex.message);
+}
+```
+
+<h4>Throw Statement</h4>
+- The throw statement can be used to simulate an exception and therefore be used to test Try/Catch statements 
+
+```javascript 
+throw new Error("oops");
+```
 
 
 <h2>Synchronous vs Asynchronous Script Loading</h2>
