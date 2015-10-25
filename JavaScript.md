@@ -214,12 +214,16 @@ while(i<=endvalue){
 //Your code here
 }
 ```
+- Note: forgetting to increase the variable in the condition will mean the loop will never end and crash the browser.
+
 <h4>Do While Loop</h4>
 ```javascript
 do{ 
 //Your code here
 } while (i < endvalue);
 ```
+- Note: forgetting to increase the variable in the condition will mean the loop will never end and crash the browser.
+
 
 <h4>For Each...in Loop (Depreciated)</h4>
 - Not to be confused with 'array.forEach() or map.forEach()' which cannot use 'break' or 'continue' functions.
