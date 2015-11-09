@@ -272,12 +272,12 @@ figcaption{display:table-caption;caption-side:bottom;}
 - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
  - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
 
-###Rendering Performance 
+####Rendering Performance 
  - Optimizing browser rendering by reducing use of CSS Box-shadows & CSS Gradients
  - Use CSS Animations & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration making CSS Transitions/Animation smoother. Be aware CPU usage can climb quite heavily because of the hardware acceleration.
  - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
 
-###Download Optimisation
+####Download Optimisation
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS files (Reduces the amount of HTTP Requests)
  - Avoid unnecessary tag identifiers to reduce file size ei.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
