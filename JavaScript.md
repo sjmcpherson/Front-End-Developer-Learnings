@@ -501,6 +501,20 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - Performance heavy as trigged everytime you scroll one pixel (or one scroll unit, whatever that is on your OS)
 - window.onscroll event - Detects scrolling
 
+<h3>DOM/Page Load Events</h3>
+- <strong>Window Load/Onload Event</strong> - Triggers when all content is loaded including images/js/iframes etc
+
+```javascript
+window.onload = function(){}
+//Or
+window.addEventListener('load', function(){})//IE9+
+```
+
+- <strong>DOMContentLoaded Event</strong> - Triggers when the HTML Document has been loaded & parsed, without waiting for CSS/images/JS/iframes etc to finish loading 
+
+```javascript
+document.addEventListener("DOMContentLoaded", function(){})//IE9+
+```
 
 <h2>Prototypal Inheritance</h2>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
@@ -852,6 +866,7 @@ jQuery.noConflict();
 ```
 
 <h3>Document Ready</h3>
+- Runs code in a after a "DOMContentLoaded" event is trigged and falls back to a window.onload event if unsuppported. 
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
 - “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
