@@ -523,6 +523,32 @@ document.addEventListener("DOMContentLoaded", function(){})//IE9+
 
 <h2>Design Patterns</h2>
 
+<h3>Singleton</h3>
+
+- A pattern for a class which initializes a single object over the lifetime of a program.
+
+```javascript
+//Addy Osmani's example which expands on the Module Pattern
+var mySingleton = (function () {
+  var instance; // Instance stores a reference to the Singleton
+  function init() {    // Private methods and variables
+    var privateVariable = "Im also private";
+    function privateMethod(){console.log( "I am private" );}
+    return {      // Public methods and variables
+      publicMethod: function () {console.log( "The public can see me!" );},
+      publicProperty: "I am also public"
+    };
+  };
+  return {
+    // Get the Singleton instance if one exists or create one if it doesn't
+    getInstance: function () {
+      if ( !instance ){instance = init();}
+      return instance;
+    }
+   };
+})();
+```
+
 <h3>the Constructor Pattern</h3>
 - Object constructors are used to create specific types of objects
 - The 'new' keyword signify's the use of a constructor instance
@@ -549,7 +575,7 @@ darkRoastCoffee.drink();//Call Drink function will produce "I am drinking coffee
 
 <h3>The Module Pattern</h3>
 
-- The Module pattern was originally defined as a way to provide both private and public encapsulation for classes in conventional software engineering.
+- Module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
 
 ```javascript
 var testModule = (function () {
@@ -624,48 +650,6 @@ throw new Error("oops");
 
 <h2>Synchronous vs Asynchronous Script Loading</h2>
 - By default scripts are downloaded & executed synchronously
-
-<h2>Design Patterns</h2>
-- Module pattern is a way of organizing and encapsulating code via a closure. It allows you to create public/private functions and vars inside an object (the module). It lessens the likelihood of naming conflicts and unintended interactions with other functions/vars on the page. Modules should work independently and be easily extensible. Using modules enables to write widgets and plugins that interact with each other.
-
-```javascript
-//Addy Osmani's example from his book Essential JavaScript Design Datterns http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
-var myModulePattern = (function () {
-  var myPrivateVar, myPrivateMethod;
-  myPrivateVar = 0; // A private counter variable
-  myPrivateMethod = function( foo ) {console.log( foo );};  // A private function which logs any arguments
-  return {
-    myPublicVar: "foo",  // A public variable
-    myPublicFunction: function( bar ) {// A public function utilizing privates
-      myPrivateVar++;  // Increment our private counter
-        myPrivateMethod( bar ); // Call our private method using bar
-    }
-  };
-})(); 
-```
-- Singleton - a pattern for a class which initializes a single object over the lifetime of a program.
-
-```javascript
-//Addy Osmani's example which expands on the Module Pattern
-var mySingleton = (function () {
-  var instance; // Instance stores a reference to the Singleton
-  function init() {    // Private methods and variables
-    var privateVariable = "Im also private";
-    function privateMethod(){console.log( "I am private" );}
-    return {      // Public methods and variables
-      publicMethod: function () {console.log( "The public can see me!" );},
-      publicProperty: "I am also public"
-    };
-  };
-  return {
-    // Get the Singleton instance if one exists or create one if it doesn't
-    getInstance: function () {
-      if ( !instance ){instance = init();}
-      return instance;
-    }
-   };
-})();
-```
 
 <h2>Animating</h2>
 <h3>RequestAnimationFrame</h3>
