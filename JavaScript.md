@@ -835,7 +835,18 @@ var foo = {bar:1, baz:2};
 var {baz} = foo; //baz equals 2 
 
 var a = 1;
-var foo = {a,b:2}
+var foo = {a} //Shorthand for var foo = {};foo.a = a;
+
+// Assign new variable names
+var {p: foo, q: bar} = o; //Shorthand for var foo = o.p, bar = o.q;
+
+//Object destructoring for parameter, with new variable assignement and default values;
+function f({weight:w, height:h, max=25, min=10}){
+	if(max<25 && min>10)
+		var answer = w * h;
+}
+f({weight, height, min})
+
 ```
 
 
