@@ -743,8 +743,9 @@ if(window.Notification && Notification.permission !== "denied") {
 
 
 <h3>ES6 Variables</h3>
-- <strong>Const</strong> - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
 - <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+
+- <strong>Const</strong> - Varible declaration for Constants acts in the same way as "let" but is Read-Only. IE11+, Safari 6+
+
 
 ```javascript
 var l = 5;
@@ -859,6 +860,7 @@ var result = function(par1,par2){
 ```
 
 - <strong>Classes</strong> - A clean simple declarative syntax for defining object prototypes and inheritance chains.
+
 - <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 - <strong>For In/Of Loop</strong>
 ```javascript
