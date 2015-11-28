@@ -840,7 +840,7 @@ var foo = {a} //Shorthand for var foo = {};foo.a = a;
 // Assign new variable names
 var {p: foo, q: bar} = o; //Shorthand for var foo = o.p, bar = o.q;
 
-//Object destructoring for parameter, with new variable assignement and default values;
+//Object destructoring for parameters, with new variable assignement and default values;
 function f({weight:w, height:h, max=25, min=10}){
 	if(max<25 && min>10)
 		var answer = w * h;
@@ -849,9 +849,21 @@ f({weight, height, min})
 
 ```
 
+<h4>Template Strings</h4>
+
+- Template strings are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them.
+
+```javascript
+var name = "doug";
+var ageInMonths = 24;
+
+var string  = `${name} is
+${ageInMonths / 12} years old`;
+```
 
 
-<h4>ES6 Functions</h4>
+
+<h3>ES6 Functions</h3>
 - <strong>Arrows</strong> - Using the following '=>' characters to provide a shortend version of a standard function that returns an expression i.e. result = arguments => expression. Arrow functions can be used instead of a standard function syntax except it cannot be used for a constructor(with 'new') and when using 'this' with Arrow functions it effectively has lexical scope and is readonly. Simple example of Arrow Function:  
 
 ```javascript
