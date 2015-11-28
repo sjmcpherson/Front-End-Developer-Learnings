@@ -751,14 +751,14 @@ if(window.Notification && Notification.permission !== "denied") {
 - Vibration - Trigger vibration in mobile devices
 - Battery - Detect if the battery is low on the device
 
-<h2>ECMAScript 6</h2>
+<h2>ECMAScript 6(2015)</h2>
 - This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Can be compiled to EcmaScript 5 via Google Traceur or BabelJS.
 
 
 
 
-<h4>ES6 Variables</h4>
+<h3>ES6 Variables</h3>
 - <strong>Const</strong> - Varible declaration for Constants acts in the same way as "var" but is Read-Only. IE11+, Safari 6+
 - <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+
 
@@ -808,6 +808,38 @@ let l = 'let'; //Confirms hoisting still occurs with Let
 }());
 ```
 
+<h4>Destructuring</h4>
+- Assignment of variables from arrays or objects using syntax that mirrors their construction.
+
+<h5>Array Destructuring</h5>
+
+```javascript
+var array = [1, 2]
+var [first, second] = array // first equals 1, second equals 2
+
+var a = 1, b = 2
+[a, b] = [b, a] //Switches values
+
+//return multiple values
+function f(){
+	return [1,2]
+}
+[a, b] = f(); //a equals 1, b equals 2
+
+```
+
+<h5>Object Destructuring</h5>
+
+```javascript
+var foo = {bar:1, baz:2};
+var {baz} = foo; //baz equals 2 
+
+var a = 1;
+var foo = {a,b:2}
+```
+
+
+
 <h4>ES6 Functions</h4>
 - <strong>Arrows</strong> - Using the following '=>' characters to provide a shortend version of a standard function that returns an expression i.e. result = arguments => expression. Arrow functions can be used instead of a standard function syntax except it cannot be used for a constructor(with 'new') and when using 'this' with Arrow functions it effectively has lexical scope and is readonly. Simple example of Arrow Function:  
 
@@ -832,10 +864,6 @@ for (let i of arr) { //for of iterates over property values
    console.log(i); //logs "3", "5", "7"
 }
 ```
-
-
- - 
-
 
 <h4>ES6 APIs</h4>
 - <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
