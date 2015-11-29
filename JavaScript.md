@@ -863,9 +863,8 @@ var result = function(par1,par2){
 
 <h4>ES6 Classes</h4>
 
-- A clean simple declarative syntax for defining object prototypes and inheritance chains.
+- A clean simple declarative syntax for defining object prototypes and inheritance chains. The bodies of class declarations and class expressions are executed in strict mode.
 - <strong>Constructor Method</strong> - For creating and initializing an object created within a class, can only be a single contructor in a class.
-- <strong>Speak Methods</strong>
 - <strong>Static Methods<strong>
 - <strong>Sub classing with extends</strong>
 
