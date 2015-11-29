@@ -849,6 +849,8 @@ ${ageInMonths / 12} years old`;
 
 
 <h3>ES6 Functions</h3>
+
+<h4>Arrow Functions</h4>
 - <strong>Arrows</strong> - Using the following '=>' characters to provide a shortend version of a standard function that returns an expression i.e. result = arguments => expression. Arrow functions can be used instead of a standard function syntax except it cannot be used for a constructor(with 'new') and when using 'this' with Arrow functions it effectively has lexical scope and is readonly. Simple example of Arrow Function:  
 
 ```javascript
@@ -859,8 +861,16 @@ var result = function(par1,par2){
 }
 ```
 
-- <strong>Classes</strong> - A clean simple declarative syntax for defining object prototypes and inheritance chains.
+<h4>ES6 Classes</h4>
 
+- A clean simple declarative syntax for defining object prototypes and inheritance chains.
+- <strong>Constructor Method</strong> - For creating and initializing an object created within a class, can only be a single contructor in a class.
+- <strong>Speak Methods</strong>
+- <strong>Static Methods<strong>
+- <strong>Sub classing with extends</strong>
+
+
+<h4>Generators</h4>
 - <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 - <strong>For In/Of Loop</strong>
 ```javascript
@@ -873,6 +883,7 @@ for (let i of arr) { //for of iterates over property values
    console.log(i); //logs "3", "5", "7"
 }
 ```
+
 
 <h4>ES6 APIs</h4>
 - <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
