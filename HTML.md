@@ -210,12 +210,12 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 
 <h4>HTML Imports</h4>
  - Allows importing of external html file through an http request that can then be rendered to the page.
- - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: <link rel="import" href="import-file.html">
+ - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: '&lt;link rel="import" href="import-file.html"&gt;'
  - Note: HTML imports adhere to the same-origin policy for security reasons. Therefore, if you wish to import an HTML document from an external domain, you need to make sure you have CORS set up correctly.
  - Limited support in Chrome & Opera Only.
  
 <h4>Shadow DOM</h4>
-- Already the browser uses Shadow DOM simplify complex elements like <input type="date">, <select>, <video> etc
+- Already the browser uses Shadow DOM simplify complex elements like '&lt;input type="date"&gt;', '&lt;select&gt;', '&lt;video&gt;' etc
 - Style & Script encapusation inside Shadow DOM
 
 
