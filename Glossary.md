@@ -158,6 +158,7 @@ Will be converted to:
  - <strong>Test-driven development (TDD)</strong> - Is a software development process, where a test is created to perform a function then the code is developed to make that test valid.
  - <strong>Three Tier Architecture</strong> - Consists of the Presentation layer or Front End, the Middle tier or Business Logic and the Data tier being where the data is stored.
  - <strong>Two Way Data Binding</strong> - A feature of Silverlight & many MV* JS frameworks where changes by the user in the DOM are reflected in the JS model & changes to the model update the DOM seemlessly.
+ - <strong>TypeScript</strong> - Is a programming language built ontop of JS adding support for Types and Annotations that transcompiles to JS.
 
 ###U
  - <strong>Unit Testing</strong> - Is a testing method where seperate pieces of source code are created to perform tasks which determine whether module of a program produce the desired outcome.
