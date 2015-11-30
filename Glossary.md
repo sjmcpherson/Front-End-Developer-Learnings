@@ -20,6 +20,7 @@
  - <strong>Closure</strong> - A term used when you nest functions, as inner functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
  - <strong>Concatenation</strong> - The practise of joining two variables together, usually a string or array.
  - <strong>CORS (Cross-Origin Resource Sharing</strong> - CORS defines a way in which a server can authenticate a cross-origin(cross-domain) request from a browser. A CORS compatible browser will send a request with its domain as the value of the 'Origin' in the HTTP header, the server could then compare that domain with a list of allowed domains and if found return that domain as value of 'Access-Control-Allow-Origin' in the response, a wilcard value can be set to allow all domains "Access-Control-Allow-Origin: *". In some cases a browser will perform a preflight request to determine what Methods they can have access to i.e the response could contain 'Access-Control-Allow-Methods: PUT, DELETE'
+ - <strong>Concurrency</strong> - A property of computer systems inwhich multiple computations are executed simultaneously.
  - <strong>Continuous Delivery (CD)</strong> -  A design practise to automate and improve the process of software delivery.
  - <strong>CRUD</strong> - Create, Read, Update, Delete (Also BREAD Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
 
@@ -108,6 +109,7 @@ Will be converted to:
  - <strong>MVW</strong> - stands for Model View Whatever termed to avoid developers arguing over which category MV* Frameworks fall over.
 
 ###N
+ - <strong>Nginx(pronounced "engine x")</strong> - is a web server and/or reverse proxy server that with a strong focus on high concurrency, performance and low memory usage. Nginx is often used as a proxy server in front of Apache to improve speed for fetching static files.
  - <strong>Node</strong> - or NodeJS is a runtime enviroment for creating server-side JavaScript applications
  - <strong>Normalisation</strong> - Is the process of structuring data in a Relational database so data is less redundant by group data into smaller tables that are linked together by relationships
  - <strong>NPM (Node Package Manager)</strong> - is the default package manager from Node.js and handles download & installation of Node modules
