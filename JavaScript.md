@@ -736,8 +736,8 @@ if(window.Notification && Notification.permission !== "denied") {
 - Vibration - Trigger vibration in mobile devices
 - Battery - Detect if the battery is low on the device
 
-<h2>ECMAScript 6(2015)</h2>
-- This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
+<h2>ECMAScript 6 (ES2015)</h2>
+- This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6 and more recently called ES2015. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Can be compiled to EcmaScript 5 via Google Traceur or BabelJS.
 
 
