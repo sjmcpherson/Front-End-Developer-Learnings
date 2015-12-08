@@ -511,11 +511,14 @@ window.onload = function(){}
 window.addEventListener('load', function(){})//IE9+
 ```
 
-- <strong>DOMContentLoaded Event</strong> - Triggers when the HTML Document has been loaded & parsed, without waiting for CSS/images/JS/iframes etc to finish loading 
+- <strong>DOMContentLoaded Event</strong> - Triggers when the HTML Document has been loaded & parsed, without waiting for CSS/images/JS/iframes etc to finish loading. jQUery's 'ready' function defaults to this event.
 
 ```javascript
 document.addEventListener("DOMContentLoaded", function(){})//IE9+
 ```
+
+<h3>Asyncronous Script Loading</h3>
+- <strong>Window Load/Onload Event</strong>
 
 <h2>Prototypal Inheritance</h2>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
