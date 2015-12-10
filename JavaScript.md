@@ -421,8 +421,24 @@ div.classList.contains("foo"); //Returns true or false
 ```
 
 <h3>The NodeList Object</h3>
-- What is a NodeList Object - it is a read-only collection of order Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
-- Converting a NodeList to an Array - var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div"));
+- A NodeList Object it is a read-only collection of ordered Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
+
+<h4>Iterating over a NodeList Object</h4>
+```JavaScript
+var myNodeList = document.querySelectorAll( 'input[type=checkbox]' );
+for (var i = 0; i < myNodeList.length; ++i) {
+  var item = myNodeList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
+}
+```
+
+<h4>Converting a NodeList to an Array</h4>
+- Sometimes you will need to convert to an Array to use Array methods;
+
+```JavaScript
+var NodeList = document.querySelectorAll('div'); // returns a NodeList
+var ArrayVar = Array.prototype.slice.call(NodeList); // converts NodeList to Array
+```
+
 
 <h3>Manipulating the DOM</h3>
 - DOM manipulations can affect performance so its important to limit the amount of changes to the DOM i.e. in the case of creating multiple Nodes in a Loop
