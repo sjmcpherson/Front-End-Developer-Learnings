@@ -883,9 +883,41 @@ var result = function(par1,par2){
 
 <h4>ES6 Classes</h4>
 
-- A clean simple declarative syntax for defining object prototypes and inheritance chains. The bodies of class declarations and class expressions are executed in strict mode.
+- A clean simple declarative syntax for defining object prototypes and inheritance chains. The bodies of class declarations and class expressions are executed in strict mode. Class declarations are not hoisted.
+
+```javascript
+    class Foo {
+        constructor() {
+        }
+    }
+    let foo = new Foo();    
+```
+
 - <strong>Constructor Method</strong> - For creating and initializing an object created within a class, can only be a single contructor in a class.
-- <strong>Static Methods<strong>
+
+```javascript
+    class Foo {
+        constructor(prop) {
+            this.prop = prop;
+        }
+    }
+    let foo = new Foo(123);    
+```
+
+- <strong>Static Methods<strong> - Static methods have no access to the fields, properties, and methods defined on an instance of the class using 'this'. However, static methods are often useful and can play the roles of factory methods, conversion methods, or general class helper methods.
+
+```javascript
+    class Foo {
+        constructor(prop) {
+            this.prop = prop;
+        }
+        static staticMethod() {
+            return 'classy';
+        }
+    }
+    let foo = new Foo(123);
+```
+
 - <strong>Sub classing with extends</strong>
 
 
