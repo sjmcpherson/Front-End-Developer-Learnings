@@ -75,7 +75,7 @@
 ###I
  - <strong>IDE</strong> - Integrated Development Enviroment is a software application that provides computer programmers with a facility to edit, debug and/or compile source code.
  - <strong>Immediately-Invoked Function Expression (IIFE)</strong> - Also known as Self-executing Anonymous Function is a JavaScript design pattern that uses JS Function Scoping to avoid Variable Hoisting poluting the global scope and calls itself immediately.
- - <strong>Immutable</strong> - 
+ - <strong>Immutable</strong> - Refers to a value or an object that cannot be changed once created.
  - <strong>Interpolation (String/Variable)</strong> - Is a form of template processing where placeholders in string are replaced by their corresponding values.
  - <strong>Isomorphic App</strong> - An application the can run both client-side and server-side.
 
