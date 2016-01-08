@@ -763,9 +763,7 @@ if(window.Notification && Notification.permission !== "denied") {
 
 
 <h3>ES6 Variables</h3>
-- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+
-- <strong>Const</strong> - Varible declaration for Constants acts in the same way as "let" but is Read-Only. IE11+, Safari 6+
-
+- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+ 
 
 ```javascript
 var l = 5;
@@ -777,6 +775,16 @@ if (l === 5) {
   console.log(l + v); // 4 + 1
 } 
 console.log(l + v); // 5 + 1
+```
+
+- <strong>Const</strong> - Varible declaration for Constants acts in the same way as "let" but is Read-Only. IE11+, Safari 6+. Note that when defining an object with 'const' the properties of the object still remain mutable i.e
+
+```javascript
+const obj = {
+  foo: "123";
+}
+obj = {}; //Won't change anything;
+obj.foo = "abc"; //Changes obj.foo
 ```
 
 - <strong>Default Parameter Values</strong> - Will allow you to set default values for parameters that are undefined. i.e.
