@@ -402,15 +402,15 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - <strong>element.getElementsByTagName(tag)</strong> - returns a NodeList matching the tag name.  (full support)
 - <strong>element.querySelector(CSS selectors)</strong> - 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element. Pseudo selectors are NOT supported. IE8+
 - <strong>element.querySelectorAll(CSS selectors)</strong> - returns a NodeList(not an array) of all elements selected. Pseudo selectors are supported. i.e. var el = document.body.querySelector("style[type='text/css]'], style:not([type])"); (IE8+ for CSS2 selectors, IE9+ for CSS3 selectors)
-- <strong>element.getElementsByClassName(class)</strong> - IE9+ i.e. document.getElementsByClassName('red test') = Get all elements that have both the 'red' and 'test' classes.
+- <strong>element.getElementsByClassName(class)</strong> - returns a HTMLCollection of elements with a matching class or classes i.e. document.getElementsByClassName('red test') //Returns all elements that have both the 'red' and 'test' classes. IE9+
 - <strong>Chaining Selectors</strong> - Just like with jQuery you can chain selectors i.e. document.getElementById('main').getElementsByClassName('test') although its better practise to cache elements for reuse i.e. var d = document;var main = d.getElementById('main');var testList = main.getElementsByClassName('test');
 - <strong>element.children</strong> - gets a HTMLCollection of direct children. (IE9+) IE 6-8 support it, but include comment nodes.
-- <strong>element.childNodes</strong> - gets a NodeList of direct children. Note: Includes text nodes. (full support)
+- <strong>element.childNodes</strong> - returns a NodeList of direct children. Note: Includes text nodes. (full support)
 - <strong>element.nextElementSibling/element.previousElementSibling</strong> - gets the next/previous element in the parent elements child HTMLColl. (IE10+)
-- <strong>node.nextSibling/node.previousSibling</strong> - gets the next/previous node in the parent elements child node list. Note: Includes text nodes. (full support) 
-- <strong>element.firstElementChild/element.lastElementChild</strong> - gets the first/last child of the element  (IE9+)
-- - <strong>node.firstChild/node.lastChild</strong> - gets the first/last child node of the element. Includes text nodes. (full support) 
-- <strong>element.parentElement</strong> - gets the parent element. (full support)
+- <strong>node.nextSibling/node.previousSibling</strong> - returns the next/previous node in the parent elements child node list. Note: Includes text nodes. (full support) 
+- <strong>element.firstElementChild/element.lastElementChild</strong> - returns the first/last child of the element  (IE9+)
+- - <strong>node.firstChild/node.lastChild</strong> - returns the first/last child node of the element. Includes text nodes. (full support) 
+- <strong>element.parentElement</strong> - returns the parent element. (full support)
 - <strong>ClassList API</strong> - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains. IE10+
 
 ```JavaScript
