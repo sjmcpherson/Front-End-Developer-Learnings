@@ -166,6 +166,8 @@ Will be converted to:
  - <strong>User Experience(UX)</strong> - User Experience is a broader which is inclusive yet distinct from the User Interface as it encompasses the way a person feels about using a product, system or service.
  - <strong>User Interface(UI)</strong> - The User Interface are the components which users interact with.
 
+###V
+ - <strong>VPN</strong> - Allows users to connect to a private network via the internet 
 
 ###W
  - <strong>Web Socket</strong> - Is a protocol for realtime two-way communication between a client & server over a standard TCP connection.
