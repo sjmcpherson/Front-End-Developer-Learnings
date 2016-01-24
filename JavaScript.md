@@ -420,6 +420,15 @@ div.classList.toggle(class);// if visible is set remove it, otherwise add it
 div.classList.contains("foo"); //Returns true or false
 ```
 
+<h3>Incrementation</h3>
+
+```JavaScript
+var x = 1;
+var y = x++; //returns x, then increments it. y = 1, x = 2
+var z = ++x; //increments x, then returns it. z = 3, x = 3
+var z = x =+ 1; //equivalent to ++x;
+```
+
 <h3>The NodeList Object</h3>
 - A NodeList Object it is a read-only collection of ordered Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
 
