@@ -134,7 +134,7 @@ JavaScript has Implied Global Variables which means if a variable is initialized
   var x, y, z=3;
 ```
 #####Function Level Scoping
-- JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accesseble outside that block but not outside its function. 
+- JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accessable outside that block but not outside its function.
 
 #####Variable Hoisting
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
