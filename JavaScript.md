@@ -953,6 +953,11 @@ for (let i of arr) { //for of iterates over property values
 ```
 
 
+<h3>ES6 Modules</h3>
+
+- Modules are 
+
+
 <h4>ES6 APIs</h4>
 - <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
 
