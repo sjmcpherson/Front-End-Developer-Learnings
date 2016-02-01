@@ -105,7 +105,7 @@ function testFunc(){
 }
 ```
 
-- Add an extra (); at the end “(function () {})();“ makes it a Self Executing(Imediately Invoking) Anonymous Function which would run imediately
+- Add an extra (); at the end “(function () {})();“ or “(function () {}());“ makes it a Self Executing(Immediately Invoking) Anonymous Function which would run imediately
 - When using optional parameters place into an options hash. function circle(x,y,radius,options) { options = options || {};} //if options parameter is undefined set options to an empt object
 - Functions inherit the object prototype therefore methods and properties can be assigned to them.
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
