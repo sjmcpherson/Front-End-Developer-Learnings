@@ -422,6 +422,9 @@ div.classList.contains("foo"); //Returns true or false
 
 <h3>Incrementation</h3>
 
+- Pre-Incrementation (++x) - Increments then returns the incremented value.
+- Post-Incrementation (x++) - Returns the value, then increaments.
+
 ```JavaScript
 var x = 1;
 var y = x++; //returns x, then increments it. y = 1, x = 2
@@ -581,6 +584,7 @@ var mySingleton = (function () {
 <h3>the Constructor Pattern</h3>
 - Object constructors are used to create specific types of objects
 - The 'new' keyword signify's the use of a constructor instance
+- For conventions name Constructors with Initial Caps i.e. var person = new Person();
 - 'this' keyword can be used to refer to the object created
 - 'instanceof' can be used to determine if the variable is an instance of a constructor i.e. var a = new Person(); if(a instanceof Person){//Will run}
 
