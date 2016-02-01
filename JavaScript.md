@@ -315,6 +315,7 @@ for (var p:* in obj)
 
 <h3>The Array Object</h3>
 - Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
+- 'typeof [];' returns 'object' so use [].isArray(); to check for an array i.e. if(myArray.isArray()){}
 - Array has a length property which is the value 1 higher than the array's subscript.
 - Use 'value instanceof Array' or 'value.contructor === Array' to determine if Array
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
@@ -333,9 +334,6 @@ for (var p:* in obj)
 var myArray = ['a','b','c']
 delete myArray[1]; // ['a',undefined,'c']
 myArray.splice(1,1); // ['a','c']
-
-
-
 ```
 
 - array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
