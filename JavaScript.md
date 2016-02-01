@@ -34,9 +34,9 @@ a === true //false, using Strict Equation values must be the same Type
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
-- Has problems mapping to common arithmetic I.e var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
-- isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number. 
-- parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion.
+- Has problems mapping to common arithmetic i.e Decimal fractions are approximate var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
+- isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number or in the case of dividing O. isNaN() is an important method as NaN === NaN is false and NaN !== NaN is true.
+- parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion. Although parseInt("08"); // equals 0. So use the radix '10' i.e. parseInt("08",10); // equals 8. 
 - Modulus(division remainder) Use % to determine if a number is divisible by another, it gives the remander value i.e:
 
 ```javascript
@@ -46,7 +46,8 @@ if(randomNum % 7 == 0)
 
 <h4>Strings</h4>
 - A string can contain an unlimited amount of characters and has methods attached to it.
-- Strings can concatenated with + "Hello " + "world!"; // = "Hello world!" Although issues with Type Coersion can occur
+- Strings can concatenated with + "Hello " + "world!"; // = "Hello world!" Although issues with Type Coersion can occur.
+- Strings have a property called length which will return the number of characters.
 - string.concat - To avoid Type Coersion concat with string1.concat(string1)
 - string.charAt
 - string.slice
@@ -60,7 +61,7 @@ if(randomNum % 7 == 0)
 
 <h4>Objects</h4>
 - Objects are an unordered list of name/value pairs. Names are strings and values can be any type including other objects
-- Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}';
+- Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}'; Object literals influenced the development of JSON.
 - For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
 - In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
@@ -314,7 +315,7 @@ for (var p:* in obj)
 
 <h3>The Array Object</h3>
 - Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
-- Array length is the value 1 higher than the array's subscript.
+- Array has a length property which is the value 1 higher than the array's subscript.
 - Use 'value instanceof Array' or 'value.contructor === Array' to determine if Array
 - array1.concat(array2,array3,...,arrayX) - Joins two or more arrays, and returns a copy of the joined arrays
 - array.indexOf(item,start) - IE9+ Search the array for an element and returns its position
