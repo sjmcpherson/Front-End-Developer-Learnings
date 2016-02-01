@@ -20,7 +20,7 @@
 <h4>Boolean</h4>
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
-- Truthy & Falsy variables can be toggled by equating a single negation of itself i.e true = !true //Will equal false
+- Truthy & Falsy variables can be toggled by equating a single negation(Logical Not) of itself i.e true = !true //Will equal false
 - Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used i.e.
 
 ```javascript
@@ -36,11 +36,12 @@ a === true //false, using Strict Equation values must be the same Type
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
 - Has problems mapping to common arithmetic i.e Decimal fractions are approximate var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number or in the case of dividing O. isNaN() is an important method as NaN === NaN is false and NaN !== NaN is true.
-- parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion. Although parseInt("08"); // equals 0. So use the radix '10' i.e. parseInt("08",10); // equals 8. 
+- parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion. Although parseInt("08"); // equals 0. So use the radix '10' i.e. parseInt("08",10); // equals 8.
+- 
 - Modulus(division remainder) Use % to determine if a number is divisible by another, it gives the remander value i.e:
 
 ```javascript
-if(randomNum % 7 == 0)
+if(randomNum % 7 === 0)
 // Do Something
 ```
 
@@ -163,8 +164,8 @@ false !== 0 //true
 
 <h3>Operators</h3>
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
-- '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
-- '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
+- The Guard Operator(Logical And) '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
+- The Default Operator(Logical Or) '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
 
 ```javascript
   var inputVal = input && "";
