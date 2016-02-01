@@ -114,10 +114,11 @@ function testFunc(){
 - function.call vs function.apply - .apply and .call do the same thing, but .apply uses an array containing arguments for the target method as the second parameter.
 
 
-####Primative Values
+###Primative Values
 - The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using String object methods.
 
 ###Variables
+
 #####Dynamic Typed
 - JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
 
