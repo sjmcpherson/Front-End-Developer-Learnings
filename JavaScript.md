@@ -573,10 +573,17 @@ var closureFunc = (function(){
 alert(closureFunc(3));
 ```
 
+<h2>PseudoClassical Inheritance</h2>
+
+
 <h2>Prototypal Inheritance</h2>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
 
+```javascript
+
+
+```
 
 <h2>Design Patterns</h2>
 
