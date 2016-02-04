@@ -559,38 +559,26 @@ document.addEventListener("DOMContentLoaded", function(){})//IE9+
 <h3>Asyncronous Script Loading</h3>
 - <strong>Window Load/Onload Event</strong>
 
+<h2>Closure</h2>
+- The outer function initializes before the inner function and has a scope that the inner function has access to it.
+
+```javascript
+var closureFunc = (function(){
+	var myArray = ['zero', 'one', 'two'];
+	
+	return function(n){
+		return myArray[n];
+	}
+}());
+alert(closureFunc(3));
+```
+
 <h2>Prototypal Inheritance</h2>
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
 
 
 <h2>Design Patterns</h2>
-
-<h3>Singleton</h3>
-
-- A pattern for a class which initializes a single object over the lifetime of a program.
-
-```javascript
-//Addy Osmani's example which expands on the Module Pattern
-var mySingleton = (function () {
-  var instance; // Instance stores a reference to the Singleton
-  function init() {    // Private methods and variables
-    var privateVariable = "Im also private";
-    function privateMethod(){console.log( "I am private" );}
-    return {      // Public methods and variables
-      publicMethod: function () {console.log( "The public can see me!" );},
-      publicProperty: "I am also public"
-    };
-  };
-  return {
-    // Get the Singleton instance if one exists or create one if it doesn't
-    getInstance: function () {
-      if ( !instance ){instance = init();}
-      return instance;
-    }
-   };
-})();
-```
 
 <h3>the Constructor Pattern</h3>
 - Object constructors are used to create specific types of objects
@@ -635,6 +623,32 @@ var testModule = (function () {
   };
 })();
 testModule.incrementCounter();
+```
+
+<h3>Singleton</h3>
+
+- A pattern for a class which initializes a single object over the lifetime of a program.
+
+```javascript
+//Addy Osmani's example which expands on the Module Pattern
+var mySingleton = (function () {
+  var instance; // Instance stores a reference to the Singleton
+  function init() {    // Private methods and variables
+    var privateVariable = "Im also private";
+    function privateMethod(){console.log( "I am private" );}
+    return {      // Public methods and variables
+      publicMethod: function () {console.log( "The public can see me!" );},
+      publicProperty: "I am also public"
+    };
+  };
+  return {
+    // Get the Singleton instance if one exists or create one if it doesn't
+    getInstance: function () {
+      if ( !instance ){instance = init();}
+      return instance;
+    }
+   };
+})();
 ```
 
 
