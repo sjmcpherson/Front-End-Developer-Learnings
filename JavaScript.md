@@ -296,7 +296,7 @@ for (var p:* in obj)
 <h4>Not Allowed in Strict Mode</h4>
 - Undeclared variables - i.e. "use strict"; x = 3; // Will error "ReferenceError: x is not defined"
 - Deleting a variable or function - i.e. "use strict"; delete arg; //Will error "Delete of an unqualified identifier in strict mode."
-- Defining a property twice - i.e "use strict"; var x = {p1:10, p1:20}; //Will error Duplicate data property in object literal not allowed in strict mode
+- Defining a property twice - i.e "use strict"; var x = {p1:10, p1:20}; //Will error "Duplicate data property in object literal not allowed in strict mode"
 - Duplicate parameters - i.e. "use strict";function x(p1, p1) {};
 - Writing to read-only or get-only property
 - Some specified variables names using reserved words. e.g arguments, eval
