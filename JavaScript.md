@@ -559,6 +559,13 @@ document.addEventListener("DOMContentLoaded", function(){})//IE9+
 <h3>Asyncronous Script Loading</h3>
 - <strong>Window Load/Onload Event</strong>
 
+
+<h2>Synchronous vs Asynchronous Script Loading</h2>
+- By default scripts are downloaded & executed synchronously, The HTML file will be parsed until it reaches a script file reference, at that point parsing will stop and a request will be made to fetch the file (if it’s external). The script will then be executed before parsing is resumed.
+- 'async' attribute - Downloads the file without stopping HTML parsing allowing other files to download but will pause the HTML parser to execute it when it has finished downloading.
+- 'defer' attribute - Also downloads the script asyncronously but defers execution till after HTML parsing is complete
+
+
 <h2>Closure</h2>
 - The outer function initializes before the inner function and has a scope that the inner function has access to it.
 
@@ -713,8 +720,6 @@ throw new Error("oops");
 ```
 
 
-<h2>Synchronous vs Asynchronous Script Loading</h2>
-- By default scripts are downloaded & executed synchronously
 
 <h2>Animating</h2>
 <h3>RequestAnimationFrame</h3>
