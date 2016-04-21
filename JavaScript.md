@@ -962,7 +962,7 @@ var result = function(par1,par2){
     let foo = new Foo(123);    
 ```
 
-- <strong>Static Methods<strong> - Static methods have no access to the fields, properties, and methods defined on an instance of the class using 'this'. However, static methods are often useful and can play the roles of factory methods, conversion methods, or general class helper methods.
+- <strong>Static Methods</strong> - Static methods have no access to the fields, properties, and methods defined on an instance of the class using 'this'. However, static methods are often useful and can play the roles of factory methods, conversion methods, or general class helper methods.
 
 ```javascript
     class Foo {
