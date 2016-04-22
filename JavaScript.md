@@ -10,7 +10,7 @@
 <h2>JavaScript Data Types</h2>
 - There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. Although a bug exists when using typeof with 'null' values as it will return 'object'.
 
-```javascript
+```javascriptparseInt 
 	var theType = typeof false //'theType' would equal 'boolean'.
 	var theType = typeof ""; //'theType' would equal 'string'.
 	var theType = typeof null; //'theType' would equal 'undefined' (which is a bug).
@@ -37,7 +37,6 @@ a === true //false, using Strict Equation values must be the same Type
 - Has problems mapping to common arithmetic i.e Decimal fractions are approximate var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number or in the case of dividing O. isNaN() is an important method as NaN === NaN is false and NaN !== NaN is true.
 - parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion. Although parseInt("08"); // equals 0. So use the radix '10' i.e. parseInt("08",10); // equals 8.
-- 
 - Modulus(division remainder) Use % to determine if a number is divisible by another, it gives the remander value i.e:
 
 ```javascript
