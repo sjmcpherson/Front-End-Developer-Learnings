@@ -19,18 +19,30 @@
 <h3>The Data Types</h3>
 <h4>Boolean</h4>
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
-- "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy"
-- Truthy & Falsy variables can be toggled by equating a single negation(Logical Not) of itself i.e true = !true //Will equal false
-- Truthy & Falsy values can be converted into real Booleans by using double negation '!!' i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used i.e.
+- "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy".
+- Single Negation - equtating a value using Single Negation(Logical Not) of itself will convert to real Boolean and will toggle its value  i.e truthyVar = !truthyVar //Will toggle 'truthyVar' from a Truthy value to false
+```javascript
+var bool = 0;
+bool = !bool; //'bool' will equal true.
+```
+
+- Double Negation - Using Double Negation will convert the Truthy/Falsy value to a real Boolean while keep its true or false state by essentially toggling the Boolean twice. i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used.
+
+```javascript
+var emptyString = "";
+!emptyString === true //true
+!!emptyString === true //false
+!!!emptyString === true //true
+```
+
+- Strict Equality - Truthy/Falsey Equation is often used to check that a variable is not undefined or a string is not empty before running further code using that variable often using "if(inputValue){}" shorthand for "if(inputValue==false){}" this can introduce bugs and the Strict Equality check is advised i.e.
 
 ```javascript
 var a = {}
-a == true //false, using Loose Equaition can cause inconsistant results, because of Type Coercion
+a == true //false, using Loose Equation can cause inconsistant results, because of Type Coercion
 a === true //false, using Strict Equation values must be the same Type
-!!a === true //true, correct check for truthy value
+!!a === true //true, Strict check for truthy value
 ```
-
-
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
