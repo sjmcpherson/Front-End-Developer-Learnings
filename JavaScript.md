@@ -13,7 +13,7 @@
 ```javascriptparseInt 
 	var theType = typeof false //'theType' would equal 'boolean'.
 	var theType = typeof ""; //'theType' would equal 'string'.
-	var theType = typeof null; //'theType' would equal 'undefined' (which is a bug).
+	var theType = typeof null; //'theType' would equal 'object' (which is a bug).
 ```
 
 <h3>The Data Types</h3>
