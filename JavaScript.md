@@ -20,7 +20,7 @@
 <h4>Boolean</h4>
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy".
-- Single Negation - equtating a value using Single Negation(Logical Not) of itself will convert to real Boolean and will toggle its value  i.e truthyVar = !truthyVar //Will toggle 'truthyVar' from a Truthy value to false
+- Single Negation - equating a value using Single Negation(Logical Not) of itself will convert to real Boolean and will toggle its value  i.e truthyVar = !truthyVar //Will toggle 'truthyVar' from a Truthy value to false
 ```javascript
 var bool = 0;
 bool = !bool; //'bool' will equal true.
@@ -35,7 +35,7 @@ var emptyString = "";
 !!!emptyString === true //true
 ```
 
-- Strict Equality - Truthy/Falsey Equation is often used to check that a variable is not undefined or a string is not empty before running further code using that variable often using "if(inputValue){}" shorthand for "if(inputValue==false){}" this can introduce bugs and the Strict Equality check is advised i.e.
+- Strict Equality - Truthy/Falsey Equation is often used to check that a variable is not undefined or a string is not empty before running further code, often using "if(inputValue){}" shorthand for "if(inputValue==false){}" this can introduce bugs and the Strict Equality check is advised i.e.
 
 ```javascript
 var a = {}
