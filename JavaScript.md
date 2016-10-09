@@ -20,13 +20,13 @@
 <h4>Boolean</h4>
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy".
-- Single Negation - equating a value using Single Negation(Logical Not) of itself will convert to real Boolean and will toggle its value  i.e truthyVar = !truthyVar //Will toggle 'truthyVar' from a Truthy value to false
+- Single Negation - equating a value using Single Negation(Logical Not) of itself will convert to a real Boolean and will toggle its value i.e truthyVar = !truthyVar //Will toggle 'truthyVar' from a Truthy value to false
 ```javascript
 var bool = 0;
 bool = !bool; //'bool' will equal true.
 ```
 
-- Double Negation - Using Double Negation will convert the Truthy/Falsy value to a real Boolean while keep its true or false state by essentially toggling the Boolean twice. i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used.
+- Double Negation - Using Double Negation will convert the Truthy/Falsy value to a real Boolean, while keep its true or false state, essentially by toggling the Boolean twice. i.e '!!0' Will equal false !!{} will equal true. This can be helpful when comparing truthy/falsy value as strict equality can be used.
 
 ```javascript
 var emptyString = "";
