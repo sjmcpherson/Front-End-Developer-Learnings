@@ -46,7 +46,7 @@ a === true //false, using Strict Equation values must be the same Type
 
 <h4>Numbers</h4>
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
-- Has problems mapping to common arithmetic i.e Decimal fractions are approximate var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
+- Has problems mapping to common arithmetic i.e Decimal fractions are approximate. var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number or in the case of dividing O. isNaN() is an important method as NaN === NaN is false and NaN !== NaN is true.
 - parseInt can also be used to parse a string into a number but in the form of an integer i.e. parseInt('20px') = 20 because of type coersion. Although parseInt("08"); // equals 0. So use the radix '10' i.e. parseInt("08",10); // equals 8.
 - Modulus(division remainder) Use % to determine if a number is divisible by another, it gives the remander value i.e:
