@@ -412,7 +412,9 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 ```
 
 <h2>Timers & Timeouts</h2>
-- setTimeout(function, delay in milliseconds);
+- setTimeout(function, delay in milliseconds, param, param, ...) - calls a function once after a specific delay. Parameters IE9+
+- setInterval(function, delay in milliseconds, param, param, ...) - calls a function continuously at specific intervals. Parameters IE9+
+
 
 <h2>Threading in JavaScript</h2>
 - JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. This single thread is shared with JS execution and browser rendering, as JS can alter how the browser renders we do not want Race conditions to occur. 
