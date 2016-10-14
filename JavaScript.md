@@ -418,7 +418,7 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 
 <h2>Threading in JavaScript</h2>
 - JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. This single thread is shared with JS execution and browser rendering, as JS can alter how the browser renders we do not want Race conditions to occur. 
-- Web Workers a new API (IE10+) look to add multi-threading by defining background scripts that can run concurrently from the main thread.
+- Service Workers a new API (IE10+) looking to add multi-threading by defining background scripts that can run concurrently from the main thread.
 
 <h2>JavaScript Selectors</h2>
 - <strong>element.getElementById(id)</strong> - (full support)
@@ -776,6 +776,7 @@ alert( "username = " + localStorage.getItem("username"));// Access some stored d
 
 
 <h2>Other JavaScript APIs</h2>
+
 - navigator.getUserMedia() - For capturing Audio/Video client side (limited browser capatibility)
 - Full Screen API with requestFullScreen
 - animationstart, animationiteration, animationend allow JavaScript control over CSS3 Animations. IE10+ & prefixes required for most browsers through:
@@ -789,7 +790,7 @@ function PrefixedEvent(element, type, callback) {
 }
 PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
-- Web Workers - An API for defining background scripts to run concurrently from the main thread handling user interactions. IE10+ See http://www.html5rocks.com/en/tutorials/workers/basics/
+
 - WebSockets - Allows the browser to open 2 way communication with the server this allows real time communication rather than relying on polling. (More Info  https://developer.mozilla.org/en-US/docs/WebSockets/Writing_WebSocket_client_applications)
 - Server Side Events(SSEs) - 
 - Page Visibility - Using document.hidden and/or document.visibilityState you can determine whether the page is in the active tab of the browser and whether the browser window is minified or not. IE10+
@@ -813,7 +814,7 @@ if(window.Notification && Notification.permission !== "denied") {
 	});
 }
 ```
-- Application Cache - Allows pages and resources to be cached for offline usage
+- Application Cache - Allows pages and resources to be cached for offline usage - Formally being depreciated to use Service Workers instead
 - Network Information - Can be used to determine what internet connection is being used I.e wifi, cellular etc
 - Vibration - Trigger vibration in mobile devices
 - Battery - Detect if the battery is low on the device
@@ -1013,7 +1014,25 @@ for (let i of arr) { //for of iterates over property values
 
 
 <h4>ES6 APIs</h4>
-- <strong>Fetch API</strong> - Provides a interface for network responses & redirects and as an improvement to XMLHttpRequest
+
+<h5>Services Workers</h5>
+An API for defining background scripts to run concurrently from the main thread handling user interactions. APIs such as synchronous XHR and localStorage can't be used inside a service. IE10+ See http://www.html5rocks.com/en/tutorials/workers/basics/
+
+<h5>Fetch API</h5>
+Interface for fetching resources across a network as an improvement to XMLHttpRequest, Read more at https://blogs.windows.com/msedgedev/2016/05/24/fetch-and-xhr-limitations/#zkj7xzYqdHeiVSwI.99
+
+```javascript
+	fetch(url).then(function(response) {
+		return response.json();
+	}).then(function(jsonData) {
+		console.log(jsonData);
+	}).catch(function() {
+		console.log("Houston, we've got a problem.");
+	});
+```
+
+<h5>Encrypted Media Extensions API</h5>
+Extends HTMLMediaElement providing APIs to control playback of encrypted content.
 
 <h2>ECMAScript 7</h2>
 - Object.Observe - Chrome only
