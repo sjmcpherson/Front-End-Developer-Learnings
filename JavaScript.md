@@ -350,7 +350,22 @@ myArray.splice(1,1); // ['a','c']
 
 - array.toString() - Converts an array to a string, and returns the result, values are seperated by a comma
 - array.unshift(item1,item2, ..., itemX) - IE9+	Adds new elements to the beginning of an array, and returns the new length
-- array.map(callback, object) - creates an array of the results of a provided function on each item in the array.
+- array.map(callback, object) - creates an array of the results of a provided function on each item in the array. IE9+
+- array.filter(callback)
+- array.every(callback) - Returns true or false depending on if ALL the elements in the array meet the condition provided by the function/callback
+- array.some(callback) - Returns true or false depending on if ANY of the elements in the array meet the condition provided by the function/callback
+
+```javascript
+	function isBigEnough(value) {
+	  return value >= 10;
+	}
+	var array = [12, 5, 8, 130];
+	var filtered = array.filter(isBigEnough); //returns [12,130]
+	var mapped = array.map(isBigEnough); //returns [true, false, false, true]
+	var isEvery = array.every(isBigEnough); //returns false
+	var isSome = array.some(isBigEnough); //returns true
+```
+
 - array.reduce()
 - Avoid using the 'for-in' loop to iterate through an array, as properties and extending Array.prototype will also be iterated. i.e
 - The correct way to clear an Array is arr.length = 0 not arr = [] as often used
