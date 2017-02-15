@@ -578,7 +578,7 @@ window.onload = function(){}
 window.addEventListener('load', function(){})//IE9+
 ```
 
-- <strong>DOMContentLoaded Event</strong> - Triggers when the HTML Document has been loaded & parsed, without waiting for CSS/images/JS/iframes etc to finish loading. jQUery's 'ready' function defaults to this event.
+- <strong>DOMContentLoaded Event</strong> - Triggers when the HTML Document has been loaded & parsed, without waiting for CSS/images/JS/iframes etc to finish loading. jQuery's 'ready' function defaults to this event.
 
 ```javascript
 document.addEventListener("DOMContentLoaded", function(){})//IE9+
