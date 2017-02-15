@@ -7,8 +7,8 @@
 - element, element - Targets both elements
 - element element - Targets children of the first element
 - element > element - targets direct children e.g ul > li{}
-- element ~ element - targets all p tags after a ul tag in DOM. e.g ul ~ p{}
-- element + element - targets adjacent p tags directly after h1 tags. e.g h1 + p{}
+- element ~ element - targets all adjacent & child elements after the first element. e.g ul ~ p{}
+- element + element - targets adjacent elements directly after the first element. e.g h1 + p{}
 
 ###Attribute Selectors
 - Targets an elements attributes, __All attribute selectors are IE7+__
