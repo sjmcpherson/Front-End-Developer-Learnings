@@ -786,8 +786,16 @@ simplePromise().then(function(result) {
 localStorage.setItem("username", "John");// Save data to the current local store also use localStorage.username = "John";
 alert( "username = " + localStorage.getItem("username"));// Access some stored data
 ```
+<h3>sessionStorage/localStorage & Private Browser Mode</h3>
+
+- Both iOS & MacOS Safari sets the storage Quota to 0 and will halt execution on the thread & return the error: "QuotaExceededError" or  when attempting to set both localStorage & sessionStorage values. This can be either silently handled by deleting 
+
+- Chrome and Opera return items set previous to private ("incognito") browsing, but once private browsing commences, treats localStorage like sessionStorage (only items set on the localStorage by that session will be returned) but like localStorage for other private windows and tabs
+
+- Firefox, like Chrome will not retrieve items set on locaStorage prior to a private session starting, but in private browsing treats localStorage like sessionStoroage for non private windows and tabs, but like localStorage for other private windows and tabs
 
 - <strong>Indexed Database (IndexedDB)</strong> -  A collection of object stores, with an asynchronous API. Indexes on stores can be created to improve search speed.
+
 
 
 <h2>Other JavaScript APIs</h2>
