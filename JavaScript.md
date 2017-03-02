@@ -780,7 +780,7 @@ simplePromise().then(function(result) {
 
 <h2>Client-side Data Storage</h2>
 
-- <strong>localStorage/sessionStorage</strong> - A single persistent object, storage limit at least 5MB per origin (domain/protocol). localStorge persists when browser closed, sessionStorage clears when window closed. IE8+. Note: All variables are converted to strings i.e. so the output of localStorage.setItem("bool", true); &  localStorage.setItem("num", 1); would be "true" & "1" respectively
+- <strong>localStorage/sessionStorage</strong> - A single persistent object, storage limit at least 5MB per origin (domain/protocol). localStorge persists when browser closed, sessionStorage clears when window closed isn't shared between tabs. IE8+. Note: All variables are converted to strings i.e. so the output of localStorage.setItem("bool", true); &  localStorage.setItem("num", 1); would be "true" & "1" respectively. Use storageType.clear() to empty storage.
 
 ```javascript
 localStorage.setItem("username", "John");// Save data to the current local store also use localStorage.username = "John";
@@ -788,7 +788,7 @@ alert( "username = " + localStorage.getItem("username"));// Access some stored d
 ```
 <h3>sessionStorage/localStorage & Private Browser Mode</h3>
 
-- Both iOS & MacOS Safari sets the storage Quota to 0 and will halt execution on the thread & return the error: "QuotaExceededError" or  when attempting to set both localStorage & sessionStorage values. This can be either silently handled by deleting 
+- Both iOS & MacOS Safari sets the storage Quota to 0 and will halt execution & return the error: "QuotaExceededError" or  when attempting to set both localStorage & sessionStorage values. This issue can be handled by overriding the setItem prototype.
 
 - Chrome and Opera return items set previous to private ("incognito") browsing, but once private browsing commences, treats localStorage like sessionStorage (only items set on the localStorage by that session will be returned) but like localStorage for other private windows and tabs
 
