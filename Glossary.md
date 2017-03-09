@@ -23,7 +23,7 @@
  - <strong>Concurrency</strong> - A property of computer systems in which multiple computations are executed simultaneously.
  - <strong>Continuous Delivery (CD)</strong> -  A design practise to automate and improve the process of software delivery.
  - <strong>CRUD</strong> - Create, Read, Update, Delete (Also BREAD Browse, Read, Edit, Add, Delete) The major functions that are implemented in relational database applications
-
+ - <strong>cURL</strong> - is a libary & command line tool for transfering data with URL syntax. See https://github.com/curl/curl for more info
 
 
 ###D
@@ -173,5 +173,5 @@ Will be converted to:
  - <strong>Web Socket</strong> - Is a protocol for realtime two-way communication between a client & server over a standard TCP connection.
  - <strong>WebRTC (Web Real-Time Commnunication)</strong> - Is an API definition which allows peer-to-peer data communication. Which gives supporting browsers the ability to facilitate Video/Audio chat & data transfer via a web application.
 
-###W
+###X
  - <strong>XSS/Cross-site Scripting</strong> - Is a security vunerability usually involving client-side script malicioulsy injected into a webpage by not properly escaping form field entry.
