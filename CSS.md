@@ -156,6 +156,15 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
 ####Flexbox Model
  - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
 
+- <strong>Flexbox Issues</strong> - In IE10-11 flex-basis doesn't account for box-sizing:border-box therefore overflows can occur. Theres are anumber of workarounds for this see https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+
+```CSS
+  div{
+  	flex:0 0 100%;
+  	padding:0 10px;//IE10-11 will cause overflow issues
+  	max-width:100%;//Potential IE10-11 workaround
+  }
+```
 
 ###CSS3 Animations & Transitions
  - Backgrounds can be animated with @Keyframes and CSS Animations:
