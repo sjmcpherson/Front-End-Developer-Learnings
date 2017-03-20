@@ -6,6 +6,7 @@
  - <strong>HTML4 vs HTML5</strong> - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
  
 <h2>The Viewport</h2>
+
  - The recommened viewport setting for responsive design '&lt;meta name="viewport" content="width=device-width"&gt;' this allows the user to zoom.
  - To disable zooming use '&lt;meta name="viewport" content="maximum-scale=1"&gt;' this would be recommend for a Mobile Web App.
  - Alternatively to disable a responsive design use '&lt;meta name="viewport" content="width=1200"&gt;' the width being the size of your outer container.
