@@ -1,4 +1,110 @@
-<h1>General JavaScript Coding Tips</h1>
+<h1>JavaScript</h1>
+
+<!-- START doctoc -->
+
+- [What is JavaScript](#what-is-javascript)
+- [JavaScript Execution](#javascript-execution)
+- [JavaScript Data Types](#javascript-data-types)
+  - [The Data Types](#the-data-types)
+    - [Boolean](#boolean)
+    - [Numbers](#numbers)
+    - [Strings](#strings)
+    - [Objects](#objects)
+    - [Undefined](#undefined)
+    - [Null](#null)
+    - [Functions](#functions)
+  - [Primative Values](#primative-values)
+  - [Variables](#variables)
+    - [Dynamic Typed](#dynamic-typed)
+    - [Variable Scope](#variable-scope)
+    - [Type Coercion](#type-coercion)
+  - [Operators](#operators)
+  - [Iteration/Loops](#iterationloops)
+    - [For Loop](#for-loop)
+    - [While Loop](#while-loop)
+    - [Do While Loop](#do-while-loop)
+    - [For Each...in Loop (Depreciated)](#for-eachin-loop-depreciated)
+    - [For In Loop (ES6)](#for-in-loop-es6)
+    - [For Of Loop (ES6)](#for-of-loop-es6)
+    - [Iteration VS Enumeration ](#iteration-vs-enumeration)
+  - [URI & Parameters](#uri--parameters)
+  - [Strict mode vs Non-strict mode](#strict-mode-vs-non-strict-mode)
+    - [Not Allowed in Strict Mode](#not-allowed-in-strict-mode)
+- [System Objects](#system-objects)
+  - [The Math Object](#the-math-object)
+  - [The Array Object](#the-array-object)
+  - [The Window Object](#the-window-object)
+  - [The Document Object](#the-document-object)
+  - [The History Object](#the-history-object)
+  - [The Image Object](#the-image-object)
+  - [The XMLHttpRequest(XHR) Object](#the-xmlhttprequestxhr-object)
+  - [The Date Object](#the-date-object)
+- [Timers & Timeouts](#timers--timeouts)
+- [Threading in JavaScript](#threading-in-javascript)
+- [JavaScript Selectors](#javascript-selectors)
+  - [Incrementation](#incrementation)
+  - [The NodeList Object](#the-nodelist-object)
+    - [Iterating over a NodeList Object](#iterating-over-a-nodelist-object)
+    - [Converting a NodeList to an Array](#converting-a-nodelist-to-an-array)
+  - [Manipulating the DOM](#manipulating-the-dom)
+- [JSON](#json)
+- [JavaScript Events](#javascript-events)
+  - [Event Delegation](#event-delegation)
+  - [Event Bubbling & Default Event Canceling](#event-bubbling--default-event-canceling)
+  - [Scroll Event](#scroll-event)
+  - [DOM/Page Load Events](#dompage-load-events)
+  - [Asyncronous Script Loading](#asyncronous-script-loading)
+- [Synchronous vs Asynchronous Script Loading](#synchronous-vs-asynchronous-script-loading)
+- [Closure](#closure)
+- [PseudoClassical Inheritance](#pseudoclassical-inheritance)
+- [Prototypal Inheritance](#prototypal-inheritance)
+- [Design Patterns](#design-patterns)
+  - [the Constructor Pattern](#the-constructor-pattern)
+  - [The Module Pattern](#the-module-pattern)
+  - [Singleton](#singleton)
+- [Debugging and Error Checking](#debugging-and-error-checking)
+  - [Syntax vs Runtime Errors](#syntax-vs-runtime-errors)
+  - [The Console](#the-console)
+  - [Try Catch Statement](#try-catch-statement)
+    - [Throw Statement](#throw-statement)
+- [Animating](#animating)
+  - [RequestAnimationFrame](#requestanimationframe)
+- [JavaScript Promises](#javascript-promises)
+- [Client-side Data Storage](#client-side-data-storage)
+  - [sessionStorage/localStorage & Private Browser Mode](#sessionstoragelocalstorage--private-browser-mode)
+- [Other JavaScript APIs](#other-javascript-apis)
+- [ECMAScript 6 (ES2015)](#ecmascript-6-es2015)
+  - [ES6 Variables](#es6-variables)
+    - [TDZ (Temporal Dead Zone)](#tdz-temporal-dead-zone)
+    - [Destructuring](#destructuring)
+    - [Template Strings](#template-strings)
+  - [ES6 Functions](#es6-functions)
+    - [Arrow Functions](#arrow-functions)
+    - [ES6 Classes](#es6-classes)
+    - [Generators](#generators)
+  - [ES6 Modules](#es6-modules)
+    - [ES6 APIs](#es6-apis)
+- [ECMAScript 7](#ecmascript-7)
+- [jQuery](#jquery)
+  - [The $ sign](#the--sign)
+  - [jQuery.noConflict()](#jquerynoconflict)
+  - [Getting/Setting the Version](#gettingsetting-the-version)
+  - [Document Ready](#document-ready)
+  - [Chaining](#chaining)
+  - [jQuery Events](#jquery-events)
+  - [jQuery Plugin](#jquery-plugin)
+  - [Helpful jQuery Snippets/Methods](#helpful-jquery-snippetsmethods)
+- [JavaScript Performance](#javascript-performance)
+- [JavaScript Frameworks, Library's, Languages and Scripts](#javascript-frameworks-librarys-languages-and-scripts)
+  - [JavaScript Frameworks](#javascript-frameworks)
+  - [JS Compilers/Languages](#js-compilerslanguages)
+  - [Library](#library)
+  - [Scripts](#scripts)
+- [Node & NPM](#node--npm)
+  - [Dependency Management](#dependency-management)
+- [Source Control](#source-control)
+
+<!-- END doctoc -->
 
 <h2>What is JavaScript</h2>
 
@@ -7,13 +113,13 @@
 
 <h2>JavaScript Execution</h2>
 
-- JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
+- JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time.
 
 <h2>JavaScript Data Types</h2>
 
 - There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. Although a bug exists when using typeof with 'null' values as it will return 'object'.
 
-```javascriptparseInt 
+```javascriptparseInt
 	var theType = typeof false //'theType' would equal 'boolean'.
 	var theType = typeof ""; //'theType' would equal 'string'.
 	var theType = typeof null; //'theType' would equal 'object' (which is a bug).
@@ -87,7 +193,7 @@ if(randomNum % 7 === 0)
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 - hasOwnProperty - This is used to determine whether a property is part of the prototype chain or not. This is useful in checking if a native prototype is supported and for use in a 'for in' loop to avoid errors from extending the native prototype
- 
+
 ```javascript
 // Poisoning Object.prototype
 Object.prototype.bar = 1;
@@ -103,14 +209,14 @@ foo.hasOwnProperty('goo'); // true
 <h4>Undefined</h4>
 
 - Undefined is the value of a variable which has been initialized but not assigned a type or a value. i.e. var a; 'typeof a' will equal undefined.
-- A value can also be set to undefinend i.e. a = undefined; 
+- A value can also be set to undefinend i.e. a = undefined;
 - Undefined is a 'Falsy' value
 
 <h4>Null</h4>
 
 - Null is a primative value that can be used by developers to set an object to no value.
 ```javascript
-alert(typeof null); //alerts object (A bug in ECMAScript it should alert '"null') 
+alert(typeof null); //alerts object (A bug in ECMAScript it should alert '"null')
 var a = null;
 alert(a); //alerts null
 alert(typeof a); //alerts object
@@ -134,7 +240,7 @@ function testFunc(){
 - Functions inherit the object prototype therefore methods and properties can be assigned to them.
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 - Initializing a variable in a Function will mean that it is only available to operations inside this function. Functions are the only place where a new scope is created.
-- Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/ 
+- Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/
 - function.call vs function.apply - .apply and .call do the same thing, but .apply uses an array containing arguments for the target method as the second parameter.
 
 
@@ -194,7 +300,7 @@ false !== 0 //true
 <h3>Operators</h3>
 
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
-- The Guard Operator(Logical And) '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
+- The Guard Operator(Logical And) '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first.
 - The Default Operator(Logical Or) '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
 
 ```javascript
@@ -205,7 +311,7 @@ false !== 0 //true
     inputVal = "";
   else
     inputVal = input
-  
+
   //Where as
   var inputVal = input || "";
   //Is the same as
@@ -237,7 +343,7 @@ var big = (x > 10);
 <h4>For Loop</h4>
 
 ```javascript
-for (var i=startvalue; i<=endvalue; incrementfactor){ 
+for (var i=startvalue; i<=endvalue; incrementfactor){
   //Your code here
 }
 ```
@@ -245,7 +351,7 @@ for (var i=startvalue; i<=endvalue; incrementfactor){
 <h4>While Loop</h4>
 
 ```javascript
-while(i<=endvalue){ 
+while(i<=endvalue){
 //Your code here
 }
 ```
@@ -254,7 +360,7 @@ while(i<=endvalue){
 <h4>Do While Loop</h4>
 
 ```javascript
-do{ 
+do{
 //Your code here
 } while (i < endvalue);
 ```
@@ -282,7 +388,7 @@ for each (variable in object) {
 ```javascript
 	for (var key in obj) {
 	  if (obj.hasOwnProperty(key)) {/iterate all the properties in an object & ignores properties attached via its prototype
-	    console.log(key + " -> " + obj[key]); 
+	    console.log(key + " -> " + obj[key]);
 	  }
 	}
 ```
@@ -308,8 +414,8 @@ arr.forEach(callback[, thisArg])
 
 <h4>Iteration VS Enumeration </h4>
 
-- iteration - the for statement 
-- enumeration - the for in statement enumeration order is not guaranteed 
+- iteration - the for statement
+- enumeration - the for in statement enumeration order is not guaranteed
 - enumeration order is not guaranteed see the follow example:
 ```javascript
 var obj:Object = {};
@@ -318,7 +424,7 @@ obj.city = "Copenhagen";
 obj.os = "Mac OS X 10.4";
 for (var p:* in obj)
     trace(p + ": " + obj[p]);
-//The above can print name, city, and os inA ANY order. 
+//The above can print name, city, and os inA ANY order.
 ```
 
 <h3>URI & Parameters</h3>
@@ -330,7 +436,7 @@ for (var p:* in obj)
 - To set Strict Mode "use strict" at the beginning of a script or for mixed mode it can be added at the function level.
 - Support is for IE9+
 - Strict mode helps development by causing potentially problematic syntax to error.
-- Note: Becareful with concatenation of scripts. If a script level Strict mode file is concatenated with a Non-strict mode file both will be forced into Strict mode. 
+- Note: Becareful with concatenation of scripts. If a script level Strict mode file is concatenated with a Non-strict mode file both will be forced into Strict mode.
 
 <h4>Not Allowed in Strict Mode</h4>
 
@@ -341,7 +447,7 @@ for (var p:* in obj)
 - Writing to read-only or get-only property
 - Some specified variables names using reserved words. e.g arguments, eval
 - In standard function calls, the 'this' value was the global object. In strict mode, it is now undefined.
-- Most usage of eval 
+- Most usage of eval
 
 <h2>System Objects</h2>
 
@@ -407,13 +513,13 @@ myArray.splice(1,1); // ['a','c']
 	Array.prototype.foo = "foo!";
 	var array = ['a', 'b', 'c'];
 	array.total = "10";
-	
+
 	for (var i in array) {
 	  alert(array[i]);
 	}
 	//The above code will alert, "a", "b", "c","foo!" and 10.
 ```
- 
+
 
 <h3>The Window Object</h3>
 
@@ -453,7 +559,7 @@ myArray.splice(1,1); // ['a','c']
 
 <h3>The Date Object</h3>
 
-- <code>var currentDateTime = new Date()</code> sets a date object equavalent to the current milliseconds since Epoch(1/1/1970 00:00:00). 
+- <code>var currentDateTime = new Date()</code> sets a date object equavalent to the current milliseconds since Epoch(1/1/1970 00:00:00).
 - new Date().getTime() is the equavalent to Date.now(), although Date.now() is IE9+.
 - Their are 4 ways of initiating a date value with the new Date() constructor.
 
@@ -472,13 +578,13 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 
 <h2>Threading in JavaScript</h2>
 
-- JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. This single thread is shared with JS execution and browser rendering, as JS can alter how the browser renders we do not want Race conditions to occur. 
+- JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. This single thread is shared with JS execution and browser rendering, as JS can alter how the browser renders we do not want Race conditions to occur.
 - Service Workers a new API (IE10+) looking to add multi-threading by defining background scripts that can run concurrently from the main thread.
 
 <h2>JavaScript Selectors</h2>
 
 - <strong>element.getElementById(id)</strong> - (full support)
-- <strong>element.getElementsByName(name)</strong> - returns a NodeList(not an array) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support) 
+- <strong>element.getElementsByName(name)</strong> - returns a NodeList(not an array) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support)
 - <strong>element.getElementsByTagName(tag)</strong> - returns a NodeList matching the tag name.  (full support)
 - <strong>element.querySelector(CSS selectors)</strong> - 'CSS selectors' is a string of one or more CSS selectors. Returns null if no matches are found; otherwise, it returns the first matching element. Pseudo selectors are NOT supported. IE8+
 - <strong>element.querySelectorAll(CSS selectors)</strong> - returns a NodeList(not an array) of all elements selected. Pseudo selectors are supported. i.e. var el = document.body.querySelector("style[type='text/css]'], style:not([type])"); (IE8+ for CSS2 selectors, IE9+ for CSS3 selectors)
@@ -487,9 +593,9 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 - <strong>element.children</strong> - gets a HTMLCollection of direct children. (IE9+) IE 6-8 support it, but include comment nodes.
 - <strong>element.childNodes</strong> - returns a NodeList of direct children. Note: Includes text nodes. (full support)
 - <strong>element.nextElementSibling/element.previousElementSibling</strong> - gets the next/previous element in the parent elements child HTMLColl. (IE10+)
-- <strong>node.nextSibling/node.previousSibling</strong> - returns the next/previous node in the parent elements child node list. Note: Includes text nodes. (full support) 
+- <strong>node.nextSibling/node.previousSibling</strong> - returns the next/previous node in the parent elements child node list. Note: Includes text nodes. (full support)
 - <strong>element.firstElementChild/element.lastElementChild</strong> - returns the first/last child of the element  (IE9+)
-- - <strong>node.firstChild/node.lastChild</strong> - returns the first/last child node of the element. Includes text nodes. (full support) 
+- - <strong>node.firstChild/node.lastChild</strong> - returns the first/last child node of the element. Includes text nodes. (full support)
 - <strong>element.parentElement</strong> - returns the parent element. (full support)
 - <strong>ClassList API</strong> - Allows access to an elements classes and contains 4 simple methods to help manipulate them and the 'length' property. Methods are: add, remove, toggle & contains. IE10+
 
@@ -549,7 +655,7 @@ for(i=0;i<100;i++){
 var container = document.createElement('div');
 for(i=0;i<100;i++){
 	var div = document.createElement('div');
-	container.appendChild(div); 
+	container.appendChild(div);
 }
 document.body.appendChild(container); //Better DOM is changed only once
 ```
@@ -561,7 +667,7 @@ var ul = document.getElementsByTagName('ul');
 var frag = document.createDocumentFragment();
 for(i=0;i<100;i++){
 	var li = document.createElement('li');
-	frag.appendChild(li); 
+	frag.appendChild(li);
 }
 ul[0].appendChild(frag);
 ```
@@ -578,18 +684,18 @@ ul[0].appendChild(frag);
 - <strong>Crossbrowser addEventListener</strong> - Use something like the below as a cross browser AddEventListener override
 
 ```javascript
-function AddEvent(html_element, event_name, event_function) 
+function AddEvent(html_element, event_name, event_function)
 {       
    if(html_element.attachEvent) //Internet Explorer
-      html_element.attachEvent("on" + event_name, function() {event_function.call(html_element);}); 
+      html_element.attachEvent("on" + event_name, function() {event_function.call(html_element);});
    else if(html_element.addEventListener) //Firefox & company
       html_element.addEventListener(event_name, event_function, false); //don't need the 'call' trick because in FF everything already works in the right way          
-} 
+}
 ```
 
 <h3>Event Delegation</h3>
 
-- <strong>Event Delegation</strong> - An method that instead of using multiple individual event listeners, places a single event listener on a parent (read more http://davidwalsh.name/event-delegate) e.g. 
+- <strong>Event Delegation</strong> - An method that instead of using multiple individual event listeners, places a single event listener on a parent (read more http://davidwalsh.name/event-delegate) e.g.
 
 ```javascript
 //jQuery 1.4.3+  
@@ -613,7 +719,7 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 
 <h3>Scroll Event</h3>
 - Can be used on any scrolling element with element.onscroll = function (event) {} but is general used on the Window object i.e. window.onscroll = function (event) {}
-- Unbind the scroll event by setting to null i.e. window.onscroll = null; 
+- Unbind the scroll event by setting to null i.e. window.onscroll = null;
 - Can also be used with addEventListener i.e. element.addEventListener("scroll", myFunction); although addEventListener is only IE9+
 - Performance heavy as trigged everytime you scroll one pixel (or one scroll unit, whatever that is on your OS)
 - window.onscroll event - Detects scrolling
@@ -652,7 +758,7 @@ document.addEventListener("DOMContentLoaded", function(){})//IE9+
 ```javascript
 var closureFunc = (function(){
 	var myArray = ['zero', 'one', 'two'];
-	
+
 	return function(n){
 		return myArray[n];
 	}
@@ -757,12 +863,12 @@ var mySingleton = (function () {
 
 <h3>The Console</h3>
 - console.log() - Used to output values to the console window.
-- console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);" 
+- console.table() - (Firefox, Chrome Only) Is used to output tabular data to the console window e.g JSON & Array Objects, to display only certain fields you can use "console.table(languages, ["name", "paradigm"]);"
 - console.count(label) - Outputs the number times the line of code has been invoked with an optional string as a label
 - console.assert(expression, message) - Will display the message if the expression in the first argument is false
 - console.time(message)/console.timeEnd(message) - Time the performance of code between .time() & .timeEnd() statements. i.e.
 
-```javascript 
+```javascript
 console.time("test");
 for(var i=0;i<100000;i++){
 	var j = Math.random()*1;
@@ -779,7 +885,7 @@ console.timeEnd("test"); //Will output "test: 8.75ms"
 - The 'catch' block is where the response to the exception is handled
 - The 'finally' block will be executed after the 'try' or 'catch' (in the case of an exception in the 'try') block.
 
-```javascript 
+```javascript
 try {
   try {
     throw new Error("oops");
@@ -798,9 +904,9 @@ catch (ex) {
 
 <h4>Throw Statement</h4>
 
-- The throw statement can be used to simulate an exception and therefore be used to test Try/Catch statements 
+- The throw statement can be used to simulate an exception and therefore be used to test Try/Catch statements
 
-```javascript 
+```javascript
 throw new Error("oops");
 ```
 
@@ -834,7 +940,7 @@ simplePromise().then(function(result) {
 });
 ```
 - Promise Libraries: Q, when, WinJS, RSVP.js
-- JavaScript ES6 Promise API (Latest browsers Only, IE12+ but Polyfils available) 
+- JavaScript ES6 Promise API (Latest browsers Only, IE12+ but Polyfils available)
 
 
 
@@ -875,7 +981,7 @@ PrefixedEvent(anim, "AnimationStart", AnimationListener);
 ```
 
 - WebSockets - Allows the browser to open 2 way communication with the server this allows real time communication rather than relying on polling. (More Info  https://developer.mozilla.org/en-US/docs/WebSockets/Writing_WebSocket_client_applications)
-- Server Side Events(SSEs) - 
+- Server Side Events(SSEs) -
 - Page Visibility - Using document.hidden and/or document.visibilityState you can determine whether the page is in the active tab of the browser and whether the browser window is minified or not. IE10+
 
 ```javascript
@@ -893,7 +999,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```javascript
 if(window.Notification && Notification.permission !== "denied") {
 	Notification.requestPermission(function(status) {  // status is "granted", if accepted by user
-		var n = new Notification('Title', { body: 'I am the body text!' }); 
+		var n = new Notification('Title', { body: 'I am the body text!' });
 	});
 }
 ```
@@ -912,7 +1018,7 @@ if(window.Notification && Notification.permission !== "denied") {
 
 <h3>ES6 Variables</h3>
 
-- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+ 
+- <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+
 
 ```javascript
 var l = 5;
@@ -922,7 +1028,7 @@ if (l === 5) {
   let v = 4; // The scope is inside the if-block and not hoisted to the top of the block
   var b = 1; // The scope is inside the function
   console.log(l + v); // 4 + 1
-} 
+}
 console.log(l + v); // 5 + 1
 ```
 
@@ -954,7 +1060,7 @@ var b = [3, 4, 5];
 a.push(...b); // => [0, 1, 2, 3, 4, 5]
 ```
 
-- <strong>Template Strings</strong> - 
+- <strong>Template Strings</strong> -
 
 
 <h4>TDZ (Temporal Dead Zone)</h4>
@@ -965,7 +1071,7 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 let l = 'let'; //Confirms hoisting still occurs with Let
 (function() {
     console.log(v); //Undefined
-    console.log(l); //Reference Error 
+    console.log(l); //Reference Error
     let v = 'var';
     let l = 'let';
 }());
@@ -996,7 +1102,7 @@ function f(){
 
 ```javascript
 var foo = {bar:1, baz:2};
-var {baz} = foo; //baz equals 2 
+var {baz} = foo; //baz equals 2
 
 var a = 1;
 var foo = {a} //Shorthand for var foo = {};foo.a = a;
@@ -1099,7 +1205,7 @@ for (let i of arr) { //for of iterates over property values
 
 <h3>ES6 Modules</h3>
 
-- Modules are 
+- Modules are
 
 
 <h4>ES6 APIs</h4>
@@ -1155,8 +1261,8 @@ jQuery.noConflict();
 
 <h3>Document Ready</h3>
 
-- Runs code in a after a "DOMContentLoaded" event is trigged and falls back to a window.onload event if unsuppported. 
-- Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
+- Runs code in a after a "DOMContentLoaded" event is trigged and falls back to a window.onload event if unsuppported.
+- Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded
 - “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
 
@@ -1234,7 +1340,7 @@ ajaxResult.items.forEach(function(item) {
 document.querySelector('ul').appendChild(frag);
 ```
 
-- Cache AJAX results to reduce unnessary requests. Use flags to determine whether to request new data and/or periodical clearing of the cache if data is updated externally. i.e. 
+- Cache AJAX results to reduce unnessary requests. Use flags to determine whether to request new data and/or periodical clearing of the cache if data is updated externally. i.e.
 - Where possible use CSS animations, browsers take advantage of hardware acceleration.
 - Debounce when using scroll & resize events, use setTimeout/setInterval to limit excessive triggering of event, this is called Debouncing.
 - Avoid using an anonymous function body to process your event code as in the first case below, as this code would be duplicated multiple times due to the for loop, use the 2nd case.
@@ -1243,7 +1349,7 @@ document.querySelector('ul').appendChild(frag);
 for(i=0 ; i<arrElements.length ; i++){
   arrElements[i].addEventListener("click", function(e){var field = i;}, false);
 }
- 
+
 for(i=0 ; i<arrElements.length ; i++){
   arrElements[i].addEventListener("click", function(e){clickEvent(i)}, false);
 }
@@ -1258,7 +1364,7 @@ for(i=0 ; i<arrElements.length ; i++){
 //Bad
 var total;
 for (var i = 0; i < values.length; i++){
-    myFramework.utils.addText(value[i]); 
+    myFramework.utils.addText(value[i]);
     total += value[i];
 }
 //Optimized    
@@ -1292,7 +1398,7 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 
 <h3>Library</h3>
 
-- Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
+- Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM.
 - Handlebars.js - Lightweight, library to build semantic templates i.e.
 - Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
@@ -1325,4 +1431,3 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 
 <h2>Source Control</h2>
 - echo "" > .hgignore
-

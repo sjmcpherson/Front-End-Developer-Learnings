@@ -1,38 +1,36 @@
 <h1>HTML</h1>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- START doctoc -->
 
-- [HTML](#html)
-  - [HTML Doctype](#html-doctype)
-  - [The Viewport](#the-viewport)
-    - [Compatibility Mode](#compatibility-mode)
-  - [Loading Resources](#loading-resources)
-  - [Images/Graphics](#imagesgraphics)
-    - [Image/Graphic Elements](#imagegraphic-elements)
-    - [Image/Graphic Formats](#imagegraphic-formats)
-    - [Image/Graphic Performance](#imagegraphic-performance)
-  - [HTML5 Forms](#html5-forms)
-      - [Form Inputs](#form-inputs)
-      - [Form Attributes](#form-attributes)
-  - [Other Elements/APIs](#other-elementsapis)
-  - [HTML Preprocessors](#html-preprocessors)
-  - [SEO Optimization](#seo-optimization)
-      - [Microdata](#microdata)
-  - [Web Components](#web-components)
-      - [Custom Elements](#custom-elements)
-      - [HTML Templates](#html-templates)
-      - [HTML Imports](#html-imports)
-      - [Shadow DOM](#shadow-dom)
-  - [HTML Performance](#html-performance)
+- [HTML Doctype](#html-doctype)
+- [The Viewport](#the-viewport)
+  - [Compatibility Mode](#compatibility-mode)
+- [Loading Resources](#loading-resources)
+- [Images/Graphics](#imagesgraphics)
+  - [Image/Graphic Elements](#imagegraphic-elements)
+  - [Image/Graphic Formats](#imagegraphic-formats)
+  - [Image/Graphic Performance](#imagegraphic-performance)
+- [HTML5 Forms](#html5-forms)
+    - [Form Inputs](#form-inputs)
+    - [Form Attributes](#form-attributes)
+- [Other Elements/APIs](#other-elementsapis)
+- [HTML Preprocessors](#html-preprocessors)
+- [SEO Optimization](#seo-optimization)
+    - [Microdata](#microdata)
+- [Web Components](#web-components)
+    - [Custom Elements](#custom-elements)
+    - [HTML Templates](#html-templates)
+    - [HTML Imports](#html-imports)
+    - [Shadow DOM](#shadow-dom)
+- [HTML Performance](#html-performance)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- END doctoc -->
 
 <h2>HTML Doctype</h2>
 
  - <strong>HTML5 Doctype &lt;!doctype html&gt;</strong> must be first on page before the <html> tag. IE will revert to Quirks Mode if not the case
  - <strong>HTML4 vs HTML5</strong> - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
- 
+
 <h2>The Viewport</h2>
 
  - The recommened viewport setting for responsive design '&lt;meta name="viewport" content="width=device-width"&gt;' this allows the user to zoom.
@@ -61,7 +59,7 @@
 
 ```HTML
 <figure>
-  <img src="mdn-logo-sm.png" alt="An awesome picture">	
+  <img src="mdn-logo-sm.png" alt="An awesome picture">
   <figcaption>Fig1. MDN Logo</figcaption>
 </figure>
 ```
@@ -96,7 +94,7 @@
 <h4>Form Inputs</h4>
 
 - <strong>New Input types</strong> - HTML5 introduces a number of new input types all have varing browser support. color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week. Modernizr can be used to determine support and if not fallback to input="text" or to avoid browser specific support.
-- <strong>type="search"</strong> - In Webkit browsers it adds a Clear field button and as a result Webkit browsers style it differently.  In Chrome hitting 'Esc' will clear field. 
+- <strong>type="search"</strong> - In Webkit browsers it adds a Clear field button and as a result Webkit browsers style it differently.  In Chrome hitting 'Esc' will clear field.
 - <strong>Meter</strong> &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
 - <strong>Datalist</strong> - &lt;datalist&gt; Databinding Autocomplete. IE10+, No Safari support. Example:
 ```HTML
@@ -130,7 +128,7 @@
  - &lt;video autoplay controls&gt;&lt;/video&gt;
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
-- Application Cache (AppCache) 
+- Application Cache (AppCache)
 
 - Dialog Element - Native popup/
 ```HTML
@@ -145,7 +143,7 @@
 - <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
 
 - <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
- 
+
 - <strong>HAML (HTML Abstraction Markup Language)</strong> is a lightweight Ruby based markup language. Example:
 
 ```HTML
@@ -177,7 +175,7 @@ Would Produce:
 
 ```HTML
 To read our View our website, click <a href="http://www.instantshift.com">here</a>. <!- Not terrible ->
-  
+
 Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine, Web Development">Smash Dynamic, web design & development specialists</a>. <!- Much better ->
 ```
 
@@ -198,19 +196,19 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 - Microdata is a way to label content as a specific type of information for Search Engines to process, for example reviews, personal information, products, locations & events.
 - Use the Microdata specification to add metadata to content i.e
 ```HTML
-<section itemscope itemtype="http://schema.org/Person"> 
-        Hello, my name is 
-        <span itemprop="name">John Doe</span>, 
-        I am a 
-        <span itemprop="jobTitle">graduate research assistant</span> 
-        at the 
-        <span itemprop="affiliation">University of Dreams</span>. 
-        My friends call me 
-        <span itemprop="additionalName">Johnny</span>. 
-        You can visit my homepage at 
-        <a href="http://www.JohnnyD.com" itemprop="url">www.JohnnyD.com</a>. 
+<section itemscope itemtype="http://schema.org/Person">
+        Hello, my name is
+        <span itemprop="name">John Doe</span>,
+        I am a
+        <span itemprop="jobTitle">graduate research assistant</span>
+        at the
+        <span itemprop="affiliation">University of Dreams</span>.
+        My friends call me
+        <span itemprop="additionalName">Johnny</span>.
+        You can visit my homepage at
+        <a href="http://www.JohnnyD.com" itemprop="url">www.JohnnyD.com</a>.
         <section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                I live at 
+                I live at
                 <span itemprop="streetAddress">1234 Peach Drive</span>,
                 <span itemprop="addressLocality">Warner Robins</span>,
                 <span itemprop="addressRegion">Georgia</span>.
@@ -232,7 +230,7 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 
 <h4>HTML Templates</h4>
 
- - Wrap any scripts, css or markup in a "template" tag to ignore parsing the contents until   i.e. images won't load, scripts won't run, elements will not render etc until specified via JavaScript i.e. 
+ - Wrap any scripts, css or markup in a "template" tag to ignore parsing the contents until   i.e. images won't load, scripts won't run, elements will not render etc until specified via JavaScript i.e.
 
 ```HTML
 <template id="template">
@@ -255,7 +253,7 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
  - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: '&lt;link rel="import" href="import-file.html"&gt;'
  - Note: HTML imports adhere to the same-origin policy for security reasons. Therefore, if you wish to import an HTML document from an external domain, you need to make sure you have CORS set up correctly.
  - Limited support in Chrome & Opera Only.
- 
+
 <h4>Shadow DOM</h4>
 
 - Already the browser uses Shadow DOM simplify complex elements like '&lt;input type="date"&gt;', '&lt;select&gt;', '&lt;video&gt;' etc
@@ -267,7 +265,7 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
  - Reduce unecessary html tags to improve performance
  - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. Because of the round-trip to the server extra HTTP requests add to the download time and most browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively and avoid potential browser repaints.
- - Use dispersed servers(CDN) for referenced files such as css, js & images. So resources 
+ - Use dispersed servers(CDN) for referenced files such as css, js & images. So resources
  - For common libraries using a popular CDN(such as //ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js) can enhance the chance the user has the file cached.
  - To give more control and to speed up loading time of Web Fonts use Web Font Loader, Fonts provided by Typekit, FontDeck and Google can be loaded through the script, for best performance embed the script directly after head tag and to remove FOUT add CSS for the class ".wf-loading" on the HTML element to hide text e.g. *.wf-loading{opacity(0)} the script then removes this class once fonts are loaded. https://developers.google.com/fonts/docs/webfont_loader
  - Place Google Analytics code at bottom even though Google recommends placing in the head, as pageviews will be tracked even if they leave the page before fully loaded also keeps the all the scripts together.

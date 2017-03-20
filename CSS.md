@@ -1,7 +1,6 @@
 # Cascading Style Sheets
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- START doctoc -->
 
 - [Cascading Style Sheets](#cascading-style-sheets)
   - [CSS Selectors](#css-selectors)
@@ -29,7 +28,7 @@
     - [CSS Source Maps](#css-source-maps)
     - [CSS Variables](#css-variables)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- END doctoc -->
 
 ## CSS Selectors
 
@@ -54,7 +53,7 @@
 - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
 - element:first-child - IE7+ targets the first child element
 - element:last-child - IE9+ targets the last child element
-- element:nth-child(3)/:nth-last-child(2) - IE9+ 
+- element:nth-child(3)/:nth-last-child(2) - IE9+
 - element:nth-of-type(n) - IE9+ rather than selecting a child, targets according to the type of element. Because of targeting the type of element you will encounter issues when using a class as the selector.
 - element:first-of-type/:last-of-type - IE9+ i.e. .active:last-of-type{} Would select the element if it was the last-child and had the class 'active' Not what would be expect as the last element with the class 'active'.
 - element:not(selector) - IE9+ targets all elements that don't match the selector i.e. div:not(#container) selects all divs that don't have a ID of "container".
@@ -64,7 +63,7 @@
 - element:target{} - IE9+ A powerful selector for single page apps, targets an element with the same ID as the hash in the URL. Note setting the URL this way triggers Bookmark like behaviour: Affecting browser history and scrolling the window to element behavior
 ```HTML
 	<a href="#page1">Page 1</a>
-	<section id="page1"> 
+	<section id="page1">
 		Content
 	</section>
 ```
@@ -94,11 +93,11 @@ opacity: 0.5;
 .transparent {
 	filter: alpha(opacity=50);
 	opacity: 0.5;
-}	
+}
 ```
 
 ### Backgrounds
- - background-size: cover;contain;width height; - 'cover' scales up background image so the <em>lesser</em> dimension matches the window size; 'contain' scales up to the <em>greater</em> dimension, meaning some background will not be covered by the image. 
+ - background-size: cover;contain;width height; - 'cover' scales up background image so the <em>lesser</em> dimension matches the window size; 'contain' scales up to the <em>greater</em> dimension, meaning some background will not be covered by the image.
  - background-attachment:scroll;fixed;local; - 'fixed' background will not move (problems in Chrome with position relative among others)
  - 'background-clip', 'background-origin' IE9+
  - 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
@@ -132,11 +131,11 @@ opacity: 0.5;
 
 
 ### Measurements
-<strong>Pixels (px)</strong> - 
-<strong>Percentage (%)</strong> - 
-<strong>em</strong> - 
-<strong>rem (Root EM)</strong> - 
-<strong>Viewport units (vh & vw)</strong> - 
+<strong>Pixels (px)</strong> -
+<strong>Percentage (%)</strong> -
+<strong>em</strong> -
+<strong>rem (Root EM)</strong> -
+<strong>Viewport units (vh & vw)</strong> -
 <strong>Points/Picas (pt)</strong> - Used for Print Stylesheets
 <strong>Inches (in) and Centimeters (cm)</strong> - Used for Print Stylesheets
 
@@ -144,7 +143,7 @@ opacity: 0.5;
 
 #### Font size units
  - em - Calculates the font size based on the Parent font size which compounds down the tree
- 
+
 ```CSS
 html {font-size: 0.625em;}
 ul { font-size: 2.4em; } /* =24px */
@@ -153,7 +152,7 @@ ul li  { font-size: 1.05em; } /* =25px */
 ```
 
  - rem - Which stands for Root EM calculates the font size relative to the Root element. IE10+ with partial support in IE9 (See http://caniuse.com/#feat=rem).
- 
+
 ```CSS
 html {font-size: 0.625rem;}
 ul { font-size: 2.4rem; } /* =24px */
@@ -173,19 +172,19 @@ i.e. html{font-size:62.5%}
 ### Structure & Positioning
  - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
  - Block & Inline Elements - Native elements tag like 'div', 'p' & 'section' are Block elements i.e. their Display attibute is set to 'block' by default, whereas Inline elements like 'span', 'a' & 'li' are set to 'display:inline' by default. Note: If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
- - Box Sizing Attribute - By default elements Box-sizing value is 'content-box' by setting it to 'border-box'(IE8+) the browser renders an elements borders & padding inside of the specified width & height. Very helpful when working with 100% widths. *{box-sizing:border-box;} is often used to convert all elements to 'border-box'. Also the can be set to the value 'padding-box'(Very limited support) which only includes 'padding' inside the specified height/width. Example of 'border-box' value i.e. 
+ - Box Sizing Attribute - By default elements Box-sizing value is 'content-box' by setting it to 'border-box'(IE8+) the browser renders an elements borders & padding inside of the specified width & height. Very helpful when working with 100% widths. *{box-sizing:border-box;} is often used to convert all elements to 'border-box'. Also the can be set to the value 'padding-box'(Very limited support) which only includes 'padding' inside the specified height/width. Example of 'border-box' value i.e.
 
 ```CSS
 div{width:100%;padding:10px;border:1px;} //Would be 22px larger than its parent element
 div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the same width as its parent element
 ```
 
- - Multi Column Module('column-count:value') - Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+ 
+ - Multi Column Module('column-count:value') - Multi-column Wrapping Text layouts with "div{column-count: 3;column-width:30px;column-gap:5px;column-rule:solid 1px #ccc;}" IE10+
  - CSS Regions Module - A experimental specification by Adobe that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful. Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
  - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little support, Safari & Firefox only. caniuse.com/css-sticky
 
 #### Flexbox Model
- - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
+ - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning
 
 - <strong>Flexbox Issues</strong> - In IE10-11 flex-basis doesn't account for box-sizing:border-box therefore overflows can occur. Theres are anumber of workarounds for this see https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
 
@@ -204,15 +203,15 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
 @keyframes animatedBackground {
         to { background-position-x:100%;}
 }
-#animate-area	{ 
-        width: 560px; 
-        height: 400px; 
+#animate-area	{
+        width: 560px;
+        height: 400px;
         background: url(bg-clouds.png) 0px 0px repeat-x;
         animation: animatedBackground 40s linear infinite;
 }
 ```
 
-- To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates. 
+- To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates.
 - Transition-timing-function presets are ease, linear, ease-in, ease-out and ease-in-out. For custom easing use cubic-bezier(point1, point2, point3, point4), i.e cubic-bezier(0.5, -0.5, 0.5, 1.5) will give a bounce effect. Its helpful to use a tool such as www.cubic-bezier.com to generate & test.
 
 ### Other CSS Properties
@@ -285,7 +284,7 @@ p+p{
 ```
 
  - Alternate Rows (:nth-child IE9+)
-```CSS 
+```CSS
 tbody tr:nth-child(odd) {
 	background-color: lightblue;
 }
@@ -312,7 +311,7 @@ figcaption{display:table-caption;caption-side:bottom;}
 - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
  - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
 
-#### Rendering Performance 
+#### Rendering Performance
  - Optimizing browser rendering by reducing use of CSS Box-shadows & CSS Gradients
  - Use CSS Animations & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration making CSS Transitions/Animation smoother. Be aware CPU usage can climb quite heavily because of the hardware acceleration.
  - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
@@ -324,7 +323,7 @@ figcaption{display:table-caption;caption-side:bottom;}
  - The browser will still download images that are hidden with display:none although with some browsers i.e Firefox, background-images will not be downloaded.
 
 ### CSS Source Maps
- - When using a pre-processor you can generate a Source Map in addition to the compiled CSS, the Source Map 
+ - When using a pre-processor you can generate a Source Map in addition to the compiled CSS, the Source Map
 
 ### CSS Variables
 - Unlike preprocessed variables, CSS Variables are scoped to an element. Very limited support, Firefox only.   
@@ -337,4 +336,3 @@ body {
     background-color: var(primary-color);
 }
 ```
-
