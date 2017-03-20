@@ -1,13 +1,16 @@
 <h1>General JavaScript Coding Tips</h1>
 
 <h2>What is JavaScript</h2>
+
 - JavaScript commonly abbreviated to just JS was initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
 
 
 <h2>JavaScript Execution</h2>
+
 - JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time. 
 
 <h2>JavaScript Data Types</h2>
+
 - There are 7 identifiable data types in JavaScript: number, string, boolean, object, function, undefined and null. They can be determined by using the 'typeof' operator. Although a bug exists when using typeof with 'null' values as it will return 'object'.
 
 ```javascriptparseInt 
@@ -17,7 +20,9 @@
 ```
 
 <h3>The Data Types</h3>
+
 <h4>Boolean</h4>
+
 - Only 2 Boolean values exist: true & false, although values of other types are also deemed either Truthy or Falsey.
 - "Falsey" values are false, null ,"" ,0 , undefined ,NaN. All other values including objects are "Truthy".
 - Single Negation - equating a value using Single Negation(Logical Not) of itself will convert to a real Boolean and will toggle its value i.e truthyVar = !truthyVar //Will toggle 'truthyVar' from a Truthy value to false
@@ -45,6 +50,7 @@ a === true //false, using Strict Equation values must be the same Type
 ```
 
 <h4>Numbers</h4>
+
 - Only 1 number type (i.e no integer) which is represented as a 64bit floating point also known as Double.
 - Has problems mapping to common arithmetic i.e Decimal fractions are approximate. var cur = 0.1 + 0.2; Will equal 0.3000000000004 so use parseFloat(0.1 + 0.2).toFixed(2) for currency calculations.
 - isNaN() checks if value is NaN(Not a Number) which is achieved when JS is unsuccessful in converting a value to a number or in the case of dividing O. isNaN() is an important method as NaN === NaN is false and NaN !== NaN is true.
@@ -57,6 +63,7 @@ if(randomNum % 7 === 0)
 ```
 
 <h4>Strings</h4>
+
 - A string can contain an unlimited amount of characters and has methods attached to it.
 - Strings can concatenated with + "Hello " + "world!"; // = "Hello world!" Although issues with Type Coersion can occur.
 - Strings have a property called length which will return the number of characters.
@@ -72,6 +79,7 @@ if(randomNum % 7 === 0)
 - string.toUpperCase
 
 <h4>Objects</h4>
+
 - Objects are an unordered list of name/value pairs. Names are strings and values can be any type including other objects
 - Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}'; Object literals influenced the development of JSON.
 - For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
@@ -93,11 +101,13 @@ foo.hasOwnProperty('goo'); // true
 ```
 
 <h4>Undefined</h4>
+
 - Undefined is the value of a variable which has been initialized but not assigned a type or a value. i.e. var a; 'typeof a' will equal undefined.
 - A value can also be set to undefinend i.e. a = undefined; 
 - Undefined is a 'Falsy' value
 
 <h4>Null</h4>
+
 - Null is a primative value that can be used by developers to set an object to no value.
 ```javascript
 alert(typeof null); //alerts object (A bug in ECMAScript it should alert '"null') 
@@ -107,6 +117,7 @@ alert(typeof a); //alerts object
 ```
 
 <h4>Functions</h4>
+
 - 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the differences between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherso/qHBUY/
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. It has the length property but no Array methods i.e
 
@@ -128,15 +139,19 @@ function testFunc(){
 
 
 <h3>Primative Values</h3>
+
 - The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using String object methods.
 
 <h3>Variables</h3>
 
 <h4>Dynamic Typed</h4>
+
 - JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
 
 <h4>Variable Scope</h4>
+
 <h5>Implied Global Variables</h5>
+
 JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For good practise always initialize with the 'var' keyword.
 
 ```javascript
@@ -148,12 +163,15 @@ JavaScript has Implied Global Variables which means if a variable is initialized
   var x, y, z=3;
 ```
 <h5>Function Level Scoping</h5>
+
 - JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accessable outside that block but not outside its function.
 
 <h5>Variable Hoisting</h5>
+
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
 <h4>Type Coercion</h4>
+
 - Due to JS being a loosely typed programming language, JS uses type coersion to evaluate equations made up of different value types rather than throwing an error like a Strongly-Typed language would.
 - When JavaScript is adding values it immediately begins type coercing all value into strings that proceed a string i.e. '1' + 2 +  3 ; // Equals '123',  3  + 2 + '1'; // Equals '51',  3  + 2 +  1 ; // Equals 6.
 - When using other operators(-,*,/,%,<,>) JavaScript type coerces values in to numbers i.e. true - '1'; //Equals 0, 'true' * 1 //Equals NaN
@@ -174,6 +192,7 @@ false !== 0 //true
 ```
 
 <h3>Operators</h3>
+
 - Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
 - The Guard Operator(Logical And) '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first. 
 - The Default Operator(Logical Or) '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
@@ -216,6 +235,7 @@ var big = (x > 10);
 <h3>Iteration/Loops</h3>
 
 <h4>For Loop</h4>
+
 ```javascript
 for (var i=startvalue; i<=endvalue; incrementfactor){ 
   //Your code here
@@ -223,6 +243,7 @@ for (var i=startvalue; i<=endvalue; incrementfactor){
 ```
 
 <h4>While Loop</h4>
+
 ```javascript
 while(i<=endvalue){ 
 //Your code here
@@ -231,6 +252,7 @@ while(i<=endvalue){
 - Note: forgetting to increase the variable in the condition will mean the loop will never end and crash the browser.
 
 <h4>Do While Loop</h4>
+
 ```javascript
 do{ 
 //Your code here
@@ -240,6 +262,7 @@ do{
 
 
 <h4>For Each...in Loop (Depreciated)</h4>
+
 - Not to be confused with 'array.forEach() or map.forEach()' which cannot use 'break' or 'continue' functions.
 ```javascript
 for each (variable in object) {
@@ -248,6 +271,7 @@ for each (variable in object) {
 ```
 
 <h4>For In Loop (ES6)</h4>
+
 - Iterates an object, in arbitrary order, outputing property <strong>name</strong>
 ```javascript
 	for (property in object) {...
@@ -265,6 +289,7 @@ for each (variable in object) {
 
 
 <h4>For Of Loop (ES6)</h4>
+
 - Iterates objects (including Array, Map, Set, arguments), outputing property <strong>value</strong>
 ```javascript
 	for (value of object) {...
@@ -282,6 +307,7 @@ arr.forEach(callback[, thisArg])
 
 
 <h4>Iteration VS Enumeration </h4>
+
 - iteration - the for statement 
 - enumeration - the for in statement enumeration order is not guaranteed 
 - enumeration order is not guaranteed see the follow example:
@@ -296,15 +322,18 @@ for (var p:* in obj)
 ```
 
 <h3>URI & Parameters</h3>
+
  - <strong>encodeURIComponent(string)</strong>
 
 <h3>Strict mode vs Non-strict mode</h3>
+
 - To set Strict Mode "use strict" at the beginning of a script or for mixed mode it can be added at the function level.
 - Support is for IE9+
 - Strict mode helps development by causing potentially problematic syntax to error.
 - Note: Becareful with concatenation of scripts. If a script level Strict mode file is concatenated with a Non-strict mode file both will be forced into Strict mode. 
 
 <h4>Not Allowed in Strict Mode</h4>
+
 - Undeclared variables - i.e. "use strict"; x = 3; // Will error "ReferenceError: x is not defined"
 - Deleting a variable or function - i.e. "use strict"; delete arg; //Will error "Delete of an unqualified identifier in strict mode."
 - Defining a property twice - i.e "use strict"; var x = {p1:10, p1:20}; //Will error "Duplicate data property in object literal not allowed in strict mode"
@@ -315,7 +344,9 @@ for (var p:* in obj)
 - Most usage of eval 
 
 <h2>System Objects</h2>
+
 <h3>The Math Object</h3>
+
 - Math object used for more complex math functions
 - The Math Object has a number of constants: Math.E, Math.PI etc and a number methods the most useful below:
 - Math.floor(x) - Round a number downward to its nearest integer. Best used to take the integer part of a number.
@@ -326,6 +357,7 @@ for (var p:* in obj)
 - The other Math methods are Math.abs(x), Math.acos(x), Math.asin(x), Math.atan(x), Math.atan2(y,x), Math.cos(x), Math.exp(x), Math.log(x), Math.pow(x,y), Math.sin(x), Math.sqrt(x), Math.tan(x)
 
 <h3>The Array Object</h3>
+
 - Arrays can be initialized via 'var arr = []' or 'var arr = new Array()' and are objects with extra properties i.e. length, sort and the methods below
 - 'typeof [];' returns 'object' so use [].isArray(); to check for an array i.e. if(myArray.isArray()){}
 - Array has a length property which is the value 1 higher than the array's subscript.
@@ -384,26 +416,31 @@ myArray.splice(1,1); // ['a','c']
  
 
 <h3>The Window Object</h3>
+
 - <strong>The window object</strong> represents the browser window and creates another window object for each frame/iframe. It holds a number of important properties and objects i.e. The document object, history object, navigator object and location object.
 - <strong>window.innerWidth/innerHeight</strong> - Read-only property which represents the viewport dimensions of the browser window. Helpful when debugging responsive screen sizes. IE9+ only
 - <strong>window.length</strong> will give you the number of iframe elmements in the current window.
 - <strong>window.postMessage()</strong> - A method to allow cross-domain communication between 'frame'/'iframe' tags (IE8+) & browser Windows/Tabs (IE10+)
 
 <h3>The Document Object</h3>
+
 - Where the DOM is accessed
 - A full list of the Document Objects Methods & Properties https://developer.mozilla.org/en-US/docs/Web/API/document
 
 <h3>The History Object</h3>
+
 - Contains a list of URLs visited that cannot be read, only navigated to
 - window.history.forward() & window.history.back() are used to navigate to the next & previous entries
 - window.history.go() is used to navigate back or forward a number of entries in the history i.e. window.history.go(-4);
 
 <h3>The Image Object</h3>
+
 - img.complete - Read-only boolean property to determine if image is loaded.
 - img.naturalWidth/naturalHeight - Read-only property which represents the original(unmanipulated by CSS/JS) size of the image. Only available after image load. IE9+
 - img.onerror
 
 <h3>The XMLHttpRequest(XHR) Object</h3>
+
 - XMLHttpRequest object (IE7+) Object can use 'ActiveXObject("Microsoft.XMLHTTP")' for IE6 IE5.
 - GET vs POST - GET is simpler and faster than POST and therefore used in AJAX enviroments. POST offers a more secure option.
 - .open(method,url,asyc,user,password) - Intializes the request. 'method' specifies the type of request("GET", "POST", "PUT" or "DELETE"), 'url' the URL(Location of file on server). Optional parameters 'asyc'(default: true) if the request should be handled asynchronously or not and user & password strings for authentication purposes.
@@ -415,6 +452,7 @@ myArray.splice(1,1); // ['a','c']
 - Modern browsers support cross-site requests by implementing the web applications working group's Access Control for Cross-Site Requests standard.  As long as the server is configured to allow requests from your web application's origin, XMLHttpRequest will work.  Otherwise, an INVALID_ACCESS_ERR exception is thrown.
 
 <h3>The Date Object</h3>
+
 - <code>var currentDateTime = new Date()</code> sets a date object equavalent to the current milliseconds since Epoch(1/1/1970 00:00:00). 
 - new Date().getTime() is the equavalent to Date.now(), although Date.now() is IE9+.
 - Their are 4 ways of initiating a date value with the new Date() constructor.
@@ -427,15 +465,18 @@ var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute
 ```
 
 <h2>Timers & Timeouts</h2>
+
 - setTimeout(function, delay in milliseconds, param, param, ...) - calls a function once after a specific delay. Parameters IE9+
 - setInterval(function, delay in milliseconds, param, param, ...) - calls a function continuously at specific intervals. Parameters IE9+
 
 
 <h2>Threading in JavaScript</h2>
+
 - JavaScript is regarded as single-threaded in that it can only ever execute one piece of code (thread) at a time. This means that when an asynchronous event occurs (like a mouse click, a timer firing, or an XMLHttpRequest completing) it gets queued up to be executed later if code is currently being run. This single thread is shared with JS execution and browser rendering, as JS can alter how the browser renders we do not want Race conditions to occur. 
 - Service Workers a new API (IE10+) looking to add multi-threading by defining background scripts that can run concurrently from the main thread.
 
 <h2>JavaScript Selectors</h2>
+
 - <strong>element.getElementById(id)</strong> - (full support)
 - <strong>element.getElementsByName(name)</strong> - returns a NodeList(not an array) matching the name attribute although in IE & Opera will also return elements that have an id attribute with the specified value. Although a NodeList doesnt not have the methods. (full support) 
 - <strong>element.getElementsByTagName(tag)</strong> - returns a NodeList matching the tag name.  (full support)
@@ -472,9 +513,11 @@ var z = x =+ 1; //equivalent to ++x;
 ```
 
 <h3>The NodeList Object</h3>
+
 - A NodeList Object it is a read-only collection of ordered Nodes obtained via element.childNodes, element.querySelectorAll etc but is NOT an Array as it does not have all the properties and methods associated with Array.prototype, it does have the property length which allows you to iterate over it with a standard For-Loop.
 
 <h4>Iterating over a NodeList Object</h4>
+
 ```JavaScript
 var myNodeList = document.querySelectorAll( 'input[type=checkbox]' );
 for (var i = 0; i < myNodeList.length; ++i) {
@@ -483,6 +526,7 @@ for (var i = 0; i < myNodeList.length; ++i) {
 ```
 
 <h4>Converting a NodeList to an Array</h4>
+
 - Sometimes you will need to convert to an Array to use Array methods;
 
 ```JavaScript
@@ -492,6 +536,7 @@ var ArrayVar = Array.prototype.slice.call(NodeList); // converts NodeList to Arr
 
 
 <h3>Manipulating the DOM</h3>
+
 - DOM manipulations can affect performance so its important to limit the amount of changes to the DOM i.e. in the case of creating multiple Nodes in a Loop
 
 ```javascript
@@ -522,10 +567,12 @@ ul[0].appendChild(frag);
 ```
 
 <h2>JSON</h2>
+
 - JSON without " is evaluated as a object literal and JSON.Parse will not accept
 - JSONP stands for JSON with padding. The padding is a callback function that is used to wrap the data returned from the server. The reason for its existence is to get around browser's same-origin restriction against cross domain requests.
 
 <h2>JavaScript Events</h2>
+
 - <strong>addEventListener(event,function,useCapture)</strong> - IE9+ allows you to have multiple events call throughout code without them being overwritten like 'element.onclick = function(){}'
 - <strong>attachEvent(event,function)</strong> - Is a depreciated version of AddEventListener used in <IE9, note the value of "this" will be a reference to the window object instead of the element on which it was fired.
 - <strong>Crossbrowser addEventListener</strong> - Use something like the below as a cross browser AddEventListener override
@@ -541,6 +588,7 @@ function AddEvent(html_element, event_name, event_function)
 ```
 
 <h3>Event Delegation</h3>
+
 - <strong>Event Delegation</strong> - An method that instead of using multiple individual event listeners, places a single event listener on a parent (read more http://davidwalsh.name/event-delegate) e.g. 
 
 ```javascript
@@ -556,6 +604,7 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 ```
 
 <h3>Event Bubbling & Default Event Canceling</h3>
+
 - <strong>Event Bubbling</strong> - is when a nested element triggers the parents event handler. The following code can be used to prevent bubbling.
 - <strong>return false</strong> - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating functions event.preventDefault() & event.stopPropagation().
 - <strong>event.preventDefault()</strong> - Cancels the default event(if cancelable) codepen.io/sjmcpherso/pen/gboxaa
@@ -570,6 +619,7 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 - window.onscroll event - Detects scrolling
 
 <h3>DOM/Page Load Events</h3>
+
 - <strong>Window Load/Onload Event</strong> - Triggers when all content is loaded including images/js/iframes etc
 
 ```javascript
@@ -585,10 +635,12 @@ document.addEventListener("DOMContentLoaded", function(){})//IE9+
 ```
 
 <h3>Asyncronous Script Loading</h3>
+
 - <strong>Window Load/Onload Event</strong>
 
 
 <h2>Synchronous vs Asynchronous Script Loading</h2>
+
 - By default scripts are downloaded & executed synchronously, The HTML file will be parsed until it reaches a script file reference, at that point parsing will stop and a request will be made to fetch the file (if it’s external). The script will then be executed before parsing is resumed.
 - 'async' attribute - Downloads the file without stopping HTML parsing allowing other files to download but will pause the HTML parser to execute it when it has finished downloading.
 - 'defer' attribute - Also downloads the script asyncronously but defers execution till after HTML parsing is complete
@@ -612,6 +664,7 @@ alert(closureFunc(3));
 
 
 <h2>Prototypal Inheritance</h2>
+
 - Distinct from Class Inheritance, where an object inherits properties from an object assigned to it.
 - Extending native prototypes - To use newer features added to JS you will often need to back port native prototypes for older browsers this breaks this breaks encapsulation e.g Array.ForEach
 
@@ -623,6 +676,7 @@ alert(closureFunc(3));
 <h2>Design Patterns</h2>
 
 <h3>the Constructor Pattern</h3>
+
 - Object constructors are used to create specific types of objects
 - The 'new' keyword signify's the use of a constructor instance
 - For conventions name Constructors with Initial Caps i.e. var person = new Person();
@@ -694,9 +748,10 @@ var mySingleton = (function () {
 ```
 
 
-<h2>Debugging & Error Checking</h2>
+<h2>Debugging and Error Checking</h2>
 
 <h3>Syntax vs Runtime Errors</h3>
+
 - Syntax errors are picked up by the browser when the script is parsed, if an error is found by the parser none of the script is executed.
 - Runtime errors are found by the browser at execution time but only code after the error will not be executed.
 
@@ -715,9 +770,10 @@ for(var i=0;i<100000;i++){
 console.timeEnd("test"); //Will output "test: 8.75ms"
 ```
 
-- NOTE: use of the Console object will break <IE9 but NOT while the IE Developer Tools window is open.
+- NOTE: use of the Console object will break IE9+ but NOT while the IE Developer Tools window is open.
 
 <h3>Try Catch Statement</h3>
+
 - Use to surround a block of statements to handle when an exception occurs
 - The 'try' block encompases where to track for exceptions
 - The 'catch' block is where the response to the exception is handled
@@ -741,6 +797,7 @@ catch (ex) {
 ```
 
 <h4>Throw Statement</h4>
+
 - The throw statement can be used to simulate an exception and therefore be used to test Try/Catch statements 
 
 ```javascript 
@@ -750,7 +807,9 @@ throw new Error("oops");
 
 
 <h2>Animating</h2>
+
 <h3>RequestAnimationFrame</h3>
+
  - CSS should be used for simple transitions & animations i.e. button rollovers, dropdown menus etc
  - Using RequestAnimationFrame over other techniques the browser optimizes it with hardware acceleration to make them smoother.
  - Animations in inactive tabs will stop, utilizing CPU elsewhere
@@ -758,6 +817,7 @@ throw new Error("oops");
 
 
 <h2>JavaScript Promises</h2>
+
 - A Promise is a way to manage asynchronous operations
 ```javascript
 function simplePromise() {
@@ -843,6 +903,7 @@ if(window.Notification && Notification.permission !== "denied") {
 - Battery - Detect if the battery is low on the device
 
 <h2>ECMAScript 6 (ES2015)</h2>
+
 - This the next version of the JS standard, code-named "Harmony" or "ES.next", abreviated to ES6 and more recently called ES2015. Limited support for most. Browser Support list found at http://kangax.github.io/es5-compat-table/es6/
 - Can be compiled to EcmaScript 5 via Google Traceur or BabelJS.
 
@@ -850,6 +911,7 @@ if(window.Notification && Notification.permission !== "denied") {
 
 
 <h3>ES6 Variables</h3>
+
 - <strong>Let</strong> - Block-level variable declaration acts in the same way as "var" but scope is at the block-level, rather than the whole function. i.e. block-level includes for loops, if/cases statement etc. 'let' unlike 'var' variables are not hoisted to thte top of the block. IE11+ 
 
 ```javascript
@@ -896,6 +958,7 @@ a.push(...b); // => [0, 1, 2, 3, 4, 5]
 
 
 <h4>TDZ (Temporal Dead Zone)</h4>
+
 - Let/Const take a different technique to dealing with Hoisting to variables declared with var, rather than being set to undefined a variable initialized with 'let' or 'const' will give a "ReferenceError" when accessed before being declared. Take the following example:
 
 ```javascript
@@ -909,6 +972,7 @@ let l = 'let'; //Confirms hoisting still occurs with Let
 ```
 
 <h4>Destructuring</h4>
+
 - Assignment of variables from arrays or objects using syntax that mirrors their construction.
 
 <h5>Array Destructuring</h5>
@@ -966,6 +1030,7 @@ ${ageInMonths / 12} years old`;
 <h3>ES6 Functions</h3>
 
 <h4>Arrow Functions</h4>
+
 - <strong>Arrows</strong> - Using the following '=>' characters to provide a shortend version of a standard function that returns an expression i.e. result = arguments => expression. Arrow functions can be used instead of a standard function syntax except it cannot be used for a constructor(with 'new') and when using 'this' with Arrow functions it effectively has lexical scope and is readonly. Simple example of Arrow Function:  
 
 ```javascript
@@ -1017,6 +1082,7 @@ var result = function(par1,par2){
 
 
 <h4>Generators</h4>
+
 - <strong>Generators</strong> - A type of function that can be stopped during execution to allow other code to run and then resumed once or many times.
 - <strong>For In/Of Loop</strong>
 ```javascript
@@ -1039,9 +1105,11 @@ for (let i of arr) { //for of iterates over property values
 <h4>ES6 APIs</h4>
 
 <h5>Services Workers</h5>
+
 An API for defining background scripts to run concurrently from the main thread handling user interactions. APIs such as synchronous XHR and localStorage can't be used inside a service. IE10+ See http://www.html5rocks.com/en/tutorials/workers/basics/
 
 <h5>Fetch API</h5>
+
 Interface for fetching resources across a network as an improvement to XMLHttpRequest, Read more at https://blogs.windows.com/msedgedev/2016/05/24/fetch-and-xhr-limitations/#zkj7xzYqdHeiVSwI.99
 
 ```javascript
@@ -1064,13 +1132,16 @@ Extends HTMLMediaElement providing APIs to control playback of encrypted content
 <h2>jQuery</h2>
 
 <h3>The $ sign</h3>
+
 - The jQuery '$' is just a function that returns jQuery's 'init' function
 - $.fn is just shorthand for the jQuery Prototype object i.e. jQuery.fn = jQuery.prototype
 
 <h3>jQuery.noConflict()</h3>
+
 - jQuery.noConflict() - Removes the jQuery object from the variable '$' so that other libraries that may conflict can use it.
 
 <h3>Getting/Setting the Version</h3>
+
 - Get the version of jQuery used on a webpage via $.fn.jquery
 - In firebug you can load the latest version of jQuery via the Command Line using "include('jquery')". Otherwise you can add to the Console something like this:
 
@@ -1083,12 +1154,14 @@ jQuery.noConflict();
 ```
 
 <h3>Document Ready</h3>
+
 - Runs code in a after a "DOMContentLoaded" event is trigged and falls back to a window.onload event if unsuppported. 
 - Anonymous Functions “$(document).ready(function() {“ & “$(function(){“ are exactly the same where code is executed after DOM is loaded 
 - “(function ($){}(jQuery)” Passes the jQuery object as a parameter so that “$” refers to “jQuery”. In general widgets would be contained in a Immediate invoking function but initated by a global Controller. Often a single ";" is placed at the front of a anonymous function to stop syntax errors when JavaScript files are combined & minified.
 - Of course if your following best practises and adding your javascript files before the closing body tag you don't need $(document).ready as the DOM will have already loaded.
 
 <h3>Chaining</h3>
+
 - Custom jQuery methods can be set to chain with:
 
 ```javascript
@@ -1099,12 +1172,15 @@ $.fn.enumerate = function() {
 $("li").enumerate().css( "color", "red" );
 ```
 <h3>jQuery Events</h3>
+
 - As of jQuery 1.7+ ".on()" depreciates .live(), .delegate() and .bind(). To remove events bound with .oconsn() use .off()
 
 <h3>jQuery Plugin</h3>
+
 - To create a jQuery plugin use (function($){ $.fn.yourPluginName = function(){ /* Your code */ return this; }; })(jQuery);
 
 <h3>Helpful jQuery Snippets/Methods</h3>
+
 - $("span", this) is the same as $(this).find('span')
 - Check if selected objects exist if($("#element").length){} as '0' is Falsy or if($("#element").is('*')) {}
 - Use .stop() to stop animations on the selected element. Useful to stop queued animations triggering well after the event.
@@ -1129,6 +1205,7 @@ $("td").hover(
 
 
 <h2>JavaScript Performance</h2>
+
 - Avoid using jQuery when unnessary. jQuery is a broad library offering new & additional functionality covering selectors, animations, events & Ajax, including polyfills across lecacy browsers that may not be need. This quite often adds alot of bloat to your JS download. Also runtime performance can be affected as extra methods & properties are often added to native JS.
 - Minifying JavaScript removes whitespace/linebreaks and shortends variables, reducing file size.
 - 'script' tags block parallel downloads, put them last so other resources can be downloaded first
@@ -1198,6 +1275,7 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 <h2>JavaScript Frameworks, Library's, Languages and Scripts</h2>
 
 <h3>JavaScript Frameworks</h3>
+
 - JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
 - AngularJS
 - Backbone
@@ -1205,6 +1283,7 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 - Ext JS
 
 <h3>JS Compilers/Languages</h3>
+
 - asm.js
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
 - JSX a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
@@ -1212,18 +1291,20 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 - AtScript - Backed by Google but likely to merge under TypeScript
 
 <h3>Library</h3>
+
 - Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM. 
 - Handlebars.js - Lightweight, library to build semantic templates i.e.
 - Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
 
 <h3>Scripts</h3>
+
 - ajax-cache.js - Provides a AJAX response caching object so as to limit unnessary requests. https://code.google.com/p/ajax-cache/
 - Equalize.js jQuery plugin for equalizing the height or width of sibling elements
 - jquery.metadata.js takes attribute metadata from html attributes and converts into JSON.
 - jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
-- htm5shiv.js/html5shim.js - Allows the styling of HTML5 Elements such as Section, Article, Header in <IE9.
+- htm5shiv.js/html5shim.js - Allows the styling of HTML5 Elements such as Section, Article, Header in IE9+.
 - Requirejs helps load scripts in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr. Note: CSS must be loaded before and be from a local directory i.e. not from a CDN or subdomain.
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
@@ -1233,6 +1314,7 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 <h2>Node & NPM</h2>
 
 <h3>Dependency Management</h3>
+
 - Create a package.json in your projects route directory with "npm init" to document your dependencies
 
 ```javascript
