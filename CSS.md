@@ -1,6 +1,8 @@
+
+# Cascading Style Sheets
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Cascading Style Sheets](#cascading-style-sheets)
   - [CSS Selectors](#css-selectors)
@@ -29,8 +31,6 @@
     - [CSS Variables](#css-variables)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Cascading Style Sheets
 
 ## CSS Selectors
 
