@@ -34,7 +34,7 @@
 ```HTML
 	<a href="#page1">Page 1</a>
 	<section id="page1"> 
-	   Content
+		Content
 	</section>
 ```
 ```CSS
