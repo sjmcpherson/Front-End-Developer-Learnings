@@ -1,6 +1,7 @@
+<h1>HTML</h1>
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [HTML](#html)
   - [HTML Doctype](#html-doctype)
@@ -26,8 +27,6 @@
   - [HTML Performance](#html-performance)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-<h1>HTML</h1>
 
 <h2>HTML Doctype</h2>
 
