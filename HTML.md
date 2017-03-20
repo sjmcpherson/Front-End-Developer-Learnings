@@ -13,11 +13,13 @@
  - See https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html for more info.
 
 <h3>Compatibility Mode</h3>
+
 - Internet Explorer 8/9/10 support document compatibility modes that affect the way webpages are interpreted and displayed, its possible those versions will not use the latest rendering engine, instead using the Internet Explorer 5.5 rendering engine. To avoid this set the X-UA-Compatible meta tag: "&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;"
 - There are some complications that may cause the X-UA-Compatible meta tag not to work and in that case it needs to be set in the HTTP request header. See https://hsivonen.fi/doctype/
 
 
 <h2>Loading Resources</h2>
+
  - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
 
@@ -26,6 +28,7 @@
 <h2>Images/Graphics</h2>
 
 <h3>Image/Graphic Elements</h3>
+
  - <strong>&lt;figure&gt;</strong> element is used to markup illustrations, graphs, code snippets and images used with &lt;figurecaption&gt; IE9+
 
 ```HTML
@@ -63,6 +66,7 @@
 <h2>HTML5 Forms</h2>
 
 <h4>Form Inputs</h4>
+
 - <strong>New Input types</strong> - HTML5 introduces a number of new input types all have varing browser support. color, date, datetime, datetime-local, email, month, number, range, search, tel, time, url, week. Modernizr can be used to determine support and if not fallback to input="text" or to avoid browser specific support.
 - <strong>type="search"</strong> - In Webkit browsers it adds a Clear field button and as a result Webkit browsers style it differently.  In Chrome hitting 'Esc' will clear field. 
 - <strong>Meter</strong> &lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt; tag defines a measurement within a known range, or a fractional value.
@@ -77,6 +81,7 @@
 ```
 
 <h4>Form Attributes</h4>
+
 - <strong>required="required"</strong> - The required attribute is used for validation and most modern browsers will check this attribute & add there own native validation errors when submitting the form.
 - <strong>placeholder="Enter Here"</strong> - Text is displayed inside the input field as long as the field is empty. When you click on (or tab to) the input field and start typing, the placeholder text disappears. IE10+, polyfill fallback jquery-placeholder.js for IE9 & below.
 - Autofocus attribute - On page load set focus to element. Can be used on inputs buttons and textareas. e.g <input autofocus /> IE10+
@@ -93,6 +98,7 @@
 
 
 <h2>Other Elements/APIs</h2>
+
  - &lt;video autoplay controls&gt;&lt;/video&gt;
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
@@ -107,6 +113,7 @@
 ```
 
 <h2>HTML Preprocessors</h2>
+
 - <strong>Markdown</strong> -  A text-to-HTML conversion tool, used as a format for writing content for the web. Uses linebreaks used to determine closing of many block tags. Allows compiled HTML.
 
 - <strong>Jade</strong> - is NodeJS based, HTML precompiler with a powerful templating engine. Jade like HAML uses indenting to determine HTML element hieracy and as a result will not accept unminfied HTML, forcing the developer to use the Jade syntax.
@@ -135,6 +142,7 @@ Would Produce:
 
 
 <h2>SEO Optimization</h2>
+
 - Include descriptive terms to your URLs and create a easily to understand hierarchy, i.e. List of Products at “www.yoursite.com/products/” individual products at “www.yoursite.com/products/descriptive-product-name/”
 - Make use of header tag. h1,h2,h3,h4,h5 tags to emphasize important text but use sparingly across the page.
 - Place links on descriptive wording rather than text such as "Click Here" and load the Title attribute with info about the link i.e
@@ -158,6 +166,7 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 ```
 
 <h4>Microdata</h4>
+
 - Microdata is a way to label content as a specific type of information for Search Engines to process, for example reviews, personal information, products, locations & events.
 - Use the Microdata specification to add metadata to content i.e
 ```HTML
@@ -185,13 +194,16 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 
 
 <h2>Web Components</h2>
+
 - A new specification for creating encapsulated, reusable widgets, the 4 components that make up the spec are Custom Elements, HTML Imports, Templates and Shadow DOM. Limited browser support, Only Chrome & Opera currently implement all 4 features, Safari & Firefox just HTML Templates. IE12 Unlikely to have any support. http://webcomponents.org/
 - <strong>Web Components Frameworks</strong> - add polyfils and intergrate web components with frameworks such as X-Tags, Polymer & Bosonic.
 
 <h4>Custom Elements</h4>
+
 - Define and use new types of DOM elements, its name must contain a dash, and its prototype must extend HTMLElement. i.e <custom-element></custom-element>. All native tag names do not contain a dash.
 
 <h4>HTML Templates</h4>
+
  - Wrap any scripts, css or markup in a "template" tag to ignore parsing the contents until   i.e. images won't load, scripts won't run, elements will not render etc until specified via JavaScript i.e. 
 
 ```HTML
@@ -210,17 +222,20 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 ```
 
 <h4>HTML Imports</h4>
+
  - Allows importing of external html file through an http request that can then be rendered to the page.
  - For HTML imports use the "import" value on the "rel" attribute in a standard <link> tag, for example: '&lt;link rel="import" href="import-file.html"&gt;'
  - Note: HTML imports adhere to the same-origin policy for security reasons. Therefore, if you wish to import an HTML document from an external domain, you need to make sure you have CORS set up correctly.
  - Limited support in Chrome & Opera Only.
  
 <h4>Shadow DOM</h4>
+
 - Already the browser uses Shadow DOM simplify complex elements like '&lt;input type="date"&gt;', '&lt;select&gt;', '&lt;video&gt;' etc
 - Style & Script encapusation inside Shadow DOM
 
 
 <h2>HTML Performance</h2>
+
  - Reduce unecessary html tags to improve performance
  - Reduce the total number of referenced files to css, js & images by using image sprites and combining CSS & JavaScript. Because of the round-trip to the server extra HTTP requests add to the download time and most browsers limit the number of concurrent downloads per host to between 2-8. For individual browser limitations see http://www.browserscope.org/?category=network
  - Putting stylesheets in the &lt;head&gt; allows the page to render progressively and avoid potential browser repaints.
