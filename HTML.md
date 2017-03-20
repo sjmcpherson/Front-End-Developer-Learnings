@@ -6,10 +6,10 @@
  - <strong>HTML4 vs HTML5</strong> - In HTML4, there are 2 types of elements: Block and Inline. HTML5 emphasizes semantics and structure, so it has organized its elements into the categories of metadata, flow, sectioning, heading, phrasing, interactive & embedded
  
 <h2>The Viewport</h2>
-- The recommened viewport setting for responsive design '&lt;meta name="viewport" content="width=device-width"&gt;' this allows the user to zoom.
-- To disable zooming use '&lt;meta name="viewport" content="maximum-scale=1"&gt;' this would be recommend for a Mobile Web App.
-- Alternatively to disable a responsive design use '&lt;meta name="viewport" content="width=1200"&gt;' the width being the size of your outer container.
-- See https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html for more info.
+ - The recommened viewport setting for responsive design '&lt;meta name="viewport" content="width=device-width"&gt;' this allows the user to zoom.
+ - To disable zooming use '&lt;meta name="viewport" content="maximum-scale=1"&gt;' this would be recommend for a Mobile Web App.
+ - Alternatively to disable a responsive design use '&lt;meta name="viewport" content="width=1200"&gt;' the width being the size of your outer container.
+ - See https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html for more info.
 
 <h3>Compatibility Mode</h3>
 - Internet Explorer 8/9/10 support document compatibility modes that affect the way webpages are interpreted and displayed, its possible those versions will not use the latest rendering engine, instead using the Internet Explorer 5.5 rendering engine. To avoid this set the X-UA-Compatible meta tag: "&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;"
