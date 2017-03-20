@@ -12,8 +12,8 @@
 
 ### Attribute Selectors
 - Targets an elements attributes, __All attribute selectors are IE7+__
-- Asterix attribute selector(element[attribute *= value]) - selects elements matching the characters e.g a[class *= "asterix"]{} selects class='more asterix' & class='moreasterix'
-- Tilde selector(element[attribute ~= value]) - selects elements matching the whole word, a stricter version of "*=" e.g a[data-info~="tilde"]{} selects data-info="external tilde" but not data-info="bigtilde" or data-info="big-tilde"
+- Asterix attribute selector(element[attribute*=value]) - selects elements matching the characters e.g a[class *= "asterix"]{} selects class='more asterix' & class='moreasterix'
+- Tilde selector(element[attribute~=value]) - selects elements matching the whole word, a stricter version of "*=" e.g a[data-info~="tilde"]{} selects data-info="external tilde" but not data-info="bigtilde" or data-info="big-tilde"
 - Pipe selector(element[attribute |= value]) - selects elements starting with the specified whole word & can be hyphenated. i.e [class|=pipe]{} would select class='pipe' & class='pipe-header' but not class='pipeheader' or class='header pipe'.
 - Caret selector(element[attribute ^= value]) - selects elements that begins with the characters and does not need to be a whole word. e.g a[href^="http"]{} would select <a href="http://www.google.com"></a> but not <a href="www.google.com&var=http"></a>
 - Dollar selector(element[attribute $= value]) - selects elements that ends with the characters and does not need to be a whole word. e.g the opposite to the Caret selector
