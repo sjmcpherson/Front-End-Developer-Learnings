@@ -1,3 +1,35 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Cascading Style Sheets](#cascading-style-sheets)
+  - [CSS Selectors](#css-selectors)
+    - [Element Selectors](#element-selectors)
+    - [Attribute Selectors](#attribute-selectors)
+    - [Pseudo-class Selectors](#pseudo-class-selectors)
+    - [CSS Opacity](#css-opacity)
+    - [Backgrounds](#backgrounds)
+    - [Gradients](#gradients)
+    - [Media Queries](#media-queries)
+    - [General Coding Tips](#general-coding-tips)
+    - [Measurements](#measurements)
+    - [Fonts](#fonts)
+      - [Font size units](#font-size-units)
+      - [Font Rendering](#font-rendering)
+    - [Structure & Positioning](#structure--positioning)
+      - [Flexbox Model](#flexbox-model)
+    - [CSS3 Animations & Transitions](#css3-animations--transitions)
+    - [Other CSS Properties](#other-css-properties)
+  - [Helpful CSS Code Snippets](#helpful-css-code-snippets)
+  - [CSS Performance](#css-performance)
+    - [CSS Selector Performance](#css-selector-performance)
+      - [Rendering Performance](#rendering-performance)
+      - [Download Optimisation](#download-optimisation)
+    - [CSS Source Maps](#css-source-maps)
+    - [CSS Variables](#css-variables)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Cascading Style Sheets
 
 ## CSS Selectors

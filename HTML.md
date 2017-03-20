@@ -1,3 +1,32 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [HTML](#html)
+  - [HTML Doctype](#html-doctype)
+  - [The Viewport](#the-viewport)
+    - [Compatibility Mode](#compatibility-mode)
+  - [Loading Resources](#loading-resources)
+  - [Images/Graphics](#imagesgraphics)
+    - [Image/Graphic Elements](#imagegraphic-elements)
+    - [Image/Graphic Formats](#imagegraphic-formats)
+    - [Image/Graphic Performance](#imagegraphic-performance)
+  - [HTML5 Forms](#html5-forms)
+      - [Form Inputs](#form-inputs)
+      - [Form Attributes](#form-attributes)
+  - [Other Elements/APIs](#other-elementsapis)
+  - [HTML Preprocessors](#html-preprocessors)
+  - [SEO Optimization](#seo-optimization)
+      - [Microdata](#microdata)
+  - [Web Components](#web-components)
+      - [Custom Elements](#custom-elements)
+      - [HTML Templates](#html-templates)
+      - [HTML Imports](#html-imports)
+      - [Shadow DOM](#shadow-dom)
+  - [HTML Performance](#html-performance)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 <h1>HTML</h1>
 
 <h2>HTML Doctype</h2>
