@@ -1,8 +1,8 @@
-#Cascading Style Sheets
+# Cascading Style Sheets
 
-##CSS Selectors
+## CSS Selectors
 
-###Element Selectors
+### Element Selectors
 - * - Selects all elements (use carefully as can be expensive performance wise)
 - element, element - Targets both elements
 - element element - Targets children of the first element
