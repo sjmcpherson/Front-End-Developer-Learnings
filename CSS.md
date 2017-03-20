@@ -3,14 +3,14 @@
 ## CSS Selectors
 
 ### Element Selectors
-- * - Selects all elements (use carefully as can be expensive performance wise)
+- *- Selects all elements (use carefully as can be expensive performance wise)
 - element, element - Targets both elements
 - element element - Targets children of the first element
 - element > element - targets direct children e.g ul > li{}
 - element ~ element - targets all adjacent & child elements after the first element. e.g ul ~ p{}
 - element + element - targets adjacent elements directly after the first element. e.g h1 + p{}
 
-###Attribute Selectors
+### Attribute Selectors
 - Targets an elements attributes, __All attribute selectors are IE7+__
 - Asterix attribute selector(element[attribute *= value]) - selects elements matching the characters e.g a[class *= "asterix"]{} selects class='more asterix' & class='moreasterix'
 - Tilde selector(element[attribute ~= value]) - selects elements matching the whole word, a stricter version of "*=" e.g a[data-info~="tilde"]{} selects data-info="external tilde" but not data-info="bigtilde" or data-info="big-tilde"
@@ -18,7 +18,7 @@
 - Caret selector(element[attribute ^= value]) - selects elements that begins with the characters and does not need to be a whole word. e.g a[href^="http"]{} would select <a href="http://www.google.com"></a> but not <a href="www.google.com&var=http"></a>
 - Dollar selector(element[attribute $= value]) - selects elements that ends with the characters and does not need to be a whole word. e.g the opposite to the Caret selector
 
-###Pseudo-class Selectors
+### Pseudo-class Selectors
 - element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
 - element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
 - element:first-child - IE7+ targets the first child element
@@ -43,7 +43,7 @@
 ```
 
 
-###CSS Opacity
+### CSS Opacity
 - 'property:rgba(255,255,255,100);' - Red, Green, Blue & Alpha transparency can be used for almost any color attribute, IE9+
 - Complete cross-browser CSS Opacity
 
@@ -66,14 +66,14 @@ opacity: 0.5;
 }	
 ```
 
-###Backgrounds
+### Backgrounds
  - background-size: cover;contain;width height; - 'cover' scales up background image so the <em>lesser</em> dimension matches the window size; 'contain' scales up to the <em>greater</em> dimension, meaning some background will not be covered by the image. 
  - background-attachment:scroll;fixed;local; - 'fixed' background will not move (problems in Chrome with position relative among others)
  - 'background-clip', 'background-origin' IE9+
  - 'background-blend-mode:value' - Photoshop like image/svg blending with values including screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity
  - 'image-set' (Safari 6+ and Chrome 21+ ONLY) Used to display High Pixel Resolution background images "background-image: image-set(url("test.png") 1x, url("test-2x.png") 2x);"
 
-###Gradients
+### Gradients
 - Use a gradient generator to build complex gradients i.e. http://www.colorzilla.com/gradient-editor/
 - Completed cross-browser CSS Linear Gradient
 ```CSS
@@ -88,19 +88,19 @@ opacity: 0.5;
 	copy
 ```
 
-###Media Queries
+### Media Queries
  - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
  - 'min-width' - '@media screen and (min-width: 900px) {}' Will apply CSS if the viewing area is greater than 900px.
  - 'max-device-width' - '@media screen and (max-device-width: 480px) {}' Will apply CSS if the resolution is greater than 480px as max-device-width means the actual resolution of the device rather than just the viewing area resolution.
  - 'min-device-pixel-ratio' - '@media only screen and (min-device-pixel-ratio : 2){}' For 2x pixel density resolutions like the Retina display.
  - 'only' in '@media only screen..' stops older browsers parsing the remander of the selector
 
-###General Coding Tips
+### General Coding Tips
  - Its important when working in a team of developers on a project that they all abide to a similar syntax and format with their stylesheets, this is important specifically in large projects to keep stylesheets maintainable, readable and scalable. Often its important to agree on a CSS Guideline which states what file structure, preprocessor, font-sizing unit, spacing etc that should be adhered to. A very detailed one can be found here: https://github.com/csswizardry/CSS-Guidelines
  - Avoid using IDs as they decrease portability
 
 
-###Measurements
+### Measurements
 <strong>Pixels (px)</strong> - 
 <strong>Percentage (%)</strong> - 
 <strong>em</strong> - 
@@ -109,9 +109,9 @@ opacity: 0.5;
 <strong>Points/Picas (pt)</strong> - Used for Print Stylesheets
 <strong>Inches (in) and Centimeters (cm)</strong> - Used for Print Stylesheets
 
-###Fonts
+### Fonts
 
-####Font size units
+#### Font size units
  - em - Calculates the font size based on the Parent font size which compounds down the tree
  
 ```CSS
@@ -133,13 +133,13 @@ i.e. html{font-size:62.5%}
  - px,pt,em,rem,%.
 
 
-####Font Rendering
+#### Font Rendering
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
 
 
-###Structure & Positioning
+### Structure & Positioning
  - IE7 fix for display:inline-block is "display:inline-block;*display: inline;zoom: 1;"
  - Block & Inline Elements - Native elements tag like 'div', 'p' & 'section' are Block elements i.e. their Display attibute is set to 'block' by default, whereas Inline elements like 'span', 'a' & 'li' are set to 'display:inline' by default. Note: If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - Box Sizing Attribute - By default elements Box-sizing value is 'content-box' by setting it to 'border-box'(IE8+) the browser renders an elements borders & padding inside of the specified width & height. Very helpful when working with 100% widths. *{box-sizing:border-box;} is often used to convert all elements to 'border-box'. Also the can be set to the value 'padding-box'(Very limited support) which only includes 'padding' inside the specified height/width. Example of 'border-box' value i.e. 
@@ -153,7 +153,7 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
  - CSS Regions Module - A experimental specification by Adobe that enables rich, magazine-like text column layouts that can resize based on the browser width although not perceived by most to be part of Responsive Web Design. IE10+ & Safari 6.1+ ONLY, Google has advised that it will not be adding support to Chrome in the forseable future due to performance. Article on the Limitations of CSS Regions http://alistapart.com/blog/post/css-regions-considered-harmful. Article on Google dumping CSS Regions http://arstechnica.com/information-technology/2014/01/google-plans-to-dump-adobe-css-tech-to-make-blink-fast-not-rich/
  - position:sticky - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little support, Safari & Firefox only. caniuse.com/css-sticky
 
-####Flexbox Model
+#### Flexbox Model
  - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning 
 
 - <strong>Flexbox Issues</strong> - In IE10-11 flex-basis doesn't account for box-sizing:border-box therefore overflows can occur. Theres are anumber of workarounds for this see https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
@@ -166,7 +166,7 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
   }
 ```
 
-###CSS3 Animations & Transitions
+### CSS3 Animations & Transitions
  - Backgrounds can be animated with @Keyframes and CSS Animations:
 
 ```CSS
@@ -184,7 +184,7 @@ div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the sa
 - To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates. 
 - Transition-timing-function presets are ease, linear, ease-in, ease-out and ease-in-out. For custom easing use cubic-bezier(point1, point2, point3, point4), i.e cubic-bezier(0.5, -0.5, 0.5, 1.5) will give a bounce effect. Its helpful to use a tool such as www.cubic-bezier.com to generate & test.
 
-###Other CSS Properties
+### Other CSS Properties
 
  - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
 ```CSS
@@ -272,30 +272,30 @@ figure{display:table;}
 figcaption{display:table-caption;caption-side:bottom;}
 ```
 
-##CSS Performance
+## CSS Performance
 
-###CSS Selector Performance
+### CSS Selector Performance
  - For most web sites, the possible performance gains from optimizing CSS selectors will be small, and are not worth the costs. Although be careful with *{} which targets every element.
  - The key to optimizing CSS selectors is to focus on the rightmost selector, also called the Key Selector. Here’s a much more expensive selector: A.class0007 * {} Although this selector might look simpler, it’s more expensive for the browser to match. Because the browser moves right to left, it starts by checking all the elements that match the key selector, “*“. This means the browser must try to match this selector against all elements in the page.
  - Avoid unnecessary tag identifiers for performance (short selectors load faster) i.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
 - Avoid using ancestors html div tr td{} Most modern browsers work from the right & work them way up
  - Chaining can mean loss of performance so when you do chain use the least used first i.e. use #foo.bar instead of .bar#foo
 
-####Rendering Performance 
+#### Rendering Performance 
  - Optimizing browser rendering by reducing use of CSS Box-shadows & CSS Gradients
  - Use CSS Animations & Transitions rather than JavaScript where possible as browsers utilize the devices hardware acceleration making CSS Transitions/Animation smoother. Be aware CPU usage can climb quite heavily because of the hardware acceleration.
  - Versions of Chrome & Safari change the anti-alias of text during CSS animations fix with body{-webkit-backface-visibility: hidden;} or on the problematic area (causes WebKit to use hardware acceleration for the animations)
 
-####Download Optimisation
+#### Download Optimisation
  - Minify CSS (Removes whitespace/linebreaks reducing file size)
  - Combine CSS files (Reduces the amount of HTTP Requests)
  - Avoid unnecessary tag identifiers to reduce file size ei.e. ul#navigation,ul.menu{} replace #navigation,.menu{}
  - The browser will still download images that are hidden with display:none although with some browsers i.e Firefox, background-images will not be downloaded.
 
-###CSS Source Maps
+### CSS Source Maps
  - When using a pre-processor you can generate a Source Map in addition to the compiled CSS, the Source Map 
 
-###CSS Variables
+### CSS Variables
 - Unlike preprocessed variables, CSS Variables are scoped to an element. Very limited support, Firefox only.   
 
 ```CSS
