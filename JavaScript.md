@@ -127,16 +127,16 @@ function testFunc(){
 - function.call vs function.apply - .apply and .call do the same thing, but .apply uses an array containing arguments for the target method as the second parameter.
 
 
-###Primative Values
+<h3>Primative Values</h3>
 - The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using String object methods.
 
-###Variables
+<h3>Variables</h3>
 
-#####Dynamic Typed
+<h4>Dynamic Typed</h4>
 - JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
 
 <h4>Variable Scope</h4>
-#####Implied Global Variables
+<h5>Implied Global Variables</h5>
 JavaScript has Implied Global Variables which means if a variable is initialized without using the 'var' keyword it will be deemed a Global Variable. For good practise always initialize with the 'var' keyword.
 
 ```javascript
@@ -147,10 +147,10 @@ JavaScript has Implied Global Variables which means if a variable is initialized
   //Shorthand
   var x, y, z=3;
 ```
-#####Function Level Scoping
+<h5>Function Level Scoping</h5>
 - JavaScript uses Function scoping rather than Block-level scoping i.e. if you declare a variable inside a "for" loop or "if" statement it will be accessable outside that block but not outside its function.
 
-#####Variable Hoisting
+<h5>Variable Hoisting</h5>
 - No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
 
 <h4>Type Coercion</h4>
@@ -213,7 +213,7 @@ var big = (x > 10) ? true : false;
 var big = (x > 10);
 ```
 
-<h3>Loops</h3>
+<h3>Iteration/Loops</h3>
 
 <h4>For Loop</h4>
 ```javascript
