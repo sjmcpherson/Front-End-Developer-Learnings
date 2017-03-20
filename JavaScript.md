@@ -1,4 +1,4 @@
-<h1>General JavaScript Coding Tips</h2>
+<h1>General JavaScript Coding Tips</h1>
 
 <h2>What is JavaScript</h2>
 - JavaScript commonly abbreviated to just JS was initially called LiveScript, JS is built from ECMAScript standards and its current version is v5 although modern web browser have started implementing many ECMAScript v6 features.
@@ -1224,10 +1224,10 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 - jQuery-contextMenu.js For creating a custom Context menu (right-click menu)
 - Adapt.js is a lightweight JavaScript file that determines which CSS file to load before the browser renders a page. If the browser tilts or resizes, Adapt.js simply checks its width, and serves only the CSS that is needed, when it is needed.
 - htm5shiv.js/html5shim.js - Allows the styling of HTML5 Elements such as Section, Article, Header in <IE9.
-- Requirejs helps load script's in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
+- Requirejs helps load scripts in the right order, you can combine scripts via the RequireJS optimizer it also allows you to load scripts after the page has loaded (Just in time)
 - Respond.js – Adds browsers support to min-max css media queries for ie6-ie8. Can be added in with Modernizr. Note: CSS must be loaded before and be from a local directory i.e. not from a CDN or subdomain.
 - selectivizr.js -  Adds support for CSS3 selectors (:first-child,:last-child,:nth-child) for ie6-ie8 can cause conflicts with respond.js must be placed before.
-- hoverIntent replicates jQuery's shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
+- hoverIntent replicates jQuery`s shorthand hover method but will only call mouseover/mouseleave when mouse movement has slowed reducing excessive calls to these events.
 - Bower - A command line package manager to automate searching and downloading front-end development tools.
 
 <h2>Node & NPM</h2>
@@ -1239,7 +1239,6 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
    npm install %package% --save
    npm install %package% --save-dev
 ```
-
 
 
 <h2>Source Control</h2>
