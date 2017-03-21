@@ -1,6 +1,8 @@
 <h1>HTML</h1>
 
-<!-- START doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+### Contents
 
 - [HTML Doctype](#html-doctype)
 - [The Viewport](#the-viewport)
@@ -24,7 +26,7 @@
     - [Shadow DOM](#shadow-dom)
 - [HTML Performance](#html-performance)
 
-<!-- END doctoc -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <h2>HTML Doctype</h2>
 

@@ -1,6 +1,8 @@
 <h1>JavaScript</h1>
 
-<!-- START doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+### Contents
 
 - [What is JavaScript](#what-is-javascript)
 - [JavaScript Execution](#javascript-execution)
@@ -104,7 +106,7 @@
   - [Dependency Management](#dependency-management)
 - [Source Control](#source-control)
 
-<!-- END doctoc -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <h2>What is JavaScript</h2>
 

@@ -1,16 +1,23 @@
 <h1>A Front End Developers Guide</h1>
 
-Building a list of Coding & Performance Tips for Developers working with HTML, CSS & JavaScript.
+A 'work in progress' guide for Front End Developers, started as a learning tool for myself to help me memorise things I learn on a day to day basis.
 
-Started as a learning tool for myself to help me memorise things I learn on a day to day basis.
+## [HTML](https://github.com/sjmcpherso/learnings/blob/master/HTML.md)
+```HTML
+    <html>HTML Guide</html>
+```
 
-[&lt;html&gt;HTML Coding&lt;html&gt;](https://github.com/sjmcpherso/learnings/blob/master/HTML.md)
+## [CSS](https://github.com/sjmcpherso/learnings/blob/master/CSS.md)
+```CSS
+    #CSS:after{content:"CSS Guide";}
+```
 
-[#CSS:after{content:"CSS Coding";}](https://github.com/sjmcpherso/learnings/blob/master/CSS.md)
+## [JavaScript](https://github.com/sjmcpherso/learnings/blob/master/JavaScript.md)
+```JavaScript
+    var JavaScript = "JavaScript Guide";
+```
 
-[var JavaScript = "JavaScript Coding";](https://github.com/sjmcpherso/learnings/blob/master/JavaScript.md)
-
-[Glossary](https://github.com/sjmcpherso/learnings/blob/master/Glossary.md)
+## [Abbreviations/Terms](https://github.com/sjmcpherso/learnings/blob/master/Glossary.md)
 
 
 
