@@ -28,10 +28,10 @@
 
 ### D
  - <strong>Data Binding</strong> - Syncronises data between UI components which are bound to the data source
+ - <strong>DDOS (Distributed Denial of Service)</strong> - is a method used to overload a network in an attempt to make it unusable typically achieved by flooding a server with requests, from multiple sources(IP Addresses)
  - <strong>Declarative Programming</strong> - seeks to make you coding more descriptive by using techniques to show what is done rather than how is done. This is opposed to Imperative Programming.
  - <strong>Denormalisation</strong> - Is the process of optimizing the read performance of a database by grouping data by the way it will be accessed, often meaning data is duplicated. This process is generally used for storing data in a NoSQL database.
  - <strong>Dependency Injection(DI)</strong> - is a software design pattern that deals with providing the dependencies that an object needs instead of having it construct them itself. AngularJS utilizes this pattern.
- - <strong>Distributed Denial of Service(DDOS)</strong> - is a method used to overload a network in an attempt to make it unusable.
  - <strong>Dirty Checking</strong> - 
  - <strong>Document-oriented Database</strong> - A collection of independent documents. E.g CouchDB, MongoDB
  - <strong>DOM (Document Object Model)</strong> - 
@@ -80,10 +80,11 @@
  - <strong>Isomorphic App</strong> - An application the can run both client-side and server-side.
 
 ### J
- - <strong>JSON (JavaScript Object Notation)</strong> - A lightweight data exchange format
+ - <strong>Jekyll</strong> - A static site generator(Generates HTML without a DB) in the form of a ruby parsing engine which can mimick features of blog software using dynamic components such as templates, partials, markdown, paging, permalinks etc. Made famous by GitHub Pages utilizing it.
+ - <strong>JSON (JavaScript Object Notation)</strong> - A lightweight data exchange format.
  - <strong>JSONP (JSON with Padding)</strong> - A technique used to allow the web browser to request data from a different domain, not usually allowed because of the "Same-orgin Policy" by using "script" tags added to the DOM to trigger the request.
  - <strong>JSX (Extension for React)</strong> - An XML like JS syntax extension for creating and editing HTML nodes used by ReactJS
- - <strong>JSX (Progamming Language)</strong> - Static type programming language that compiles to JS
+ - <strong>JSX (Progamming Language)</strong> - Static type programming language that compiles to JS.
 
 ### L
  - <strong>Loose Coupling</strong> - Coupling measures the degree to which program modules rely on other modules. Loose coupling implies each component can operate or be tested independently of other components.
