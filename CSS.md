@@ -104,7 +104,7 @@
  - <strong>vmin & vmax</strong> - vmin: 1vw or 1vh, whichever is smaller, IE9+. vmax: 1vw or 1vh, whichever is larger, No IE support
 
 
-## Theme
+## Design
 
 ### Backgrounds
 
@@ -121,14 +121,9 @@
 
 ```CSS
 	background: #e56464; /* Old browsers */
-	background: -moz-linear-gradient(top, #e56464 0%, #a80000 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e56464), color-stop(100%,#a80000)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #e56464 0%,#a80000 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #e56464 0%,#a80000 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, #e56464 0%,#a80000 100%); /* IE10+ */
 	background: linear-gradient(to bottom, #e56464 0%,#a80000 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e56464', endColorstr='#a80000',GradientType=0 ); /* IE6-9 */
-	copy
 ```
 
 ### CSS Opacity
@@ -145,6 +140,8 @@
 
 ## Structure & Positioning
 
+### Important base attributes
+
  - <strong>Block & Inline Elements</strong> - Native elements tag like 'div', 'p' & 'section' are Block elements i.e. their Display attibute is set to 'block' by default, whereas Inline elements like 'span', 'a' & 'li' are set to 'display:inline' by default. Note: If you're floating an inline element, it's treated as block, so no need to include "display:block" in your stylesheet.
  - <strong>Box Sizing Attribute</strong> - By default elements Box-sizing value is 'content-box' by setting it to 'border-box'(IE8+) the browser renders an elements borders & padding inside of the specified width & height. Very helpful when working with 100% widths. *{box-sizing:border-box;} is often used to convert all elements to 'border-box'. Also the can be set to the value 'padding-box'(Very limited support) which only includes 'padding' inside the specified height/width. Example of 'border-box' value i.e.
 
@@ -153,16 +150,7 @@
   div{box-sizing:border-box;width:100%;padding:10px;border:1px;} //Would be the same width as its parent element
 ```
 
-
-### Media Queries
-
- - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
- - 'min-width' - '@media screen and (min-width: 900px) {}' Will apply CSS if the viewing area is greater than 900px.
- - 'max-device-width' - '@media screen and (max-device-width: 480px) {}' Will apply CSS if the resolution is greater than 480px as max-device-width means the actual resolution of the device rather than just the viewing area resolution.
- - 'min-device-pixel-ratio' - '@media only screen and (min-device-pixel-ratio : 2){}' For 2x pixel density resolutions like the Retina display.
- - 'only' in '@media only screen..' stops older browsers parsing the remander of the selector
-
-## CSS Columns/Multi-column Layouts
+### CSS Columns/Multi-column Layouts
 
  - A CSS module to divide the flow of content into columns, mimicking magazine/newspaper style layouts. Very useful when displaying hierarchical lists in columns. IE10+
 
@@ -173,14 +161,7 @@
     column-rule: 1px solid #ccc;
 }
  ```
-
-## Other CSS Structures
-
- - <strong>position:sticky</strong> - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little support, Safari & Firefox only. caniuse.com/css-sticky
- - <strong>CSS Regions Module</strong> - Abandoned layout module for flowing content into multiple elements. Chrome & Firefox will not be building support.
-
-
-### Flexbox Model
+ ### Flexbox Model
 
  - Flex Box Module('display:flex;') - Very powerful fluid layouts api, IE10+ - http://html5-demos.appspot.com/static/css/flexbox/index.html includes '-order': for ordering structure elements '-justify-content': for aligning structure elements horizontally, 'align-items' for vertical alignment  and '-webkit-flex-direction': for positioning
 
@@ -198,10 +179,15 @@
  
  - A module to create rows & columns in many different layouts, controlling size, position and layers(elements can be set to overlap). Limited browser support.
 
+### Other CSS Structure & Positioning
 
+ - <strong>CSS Regions Module</strong> - Abandoned layout module for flowing content into multiple elements. Chrome & Firefox will not be building support.
+ - <strong>position:sticky</strong> - a new way to position elements and is conceptually similar to position: fixed. The difference is that an element with position: sticky behaves like position: relative within its parent, until a given offset threshold is met in the viewport. Little support, Safari & Firefox only. caniuse.com/css-sticky
+ 
+ 
 ## Font
 
-#### Font size units
+### Font size units
 
  - em - Calculates the font size based on the Parent font size which compounds down the tree
 
@@ -224,17 +210,22 @@ i.e. html{font-size:62.5%}
  - px,pt,em,rem,%.
 
 
-#### Font Rendering
+### Font Rendering
 
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
 
 
+## Animation & Transitions
 
+- To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates.
 
-## Animation
+### Transitions
 
+- Transition-timing-function presets are ease, linear, ease-in, ease-out and ease-in-out. For custom easing use cubic-bezier(point1, point2, point3, point4), i.e cubic-bezier(0.5, -0.5, 0.5, 1.5) will give a bounce effect. Its helpful to use a tool such as www.cubic-bezier.com to generate & test.
+
+### Animations
  - Backgrounds can be animated with @Keyframes and CSS Animations:
 
 ```CSS
@@ -249,12 +240,21 @@ i.e. html{font-size:62.5%}
 }
 ```
 
-- To get the best performance from transitions & animations use Opacity or CSS3 Transform (i.e transform:translate(0,0)) other properties are likely to give lower frame rates.
-- Transition-timing-function presets are ease, linear, ease-in, ease-out and ease-in-out. For custom easing use cubic-bezier(point1, point2, point3, point4), i.e cubic-bezier(0.5, -0.5, 0.5, 1.5) will give a bounce effect. Its helpful to use a tool such as www.cubic-bezier.com to generate & test.
+## Advanced Modules
 
+### Media Queries
 
+ - 'max-width' - '@media screen and (max-width: 600px) {}' Will apply CSS if the viewing area is less than 600px.
+ - 'min-width' - '@media screen and (min-width: 900px) {}' Will apply CSS if the viewing area is greater than 900px.
+ - 'max-device-width' - '@media screen and (max-device-width: 480px) {}' Will apply CSS if the resolution is greater than 480px as max-device-width means the actual resolution of the device rather than just the viewing area resolution.
+ - 'min-device-pixel-ratio' - '@media only screen and (min-device-pixel-ratio : 2){}' For 2x pixel density resolutions like the Retina display.
+ - 'only' in '@media only screen..' stops older browsers parsing the remander of the selector
+ 
+### Calc Function
 
-### CSS Source Maps
+ - 'property:calc()' IE9+ Dynamic css calculations "width:calc(100% - 4em);"
+  
+### Source Maps
 
  - When using a pre-processor you can generate a Source Map in addition to the compiled CSS, the Source Map
 
@@ -271,15 +271,15 @@ body {
 }
 ```
 
+### @supports
 
-## Other CSS Properties
+### Other CSS Properties
 
  - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
 ```CSS
 h1 {counter-reset: section;}
 h2:before {counter-increment: section;content: counter(section) ". ";}
 ```
- - Calculations('property:calc()') - IE9+ Dynamic css calculations "width:calc(100% - 4em);"
  - Pointer Events('pointer-events:none') - Disables mouse/touch events (hover, click, drag) including JS event listeners on an element. E.g Disable a semitransparent element with a higher Z-index so the element below is clicked. SVG IE9+, HTML Elements IE11+
  - 'backface-visibility: hidden/visible' - Defines whether the element should be visible when the opposite side is facing i.e. When rotateX(180) is used to flip the element.
 
