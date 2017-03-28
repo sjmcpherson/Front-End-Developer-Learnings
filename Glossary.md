@@ -1,3 +1,33 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Abbreviations/Terms:](#abbreviationsterms)
+    - [A](#a)
+    - [B](#b)
+    - [C](#c)
+    - [D](#d)
+    - [E](#e)
+    - [F](#f)
+    - [G](#g)
+    - [H](#h)
+    - [I](#i)
+    - [J](#j)
+    - [L](#l)
+    - [M](#m)
+    - [N](#n)
+    - [O](#o)
+    - [P](#p)
+    - [R](#r)
+    - [S](#s)
+    - [T](#t)
+    - [U](#u)
+    - [V](#v)
+    - [W](#w)
+    - [X](#x)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Abbreviations/Terms:
 
 ### A
