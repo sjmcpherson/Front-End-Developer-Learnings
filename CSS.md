@@ -273,6 +273,24 @@ body {
 
 ### @supports
 
+ - Allows conditional CSS to be applyed based on the browser support for a CSS property or properties. Limited Browser Support
+ - Accompaning JS Method CSS.supports() i.e. var result = CSS.supports("display", "flex");
+
+```CSS
+@supports (display: flex) {
+	div { display: flex; }
+}
+@supports not (display: flex) {
+	div { float: left; } /* alternative styles */
+}
+@supports (display: flex) and (display: -webkit-flex) and (display: -moz-flex){
+	div { display: flex; }
+}
+@supports (display: flex) or (display: -webkit-flex) or (display: -moz-flex){
+	div { display: flex; }
+}
+```
+
 ### Other CSS Properties
 
  - CSS Counter(counter-increment:value) - IE8+ Used to display a incremented value, set & reset via the 'counter-reset' property. http://codepen.io/sjmcpherso/pen/eILwf
