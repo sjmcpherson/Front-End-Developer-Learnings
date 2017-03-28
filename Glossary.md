@@ -65,6 +65,7 @@
  - <strong>Graceful Degradation</strong> - Follows a top down approach to dealing with features and performance, building with latest technologies first then applying fallbacks for technologies that don't support the features used.
  - <strong>Gulp</strong> - is a framework to build, run and test your project. It can process/minify/combine the likes of Less, Sass, JS, HAML, Markdown, CoffeeScript etc create a test enviroment and create a webserver to view your project on.
  - <strong>Grunt</strong> - much like its competitor Gulp above, Grunt is used for creating build scripts although uses a configuration over code syntax.
+ - <strong>Gzip</strong> - a method of compressing files to make downloads from Webservers faster
 
 ### H
  - <strong>Hash Table</strong> - 
