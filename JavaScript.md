@@ -1,5 +1,6 @@
 <h1>JavaScript</h1>
 
+<!-- doctoc HTML.md JavaScript.md CSS.md -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ### Contents
@@ -41,6 +42,7 @@
   - [The Image Object](#the-image-object)
   - [The XMLHttpRequest(XHR) Object](#the-xmlhttprequestxhr-object)
   - [The Date Object](#the-date-object)
+  - [The CSS Object Model (CSSOM)](#the-css-object-model-cssom)
 - [Timers & Timeouts](#timers--timeouts)
 - [Threading in JavaScript](#threading-in-javascript)
 - [JavaScript Selectors](#javascript-selectors)
