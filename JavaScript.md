@@ -572,6 +572,15 @@ var date = new Date("January 13, 2015 12:30:00"); //Datestring
 var date = new Date(2015, 0, 13, 12, 30, 0, 0); //year, month, day, hour, minute, second, and millisecond, in that order. NOTE the month reference is from 0 so in most cases you will need to decrease month variable by 1
 ```
 
+<h3>The CSS Object Model (CSSOM)</h3>
+ - CSS.supports() Method - Accompanies the @supports CSS Module by returning a Boolean value based on whether the Browser supports the CSS property or condition. Limited Browser Support
+ 
+```javascript
+	result = CSS.supports("display", "flex"); // Basic property check
+	result = CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: preserve ) or ( -o-transform-style: preserve ) or ( -webkit-transform-style: preserve )" ); // Multiple properties conditional check
+```
+
+
 <h2>Timers & Timeouts</h2>
 
 - setTimeout(function, delay in milliseconds, param, param, ...) - calls a function once after a specific delay. Parameters IE9+
