@@ -1215,6 +1215,7 @@ for (let i of arr) { //for of iterates over property values
 }
 ```
 
+<h4>Async Await</h4>
 
 <h3>ES6 Modules</h3>
 
@@ -1244,8 +1245,8 @@ Interface for fetching resources across a network as an improvement to XMLHttpRe
 <h5>Encrypted Media Extensions API</h5>
 Extends HTMLMediaElement providing APIs to control playback of encrypted content.
 
-<h2>ECMAScript 7</h2>
-- Object.Observe - Chrome only
+
+- Object.Observe - A method for observing changes to an object, inspired by AngularJS's $watch() method, but was depreciated
 
 
 <h2>jQuery</h2>
@@ -1395,10 +1396,12 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 
 <h3>JS Compilers/Languages</h3>
 
+- BabelJS - A compiler which converts ES6(and beyond) code to ES5
 - asm.js
 - CoffeeScript - Programming language that transcompiles to JavaScript inspired by Ruby
-- JSX a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
-- TypeScript - A strict sperset of JS which adds EcmaScript 6, optional static typing and class-based support amongst other things to the language. Backed by Microsoft
+- JSX - a statically typed, object oriented programming language that compiles to JS, which offers performance and error checking improvements.
+- JSX for React - a preprocessor step that adds XML syntax to JavaScript for ReactJS
+- TypeScript - A strict superset of JS which adds EcmaScript 6, optional static typing and class-based support amongst other things to the language. Backed by Microsoft
 - AtScript - Backed by Google but likely to merge under TypeScript
 
 <h3>JavaScript Frameworks</h3>
