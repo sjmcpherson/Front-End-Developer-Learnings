@@ -117,7 +117,7 @@
 
 <h2>JavaScript Execution</h2>
 
-- JS is a scripted language rather than a compiled language like C#, C++, Java etc. This means it is executed line by line by its host environment(commonly the web browser) at run time.
+- JS is a Dynamic or Scripting programming language which means it is executed line by line by its host environment(commonly the web browser) at runtime rather than a compiled language like C#, C++, Java etc.
 
 <h2>JavaScript Data Types</h2>
 
@@ -193,7 +193,7 @@ if(randomNum % 7 === 0)
 - Objects are an unordered list of name/value pairs. Names are strings and values can be any type including other objects
 - Objects are initialized using the 'new' namespace i.e 'var obj = new Object()' or using Literal notation i.e. 'var obj = {}'; Object literals influenced the development of JSON.
 - For code consistancy use capitals for the name of a constructor of an Object but use lower case for Instance names. i.e. var car = new Car();
-- In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherso/YgEjv/
+- In JavaScript, all objects are passed by reference. When you make a change to a reference to an object, you change the actual object. Primitive types are passed by value. see http://jsfiddle.net/sjmcpherson/YgEjv/
 - When you change the value of a prototype property it also changes across all existing objects derived from it. This is called Prototypal Inheritance.
 - Using delete will destroy variables and properties, making them undefined when you try to access them. Though if you call delete on an item in an array, the array's .length is unaffected.
 - hasOwnProperty - This is used to determine whether a property is part of the prototype chain or not. This is useful in checking if a native prototype is supported and for use in a 'for in' loop to avoid errors from extending the native prototype
@@ -228,7 +228,7 @@ alert(typeof a); //alerts object
 
 <h4>Functions</h4>
 
-- 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the differences between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherso/qHBUY/
+- 'function a(){}' is essentially shorthand for 'var a = function a(){}'; though will cause different results based on the differences between Function & Variable Hoisting.  See http://jsfiddle.net/sjmcpherson/qHBUY/
 - The Arguments Object - is a system object resembling an array for accessing the variables past to an function. It has the length property but no Array methods i.e
 
 ```javascript
@@ -244,7 +244,7 @@ function testFunc(){
 - Functions inherit the object prototype therefore methods and properties can be assigned to them.
 - JavaScript Scope, Function-Level & Hoisting: http://coding.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/, http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html
 - Initializing a variable in a Function will mean that it is only available to operations inside this function. Functions are the only place where a new scope is created.
-- Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherso/ByJfv/
+- Inner(or Nested) functions can refer to the variables present in their outer enclosing functions even after their parent functions have already executed. This is called Closure. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures, http://jsfiddle.net/sjmcpherson/ByJfv/
 - function.call vs function.apply - .apply and .call do the same thing, but .apply uses an array containing arguments for the target method as the second parameter.
 
 
@@ -256,7 +256,7 @@ function testFunc(){
 
 <h4>Dynamic Typed</h4>
 
-- JavaScript is a Dynamically Typed language, as it is not compiled, there is no Static Type Checking and variables are not initialised with a type at Runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
+- JavaScript is a Dynamically or Loosely Typed language, as it is not compiled, there is no Static Type Checking and variables are not declared with a type. The type is determined automatically at runtime. JS therefore must deal with Type errors differently to Static Type languages like C#, C++, Java etc. i.e. see Type Coercion
 
 <h4>Variable Scope</h4>
 
@@ -278,7 +278,7 @@ JavaScript has Implied Global Variables which means if a variable is initialized
 
 <h5>Variable Hoisting</h5>
 
-- No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherso/qHBUY/
+- No matter where you declare a variable and what you set it to, the declaration will moved to the top of its scope(i.e its function) and assigned 'undefined'. This is called Variable Hoisting, so its good practise to always declare your variables at the top of the scope. See http://jsfiddle.net/sjmcpherson/qHBUY/
 
 <h4>Type Coercion</h4>
 
@@ -303,7 +303,7 @@ false !== 0 //true
 
 <h3>Operators</h3>
 
-- Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherso/S6W22/
+- Type Coercion can affect comparison of values with Equal & Non-equal operators so its recommended to use '===' and '!==' for strict comparison. See http://jsfiddle.net/sjmcpherson/S6W22/
 - The Guard Operator(Logical And) '&&' Can be used to avoid null references, if the first operand is Truthy then the result is the second operand else result is the first.
 - The Default Operator(Logical Or) '||' As above but if the first operand is Truthy then the result is the first operand i.e. var inputVal = input || ""; Think of the second operated as of setting a default value.
 
@@ -726,7 +726,7 @@ document.querySelectorAll('nav').addEventListener('click', function(e) {
 
 - <strong>Event Bubbling</strong> - is when a nested element triggers the parents event handler. The following code can be used to prevent bubbling.
 - <strong>return false</strong> - Adding this to your event handler will prevent the default event from occuring, NOTE if used in a jQuery event handler it will also prevent the event from bubbling up, effectively simulating functions event.preventDefault() & event.stopPropagation().
-- <strong>event.preventDefault()</strong> - Cancels the default event(if cancelable) codepen.io/sjmcpherso/pen/gboxaa
+- <strong>event.preventDefault()</strong> - Cancels the default event(if cancelable) codepen.io/sjmcpherson/pen/gboxaa
 -  <strong>event.stopPropagation()</strong> - event.stopPropagation ? event.stopPropagation() : (event.cancelBubble=true) //event.cancelBubble used for IE<9
 
 
