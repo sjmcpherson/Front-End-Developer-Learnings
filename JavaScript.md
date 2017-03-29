@@ -1393,14 +1393,6 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 
 <h2>JavaScript Frameworks, Library's, Languages and Scripts</h2>
 
-<h3>JavaScript Frameworks</h3>
-
-- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
-- AngularJS
-- Backbone
-- EmberJS
-- Ext JS
-
 <h3>JS Compilers/Languages</h3>
 
 - asm.js
@@ -1409,9 +1401,17 @@ for (var i = 0, l = values.length; i < l; i++){//Cache array length propery, bei
 - TypeScript - A strict sperset of JS which adds EcmaScript 6, optional static typing and class-based support amongst other things to the language. Backed by Microsoft
 - AtScript - Backed by Google but likely to merge under TypeScript
 
+<h3>JavaScript Frameworks</h3>
+
+- JavaScript Frameworks which add content to the DOM on page load eg. AngularJS, Backbone JS etc have problems with Search Engines(https://developers.google.com/webmasters/ajax-crawling/) they are therefore best utilized in CRUD apps (Create, Read, Update, Delete). With extra configuration pages can be recreted as HTML Snapshots & hosted on alternative URL's to index the content.
+- AngularJS
+- Backbone
+- EmberJS
+- Ext JS
+
 <h3>Library</h3>
 
-- Reactjs a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM.
+- ReactJS a JS library developed by Facebook which alters Virtual DOM in the form of components to make changes to the View. This improves performance over changes to the Actual DOM.
 - Handlebars.js - Lightweight, library to build semantic templates i.e.
 - Modernizr.js - Adds classes to the html element based on feature tests and includes HTML5 Shiv. Allows you to target parts of your CSS and JavaScript based on the features supported by a browser. Offers cross browser support for CSS3 TransitionEnd Event.
 - Underscore.js - Utilty functions uncluding map, select, javascript templating
