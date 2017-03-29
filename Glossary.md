@@ -134,10 +134,12 @@ Will be converted to:
  - <strong>Relational Database</strong> - built on tables, fields & keys e.g MySQL, SQL Server.
  - <strong>REST (REpresentational State Transfer)</strong> - is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. 
  - <strong>Rich Object Model</strong> - 
+ - <strong>Rust</strong> - a systems programming language.
 
 ### S
  - <strong>Same Origin Policy</strong> - An important security concept used to stop Client-side programming languages accessing methods and properties across different hostnames.
  - <strong>Sass</strong> - Preproccessor for CSS, which allow you to use Variables, Functions & Calcutions, their are 2 formats the standard .Sass format and the more widely used .Scss format.
+ - <strong>Segfault (Segmentation Fault)</strong> - Is an error that generally occurs via a systems programming language accessing a memory location which is not allowed
  - <strong>Semantic HTML</strong> - The use of HTML markup(tags & properties) to give meaning to the information displayed rather than just defining its presentation i.e. rather than &lt;i&gt;Yes&lt;i&gt; use "&lt;em&gt;Yes&lt;em&gt;"(emphasis) or "&lt;span class='emphasis'&gt;Yes&lt;span&gt;"
  - <strong>SemVer (Semantic Versioning)</strong> - Is a versioning guideline to help track changes. The SemVar syntax is in the form MAJOR.MINOR.PATCH, where PATCH is backwards-compatible bug fix, MINOR is a backwards-compatible new feature release and MAJOR is 'breaking change' that is not backwards-compatible. Development should start at 0.1.0 as the first feature set and indicate as production ready with version 1.0.0 
  - <strong>SHA (Secure Hash Algorithm)</strong> - 
