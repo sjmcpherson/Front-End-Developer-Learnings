@@ -953,7 +953,7 @@ simplePromise().then(function(result) {
 });
 ```
 - Promise Libraries: Q, when, WinJS, RSVP.js
-- JavaScript ES6 Promise API (Latest browsers Only, IE12+ but Polyfils available)
+- JavaScript ES6 Promise API (Limited support but Polyfills available)
 
 
 
