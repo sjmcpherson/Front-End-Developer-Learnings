@@ -11,6 +11,7 @@
 
 ### B
  - <strong>Backend as a Service (BaaS)</strong> - A backend provider accessed via an API e.g Firebase, Parse, Loopback
+ - <strong>BEM (Block Element Modifier)</strong> - A methodology for naming CSS classes by attempting to structure elements into components
  - <strong>Bower</strong> - A front-end package management system that runs on Node.js & npm
 
 ### C
@@ -145,6 +146,7 @@ Will be converted to:
  - <strong>SHA (Secure Hash Algorithm)</strong> - 
  - <strong>Shadow DOM</strong> - 
  - <strong>Singleton</strong> - A programming design pattern which limits the number of instances of a particular object to just one effectively creating a system wide object. E.g The JS Module pattern, Angular Factories and Prototypes
+ - <strong>SMACSS ( calable and Modular Architecture for CSS)</strong> - A methodology for CSS which resemebles a style guide for structure CSS
  - <strong>SOAP (Simple Object Access Protocol)</strong> - 
  - <strong>Software Development Lifecycle or Systems Development Lifecycle (SDLC)</strong> - is used to describe a process for planning, creating, testing and deploying a information system.
  - <strong>Software Development Methology</strong> - is a ideology for structuring planning, controlling a software project. 
