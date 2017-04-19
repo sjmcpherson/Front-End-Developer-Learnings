@@ -250,7 +250,14 @@ function testFunc(){
 
 <h3>Primative Values</h3>
 
-- The Data types number, boolean, null and undefined are Primative values meaning they do not have methods associated with them. Whereas objects and functions do. String's when not using the 'new' keyword are classed as Primitives although they are automatically converted to an object when using String object methods.
+- By default the Data types 'number', 'boolean', 'null', 'undefined' and 'string' in JavaScript are Primative values, meaning properties & methods cannot be assigned to them. However 'number', 'boolean' and 'string' do have built-in properties & methods, which JavaScript accesses by momentarily & automatically converting these Primatives to a Object representation. The Object representation of those Primatives can be defined by using the 'new' keyword, allowing methods & properties to be assigned to them. Note using the Object representation is not recommended because of how JS uses automatic Type Coercion.
+
+```javascript
+var str = new String('Bob');
+typeof str //object
+str = "Peter";
+typeof str //string
+```
 
 <h3>Variables</h3>
 
