@@ -69,7 +69,7 @@
  - <strong>Gzip</strong> - a method of compressing files to make downloads from Webservers faster
 
 ### H
- - <strong>Hash Table</strong> - 
+ - <strong>Hash Table</strong> - A data structure that maps keys to values and is used for associative arrays, database indexing, caches, and sets.
  - <strong>Hoisting</strong> - In JavaScript no matter where you declare a variable, its declaration is added to the top of its scope(function) this means JavaScript Scope is different to most other languages that use Block Level Scope inwhich new scope is created within any curly brakets('{}')
  - <strong>HTTP (Hypertext Transfer Protocol)</strong> - is the underlying protocol used by the web to define the format and transmition between client & server
  - <strong>HTTPS</strong> - Result of layering HTTP on top of a secure protocol like SSL or TLS to provide authentication of the visited website and encripted communication between client & server
