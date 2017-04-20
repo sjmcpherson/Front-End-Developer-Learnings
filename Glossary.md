@@ -131,7 +131,7 @@ Will be converted to:
 
 ### R
  - <strong>Race Condition</strong> - Are issues that arise when software depends on specific timing of threads to be functional i.e. When an AJAX request a seperate thread is created.
- - <strong>Recursion</strong> - when a function calls itself used as an alternative to iteration.
+ - <strong>Recursion</strong> - a programming concept for when a function calls itself used as an alternative to iteration. In JS, recusion would utilize the 'return' statement or setTimeout function to call itself.
  - <strong>Relational Database</strong> - built on tables, fields & keys e.g MySQL, SQL Server.
  - <strong>REST (REpresentational State Transfer)</strong> - is a Web service design model, conforming to REST constraits is considered RESTful. REST is Resource based rather than Action based as opposed to SOAP. 
  - <strong>Rich Object Model</strong> - 
