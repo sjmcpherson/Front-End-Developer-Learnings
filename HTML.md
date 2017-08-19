@@ -281,4 +281,20 @@ Visit <a href="http://www.smashdynamic.com" title="Visit Smash Dynamic magazine,
 <link rel="prefetch" href="http://davidwalsh.name/wp-content/themes/walshbook3/images/sprite.png" />
 ```
 
+ - Like Link Prefetching DNS prefetch will preload the DNS for external url, helpful when a particular page contains a number of external links but also in the case where browsers will limit the number of simulatanious connections to a host.
+ 
+```HTML
+<!-- Google Analytics -->
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<!-- Google Fonts -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+```
+
+```HTML
+<!-- full page -->
+<link rel="dns-prefetch" href="http://davidwalsh.name/css-enhancements-user-experience" />
+<!-- just an image -->
+<link rel="prefetch" href="http://davidwalsh.name/wp-content/themes/walshbook3/images/sprite.png" />
+```
+
 - Compress Your Images - Photoshop does a fairly decent job at optimizing images but their are other tools that can take you files and compress them even further. Yahoo's www.smushit.com does a good job with PNG's & GIF's & theres also FileOptimizer a Desktop app that compresses images and a number of other file formats.
