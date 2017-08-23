@@ -87,7 +87,11 @@
  - <strong>WebP</strong> is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
  - <strong>SVG (Scalable Vector Graphics )</strong> - is a XML markup language for describing & plotting vector graphics
 
-<h3>Image/Graphic Performance</h3>
+<h4>SVG (Scalable Vector Graphics)</h4>
+ - SVGs is a XML markup language for describing & plotting vector graphics but have a number of quirks between browsers.
+ 
+
+<h4>Image/Graphic Performance</h4>
  - <strong>Specifing image size attributes</strong> by specifying a width and height for all images allows for faster rendering by eliminating the need for unnecessary reflows and repaints.
 
 
