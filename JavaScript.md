@@ -680,7 +680,11 @@ for(i=0;i<100;i++){
 document.body.appendChild(container); //Better DOM is changed only once
 ```
 
-- <strong>document.createDocumentFragment()</strong> - DocumentFragment acts like a pseudo-DOM node, this maybe preferable to creating a container with an actual DOM node with document.createElement i.e.
+<h4>DocumentFragment</h4>
+
+- <strong>document.createDocumentFragment()</strong> - DocumentFragment acts like a pseudo-DOM node, this maybe preferable to creating a container with an actual DOM node with document.createElement. When a DocumentFragment is inserted into the DOM it is emptied unlike an element created with 'createElement';
+
+i.e.
 
 ```javascript
 var ul = document.getElementsByTagName('ul');
@@ -691,6 +695,25 @@ for(i=0;i<100;i++){
 }
 ul[0].appendChild(frag);
 ```
+
+<h4>createDocumentFragment vs createElement</h4>
+
+- See the following example as a comparison of the effects of each. In the 'createElement' only case, in each iteration of the loop the 'el' element would be inserted then moved to the following 'div' until it would be finally displayed before the <strong>last</strong> 'div'. Whereas the 'frag' DocumentFragment would be inserted and displayed before the <strong>first</strong> 'div' as in subsequent iterations of the loop the 'frag' would be empty.
+
+```javascript
+var divs = document.getElementsByTagName('div');
+var el = document.createElement('a'); //Create an Element
+var frag = document.createDocumentFragment(); //Create a Frag
+frag.appendChild(el); //Add the element to the Frag
+for(var i=0; i<divs.length; i++) { //Loop through all the Divs
+    var div = divs[i];  
+    div.parentNode.insertBefore(el, div);
+    div.parentNode.insertBefore(frag, div);
+}
+```
+
+
+
 
 <h2>JSON</h2>
 
