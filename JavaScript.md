@@ -441,6 +441,7 @@ for (var p:* in obj)
 <h3>URI & Parameters</h3>
 
  - <strong>encodeURIComponent(string)</strong>
+ - <strong>URLSearchParams</strong> - Interface with methods to search & manipulate a Parameter String. No IE Support.
 
 <h3>Strict mode vs Non-strict mode</h3>
 
