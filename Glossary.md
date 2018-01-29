@@ -12,7 +12,7 @@
 ### B
  - <strong>Backend as a Service (BaaS)</strong> - A backend provider accessed via an API e.g Firebase, Parse, Loopback
  - <strong>BEM (Block Element Modifier)</strong> - A methodology for naming CSS classes by attempting to structure elements into components
- - <strong>Bower</strong> - A front-end package management system that runs on Node.js & npm
+ - <strong>Bower</strong> - A front-end package management system that runs on Node.js & npm, that is in the process of being depreciated in favour for Yarn or Webpack
 
 ### C
  - <strong>CDN (Content Delivery Network)</strong> - is a large distributed system of servers hosting content with high availability and download speeds.
