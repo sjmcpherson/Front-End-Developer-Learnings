@@ -15,6 +15,7 @@
  - <strong>Bower</strong> - A front-end package management system that runs on Node.js & npm, that is in the process of being depreciated in favour for Yarn or Webpack
 
 ### C
+ - <strong>Canonical URL</strong> - The URL used for Search Engines to individualize content which can have multiple URLs i.e A single product maybe found under different categories and therefore have different URLs
  - <strong>CDN (Content Delivery Network)</strong> - is a large distributed system of servers hosting content with high availability and download speeds.
  - <strong>CGI (Common Gateway Interface)</strong> - is the standard method for server-side communication when transfering information between the web server & browser. 
  - <strong>CLI</strong> - Command Line Interface
