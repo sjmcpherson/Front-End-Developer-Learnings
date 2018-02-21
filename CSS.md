@@ -183,7 +183,24 @@
 
 ### CSS Grid Layout
  
- - A module to create rows & columns in many different layouts, controlling size, position and layers(elements can be set to overlap). Limited browser support.
+ - A powerful module to create rows & columns in many different layouts, controlling size, position and layers(elements can be set to overlap). Partial IE support.
+ 
+ - The Below CSS Grid example defines a simple 4x3 Sectioned Grid, A full width 'header' section followed by a 25% or 1/4 width 'sidebar' that aligns to the left of the 'main' section and 'footer' section.
+ 
+```CSS
+.header{ grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'sidebar main main main'
+    'sidebar footer footer footer';
+  grid-gap: 10px;
+}
+```
 
 ### Other CSS Structure & Positioning
 
