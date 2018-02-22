@@ -49,7 +49,7 @@
 
 <h2>Loading Resources</h2>
 
- - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Avoid using protocol relative URLs for stylesheets as IE7 & 8 will download the file twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
+ - The Protocol-relative URL &lt;img src="//domain.com/img/logo.png"&gt; Note: Using protocol relative URLs for stylesheets in IE7 & 8 will mean the file is download twice. For More Info http://paulirish.com/2010/the-protocol-relative-url/
  - The "download" attribute forces browser to invoke download dialog &lt;a href="logo.png" download="Logo.png"&gt;download me&lt;/a&gt; Chrome Only
 
 
