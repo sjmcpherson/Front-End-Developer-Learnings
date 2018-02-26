@@ -72,6 +72,7 @@
 ### H
  - <strong>Hash Table</strong> - A data structure that maps keys to values and is used for associative arrays, database indexing, caches, and sets.
  - <strong>Hoisting</strong> - In JavaScript no matter where you declare a variable, its declaration is added to the top of its scope(function) this means JavaScript Scope is different to most other languages that use Block Level Scope inwhich new scope is created within any curly brakets('{}')
+ - <strong>HSTS (HTTP Strict Transport Security)</strong> - a web security policy enforcing browsers to only interact with a webserver via secure HTTPS connections as a 301 redirect from HTTP to HTTPS still leaves vunerabilities. HSTS uses the user agent via an HTTPS response header field named "Strict-Transport-Security". i.e  "Strict-Transport-Security: max-age=31536000"
  - <strong>HTTP (Hypertext Transfer Protocol)</strong> - is the underlying protocol used by the web to define the format and transmition between client & server
  - <strong>HTTPS</strong> - Result of layering HTTP on top of a secure protocol like SSL or TLS to provide authentication of the visited website and encripted communication between client & server
  - <strong>HTTP/2</strong> - Offers anumber of performance improvements over the current version of HTTP(HTTP 1.1). HTTP/2 uses multiplexing which allows multiple assets to be sent and received at the same time, the connection is left open for extended periods of time elimating the need for multiple HTTP requests. With HTTP/2 also using compression, performance best practises like minification, concatenation and spriting will likely become unnecessary. Browser support for HTTP/2 is available in the latest browsers but only a few HTTP servers are offering the technology currently.
@@ -156,6 +157,7 @@ Will be converted to:
  - <strong>SSL (Secure Sockets Layer)</strong> - a internet protocol for secure communication.
  - <strong>SSH (Secure Shell)</strong> - is a network protocol for secure communication over an insecure network.
  - <strong>Statement</strong> - A line of code made of expressions that performs a task in a program. Example: GOTO 100. 
+ - <strong>Strict Transport Security</strong> - See HSTS.
  - <strong>Strongly Typed</strong> - Describes a programming language that requires a variable be assigned a type as apposed to Loosely Typed and throws a type error when values of different types a evaluated.
  - <strong>Stub or Method Stub</strong> - Code used to simulate behaviour, often a temporary solution or used to demo functionality.
  - <strong>Surface Web</strong> - the World Wide Web that is indexable by conventional search engines as opposed to the Deep Web with is not reachable by conventional search engines.
