@@ -76,6 +76,7 @@
   <img src="mdn-logo-narrow.png" alt="MDN">
 </picture>
 ```
+
 <h3>Image/Graphic Formats</h3>
 
  - <strong>GIF (Graphics Interchange Format)</strong> - Lossless format that can have transparency & animation with a maximum of 256 colors.
@@ -84,11 +85,19 @@
  - <strong>APNG (Animated PNG)</strong> - A PNG but allows frames for animation. Limited support - FF & Safari only
  - <strong>JPEG/JPG (Joint Photographic Experts Group)</strong> -  Lossy compression whereby the level of compression can be adjusted supports a maximum image size of 65535×65535 pixels
 - <strong>Progressive vs Baseline JPEGs</strong> -  A Progressive jpeg is a series of scans of increasing quality, a Baseline jpeg is a single full resolution scan, Progressive JPEGs load faster on IE9, Chrome & Firefox but use more CPU. http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/
- - <strong>WebP</strong> is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome, Opera & Android but can be added with a JavaScript shim.
+ - <strong>WebP</strong> is a new image format developed by Google, superior to PNG and JPG. It produces 24-35% lossy & lossless images, browser support is limited to Chrome & Android Browsers but fallbacks can be provided using the &lt;picture&gt; element. In the below example if 'webp' or the &lt;picture&gt; element isn't supported(IE)the img element is used as a fallback with a 'jpg'. 
+
+```HTML
+<picture>
+  <source srcset="img/awesomeWebPImage.webp" type="image/webp">
+  <img src="img/creakyOldJPEG.jpg" alt="Alt Text!">
+</picture>
+ ```
+ 
  - <strong>SVG (Scalable Vector Graphics )</strong> - is a XML markup language for describing & plotting vector graphics
 
 <h4>SVG (Scalable Vector Graphics)</h4>
- - SVGs is a XML markup language for describing & plotting vector graphics but have a number of quirks between browsers.
+ - SVGs is a XML markup language for describing & plotting vector graphics but have a number of quirks between browsers. IE9+ IE9-IE11 has some scaling issues which can be addressed by adding height, width, viewBox and/or CSS rules seen here https://codepen.io/tomByrer/pen/qEBbzw
  
 
 <h4>Image/Graphic Performance</h4>
