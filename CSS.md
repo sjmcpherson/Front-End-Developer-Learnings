@@ -231,14 +231,16 @@ ul li { font-size: 1.4rem; } /* =14px */
 i.e. html{font-size:62.5%}
 
  - px,pt,em,rem,%.
-
-
+ 
 ### Font Rendering
 
  - http://webdesign.tutsplus.com/articles/a-web-designers-typographic-boilerplate--webdesign-15234?utm_content=buffer1e888&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
  - http://aestheticallyloyal.com/public/optimize-legibility/
  - "font-weight:bold" is the same "font-weight:700" & "font-weight:normal" is the same as font-weight:300" this is important when using webfonts which are downloaded at a specific weight as most browsers will try and render the wrong weight if set incorrectly resulting in blurry text.
 
+### Line Height
+
+ - Unit-less line-height is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the font-size
 
 ## Animation & Transitions
 
@@ -422,6 +424,28 @@ tbody tr:nth-child(odd) {
 ```CSS
 figure{display:table;}
 figcaption{display:table-caption;caption-side:bottom;}
+```
+
+## Print Styles
+ 
+ - The 'Print' media type can be used to create a print stylesheet, remove backgrounds, shadows, text-shadow and make text black
+ 
+```CSS
+@media print {
+    *,*:before,*:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+```
+ - To deal with unwanted page breaks between blocks of text & after headings we can add the following
+```CSS
+@media print {
+	p,h2,h3,h4 {orphans: 3; widows: 3;} //Minimum number of lines split between new page & old
+	h1,h2,h3,h4 {page-break-after: avoid;} //Avoid page breaks directly after headings
+}
 ```
 
 
