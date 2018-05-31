@@ -141,17 +141,22 @@
 
 <h2>Other Elements/APIs</h2>
 
+<h3>Video Element/API</h3>
+
  - &lt;video autoplay controls&gt;&lt;/video&gt;
 - CDATA witten in HTML as <![CDATA[]]> is a section of element content that is marked for the parser to interpret as only character data, not markup i.e. Like a comment although is still part of the document and therefore can be read from JS.
 - Cookies vs sessionStorage vs localStorage - Cookies are for storing small amounts of website data, such as a username. HTML5 Web Storage is a faster and larger method created by the browser, sessionsStorage expires after the browser window closes, and localStorage is for persistant data.
 - Application Cache (AppCache)
 
-- Dialog Element - Native popup/
+<h3>Dialog Element/API</h3>
+
+- The Dialog Element is for including a native popup and can be manipulated with .show(), .close() calls with with limited browser support (Chrome Only) see https://codepen.io/sjmcpherson/pen/PawdeM for example
 ```HTML
 <dialog open id="dialog">
   <p>Hi, I'm a dialog!</p>
   <button id="close">Okay</button>
 </dialog>
+<button id="show">Open Dialog!</button>
 ```
 
 <h2>HTML Preprocessors</h2>
