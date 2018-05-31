@@ -66,8 +66,6 @@
 
 ### Pseudo-class Selectors
 
-- element:first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
-- element:after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
 - element:first-child - IE7+ targets the first child element
 - element:last-child - IE9+ targets the last child element
 - element:nth-child(3)/:nth-last-child(2) - IE9+
@@ -88,6 +86,13 @@
 	section{display:none;}
 	:target {display:block;}
 ```
+
+## Pseudo Elements
+
+- element::first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
+- element::after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
+- element::selection elects the portion of an element that is selected by a user
+- element::backdrop used with the FullScreen & Dialog API. Chrome Only
 
 ## Units/Measurements
 
