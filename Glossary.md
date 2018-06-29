@@ -180,7 +180,7 @@ Will be converted to:
  - <strong>VPN</strong> - Allows users to connect to a private network via the internet 
 
 ### W
- - <strong>Web Socket</strong> - Is a protocol for realtime two-way communication between a client & server over a standard TCP connection.
+ - <strong>WebSockets</strong> - Is a protocol for realtime two-way communication between a client & server over a standard TCP connection.
  - <strong>WebRTC (Web Real-Time Commnunication)</strong> - Is an API definition which allows peer-to-peer data communication. Which gives supporting browsers the ability to facilitate Video/Audio chat & data transfer via a web application.
 
 ### X
