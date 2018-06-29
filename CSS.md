@@ -48,12 +48,14 @@
 
 ### Element Selectors
 
-- *- Selects all elements (use carefully as can be expensive performance wise)
+- * - Selects all elements (use carefully as can be expensive performance wise)
 - element, element - Targets both elements
 - element element - Targets children of the first element
 - element > element - targets direct children e.g ul > li{}
-- element ~ element - targets all adjacent & child elements after the first element. e.g ul ~ p{}
 - element + element - targets adjacent elements directly after the first element. e.g h1 + p{}
+- element ~ element - targets all adjacent elements after the first element & all child elements of the first element. e.g ul ~ p{}
+- element ~ * element - targets all child elmenets of adjacent elements after the first element e.g ul * ~ p{}
+
 
 ### Attribute Selectors
 
