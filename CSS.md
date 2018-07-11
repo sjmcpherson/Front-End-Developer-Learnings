@@ -93,10 +93,12 @@
 
 - Pseudo-elements are very much like pseudo-classes, although the directly affect the DOM, CSS3 spec diffentiates them by using two colons (::) although single colon (:) works and has better browser compatibility working with IE8. Pseudo Elements are cannot be applied to 'Input' or 'Video' elements.
 
-- element::first-letter/:first-line - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
-- element::after{content:"";} & element:before - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
-- element::selection elects the portion of an element that is selected by a user
-- element::backdrop used with the FullScreen & Dialog API. Chrome Only
+- <strong>element::first-letter/:first-line</strong> - IE6+ apply to block level elements compatible with all browser versions e.g p:first-letter{}. NOTE: Doesn't work on display:inline; elements.
+- <strong>element::after{content:"";} & element:before</strong> - IE8+ Allows you to add content before/after an element. CSS3 syntax is double colon "::" although this is not supported by IE8. Note: <b>Input elements are not supported</b>.
+- <strong>element::selection</strong> - elects the portion of an element that is selected by a user
+- <strong>element:focus</strong> - Targets the element that has focus.
+- <strong>element::focus-within</strong> - Targets the element both if itself has focus or any of its decendents have focus.  No IE or Edge Support
+- <strong>element::backdrop</strong> - used with the FullScreen & Dialog API. Chrome Only
 
 ## Units/Measurements
 
